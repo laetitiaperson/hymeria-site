@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hymeria | Cabinet de conseil augment&eacute; par l'IA &mdash; R&eacute;sultats en jours, pas en mois</title>
+<meta name="description" content="Hymeria combine intelligence artificielle et validation par des experts pour livrer des missions de conseil strat&eacute;gique en quelques jours. &Eacute;tudes de march&eacute;, business plans, audits digitaux : la qualit&eacute; d'un grand cabinet, 5&times; plus vite, 3&times; moins cher.">
+<meta property="og:title" content="Hymeria | AI Consulting, Human Validated">
+<meta property="og:description" content="Missions de conseil strat&eacute;gique livr&eacute;es en jours. Qualit&eacute; McKinsey, agilit&eacute; start-up.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="alternate" hreflang="fr" href="index-fr.html">
+<link rel="alternate" hreflang="en" href="index-en.html">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+  :root {
+    --bg: #FAFAF8;
+    --bg-warm: #F5F3EF;
+    --bg-dark: #0C1220;
+    --navy: #0C1220;
+    --navy-light: #1A2744;
+    --ink: #1A1A2E;
+    --text: #2D2D3A;
+    --text-light: #6B6B80;
+    --text-muted: #9B9BAE;
+    --accent: #4338CA;
+    --accent-light: #6366F1;
+    --accent-soft: rgba(67,56,202,0.08);
+    --green: #059669;
+    --green-soft: rgba(5,150,105,0.08);
+    --gold: #B8860B;
+    --white: #FFFFFF;
+    --border: #E8E6E1;
+    --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); overflow-x: hidden; }
+  ::selection { background: rgba(67,56,202,0.15); }
+  img { display: block; }
+  a { text-decoration: none; }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0; transform: translateY(24px);
+    transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+  @keyframes fadeInLine { to { opacity: 1; } }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* Section Label */
+  .section-label {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; display: inline-block; margin-bottom: 16px;
+  }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid transparent;
+  }
+  nav.scrolled {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(24px) saturate(180%);
+    border-bottom-color: var(--border);
+  }
+  nav .inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between; height: 72px;
+  }
+  nav .logo { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: #fff; transition: color 0.4s; }
+  nav .logo span { font-weight: 300; }
+  nav.scrolled .logo { color: var(--navy); }
+  nav .links { display: flex; align-items: center; gap: 36px; }
+  nav .links a.nav-link {
+    font-size: 14px; font-weight: 450; transition: color 0.3s;
+    color: rgba(255,255,255,0.7); letter-spacing: 0.01em;
+  }
+  nav.scrolled .links a.nav-link { color: var(--text-light); }
+  nav .links a.nav-link:hover { color: #fff; }
+  nav.scrolled .links a.nav-link:hover { color: var(--navy); }
+  nav .cta-nav {
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; padding: 10px 24px; border-radius: 100px;
+    font-size: 14px; font-weight: 500; transition: all 0.3s;
+  }
+  nav.scrolled .cta-nav {
+    background: var(--navy); border-color: var(--navy);
+  }
+  .lang-switch {
+    display: flex; align-items: center; gap: 4px;
+    margin-left: 8px; font-size: 13px; font-weight: 500;
+  }
+  .lang-switch a {
+    color: rgba(255,255,255,0.4); transition: color 0.3s; padding: 4px 6px; border-radius: 4px;
+  }
+  .lang-switch a.active { color: #fff; background: rgba(255,255,255,0.12); }
+  .lang-switch a:hover { color: #fff; }
+  nav.scrolled .lang-switch a { color: var(--text-muted); }
+  nav.scrolled .lang-switch a.active { color: var(--navy); background: var(--accent-soft); }
+  nav.scrolled .lang-switch a:hover { color: var(--navy); }
+  .lang-sep { color: rgba(255,255,255,0.2); font-size: 12px; }
+  nav.scrolled .lang-sep { color: var(--border); }
+
+  /* Hero */
+  .hero {
+    position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80') center/cover;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(12,18,32,0.88) 0%, rgba(26,39,68,0.82) 50%, rgba(12,18,32,0.75) 100%);
+  }
+  .hero .content {
+    position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;
+    padding: 140px 32px 100px; width: 100%;
+  }
+  .hero .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 18px; border-radius: 100px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 36px;
+  }
+  .hero .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #10B981; }
+  .hero .badge span { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 450; }
+  .hero h1 {
+    font-size: clamp(40px, 5vw, 64px); font-weight: 300;
+    line-height: 1.1; letter-spacing: -0.03em;
+    color: #fff; margin-bottom: 28px; font-family: var(--serif); max-width: 780px;
+  }
+  .hero h1 em { font-weight: 600; font-style: italic; }
+  .hero .sub {
+    font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.7;
+    max-width: 600px; margin-bottom: 44px; font-weight: 350;
+  }
+  .hero .sub strong { color: #fff; }
+  .hero .ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-white {
+    background: #fff; color: var(--navy); padding: 16px 36px; border-radius: 100px;
+    font-size: 15px; font-weight: 600; transition: all 0.3s;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  }
+  .btn-white:hover { transform: translateY(-2px); }
+  .btn-outline {
+    color: #fff; padding: 16px 36px; border-radius: 100px;
+    font-size: 15px; font-weight: 450; border: 1px solid rgba(255,255,255,0.25);
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+  .hero .stats {
+    display: flex; gap: 56px; margin-top: 80px; padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.12); flex-wrap: wrap;
+  }
+  .hero .stat-val {
+    font-size: 32px; font-weight: 600; color: #fff; letter-spacing: -0.02em;
+    font-family: var(--serif);
+  }
+  .hero .stat-label {
+    font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 6px;
+    font-weight: 450; letter-spacing: 0.04em;
+  }
+
+  /* Problem */
+  .problem { background: var(--bg); padding: 120px 32px; }
+  .problem .grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .problem h2, .solution h2, .expertise h2, .pricing h2, .diagnostic h2,
+  .insights h2, .trust h2, .newsletter h3, .final-cta h2 {
+    font-family: var(--serif); color: var(--navy); letter-spacing: -0.02em;
+  }
+  .problem h2 { font-size: 36px; font-weight: 300; line-height: 1.2; }
+  .problem h2 em { font-weight: 600; font-style: italic; }
+  .problem p.desc { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
+  .problem .items { margin-top: 40px; display: flex; flex-direction: column; gap: 24px; }
+  .problem .item { display: flex; gap: 16px; align-items: flex-start; }
+  .problem .item-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .problem .item-title { font-size: 16px; font-weight: 600; color: var(--navy); }
+  .problem .item-desc { font-size: 15px; color: var(--text-light); margin-top: 4px; line-height: 1.6; }
+
+  .problem .photo-wrap {
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.08);
+  }
+  .problem .photo-wrap img { width: 100%; height: 500px; object-fit: cover; }
+
+  /* Solution / Process */
+  .solution { background: var(--white); padding: 120px 32px; }
+  .solution .inner { max-width: 1100px; margin: 0 auto; }
+  .solution .center { text-align: center; margin-bottom: 80px; }
+  .solution h2 { font-size: 42px; font-weight: 300; line-height: 1.2; }
+  .solution h2 em { font-weight: 600; font-style: italic; }
+  .solution .center p { font-size: 16px; color: var(--text-light); margin-top: 20px; max-width: 680px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+  .pillar-card {
+    display: grid; gap: 0; border-radius: 20px; overflow: hidden;
+    background: var(--bg-warm); border: 1px solid var(--border);
+    transition: box-shadow 0.4s; margin-bottom: 32px;
+  }
+  .pillar-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.06); }
+  .pillar-card.left { grid-template-columns: 1fr 1.2fr; }
+  .pillar-card.right { grid-template-columns: 1.2fr 1fr; }
+  .pillar-card img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
+  .pillar-text { padding: 48px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .pillar-step {
+    font-size: 60px; font-weight: 200; color: rgba(12,18,32,0.06);
+    font-family: var(--serif); line-height: 1; margin-bottom: 8px;
+  }
+  .pillar-title { font-size: 24px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .pillar-who {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--accent); margin-bottom: 16px;
+  }
+  .pillar-desc { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+
+  .process-flow {
+    margin-top: 48px; padding: 20px 32px; border-radius: 100px;
+    background: var(--bg-warm); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px; flex-wrap: wrap; font-size: 12px; font-weight: 500;
+  }
+  .flow-step {
+    padding: 4px 12px; border-radius: 100px;
+    background: var(--white); border: 1px solid var(--border);
+    color: var(--navy); white-space: nowrap;
+  }
+  .flow-arrow { color: var(--text-muted); }
+
+  /* Expertise */
+  .expertise { background: var(--bg-warm); padding: 120px 32px; }
+  .expertise .inner { max-width: 1100px; margin: 0 auto; }
+  .expertise .center { text-align: center; margin-bottom: 64px; }
+  .expertise h2 { font-size: 42px; font-weight: 300; line-height: 1.2; }
+  .expertise h2 em { font-weight: 600; font-style: italic; }
+  .expertise .center p { font-size: 16px; color: var(--text-light); margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+  .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
+  .tab-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 100px; border: none; cursor: pointer;
+    font-size: 13px; font-weight: 500; font-family: var(--sans);
+    transition: all 0.3s;
+  }
+  .tab-btn.active {
+    background: var(--navy); color: #fff;
+    box-shadow: 0 4px 16px rgba(12,18,32,0.15);
+  }
+  .tab-btn:not(.active) {
+    background: var(--white); color: var(--text-light);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .expertise-card {
+    background: var(--white); border-radius: 24px; padding: 56px 60px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.04); border: 1px solid var(--border);
+  }
+  .expertise-card h3 { font-size: 26px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+  .expertise-card .expertise-desc { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 28px; }
+  .expertise-card .missions-label { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+  .missions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .mission-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 18px; border-radius: 14px;
+    border: 1px solid var(--border); transition: all 0.25s; cursor: default;
+  }
+  .mission-item:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .mission-icon {
+    width: 24px; height: 24px; border-radius: 8px; flex-shrink: 0; margin-top: 1px;
+    background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: var(--accent); font-weight: 700;
+  }
+  .mission-item span { font-size: 14px; color: var(--text); line-height: 1.55; }
+
+  .expertise-card .pricing-line {
+    margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
+    font-size: 15px; color: var(--green); font-weight: 600;
+  }
+
+  .btn-navy {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 32px; border-radius: 100px;
+    background: var(--navy); color: #fff;
+    font-size: 14px; font-weight: 600; transition: all 0.3s; margin-top: 24px;
+  }
+  .btn-navy:hover { background: var(--navy-light); }
+
+  /* Pricing */
+  .pricing {
+    background: var(--bg-dark); padding: 120px 32px;
+    position: relative; overflow: hidden;
+  }
+  .pricing-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1400&q=80') center/cover;
+    opacity: 0.06;
+  }
+  .pricing .inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+  .pricing .center { text-align: center; margin-bottom: 64px; }
+  .pricing h2 { font-size: 42px; font-weight: 300; line-height: 1.2; color: #fff; }
+  .pricing h2 em { font-weight: 600; font-style: italic; }
+  .pricing .center p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+  .pricing-table {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px; overflow: hidden;
+    backdrop-filter: blur(20px);
+  }
+  .pricing-header {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .pricing-header > div { padding: 24px 32px; }
+  .pricing-header .col-label {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+    font-weight: 600; margin-bottom: 8px;
+  }
+  .pricing-header .col-price { font-size: 28px; font-family: var(--serif); }
+  .col-old .col-label { color: rgba(255,255,255,0.35); }
+  .col-old .col-price { color: rgba(255,255,255,0.5); font-weight: 300; }
+  .col-new { border-left: 1px solid rgba(255,255,255,0.06); background: rgba(99,102,241,0.06); text-align: center; }
+  .col-new .col-label { color: var(--accent-light); }
+  .col-new .col-price { color: #fff; font-weight: 600; }
+  .col-old { border-left: 1px solid rgba(255,255,255,0.06); text-align: center; }
+
+  .pricing-row {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .pricing-row:last-child { border-bottom: none; }
+  .pricing-row > div { padding: 16px 32px; font-size: 14px; }
+  .pricing-row .row-label { font-weight: 500; color: rgba(255,255,255,0.6); }
+  .pricing-row .row-old {
+    color: rgba(255,255,255,0.35); text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.04);
+  }
+  .pricing-row .row-new {
+    color: var(--green); font-weight: 600; text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.04);
+    background: rgba(99,102,241,0.03);
+  }
+  .pricing-cta { padding: 28px 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .pricing-note { font-size: 13px; color: rgba(255,255,255,0.35); text-align: center; }
+
+  /* Diagnostic */
+  .diagnostic { background: var(--bg); padding: 120px 32px; }
+  .diagnostic .inner { max-width: 680px; margin: 0 auto; }
+  .diagnostic .center { text-align: center; margin-bottom: 48px; }
+  .diagnostic h2 { font-size: 40px; font-weight: 300; line-height: 1.2; }
+  .diagnostic h2 em { font-weight: 600; font-style: italic; }
+  .diagnostic .center p { font-size: 16px; color: var(--text-light); margin-top: 16px; line-height: 1.6; }
+
+  .diag-card {
+    background: var(--white); border-radius: 24px; padding: 52px;
+    box-shadow: 0 16px 64px rgba(0,0,0,0.06);
+    border: 1px solid var(--border); position: relative; overflow: hidden;
+  }
+  .diag-progress {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--border);
+  }
+  .diag-progress-bar {
+    height: 100%; background: linear-gradient(90deg, var(--accent), #A855F7);
+    transition: width 0.5s ease; border-radius: 0 2px 2px 0;
+  }
+  .diag-step { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-weight: 500; }
+  .diag-question { font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 32px; line-height: 1.3; }
+  .diag-options { display: flex; flex-direction: column; gap: 10px; }
+  .diag-option {
+    padding: 16px 20px; border-radius: 14px; text-align: left;
+    background: var(--bg); border: 1px solid var(--border);
+    color: var(--text); font-size: 15px; font-weight: 450; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; gap: 14px;
+    font-family: var(--sans);
+  }
+  .diag-option:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .diag-option-key {
+    width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+    background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--accent);
+  }
+
+  .diag-analyzing { text-align: center; padding: 40px 0; }
+  .diag-analyzing .brain { font-size: 40px; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
+  .diag-lines { max-width: 340px; margin: 28px auto 0; text-align: left; }
+  .diag-line { color: var(--green); font-size: 14px; font-weight: 500; margin-bottom: 10px; opacity: 0; }
+
+  .diag-result-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .diag-check {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--green-soft); display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .diag-result-title { font-size: 22px; font-weight: 600; color: var(--navy); }
+  .diag-result-sub { font-size: 13px; color: var(--text-muted); }
+  .diag-missions-label {
+    font-size: 13px; font-weight: 600; color: var(--accent);
+    margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .diag-mission {
+    display: flex; align-items: center; gap: 10px; padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .diag-mission:last-child { border-bottom: none; }
+  .diag-mission .arrow { color: var(--accent); }
+
+  .diag-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 28px 0 32px; }
+  .diag-metric {
+    padding: 18px; border-radius: 14px; background: var(--bg-warm);
+    border: 1px solid var(--border); text-align: center;
+  }
+  .diag-metric-label {
+    font-size: 11px; color: var(--text-muted); margin-bottom: 6px;
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+  }
+  .diag-metric-value { font-size: 15px; font-weight: 700; color: var(--navy); }
+
+  .diag-actions { display: flex; gap: 12px; }
+  .diag-actions .primary {
+    flex: 1; text-align: center; padding: 14px 28px; border-radius: 100px;
+    background: var(--navy); color: #fff; font-size: 15px; font-weight: 600;
+    border: none; cursor: pointer; font-family: var(--sans);
+  }
+  .diag-actions .secondary {
+    padding: 14px 20px; border-radius: 100px; background: transparent;
+    border: 1px solid var(--border); color: var(--text-light);
+    font-size: 14px; cursor: pointer; font-family: var(--sans);
+  }
+
+  /* Insights */
+  .insights { background: var(--white); padding: 120px 32px; }
+  .insights .inner { max-width: 1100px; margin: 0 auto; }
+  .insights .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+  .insights h2 { font-size: 40px; font-weight: 300; }
+  .insights h2 em { font-weight: 600; font-style: italic; }
+  .insights .center-desc { font-size: 16px; color: var(--text-light); margin-top: 12px; max-width: 600px; line-height: 1.7; }
+  .insights .view-all { font-size: 14px; color: var(--accent); font-weight: 500; }
+
+  .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .article-card {
+    border-radius: 20px; overflow: hidden;
+    border: 1px solid var(--border); background: var(--white);
+    transition: all 0.4s; cursor: pointer;
+  }
+  .article-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.08); }
+  .article-card .photo { height: 200px; overflow: hidden; }
+  .article-card .photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+  .article-card:hover .photo img { transform: scale(1.05); }
+  .article-card .body { padding: 28px; }
+  .article-tag {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px;
+  }
+  .article-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+  .article-card h3 { font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
+  .article-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+  .article-link { display: inline-block; margin-top: 14px; font-size: 14px; color: var(--accent); font-weight: 500; }
+
+  /* Trust */
+  .trust { background: var(--bg-warm); padding: 100px 32px; }
+  .trust .inner { max-width: 1100px; margin: 0 auto; }
+  .trust .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .trust .photo-wrap { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.08); }
+  .trust .photo-wrap img { width: 100%; height: 400px; object-fit: cover; }
+  .trust h2 { font-size: 34px; font-weight: 300; line-height: 1.25; margin-bottom: 20px; }
+  .trust h2 em { font-weight: 600; font-style: italic; }
+  .trust .desc { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
+  .trust .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+  .trust .stat { padding-top: 20px; border-top: 2px solid var(--border); }
+  .trust .stat-val { font-size: 28px; font-weight: 600; color: var(--navy); font-family: var(--serif); }
+  .trust .stat-label {
+    font-size: 13px; color: var(--text-muted); margin-top: 4px;
+    letter-spacing: 0.04em; font-weight: 500;
+  }
+
+  /* Newsletter */
+  .newsletter { background: var(--white); padding: 80px 32px; }
+  .newsletter .card {
+    max-width: 640px; margin: 0 auto; text-align: center;
+    padding: 56px 52px; border-radius: 24px;
+    background: var(--bg-warm); border: 1px solid var(--border);
+  }
+  .newsletter h3 { font-size: 26px; font-weight: 300; line-height: 1.3; }
+  .newsletter h3 em { font-weight: 600; font-style: italic; }
+  .newsletter p { font-size: 15px; color: var(--text-light); margin-top: 12px; margin-bottom: 32px; line-height: 1.6; }
+  .newsletter .form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
+  .newsletter input {
+    flex: 1; padding: 14px 18px; border-radius: 100px;
+    border: 1px solid var(--border); background: var(--white);
+    font-size: 15px; color: var(--text); outline: none; font-family: var(--sans);
+  }
+  .newsletter input::placeholder { color: var(--text-muted); }
+  .newsletter button {
+    padding: 14px 28px; border-radius: 100px; border: none;
+    background: var(--navy); color: #fff; font-size: 14px; font-weight: 600;
+    cursor: pointer; white-space: nowrap; font-family: var(--sans);
+  }
+  .newsletter .note { font-size: 13px; color: var(--text-muted); margin-top: 16px; }
+  .newsletter .success {
+    padding: 14px 24px; border-radius: 100px;
+    background: var(--green-soft); border: 1px solid rgba(5,150,105,0.2);
+    color: var(--green); font-size: 15px; font-weight: 500;
+  }
+
+  /* Final CTA */
+  .final-cta { position: relative; padding: 140px 32px; overflow: hidden; }
+  .final-cta .bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1400&q=80') center/cover;
+  }
+  .final-cta .overlay { position: absolute; inset: 0; background: rgba(12,18,32,0.88); }
+  .final-cta .content {
+    max-width: 720px; margin: 0 auto; text-align: center;
+    position: relative; z-index: 2;
+  }
+  .final-cta h2 { font-size: clamp(32px, 4.5vw, 48px); font-weight: 300; line-height: 1.15; color: #fff; margin-bottom: 24px; }
+  .final-cta h2 em { font-weight: 600; font-style: italic; }
+  .final-cta p { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 44px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .final-cta .ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .final-cta .cta-note { font-size: 14px; color: rgba(255,255,255,0.4); }
+
+  /* Footer */
+  footer {
+    background: var(--bg-dark); padding: 64px 32px 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  footer .inner {
+    max-width: 1100px; margin: 0 auto;
+  }
+  footer .footer-grid {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 48px;
+  }
+  footer .brand { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 8px; }
+  footer .brand span { font-weight: 300; }
+  footer .tagline { font-size: 14px; color: var(--accent-light); font-weight: 500; margin-bottom: 8px; }
+  footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  footer .footer-col-title {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 20px;
+  }
+  footer .footer-col a, footer .footer-col span {
+    display: block; font-size: 14px; color: rgba(255,255,255,0.4);
+    margin-bottom: 12px; transition: color 0.2s;
+  }
+  footer .footer-col a:hover { color: #fff; }
+  footer .footer-bottom {
+    padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  footer .copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  footer .legal-links { display: flex; gap: 24px; }
+  footer .legal-links a { font-size: 12px; color: rgba(255,255,255,0.25); }
+  footer .legal-links a:hover { color: rgba(255,255,255,0.5); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .problem .grid, .trust .grid { grid-template-columns: 1fr; gap: 40px; }
+    .pillar-card.left, .pillar-card.right { grid-template-columns: 1fr; }
+    .missions-grid { grid-template-columns: 1fr; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .pricing-header, .pricing-row { grid-template-columns: 1fr; }
+    .hero .stats { gap: 32px; }
+    .diag-metrics { grid-template-columns: 1fr; }
+    nav .links a.nav-link { display: none; }
+    footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .process-flow { border-radius: 20px; padding: 16px 20px; }
+    .expertise-card { padding: 32px 24px; }
+    .pillar-text { padding: 32px 28px; }
+    .diag-card { padding: 32px 24px; }
+  }
+  @media (max-width: 480px) {
+    footer .footer-grid { grid-template-columns: 1fr; }
+    .diag-actions { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="inner">
+    <a href="#hero" class="logo">Hyme<span>ria</span></a>
+    <div class="links">
+      <a href="#modele" class="nav-link">Mod&egrave;le</a>
+      <a href="#expertises" class="nav-link">Expertises</a>
+      <a href="#tarifs" class="nav-link">Tarifs</a>
+      <a href="#insights" class="nav-link">Insights</a>
+      <a href="#diagnostic" class="cta-nav">Diagnostic IA</a>
+      <div class="lang-switch">
+        <a href="index-fr.html" class="active">FR</a>
+        <span class="lang-sep">|</span>
+        <a href="index-en.html">EN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="content">
+    <div class="fade-in">
+      <div class="badge">
+        <div class="badge-dot"></div>
+        <span>Consulting as a Service &mdash; Propuls&eacute; par l'IA</span>
+      </div>
+    </div>
+    <div class="fade-in" style="transition-delay:120ms">
+      <h1>Le conseil strat&eacute;gique, <em>r&eacute;invent&eacute; par l'intelligence artificielle</em></h1>
+    </div>
+    <div class="fade-in" style="transition-delay:240ms">
+      <p class="sub">Hymeria combine des agents IA sp&eacute;cialis&eacute;s et la validation d'experts seniors pour livrer des missions de conseil <strong>en jours, pas en mois</strong>. La rigueur d'un grand cabinet. L'agilit&eacute; de la technologie.</p>
+    </div>
+    <div class="fade-in" style="transition-delay:360ms">
+      <div class="ctas">
+        <a href="#modele" class="btn-white">D&eacute;couvrir notre mod&egrave;le</a>
+        <a href="#diagnostic" class="btn-outline">Lancer votre diagnostic IA gratuit</a>
+      </div>
+    </div>
+    <div class="fade-in" style="transition-delay:500ms">
+      <div class="stats">
+        <div><div class="stat-val">5&times;</div><div class="stat-label">plus rapide qu'un cabinet traditionnel</div></div>
+        <div><div class="stat-val">70%</div><div class="stat-label">de co&ucirc;ts en moins en moyenne</div></div>
+        <div><div class="stat-val">92%</div><div class="stat-label">de recommandations actionnables</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEME -->
+<section class="problem">
+  <div class="grid">
+    <div class="fade-in">
+      <span class="section-label" style="color:var(--accent)">Le conseil strat&eacute;gique est cass&eacute;</span>
+      <h2>Pourquoi 73% des dirigeants jugent le conseil traditionnel <em>inadapt&eacute; &agrave; leur r&eacute;alit&eacute;</em></h2>
+      <p class="desc">Les cabinets de conseil traditionnels ont &eacute;t&eacute; con&ccedil;us pour un monde qui n'existe plus. D&eacute;lais interminables, tarifs prohibitifs, recommandations g&eacute;n&eacute;riques : le mod&egrave;le classique ne r&eacute;pond plus aux besoins d'entreprises qui doivent d&eacute;cider vite et agir imm&eacute;diatement.</p>
+      <div class="items">
+        <div class="item">
+          <span class="item-icon">&9201;</span>
+          <div>
+            <div class="item-title">4 &agrave; 12 semaines pour un livrable</div>
+            <div class="item-desc">Quand votre march&eacute; bouge en temps r&eacute;el, attendre trois mois pour une &eacute;tude strat&eacute;gique n'est pas un processus &mdash; c'est un handicap. Vos concurrents n'attendent pas vos consultants.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="item-icon">&128176;</span>
+          <div>
+            <div class="item-title">50 000 &euro; &agrave; 500 000 &euro; la mission</div>
+            <div class="item-desc">Des honoraires qui excluent de fait les ETI, les PME ambitieuses et les startups en croissance. L'expertise strat&eacute;gique ne devrait pas &ecirc;tre un privil&egrave;ge r&eacute;serv&eacute; au CAC 40.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="item-icon">&128196;</span>
+          <div>
+            <div class="item-title">Des slides magnifiques, z&eacute;ro ex&eacute;cution</div>
+            <div class="item-desc">Des rapports de 200 pages que personne ne lit. Des recommandations th&eacute;oriques d&eacute;connect&eacute;es de votre r&eacute;alit&eacute; op&eacute;rationnelle. Le conseil traditionnel produit du savoir. Hymeria produit de l'action.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in" style="transition-delay:200ms">
+      <div class="photo-wrap">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Immeubles modernes" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELE / PROCESSUS -->
+<section class="solution" id="modele">
+  <div class="inner">
+    <div class="center fade-in">
+      <span class="section-label" style="color:var(--green)">Comment &ccedil;a marche</span>
+      <h2>L'intelligence artificielle produit. <em>L'expert valide. Vous d&eacute;cidez.</em></h2>
+      <p>Hymeria a con&ccedil;u un mod&egrave;le de consulting enti&egrave;rement nouveau. Nos agents IA sp&eacute;cialis&eacute;s r&eacute;alisent 90% du travail analytique &mdash; recherche, mod&eacute;lisation, synth&egrave;se &mdash; avant qu'un expert senior ne valide, enrichisse et contextualise chaque livrable. R&eacute;sultat : la qualit&eacute; d'un tier-one, livr&eacute;e en jours, &agrave; une fraction du co&ucirc;t.</p>
+    </div>
+
+    <div class="fade-in">
+      <div class="pillar-card left">
+        <div class="pillar-text">
+          <div class="pillar-step">01</div>
+          <div class="pillar-title">Qualification strat&eacute;gique</div>
+          <div class="pillar-who">Directeur de mission + Client</div>
+          <div class="pillar-desc">Chaque mission d&eacute;marre par un cadrage pr&eacute;cis avec un directeur de mission. Objectifs, p&eacute;rim&egrave;tre, livrables attendus, contraintes sectorielles : rien n'est laiss&eacute; au hasard. Ce cadrage humain garantit que nos agents IA travaillent sur les bonnes questions.</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="R&eacute;union de cadrage" />
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:150ms">
+      <div class="pillar-card right">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analyse de donn&eacute;es" />
+        <div class="pillar-text">
+          <div class="pillar-step">02</div>
+          <div class="pillar-title">Production par agents IA</div>
+          <div class="pillar-who">Pipeline d'agents IA (~90%)</div>
+          <div class="pillar-desc">Nos pipelines d'agents IA sp&eacute;cialis&eacute;s collectent, analysent et synth&eacute;tisent les donn&eacute;es &agrave; une &eacute;chelle et une vitesse impossibles pour une &eacute;quipe humaine. Chaque agent est entra&icirc;n&eacute; sur un domaine d'expertise : analyse financi&egrave;re, &eacute;tude concurrentielle, mod&eacute;lisation march&eacute;, audit technique.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:300ms">
+      <div class="pillar-card left">
+        <div class="pillar-text">
+          <div class="pillar-step">03</div>
+          <div class="pillar-title">Validation par un expert senior</div>
+          <div class="pillar-who">Consultant senior (+15 ans)</div>
+          <div class="pillar-desc">Chaque livrable est revu, enrichi et valid&eacute; par un consultant senior (+15 ans d'exp&eacute;rience). L'expert apporte le jugement, la nuance sectorielle et la vision strat&eacute;gique que l'IA ne peut pas reproduire. C'est cette combinaison qui fait la diff&eacute;rence.</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Expert senior" />
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:400ms">
+      <div class="process-flow">
+        <span class="flow-step">Brief strat&eacute;gique</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Cadrage m&eacute;thodo.</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Collecte augment&eacute;e</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Analyse multi-dim.</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Synth&egrave;se strat&eacute;gique</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Validation expert</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Livraison</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Suivi 30j</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISES -->
+<section class="expertise" id="expertises">
+  <div class="inner">
+    <div class="center fade-in">
+      <span class="section-label" style="color:var(--accent)">6 p&ocirc;les d'excellence</span>
+      <h2>L'expertise strat&eacute;gique, <em>augment&eacute;e par l'IA</em></h2>
+      <p>Chaque p&ocirc;le combine la puissance analytique de nos agents IA avec l'exp&eacute;rience de consultants seniors sp&eacute;cialis&eacute;s. S&eacute;lectionnez un domaine pour d&eacute;couvrir nos missions types.</p>
+    </div>
+
+    <div class="fade-in" style="transition-delay:100ms">
+      <div class="tabs" id="expertiseTabs"></div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:200ms">
+      <div class="expertise-card" id="expertiseCard"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFICATION -->
+<section class="pricing" id="tarifs">
+  <div class="pricing-bg"></div>
+  <div class="inner">
+    <div class="center fade-in">
+      <span class="section-label" style="color:rgba(255,255,255,0.4)">Investissement transparent</span>
+      <h2>La qualit&eacute; d'un grand cabinet, <em>sans le grand budget</em></h2>
+      <p>Nous croyons que l'expertise strat&eacute;gique doit &ecirc;tre accessible. Gr&acirc;ce &agrave; notre mod&egrave;le augment&eacute; par l'IA, nous r&eacute;duisons drastiquement les co&ucirc;ts de production sans jamais compromettre la qualit&eacute;.</p>
+    </div>
+
+    <div class="fade-in" style="transition-delay:200ms">
+      <div class="pricing-table">
+        <div class="pricing-header">
+          <div></div>
+          <div class="col-old">
+            <div class="col-label">Cabinet traditionnel</div>
+            <div class="col-price">50K&euro; &mdash; 500K&euro;</div>
+          </div>
+          <div class="col-new">
+            <div class="col-label">Hymeria</div>
+            <div class="col-price">5K&euro; &mdash; 15K&euro;</div>
+          </div>
+        </div>
+        <div id="pricingRows"></div>
+        <div class="pricing-cta">
+          <a href="#diagnostic" class="btn-white" style="font-size:15px;padding:14px 36px">Demander un devis personnalis&eacute; &rarr;</a>
+          <div class="pricing-note">Tous les prix sont indiqu&eacute;s HT. Devis personnalis&eacute; sous 24h. Pas d'engagement longue dur&eacute;e.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSTIC IA -->
+<section class="diagnostic" id="diagnostic">
+  <div class="inner">
+    <div class="center fade-in">
+      <span class="section-label" style="color:var(--green)">Outil interactif</span>
+      <h2>&Eacute;valuez votre maturit&eacute; strat&eacute;gique <em>en 2 minutes</em></h2>
+      <p>Notre diagnostic IA analyse votre situation en 4 questions cl&eacute;s et g&eacute;n&egrave;re des recommandations personnalis&eacute;es. Gratuit, sans engagement, instantan&eacute;.</p>
+    </div>
+
+    <div class="fade-in" style="transition-delay:150ms">
+      <div class="diag-card" id="diagCard">
+        <div class="diag-progress"><div class="diag-progress-bar" id="diagProgress" style="width:0%"></div></div>
+        <div id="diagContent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights" id="insights">
+  <div class="inner">
+    <div class="header fade-in">
+      <div>
+        <span class="section-label" style="color:var(--accent)">Perspectives strat&eacute;giques</span>
+        <h2>Analyses et points de vue <em>pour d&eacute;cideurs</em></h2>
+        <p class="center-desc">Nos experts et nos agents IA publient r&eacute;guli&egrave;rement des analyses approfondies sur les enjeux strat&eacute;giques qui transforment les industries.</p>
+      </div>
+      <a href="#" class="view-all">Voir tout &rarr;</a>
+    </div>
+    <div class="articles-grid fade-in" style="transition-delay:150ms">
+      <article class="article-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" alt="Technologie" /></div>
+        <div class="body">
+          <div class="article-tag">Strat&eacute;gie</div>
+          <div class="article-meta">8 min de lecture</div>
+          <h3>Pourquoi le consulting traditionnel ne survivra pas &agrave; l'&egrave;re de l'IA</h3>
+          <p>L'industrie du conseil strat&eacute;gique n'a pas fondamentalement chang&eacute; depuis 50 ans. L'arriv&eacute;e de l'IA g&eacute;n&eacute;rative change la donne.</p>
+          <span class="article-link">Lire l'article &rarr;</span>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Strat&eacute;gie" /></div>
+        <div class="body">
+          <div class="article-tag">Intelligence artificielle</div>
+          <div class="article-meta">6 min de lecture</div>
+          <h3>Dirigeants : comment exploiter l'IA sans d&eacute;pendre d'un consultant</h3>
+          <p>L'IA n'est pas un outil de plus. C'est un changement de paradigme dans la fa&ccedil;on de prendre des d&eacute;cisions strat&eacute;giques.</p>
+          <span class="article-link">Lire l'article &rarr;</span>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="R&eacute;glementation" /></div>
+        <div class="body">
+          <div class="article-tag">R&eacute;glementation</div>
+          <div class="article-meta">10 min de lecture</div>
+          <h3>CSRD, AI Act, NIS2 : les r&eacute;glementations qui vont transformer votre business en 2026</h3>
+          <p>Trois r&eacute;glementations europ&eacute;ennes majeures entrent en application cette ann&eacute;e. Quels impacts concrets pour votre entreprise ?</p>
+          <span class="article-link">Lire l'article &rarr;</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="trust">
+  <div class="inner">
+    <div class="grid fade-in">
+      <div class="photo-wrap">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="&Eacute;quipe d'experts" />
+      </div>
+      <div>
+        <span class="section-label" style="color:var(--gold)">Pourquoi nous faire confiance</span>
+        <h2>L'exigence d'un grand cabinet. <em>L'agilit&eacute; de l'IA.</em></h2>
+        <p class="desc">Hymeria est n&eacute; d'un constat simple : l'intelligence artificielle peut faire 90% du travail analytique d'un consultant, mais les 10% restants &mdash; le jugement, la nuance, l'intuition strat&eacute;gique &mdash; restent irremplacables. Notre mod&egrave;le unit le meilleur des deux mondes.</p>
+        <p class="desc">Nos experts sont issus des plus grands cabinets de conseil (McKinsey, BCG, Bain, Roland Berger) et des directions strat&eacute;giques de grands groupes. Ils ne produisent pas &mdash; ils valident, enrichissent et garantissent la qualit&eacute; de chaque livrable.</p>
+        <div class="stats-grid">
+          <div class="stat"><div class="stat-val">90%</div><div class="stat-label">de la production par nos agents IA</div></div>
+          <div class="stat"><div class="stat-val">100%</div><div class="stat-label">des livrables valid&eacute;s par un expert senior</div></div>
+          <div class="stat"><div class="stat-val">48h</div><div class="stat-label">d&eacute;lai moyen premiers r&eacute;sultats</div></div>
+          <div class="stat"><div class="stat-val">15+</div><div class="stat-label">ann&eacute;es d'exp&eacute;rience de nos experts</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="card fade-in">
+    <span class="section-label" style="color:var(--accent)">Newsletter</span>
+    <h3>L'intelligence strat&eacute;gique, chaque semaine <em>dans votre inbox</em></h3>
+    <p>Recevez nos analyses exclusives, tendances sectorielles et cas d'&eacute;tude directement dans votre bo&icirc;te mail. Rejoignez les d&eacute;cideurs qui prennent une longueur d'avance.</p>
+    <div id="newsletterForm">
+      <div class="form">
+        <input type="email" id="nlEmail" placeholder="votre@email.com" />
+        <button onclick="submitNewsletter()">S'inscrire gratuitement</button>
+      </div>
+      <div class="note">Pas de spam. D&eacute;sinscription en un clic. ~5 min de lecture par semaine.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-cta" id="contact">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="content fade-in">
+    <h2>Pr&ecirc;t &agrave; red&eacute;finir votre approche du <em>conseil strat&eacute;gique ?</em></h2>
+    <p>Qu'il s'agisse d'une &eacute;tude de march&eacute;, d'un business plan ou d'un audit digital, Hymeria vous livre des r&eacute;sultats en jours, pas en mois. Parlez-nous de votre projet.</p>
+    <div class="ctas">
+      <a href="#contact" class="btn-white" style="padding:18px 40px;font-size:16px">R&eacute;server un appel strat&eacute;gique</a>
+      <a href="#diagnostic" class="btn-outline" style="padding:18px 32px;font-size:16px">Lancer votre diagnostic IA</a>
+    </div>
+    <div class="cta-note">30 minutes avec un directeur de mission. Gratuit. Sans engagement.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">Hyme<span>ria</span></div>
+        <div class="tagline">AI Consulting, Human Validated.</div>
+        <div class="brand-desc">Le conseil strat&eacute;gique augment&eacute; par l'intelligence artificielle.</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Expertises</div>
+        <a href="#expertises">&Eacute;tudes de march&eacute;</a>
+        <a href="#expertises">Market intelligence</a>
+        <a href="#expertises">Business plans</a>
+        <a href="#expertises">Audit digital</a>
+        <a href="#expertises">Impact r&eacute;glementaire</a>
+        <a href="#expertises">Strat&eacute;gie RH</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Entreprise</div>
+        <a href="#modele">Notre mod&egrave;le</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <a href="mailto:contact@hymeria.com">contact@hymeria.com</a>
+        <span>Paris &middot; New York</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copy">&copy; 2026 Hymeria. Tous droits r&eacute;serv&eacute;s.</div>
+      <div class="legal-links">
+        <a href="#">Mentions l&eacute;gales</a>
+        <a href="#">Politique de confidentialit&eacute;</a>
+        <a href="#">CGU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Expertise Tabs
+const expertiseData = [
+  {
+    id: "marche",
+    label: "\u00C9tudes de march\u00E9",
+    icon: "\uD83D\uDCCA",
+    desc: "Comprendre un march\u00E9, identifier les opportunit\u00E9s, anticiper les \u00E9volutions : nos agents IA analysent des milliers de sources en temps r\u00E9el pour vous livrer une vision claire et actionnable.",
+    missions: [
+      "\u00C9tude de march\u00E9 compl\u00E8te (taille, segments, tendances, acteurs)",
+      "Analyse d\u2019opportunit\u00E9 pour un lancement produit / expansion g\u00E9ographique",
+      "Benchmark concurrentiel approfondi (positionnement, pricing, strat\u00E9gie)",
+      "Cartographie de l\u2019\u00E9cosyst\u00E8me et identification de partenaires strat\u00E9giques",
+      "\u00C9tude de faisabilit\u00E9 march\u00E9 pour investisseurs et comit\u00E9s de direction"
+    ],
+    pricing: "\u00C0 partir de 5\u00A0000\u00A0\u20AC \u00B7 Livraison en 5\u20137 jours"
+  },
+  {
+    id: "intelligence",
+    label: "Market intelligence",
+    icon: "\uD83D\uDD0D",
+    desc: "Dans un monde o\u00F9 l\u2019information est abondante mais l\u2019intelligence rare, nos agents IA filtrent le bruit pour extraire les signaux faibles qui comptent.",
+    missions: [
+      "Mise en place d\u2019un dispositif de veille concurrentielle automatis\u00E9",
+      "Analyse des signaux faibles et tendances \u00E9mergentes",
+      "Monitoring r\u00E9glementaire sectoriel (compliance, normes, directives)",
+      "Veille technologique et cartographie de l\u2019innovation",
+      "Rapports flash sur \u00E9v\u00E9nements march\u00E9 (M&A, lev\u00E9es de fonds, pivots strat\u00E9giques)"
+    ],
+    pricing: "\u00C0 partir de 3\u00A0000\u00A0\u20AC \u00B7 Livraison en 3\u20135 jours"
+  },
+  {
+    id: "business",
+    label: "Business plans",
+    icon: "\uD83D\uDCBC",
+    desc: "Un business plan n\u2019est pas un exercice de style \u2014 c\u2019est un outil de d\u00E9cision. Nos agents IA mod\u00E9lisent vos hypoth\u00E8ses financi\u00E8res tandis que nos experts challengent chaque projection.",
+    missions: [
+      "Business plan complet pour lev\u00E9e de fonds (seed, s\u00E9rie A, PE)",
+      "Mod\u00E9lisation financi\u00E8re 3\u20135 ans avec analyse de sensibilit\u00E9",
+      "Plan de d\u00E9veloppement strat\u00E9gique (PME, ETI)",
+      "Due diligence commerciale et strat\u00E9gique",
+      "\u00C9valuation d\u2019entreprise et sc\u00E9narios de valorisation"
+    ],
+    pricing: "\u00C0 partir de 5\u00A0000\u00A0\u20AC \u00B7 Livraison en 7\u201310 jours"
+  },
+  {
+    id: "digital",
+    label: "Audit digital",
+    icon: "\u2699\uFE0F",
+    desc: "Site web, application mobile, parcours client digital : nos agents IA scannent chaque point de contact pour identifier les frictions et les leviers de croissance. Int\u00E9gration des principes d\u2019\u00E9co-conception num\u00E9rique.",
+    missions: [
+      "Audit UX/UI complet de site web ou application mobile",
+      "Analyse du parcours client omnicanal (web, mobile, physique)",
+      "Audit d\u2019\u00E9co-conception num\u00E9rique et conformit\u00E9 RGESN",
+      "Benchmark digital sectoriel (exp\u00E9rience, performance, accessibilit\u00E9)",
+      "Recommandations de refonte et feuille de route d\u2019optimisation"
+    ],
+    pricing: "\u00C0 partir de 4\u00A0000\u00A0\u20AC \u00B7 Livraison en 5\u20137 jours"
+  },
+  {
+    id: "regulation",
+    label: "Impact r\u00E9glementaire",
+    icon: "\uD83D\uDCCB",
+    desc: "CSRD, AI Act, RGPD, DORA, NIS2 : chaque nouvelle r\u00E9glementation transforme votre environnement business. Nos agents IA cartographient les impacts sp\u00E9cifiques \u00E0 votre organisation.",
+    missions: [
+      "Analyse d\u2019impact r\u00E9glementaire (CSRD, AI Act, NIS2, DORA)",
+      "Diagnostic de conformit\u00E9 RGPD et plan de mise en conformit\u00E9",
+      "Cartographie des risques r\u00E9glementaires sectoriels",
+      "\u00C9valuation de l\u2019impact ESG et strat\u00E9gie de reporting",
+      "Veille r\u00E9glementaire automatis\u00E9e et syst\u00E8me d\u2019alerte"
+    ],
+    pricing: "\u00C0 partir de 4\u00A0000\u00A0\u20AC \u00B7 Livraison en 5\u20138 jours"
+  },
+  {
+    id: "rh",
+    label: "Strat\u00E9gie RH",
+    icon: "\uD83D\uDC65",
+    desc: "L\u2019IA transforme les m\u00E9tiers, les comp\u00E9tences et les organisations. Nos agents analysent votre capital humain et nos experts co-construisent avec vous une strat\u00E9gie RH align\u00E9e sur vos ambitions.",
+    missions: [
+      "Cartographie des comp\u00E9tences et plan de transformation (upskilling/reskilling)",
+      "Diagnostic organisationnel et recommandations de restructuration",
+      "Strat\u00E9gie marque employeur et proposition de valeur collaborateur",
+      "Analyse d\u2019impact IA sur les m\u00E9tiers et plan d\u2019accompagnement du changement",
+      "Benchmark RH sectoriel (r\u00E9mun\u00E9ration, avantages, pratiques)"
+    ],
+    pricing: "\u00C0 partir de 5\u00A0000\u00A0\u20AC \u00B7 Livraison en 7\u201310 jours"
+  },
+];
+
+let activeTab = 0;
+function renderExpertise() {
+  const tabsEl = document.getElementById('expertiseTabs');
+  tabsEl.innerHTML = expertiseData.map((c, i) =>
+    '<button class="tab-btn ' + (i === activeTab ? 'active' : '') + '" onclick="setTab(' + i + ')">' + c.icon + ' ' + c.label + '</button>'
+  ).join('');
+
+  const cat = expertiseData[activeTab];
+  const cardEl = document.getElementById('expertiseCard');
+  cardEl.innerHTML =
+    '<h3>' + cat.icon + '  ' + cat.label + '</h3>' +
+    '<div class="expertise-desc">' + cat.desc + '</div>' +
+    '<div class="missions-label">Missions types</div>' +
+    '<div class="missions-grid">' +
+      cat.missions.map(function(m) {
+        return '<div class="mission-item"><div class="mission-icon">\u2192</div><span>' + m + '</span></div>';
+      }).join('') +
+    '</div>' +
+    '<div class="pricing-line">\u2192 ' + cat.pricing + '</div>' +
+    '<a href="#diagnostic" class="btn-navy">Demander un devis \u2192</a>';
+}
+function setTab(i) { activeTab = i; renderExpertise(); }
+renderExpertise();
+
+// Pricing Rows
+const pricingData = [
+  { label: "D\u00E9lai moyen", old: "4 \u00E0 12 semaines", neu: "3 \u00E0 10 jours" },
+  { label: "Budget mission", old: "50K\u20AC \u2014 500K\u20AC", neu: "5K\u20AC \u2014 15K\u20AC" },
+  { label: "Profondeur d\u2019analyse", old: "Limit\u00E9e par l\u2019\u00E9quipe", neu: "Illimit\u00E9e (agents IA)" },
+  { label: "Sources analys\u00E9es", old: "10 \u2014 50 sources", neu: "1\u00A0000+ sources" },
+  { label: "Validation humaine", old: "Junior + Partner review", neu: "Expert senior d\u00E9di\u00E9" },
+  { label: "Support post-mission", old: "Factur\u00E9 en suppl\u00E9ment", neu: "30 jours inclus" },
+  { label: "Format livrables", old: "PDF / PowerPoint", neu: "Interactif + PDF" },
+];
+document.getElementById('pricingRows').innerHTML = pricingData.map(function(r) {
+  return '<div class="pricing-row"><div class="row-label">' + r.label + '</div><div class="row-old">' + r.old + '</div><div class="row-new">' + r.neu + '</div></div>';
+}).join('');
+
+// Diagnostic Tool
+const diagQuestions = [
+  {
+    q: "Quel est le d\u00E9fi strat\u00E9gique num\u00E9ro un de votre organisation aujourd\u2019hui ?",
+    opts: [
+      "Acc\u00E9l\u00E9rer la croissance (nouveaux march\u00E9s, lancement produit)",
+      "Optimiser la performance (co\u00FBts, processus, organisation)",
+      "G\u00E9rer une transformation (digitale, r\u00E9glementaire, organisationnelle)",
+      "Renforcer la comp\u00E9titivit\u00E9 (positionnement, diff\u00E9renciation)"
+    ]
+  },
+  {
+    q: "Dans quel secteur op\u00E9rez-vous ?",
+    opts: [
+      "Tech & SaaS",
+      "Services financiers & assurance",
+      "Sant\u00E9 & Life Sciences",
+      "Industrie & Manufacturing",
+      "Retail & e-commerce",
+      "Autre"
+    ]
+  },
+  {
+    q: "Quelle est la taille de votre organisation ?",
+    opts: [
+      "Startup / PME (< 50 collaborateurs)",
+      "ETI (50 \u2013 500 collaborateurs)",
+      "Grand groupe (500+ collaborateurs)"
+    ]
+  },
+  {
+    q: "Quel est votre horizon de d\u00E9cision ?",
+    opts: [
+      "Urgent \u2014 j\u2019ai besoin de r\u00E9sultats sous 2 semaines",
+      "Court terme \u2014 d\u00E9cision \u00E0 prendre dans le mois",
+      "Moyen terme \u2014 planification strat\u00E9gique \u00E0 3\u20136 mois",
+      "Exploratoire \u2014 je me renseigne"
+    ]
+  },
+];
+let diagStep = 0, diagAnswers = {};
+
+function renderDiag() {
+  const progress = document.getElementById('diagProgress');
+  const content = document.getElementById('diagContent');
+  progress.style.width = (diagStep / diagQuestions.length * 100) + '%';
+
+  const q = diagQuestions[diagStep];
+  content.innerHTML =
+    '<div class="diag-step">Question ' + (diagStep + 1) + ' sur ' + diagQuestions.length + '</div>' +
+    '<div class="diag-question">' + q.q + '</div>' +
+    '<div class="diag-options">' +
+      q.opts.map(function(o, i) {
+        return '<button class="diag-option" onclick="diagAnswer(\'' + o.replace(/'/g, "\\'") + '\')">' +
+          '<span class="diag-option-key">' + String.fromCharCode(65 + i) + '</span>' + o + '</button>';
+      }).join('') +
+    '</div>';
+}
+
+function diagAnswer(answer) {
+  diagAnswers[diagStep] = answer;
+  if (diagStep < diagQuestions.length - 1) {
+    diagStep++;
+    renderDiag();
+  } else {
+    showAnalyzing();
+  }
+}
+
+function showAnalyzing() {
+  var progress = document.getElementById('diagProgress');
+  progress.style.width = '90%';
+  var content = document.getElementById('diagContent');
+  content.innerHTML =
+    '<div class="diag-analyzing">' +
+      '<div class="brain">\uD83E\uDDE0</div>' +
+      '<h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-bottom:8px">Analyse IA en cours</h3>' +
+      '<p style="font-size:15px;color:var(--text-light)">Nos agents construisent votre recommandation personnalis\u00E9e.</p>' +
+      '<div class="diag-lines">' +
+        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.3s forwards">\u2713 Analyse du type de d\u00E9fi\u2026</div>' +
+        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.9s forwards">\u2713 Mapping des expertises pertinentes\u2026</div>' +
+        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 1.5s forwards">\u2713 Estimation du p\u00E9rim\u00E8tre et du d\u00E9lai\u2026</div>' +
+        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 2.1s forwards">\u2713 G\u00E9n\u00E9ration de la recommandation\u2026</div>' +
+      '</div>' +
+    '</div>';
+  setTimeout(showResult, 3000);
+}
+
+function showResult() {
+  var progress = document.getElementById('diagProgress');
+  progress.style.width = '100%';
+  var content = document.getElementById('diagContent');
+  content.innerHTML =
+    '<div class="diag-result-header">' +
+      '<div class="diag-check">\u2713</div>' +
+      '<div>' +
+        '<div class="diag-result-title">Votre diagnostic Hymeria</div>' +
+        '<div class="diag-result-sub">Bas\u00E9 sur : ' + diagAnswers[0] + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="diag-missions-label">Missions recommand\u00E9es</div>' +
+    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Analyse du paysage concurrentiel et positionnement strat\u00E9gique</span></div>' +
+    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Dimensionnement march\u00E9 et \u00E9valuation des opportunit\u00E9s</span></div>' +
+    '<div class="diag-mission" style="border-bottom:none"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Strat\u00E9gie go-to-market avec feuille de route actionnable</span></div>' +
+    '<div class="diag-metrics">' +
+      '<div class="diag-metric"><div class="diag-metric-label">Estimation</div><div class="diag-metric-value">7\u00A0500\u00A0\u20AC \u2013 12\u00A0000\u00A0\u20AC</div></div>' +
+      '<div class="diag-metric"><div class="diag-metric-label">Livraison</div><div class="diag-metric-value">5\u20138 jours ouvr\u00E9s</div></div>' +
+      '<div class="diag-metric"><div class="diag-metric-label">\u00C9conomies</div><div class="diag-metric-value">~85% vs traditionnel</div></div>' +
+    '</div>' +
+    '<div class="diag-actions">' +
+      '<button class="primary" onclick="alert(\'Merci ! Nous vous recontactons rapidement.\')">R\u00E9server un appel strat\u00E9gique \u2192</button>' +
+      '<button class="secondary" onclick="resetDiag()">Recommencer</button>' +
+    '</div>';
+}
+
+function resetDiag() {
+  diagStep = 0; diagAnswers = {};
+  renderDiag();
+}
+renderDiag();
+
+// Newsletter
+function submitNewsletter() {
+  var email = document.getElementById('nlEmail').value;
+  if (email) {
+    document.getElementById('newsletterForm').innerHTML =
+      '<div class="success">\u2713 Bienvenue ! Votre premi\u00E8re \u00E9dition arrive lundi prochain.</div>';
+  }
+}
+</script>
+
+</body>
+</html>
