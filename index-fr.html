@@ -489,17 +489,15 @@
   .article-link { display: inline-block; margin-top: 14px; font-size: 14px; color: var(--accent); font-weight: 500; }
 
   /* Trust */
-  .trust { background: var(--bg-warm); padding: 100px 32px; }
+  .trust { background: var(--bg-warm); padding: 80px 32px; }
   .trust .inner { max-width: 1100px; margin: 0 auto; }
-  .trust .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  .trust .photo-wrap { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.08); }
-  .trust .photo-wrap img { width: 100%; height: 400px; object-fit: cover; }
-  .trust h2 { font-size: 34px; font-weight: 300; line-height: 1.25; margin-bottom: 20px; }
+  .trust .left-align { text-align: left; margin-bottom: 48px; }
+  .trust h2 { font-size: 28px; font-weight: 300; line-height: 1.3; margin-bottom: 0; letter-spacing: -0.02em; }
   .trust h2 em { font-weight: 600; font-style: italic; }
-  .trust .desc { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
-  .trust .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
-  .trust .stat { padding-top: 20px; border-top: 2px solid var(--border); }
-  .trust .stat-val { font-size: 28px; font-weight: 600; color: var(--navy); font-family: var(--serif); }
+  .trust .left-align p { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
+  .trust .logos-grid { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; margin-top: 40px; }
+  .trust .client-logo { height: 50px; width: auto; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s; }
+  .trust .client-logo:hover { filter: grayscale(0%); opacity: 1; }
   .trust .stat-label {
     font-size: 13px; color: var(--text-muted); margin-top: 4px;
     letter-spacing: 0.04em; font-weight: 500;
@@ -837,21 +835,12 @@
 <!-- CONFIANCE -->
 <section class="trust">
   <div class="inner">
-    <div class="grid fade-in">
-      <div class="photo-wrap">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="&Eacute;quipe d'experts" />
-      </div>
-      <div>
-        <span class="section-label" style="color:var(--gold)">Pourquoi nous faire confiance</span>
-        <h2>L'exigence d'un grand cabinet. <em>L'agilit&eacute; de l'IA.</em></h2>
-        <p class="desc">Hymeria est n&eacute; d'un constat simple : l'intelligence artificielle peut faire 90% du travail analytique d'un consultant, mais les 10% restants &mdash; le jugement, la nuance, l'intuition strat&eacute;gique &mdash; restent irremplacables. Notre mod&egrave;le unit le meilleur des deux mondes.</p>
-        <p class="desc">Nos experts sont issus des plus grands cabinets de conseil (McKinsey, BCG, Bain, Roland Berger) et des directions strat&eacute;giques de grands groupes. Ils ne produisent pas &mdash; ils valident, enrichissent et garantissent la qualit&eacute; de chaque livrable.</p>
-        <div class="stats-grid">
-          <div class="stat"><div class="stat-val">90%</div><div class="stat-label">de la production par nos agents IA</div></div>
-          <div class="stat"><div class="stat-val">100%</div><div class="stat-label">des livrables valid&eacute;s par un expert senior</div></div>
-          <div class="stat"><div class="stat-val">48h</div><div class="stat-label">d&eacute;lai moyen premiers r&eacute;sultats</div></div>
-          <div class="stat"><div class="stat-val">15+</div><div class="stat-label">ann&eacute;es d'exp&eacute;rience de nos experts</div></div>
-        </div>
+    <div class="left-align fade-in">
+      <h2>Ils nous font <em>confiance</em></h2>
+      <p>Nos experts sont issus des plus grands cabinets de conseil et des directions strat&eacute;giques de grands groupes. Chez Hymeria, ils valident, enrichissent et garantissent chaque recommandation. C'est cette exigence qui nous permet de livrer un conseil de m&ecirc;me niveau qu'un grand cabinet, avec la rapidit&eacute; et l'accessibilit&eacute; que permet l'IA.</p>
+      <div class="logos-grid">
+        <img src="logo-geuther.png" alt="Geuther" class="client-logo" />
+        <img src="logo-wello.png" alt="Wello Pet Health" class="client-logo" />
       </div>
     </div>
   </div>
