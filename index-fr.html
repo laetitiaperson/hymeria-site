@@ -325,7 +325,7 @@
 
   /* Pricing */
   .pricing {
-    background: var(--bg-dark); padding: 120px 32px;
+    background: var(--bg-dark); padding: 80px 32px;
     position: relative; overflow: hidden;
   }
   .pricing-bg {
@@ -334,10 +334,10 @@
     opacity: 0.06;
   }
   .pricing .inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
-  .pricing .center { text-align: center; margin-bottom: 64px; }
-  .pricing h2 { font-size: 42px; font-weight: 300; line-height: 1.2; color: #fff; }
+  .pricing .left-align { text-align: left; margin-bottom: 48px; }
+  .pricing h2 { font-size: 28px; font-weight: 300; line-height: 1.3; color: #fff; }
   .pricing h2 em { font-weight: 600; font-style: italic; }
-  .pricing .center p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .pricing .left-align p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 24px; line-height: 1.8; }
 
   .pricing-table {
     background: rgba(255,255,255,0.03);
@@ -767,10 +767,9 @@
 <section class="pricing" id="tarifs">
   <div class="pricing-bg"></div>
   <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:rgba(255,255,255,0.4)">Investissement transparent</span>
-      <h2>La qualit&eacute; d'un grand cabinet, <em>sans le grand budget</em></h2>
-      <p>Nous croyons que l'expertise strat&eacute;gique doit &ecirc;tre accessible. Gr&acirc;ce &agrave; notre mod&egrave;le augment&eacute; par l'IA, nous r&eacute;duisons drastiquement les co&ucirc;ts de production sans jamais compromettre la qualit&eacute;.</p>
+    <div class="left-align fade-in">
+      <h2>Des missions de conseil strat&eacute;gique <em>&agrave; partir de 5&nbsp;000&nbsp;&euro;</em></h2>
+      <p>Chez Hymeria, nous avons fait un choix simple : facturer au r&eacute;sultat, pas au temps pass&eacute;. Notre mod&egrave;le augment&eacute; par l'IA nous permet de r&eacute;duire drastiquement les co&ucirc;ts de production sans jamais compromettre la profondeur d'analyse. Vous payez pour la valeur de la recommandation, pas pour le nombre de jours mobilis&eacute;s.</p>
     </div>
 
     <div class="fade-in" style="transition-delay:200ms">
@@ -789,7 +788,7 @@
         <div id="pricingRows"></div>
         <div class="pricing-cta">
           <a href="#diagnostic" class="btn-white" style="font-size:15px;padding:14px 36px">Demander un devis personnalis&eacute; &rarr;</a>
-          <div class="pricing-note">Tous les prix sont indiqu&eacute;s HT. Devis personnalis&eacute; sous 24h. Pas d'engagement longue dur&eacute;e.</div>
+          <div class="pricing-note">Nous facturons au p&eacute;rim&egrave;tre de mission et au r&eacute;sultat attendu. Chaque projet fait l'objet d'un devis pr&eacute;cis sous 24h, sans engagement longue dur&eacute;e. Tous les prix sont indiqu&eacute;s HT.</div>
         </div>
       </div>
     </div>
@@ -1083,12 +1082,12 @@ renderExpertise();
 // Pricing Rows
 const pricingData = [
   { label: "D\u00E9lai moyen", old: "4 \u00E0 12 semaines", neu: "3 \u00E0 10 jours" },
-  { label: "Budget mission", old: "50K\u20AC \u2014 500K\u20AC", neu: "5K\u20AC \u2014 15K\u20AC" },
-  { label: "Profondeur d\u2019analyse", old: "Limit\u00E9e par l\u2019\u00E9quipe", neu: "Illimit\u00E9e (agents IA)" },
-  { label: "Sources analys\u00E9es", old: "10 \u2014 50 sources", neu: "1\u00A0000+ sources" },
-  { label: "Validation humaine", old: "Junior + Partner review", neu: "Expert senior d\u00E9di\u00E9" },
+  { label: "Budget mission", old: "50\u00A0000\u00A0\u20AC \u00E0 500\u00A0000\u00A0\u20AC", neu: "5\u00A0000\u00A0\u20AC \u00E0 15\u00A0000\u00A0\u20AC" },
+  { label: "Profondeur d\u2019analyse", old: "Limit\u00E9e par la taille de l\u2019\u00E9quipe", neu: "D\u00E9multipli\u00E9e par nos agents IA" },
+  { label: "Sources analys\u00E9es", old: "10 \u00E0 50 sources", neu: "1\u00A0000+ sources" },
+  { label: "Validation humaine", old: "Junior + partner review", neu: "Expert senior d\u00E9di\u00E9" },
   { label: "Support post-mission", old: "Factur\u00E9 en suppl\u00E9ment", neu: "30 jours inclus" },
-  { label: "Format livrables", old: "PDF / PowerPoint", neu: "Interactif + PDF" },
+  { label: "Format des livrables", old: "PDF et PowerPoint statiques", neu: "Interactif + PDF" },
 ];
 document.getElementById('pricingRows').innerHTML = pricingData.map(function(r) {
   return '<div class="pricing-row"><div class="row-label">' + r.label + '</div><div class="row-old">' + r.old + '</div><div class="row-new">' + r.neu + '</div></div>';
