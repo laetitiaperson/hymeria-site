@@ -162,16 +162,23 @@
   }
   .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
   .hero .stats {
-    display: flex; gap: 56px; margin-top: 80px; padding-top: 40px;
-    border-top: 1px solid rgba(255,255,255,0.12); flex-wrap: wrap;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 80px;
+  }
+  .hero .stat-card {
+    text-align: center; padding: 32px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
   }
   .hero .stat-val {
-    font-size: 32px; font-weight: 600; color: #fff; letter-spacing: -0.02em;
-    font-family: var(--serif);
+    font-size: 52px; font-weight: 700; color: #fff; letter-spacing: -0.03em;
+    font-family: var(--serif); line-height: 1;
   }
   .hero .stat-label {
-    font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 6px;
-    font-weight: 450; letter-spacing: 0.04em;
+    font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 12px;
+    font-weight: 450; line-height: 1.4;
   }
 
   /* Problem */
@@ -576,7 +583,7 @@
     .missions-grid { grid-template-columns: 1fr; }
     .articles-grid { grid-template-columns: 1fr; }
     .pricing-header, .pricing-row { grid-template-columns: 1fr; }
-    .hero .stats { gap: 32px; }
+    .hero .stats { grid-template-columns: 1fr; gap: 16px; }
     .diag-metrics { grid-template-columns: 1fr; }
     nav .links a.nav-link { display: none; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -634,9 +641,9 @@
     </div>
     <div class="fade-in" style="transition-delay:500ms">
       <div class="stats">
-        <div><div class="stat-val">5&times;</div><div class="stat-label">plus rapide qu'un cabinet traditionnel</div></div>
-        <div><div class="stat-val">70%</div><div class="stat-label">de co&ucirc;ts en moins en moyenne</div></div>
-        <div><div class="stat-val">92%</div><div class="stat-label">de recommandations actionnables</div></div>
+        <div class="stat-card"><div class="stat-val">5&times;</div><div class="stat-label">plus rapide qu'un cabinet traditionnel</div></div>
+        <div class="stat-card"><div class="stat-val">70%</div><div class="stat-label">de co&ucirc;ts en moins en moyenne</div></div>
+        <div class="stat-card"><div class="stat-val">92%</div><div class="stat-label">de recommandations actionnables</div></div>
       </div>
     </div>
   </div>
