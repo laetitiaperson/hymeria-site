@@ -255,18 +255,55 @@
   }
   .pillar-desc { font-size: 15px; color: var(--text-light); line-height: 1.7; }
 
-  .process-flow {
-    margin-top: 48px; padding: 20px 32px; border-radius: 100px;
-    background: var(--bg-warm); border: 1px solid var(--border);
+  /* Processus 8 étapes */
+  .process-section { margin-top: 64px; }
+  .process-section h3 {
+    font-family: var(--serif); font-size: 24px; font-weight: 300;
+    color: var(--navy); letter-spacing: -0.02em; margin-bottom: 12px;
+  }
+  .process-section h3 em { font-weight: 600; font-style: italic; }
+  .process-badge {
+    display: inline-block; padding: 6px 16px; border-radius: 100px;
+    background: var(--green-soft); color: var(--green); font-size: 13px;
+    font-weight: 600; margin-bottom: 40px;
+  }
+  .process-timeline { position: relative; padding-left: 48px; }
+  .process-timeline::before {
+    content: ''; position: absolute; left: 18px; top: 8px; bottom: 8px;
+    width: 2px; background: linear-gradient(to bottom, var(--green), var(--accent), #800020);
+    border-radius: 2px;
+  }
+  .process-step {
+    position: relative; margin-bottom: 28px; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 8px 20px; align-items: baseline;
+  }
+  .process-step:last-child { margin-bottom: 0; }
+  .process-step-num {
+    position: absolute; left: -48px; top: 0;
+    width: 36px; height: 36px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    gap: 10px; flex-wrap: wrap; font-size: 12px; font-weight: 500;
+    font-size: 14px; font-weight: 700; color: #fff;
+    background: var(--navy);
   }
-  .flow-step {
-    padding: 4px 12px; border-radius: 100px;
-    background: var(--white); border: 1px solid var(--border);
-    color: var(--navy); white-space: nowrap;
+  .process-step-num.green { background: var(--green); }
+  .process-step-num.accent { background: var(--accent); }
+  .process-step-num.bordeaux { background: #800020; }
+  .process-step-title {
+    font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.4;
+    padding-top: 7px;
   }
-  .flow-arrow { color: var(--text-muted); }
+  .process-step-desc {
+    font-size: 13px; color: var(--text-light); line-height: 1.6;
+    padding-top: 7px;
+  }
+  .process-step-day {
+    grid-column: 1 / -1; margin-top: -4px;
+  }
+  .process-day-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    color: var(--green); background: var(--green-soft);
+    padding: 2px 10px; border-radius: 100px;
+  }
 
   /* Expertise */
   .expertise { background: var(--bg-warm); padding: 80px 32px; }
@@ -739,6 +776,61 @@
           <div class="pillar-desc">Aucun livrable Hymeria ne sort sans la relecture et la validation d'un consultant senior disposant de plus de 15 ans d'exp&eacute;rience. L'expert d&eacute;tecte les angles morts, enrichit l'analyse avec sa connaissance sectorielle et transforme des donn&eacute;es en recommandations actionnables. C'est cette exigence humaine qui fait la diff&eacute;rence entre un rapport g&eacute;n&eacute;r&eacute; par l'IA et un vrai conseil strat&eacute;gique.</div>
         </div>
         <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Expert senior en validation" />
+      </div>
+    </div>
+
+    <div class="process-section fade-in">
+      <h3>Un processus en <em>8 &eacute;tapes</em></h3>
+      <div class="process-badge">De la prise de contact au livrable en 15 jours maximum</div>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="process-step-num green">1</div>
+          <div class="process-step-title">Demande en ligne</div>
+          <div class="process-step-desc">Le prospect remplit un <a href="#diagnostic" style="color:var(--accent);font-weight:500">formulaire de diagnostic</a> pour d&eacute;crire son enjeu.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num green">2</div>
+          <div class="process-step-title">Contact et qualification du besoin</div>
+          <div class="process-step-desc">Prise de rendez-vous et brief initial. Session structur&eacute;e entre l'expert et le client pour d&eacute;finir pr&eacute;cis&eacute;ment le scope et les attendus.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+1</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num green">3</div>
+          <div class="process-step-title">Proposition commerciale</div>
+          <div class="process-step-desc">Proposition compl&egrave;te pr&eacute;par&eacute;e avec l'IA, incluant scope, livrables et tarification. Envoy&eacute;e sous 48h.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+2</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num accent">4</div>
+          <div class="process-step-title">Validation client &amp; d&eacute;marrage</div>
+          <div class="process-step-desc">Bon de commande sign&eacute;. D&eacute;marrage imm&eacute;diat de la mission.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+3</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num accent">5</div>
+          <div class="process-step-title">Production du livrable</div>
+          <div class="process-step-desc">Configuration et orchestration des agents IA qui g&eacute;n&egrave;rent le livrable selon les templates Hymeria. Phase automatis&eacute;e (~90 % du travail).</div>
+          <div class="process-step-day"><span class="process-day-badge">J+3 &agrave; J+10</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num bordeaux">6</div>
+          <div class="process-step-title">Revue qualit&eacute;</div>
+          <div class="process-step-desc">Consultant senior + expert relisent, challengent et ajustent le livrable sur le fond et la forme.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+10 &agrave; J+12</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num bordeaux">7</div>
+          <div class="process-step-title">Pr&eacute;sentation client (2h)</div>
+          <div class="process-step-desc">Restitution des r&eacute;sultats et livrable final transmis.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+13 &agrave; J+14</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num bordeaux">8</div>
+          <div class="process-step-title">Mission cl&ocirc;tur&eacute;e</div>
+          <div class="process-step-desc">Facturation. Invitation &agrave; &eacute;valuer le service et possibilit&eacute; de missions compl&eacute;mentaires.</div>
+          <div class="process-step-day"><span class="process-day-badge">J+15</span></div>
+        </div>
       </div>
     </div>
   </div>
