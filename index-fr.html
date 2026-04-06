@@ -299,19 +299,16 @@
   .expertise-card h3 { font-size: 26px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
   .expertise-card .expertise-desc { font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 28px; }
   .expertise-card .missions-label { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
-  .missions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .missions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
   .mission-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 16px 18px; border-radius: 14px;
-    border: 1px solid var(--border); transition: all 0.25s; cursor: default;
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 4px 0;
   }
-  .mission-item:hover { border-color: var(--accent); background: var(--accent-soft); }
-  .mission-icon {
-    width: 24px; height: 24px; border-radius: 8px; flex-shrink: 0; margin-top: 1px;
-    background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
-    font-size: 12px; color: var(--accent); font-weight: 700;
+  .mission-dot {
+    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px;
+    background: var(--green);
   }
-  .mission-item span { font-size: 14px; color: var(--text); line-height: 1.55; }
+  .mission-item span { font-size: 14px; color: var(--text-light); line-height: 1.55; }
 
   .expertise-card .pricing-line {
     margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -1074,7 +1071,7 @@ function renderExpertise() {
     '<div class="missions-label">Missions types</div>' +
     '<div class="missions-grid">' +
       cat.missions.map(function(m) {
-        return '<div class="mission-item"><div class="mission-icon">\u2192</div><span>' + m + '</span></div>';
+        return '<div class="mission-item"><div class="mission-dot"></div><span>' + m + '</span></div>';
       }).join('') +
     '</div>' +
     '<div class="pricing-line">\u2192 ' + cat.pricing + '</div>' +
