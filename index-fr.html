@@ -226,12 +226,13 @@
   }
 
   /* Solution / Process */
-  .solution { background: var(--white); padding: 120px 32px; }
+  .solution { background: var(--white); padding: 80px 32px; }
   .solution .inner { max-width: 1100px; margin: 0 auto; }
   .solution .center { text-align: center; margin-bottom: 80px; }
-  .solution h2 { font-size: 42px; font-weight: 300; line-height: 1.2; }
+  .solution .left-align { text-align: left; margin-bottom: 48px; }
+  .solution h2 { font-size: 28px; font-weight: 300; line-height: 1.3; font-family: var(--serif); color: var(--navy); letter-spacing: -0.02em; }
   .solution h2 em { font-weight: 600; font-style: italic; }
-  .solution .center p { font-size: 16px; color: var(--text-light); margin-top: 20px; max-width: 680px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .solution .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; margin-bottom: 40px; }
 
   .pillar-card {
     display: grid; gap: 0; border-radius: 20px; overflow: hidden;
@@ -241,7 +242,7 @@
   .pillar-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.06); }
   .pillar-card.left { grid-template-columns: 1fr 1.2fr; }
   .pillar-card.right { grid-template-columns: 1.2fr 1fr; }
-  .pillar-card img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
+  .pillar-card img { width: 100%; height: 100%; object-fit: cover; max-height: 260px; }
   .pillar-text { padding: 48px 52px; display: flex; flex-direction: column; justify-content: center; }
   .pillar-step {
     font-size: 60px; font-weight: 200; color: rgba(12,18,32,0.06);
@@ -705,15 +706,11 @@
 <!-- MODELE / PROCESSUS -->
 <section class="solution" id="modele">
   <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:#2A3547">Notre mod&egrave;le</span>
-      <h2>L'intelligence artificielle produit. <em>L'expert valide. Vous d&eacute;cidez.</em></h2>
+    <div class="left-align fade-in">
+      <h2>Notre mod&egrave;le : l'intelligence artificielle produit. <em>L'expert valide. Vous d&eacute;cidez.</em></h2>
       <p>Hymeria est un cabinet de conseil augment&eacute; par l'intelligence artificielle. Notre mod&egrave;le repose sur une conviction simple : l'IA g&eacute;n&eacute;rative permet aujourd'hui de produire des analyses strat&eacute;giques plus rapides, plus profondes et plus accessibles, &agrave; condition qu'un expert les valide. C'est ce que nous appelons le <strong>Consulting-as-a-Service</strong> : un acc&egrave;s continu &agrave; des capacit&eacute;s d'analyse hybrides, combinant agents IA sp&eacute;cialis&eacute;s et consultants seniors, pour des missions livr&eacute;es en jours et non en semaines.</p>
       <p>Nos agents IA r&eacute;alisent <strong style="color:#2A3547">90 % du travail analytique</strong>. Nos experts apportent les <strong style="color:#800020">10 % qui changent tout</strong> : le jugement, la nuance et la recommandation strat&eacute;gique. Le r&eacute;sultat, c'est un conseil de qualit&eacute; sup&eacute;rieure, livr&eacute; plus vite, &agrave; une fraction du co&ucirc;t traditionnel.</p>
-    </div>
-
-    <div class="center fade-in" style="margin-top:56px; margin-bottom:40px;">
-      <h3 style="font-family:var(--serif); font-size:28px; font-weight:300; color:var(--navy); letter-spacing:-0.02em;">Notre m&eacute;thode en <em style="font-weight:600; font-style:italic;">3 piliers</em></h3>
+      <h3 style="font-family:var(--serif); font-size:24px; font-weight:300; color:var(--navy); letter-spacing:-0.02em; margin-top:8px;">Notre m&eacute;thode en <em style="font-weight:600; font-style:italic;">3 piliers</em></h3>
     </div>
 
     <div class="fade-in">
@@ -745,7 +742,7 @@
           <div class="pillar-title">Validation par un expert senior</div>
           <div class="pillar-desc">Aucun livrable Hymeria ne sort sans la relecture et la validation d'un consultant senior disposant de plus de 15 ans d'exp&eacute;rience. L'expert d&eacute;tecte les angles morts, enrichit l'analyse avec sa connaissance sectorielle et transforme des donn&eacute;es en recommandations actionnables. C'est cette exigence humaine qui fait la diff&eacute;rence entre un rapport g&eacute;n&eacute;r&eacute; par l'IA et un vrai conseil strat&eacute;gique.</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Expert senior" />
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Expert senior en validation" />
       </div>
     </div>
   </div>
