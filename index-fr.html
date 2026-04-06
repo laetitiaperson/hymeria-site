@@ -75,9 +75,12 @@
     max-width: 1200px; margin: 0 auto; padding: 0 32px;
     display: flex; align-items: center; justify-content: space-between; height: 72px;
   }
-  nav .logo { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: #fff; transition: color 0.4s; }
-  nav .logo span { font-weight: 300; }
-  nav.scrolled .logo { color: var(--navy); }
+  nav .logo { display: flex; align-items: center; transition: all 0.4s; }
+  nav .logo img { height: 32px; width: auto; }
+  nav .logo .logo-blanc { display: block; }
+  nav .logo .logo-noir { display: none; }
+  nav.scrolled .logo .logo-blanc { display: none; }
+  nav.scrolled .logo .logo-noir { display: block; }
   nav .links { display: flex; align-items: center; gap: 36px; }
   nav .links a.nav-link {
     font-size: 14px; font-weight: 450; transition: color 0.3s;
@@ -543,8 +546,8 @@
     display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 48px; margin-bottom: 48px;
   }
-  footer .brand { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 8px; }
-  footer .brand span { font-weight: 300; }
+  footer .brand { margin-bottom: 12px; }
+  footer .brand img { height: 28px; width: auto; }
   footer .tagline { font-size: 14px; color: var(--accent-light); font-weight: 500; margin-bottom: 8px; }
   footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
   footer .footer-col-title {
@@ -593,7 +596,10 @@
 <!-- NAV -->
 <nav id="mainNav">
   <div class="inner">
-    <a href="#hero" class="logo">Hyme<span>ria</span></a>
+    <a href="#hero" class="logo">
+      <img src="logo-blanc.png" alt="Hymeria Consulting" class="logo-blanc">
+      <img src="logo-noir.png" alt="Hymeria Consulting" class="logo-noir">
+    </a>
     <div class="links">
       <a href="#modele" class="nav-link">Mod&egrave;le</a>
       <a href="#expertises" class="nav-link">Expertises</a>
@@ -916,7 +922,7 @@
   <div class="inner">
     <div class="footer-grid">
       <div>
-        <div class="brand">Hyme<span>ria</span></div>
+        <div class="brand"><img src="logo-blanc.png" alt="Hymeria Consulting"></div>
         <div class="tagline">AI Consulting, Human Validated.</div>
         <div class="brand-desc">Le conseil strat&eacute;gique augment&eacute; par l'intelligence artificielle.</div>
       </div>
