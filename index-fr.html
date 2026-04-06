@@ -565,14 +565,15 @@
   footer .inner {
     max-width: 1100px; margin: 0 auto;
   }
-  footer .footer-grid {
-    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 48px; margin-bottom: 48px;
-  }
+  footer .footer-brand { margin-bottom: 40px; }
   footer .brand { margin-bottom: 12px; }
   footer .brand img { height: 76px; width: auto; }
   footer .tagline { font-size: 14px; color: var(--accent-light); font-weight: 500; margin-bottom: 8px; }
   footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  footer .footer-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 48px;
+  }
   footer .footer-col-title {
     font-size: 12px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 20px;
@@ -898,12 +899,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="inner">
+    <div class="footer-brand">
+      <div class="brand"><img src="logo-blanc.png" alt="Hymeria Consulting"></div>
+      <div class="tagline">AI Consulting, Human Validated.</div>
+      <div class="brand-desc">Le conseil strat&eacute;gique augment&eacute; par l'intelligence artificielle.</div>
+    </div>
     <div class="footer-grid">
-      <div>
-        <div class="brand"><img src="logo-blanc.png" alt="Hymeria Consulting"></div>
-        <div class="tagline">AI Consulting, Human Validated.</div>
-        <div class="brand-desc">Le conseil strat&eacute;gique augment&eacute; par l'intelligence artificielle.</div>
-      </div>
       <div class="footer-col">
         <div class="footer-col-title">Expertises</div>
         <a href="#expertises">&Eacute;tudes de march&eacute;</a>
