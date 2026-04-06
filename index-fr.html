@@ -189,7 +189,6 @@
   .problem { background: var(--bg); padding: 120px 32px; }
   .problem .grid {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
   }
   .problem h2, .solution h2, .expertise h2, .pricing h2, .diagnostic h2,
   .insights h2, .trust h2, .newsletter h3, .final-cta h2 {
@@ -198,17 +197,33 @@
   .problem h2 { font-size: 36px; font-weight: 300; line-height: 1.2; }
   .problem h2 em { font-weight: 600; font-style: italic; }
   .problem p.desc { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
-  .problem .items { margin-top: 40px; display: flex; flex-direction: column; gap: 24px; }
-  .problem .item { display: flex; gap: 16px; align-items: flex-start; }
-  .problem .item-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
-  .problem .item-title { font-size: 16px; font-weight: 600; color: var(--navy); }
-  .problem .item-desc { font-size: 15px; color: var(--text-light); margin-top: 4px; line-height: 1.6; }
-
-  .problem .photo-wrap {
-    border-radius: 20px; overflow: hidden;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.08);
+  .problem .constats-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 300; color: var(--navy);
+    margin-top: 48px; margin-bottom: 32px; letter-spacing: -0.02em;
   }
-  .problem .photo-wrap img { width: 100%; height: 500px; object-fit: cover; }
+  .problem .constats-title em { font-weight: 600; font-style: italic; }
+  .problem .constats-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .problem .constat-card {
+    background: var(--white); border-radius: 20px; padding: 36px 32px;
+    border: 1px solid var(--border); transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  }
+  .problem .constat-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+  }
+  .problem .constat-card-title {
+    font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px;
+  }
+  .problem .constat-card-quote {
+    font-size: 14px; font-weight: 600; color: var(--accent);
+    margin-bottom: 16px; font-style: italic;
+  }
+  .problem .constat-card-desc {
+    font-size: 14px; color: var(--text-light); line-height: 1.7;
+  }
 
   /* Solution / Process */
   .solution { background: var(--white); padding: 120px 32px; }
@@ -583,6 +598,7 @@
   /* Responsive */
   @media (max-width: 768px) {
     .problem .grid, .trust .grid { grid-template-columns: 1fr; gap: 40px; }
+    .problem .constats-grid { grid-template-columns: 1fr; }
     .pillar-card.left, .pillar-card.right { grid-template-columns: 1fr; }
     .missions-grid { grid-template-columns: 1fr; }
     .articles-grid { grid-template-columns: 1fr; }
@@ -661,33 +677,28 @@
       <h2>Le mod&egrave;le traditionnel du conseil strat&eacute;gique <em>ne suffit plus</em></h2>
       <p class="desc">Les cabinets de conseil traditionnels ont &eacute;t&eacute; con&ccedil;us pour un monde qui n'existe plus. D&eacute;lais de plusieurs semaines, tarifs index&eacute;s sur le temps pass&eacute;, recommandations standardis&eacute;es : le mod&egrave;le historique du conseil ne r&eacute;pond plus aux exigences des dirigeants qui doivent d&eacute;cider vite et agir imm&eacute;diatement. Selon le sondage C3 &times; HEC Alumni (oct &ndash; d&eacute;c 2025), 72 % des clients estiment que l'IA modifie significativement leurs attentes vis-&agrave;-vis de leurs consultants.</p>
       <p class="desc">C'est pr&eacute;cis&eacute;ment ce d&eacute;calage qu'Hymeria a choisi d'adresser. L&agrave; o&ugrave; le conseil classique reste ancr&eacute; dans l'&eacute;conomie du document, en vendant du temps et des slides, Hymeria op&egrave;re dans l'&eacute;conomie du r&eacute;sultat. Ce que des &eacute;quipes de consultants produisent en plusieurs semaines, nos agents IA sp&eacute;cialis&eacute;s le r&eacute;alisent en quelques jours, avec une profondeur d'analyse sup&eacute;rieure. L'&eacute;tude BCG &times; Harvard (2024, 758 consultants) confirme ce potentiel :<br>+ 40 % de qualit&eacute; et + 25 % de rapidit&eacute; lorsque l'IA est int&eacute;gr&eacute;e au processus de conseil. Hymeria combine cette puissance avec une validation humaine syst&eacute;matique, parce que la technologie sans expertise reste un outil, pas une solution.</p>
-      <div class="items">
-        <div class="item">
-          <span class="item-icon">&9201;</span>
-          <div>
-            <div class="item-title">4 &agrave; 12 semaines pour un livrable</div>
-            <div class="item-desc">Quand votre march&eacute; bouge en temps r&eacute;el, attendre trois mois pour une &eacute;tude strat&eacute;gique n'est pas un processus &mdash; c'est un handicap. Vos concurrents n'attendent pas vos consultants.</div>
-          </div>
+      <h3 class="constats-title">Quatre constats sur un mod&egrave;le de conseil <em>&agrave; bout de souffle</em></h3>
+      <div class="constats-grid">
+        <div class="constat-card">
+          <div class="constat-card-title">La lenteur du conseil traditionnel</div>
+          <div class="constat-card-quote">&laquo; 4 &agrave; 12 semaines pour un livrable strat&eacute;gique &raquo;</div>
+          <div class="constat-card-desc">Votre march&eacute; bouge en temps r&eacute;el. Vos concurrents lancent, testent, pivotent pendant que votre cabinet de conseil finalise ses slides. Attendre trois mois pour une recommandation strat&eacute;gique, ce n'est pas un processus : c'est un handicap concurrentiel. Les dirigeants l'expriment clairement : ils veulent des r&eacute;ponses plus rapides, plus fiables et moins co&ucirc;teuses. Hymeria livre en jours ce que le conseil traditionnel produit en semaines.</div>
         </div>
-        <div class="item">
-          <span class="item-icon">&128176;</span>
-          <div>
-            <div class="item-title">50 000 &euro; &agrave; 500 000 &euro; la mission</div>
-            <div class="item-desc">Des honoraires qui excluent de fait les ETI, les PME ambitieuses et les startups en croissance. L'expertise strat&eacute;gique ne devrait pas &ecirc;tre un privil&egrave;ge r&eacute;serv&eacute; au CAC 40.</div>
-          </div>
+        <div class="constat-card">
+          <div class="constat-card-title">Le co&ucirc;t prohibitif des missions de conseil</div>
+          <div class="constat-card-quote">&laquo; 50 000 &euro; &agrave; 500 000 &euro; la mission &raquo;</div>
+          <div class="constat-card-desc">&Agrave; ce niveau de ticket d'entr&eacute;e, le conseil strat&eacute;gique reste r&eacute;serv&eacute; aux grands groupes. Les ETI, les PME ambitieuses et les startups en scaling, celles qui en auraient le plus besoin, en sont exclues de fait. Et m&ecirc;me pour ceux qui paient, la question est devenue incontournable : si l'IA permet de produire mieux et plus vite, pourquoi le prix ne baisse-t-il pas ? Hymeria r&eacute;pond &agrave; cette contradiction en proposant des missions &agrave; partir de 5 000 &euro;, sans sacrifier la profondeur d'analyse.</div>
         </div>
-        <div class="item">
-          <span class="item-icon">&128196;</span>
-          <div>
-            <div class="item-title">Des slides magnifiques, z&eacute;ro ex&eacute;cution</div>
-            <div class="item-desc">Des rapports de 200 pages que personne ne lit. Des recommandations th&eacute;oriques d&eacute;connect&eacute;es de votre r&eacute;alit&eacute; op&eacute;rationnelle. Le conseil traditionnel produit du savoir. Hymeria produit de l'action.</div>
-          </div>
+        <div class="constat-card">
+          <div class="constat-card-title">Des recommandations sans impact op&eacute;rationnel</div>
+          <div class="constat-card-quote">&laquo; Des rapports de 200 pages que personne n'ex&eacute;cute &raquo;</div>
+          <div class="constat-card-desc">Le livrable classique du conseil, c'est un document. &Eacute;pais, structur&eacute;, bien r&eacute;dig&eacute; et souvent class&eacute; sans suite. Ce que veulent r&eacute;ellement les d&eacute;cideurs, ce n'est pas du temps consultant ni des slides : ce sont des r&eacute;sultats concrets et des m&eacute;canismes reproductibles. Le secteur lui-m&ecirc;me reconna&icirc;t cette bascule, du livrable vers le r&eacute;sultat mesurable. Chez Hymeria nous ne vendons pas des pages, nous livrons des r&eacute;ponses actionnables, valid&eacute;es par des experts.</div>
         </div>
-      </div>
-    </div>
-    <div class="fade-in" style="transition-delay:200ms">
-      <div class="photo-wrap">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Immeubles modernes" />
+        <div class="constat-card">
+          <div class="constat-card-title">Un mod&egrave;le de facturation devenu obsol&egrave;te</div>
+          <div class="constat-card-quote">&laquo; Le tarif journalier a fait son temps &raquo;</div>
+          <div class="constat-card-desc">Facturer au temps pass&eacute; avait du sens quand le conseil reposait uniquement sur l'humain. Ce n'est plus le cas. Chez Hymeria, nous facturons au r&eacute;sultat et au p&eacute;rim&egrave;tre de mission, pas au nombre de jours. C'est la seule logique compatible avec un conseil augment&eacute; par l'intelligence artificielle.</div>
+        </div>
       </div>
     </div>
   </div>
