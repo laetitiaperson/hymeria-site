@@ -333,53 +333,46 @@
     background: url('https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1400&q=80') center/cover;
     opacity: 0.06;
   }
-  .pricing .inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+  .pricing .inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
   .pricing .left-align { text-align: left; margin-bottom: 48px; }
   .pricing h2 { font-size: 28px; font-weight: 300; line-height: 1.3; color: #fff; }
   .pricing h2 em { font-weight: 600; font-style: italic; }
   .pricing .left-align p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 24px; line-height: 1.8; }
 
-  .pricing-table {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px; overflow: hidden;
-    backdrop-filter: blur(20px);
-  }
+  .pricing-table { max-width: 900px; margin: 0 auto; }
   .pricing-header {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+    padding-bottom: 20px; margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  .pricing-header > div { padding: 24px 32px; }
+  .pricing-header > div { padding: 0 20px; }
   .pricing-header .col-label {
-    font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
-    font-weight: 600; margin-bottom: 8px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; margin-bottom: 4px;
   }
-  .pricing-header .col-price { font-size: 28px; font-family: var(--serif); }
-  .col-old .col-label { color: rgba(255,255,255,0.35); }
-  .col-old .col-price { color: rgba(255,255,255,0.5); font-weight: 300; }
-  .col-new { border-left: 1px solid rgba(255,255,255,0.06); background: rgba(99,102,241,0.06); text-align: center; }
-  .col-new .col-label { color: var(--accent-light); }
-  .col-new .col-price { color: #fff; font-weight: 600; }
-  .col-old { border-left: 1px solid rgba(255,255,255,0.06); text-align: center; }
+  .col-old .col-label { color: rgba(255,255,255,0.3); }
+  .col-old .col-price { display: none; }
+  .col-new .col-label { color: var(--green); }
+  .col-new .col-price { display: none; }
+  .col-old { text-align: center; }
+  .col-new { text-align: center; }
 
   .pricing-row {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
   }
   .pricing-row:last-child { border-bottom: none; }
-  .pricing-row > div { padding: 16px 32px; font-size: 14px; }
-  .pricing-row .row-label { font-weight: 500; color: rgba(255,255,255,0.6); }
+  .pricing-row > div { padding: 0 20px; font-size: 14px; }
+  .pricing-row .row-label { font-weight: 500; color: rgba(255,255,255,0.55); }
   .pricing-row .row-old {
-    color: rgba(255,255,255,0.35); text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.3); text-align: center; font-size: 13px;
   }
   .pricing-row .row-new {
-    color: var(--green); font-weight: 600; text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.04);
-    background: rgba(99,102,241,0.03);
+    color: #fff; font-weight: 600; text-align: center; font-size: 13px;
   }
-  .pricing-cta { padding: 28px 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-  .pricing-note { font-size: 13px; color: rgba(255,255,255,0.35); text-align: center; }
+  .pricing-cta { padding: 40px 0 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .pricing-note { font-size: 13px; color: rgba(255,255,255,0.35); text-align: center; max-width: 600px; line-height: 1.6; }
 
   /* Diagnostic */
   .diagnostic { background: var(--bg); padding: 120px 32px; }
