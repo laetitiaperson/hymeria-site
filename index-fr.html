@@ -651,6 +651,52 @@
     footer .footer-grid { grid-template-columns: 1fr; }
     .diag-actions { flex-direction: column; }
   }
+
+  /* Cookie consent banner */
+  #cookieBanner {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    max-width: 880px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid rgba(12,18,32,0.08);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(12,18,32,0.18);
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #cookieBanner.visible { opacity: 1; transform: translateY(0); }
+  #cookieBanner .cookie-text { flex: 1; font-size: 13px; color: #2A3547; line-height: 1.55; }
+  #cookieBanner .cookie-text strong { display: block; font-size: 14px; color: #0C1220; margin-bottom: 4px; }
+  #cookieBanner .cookie-text p { margin: 0; }
+  #cookieBanner .cookie-text a { color: #2E8B57; text-decoration: underline; }
+  #cookieBanner .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  #cookieBanner .cookie-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: inherit;
+    transition: all .2s ease;
+  }
+  #cookieBanner .cookie-refuse { background: #fff; color: #2A3547; border-color: rgba(12,18,32,0.15); }
+  #cookieBanner .cookie-refuse:hover { background: #f4f5f7; }
+  #cookieBanner .cookie-accept { background: #2E8B57; color: #fff; }
+  #cookieBanner .cookie-accept:hover { background: #246d44; }
+  @media (max-width: 720px) {
+    #cookieBanner { flex-direction: column; align-items: stretch; padding: 20px; bottom: 16px; left: 16px; right: 16px; }
+    #cookieBanner .cookie-actions { justify-content: flex-end; }
+  }
 </style>
 </head>
 <body>
@@ -1295,6 +1341,30 @@ function submitNewsletter() {
     document.getElementById('newsletterForm').innerHTML =
       '<div class="success">\u2713 Bienvenue ! Votre premi\u00E8re \u00E9dition arrive lundi prochain.</div>';
   }
+}
+
+// Cookie consent banner
+(function() {
+  if (localStorage.getItem('hymeria-cookie-consent')) return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.innerHTML =
+    '<div class="cookie-text">' +
+      '<strong>Respect de votre vie priv&eacute;e</strong>' +
+      '<p>Nous utilisons des cookies pour mesurer l\'audience de notre site et am&eacute;liorer votre exp&eacute;rience. Vous pouvez accepter ou refuser leur d&eacute;p&ocirc;t. Pour en savoir plus, consultez notre <a href="#">Politique de confidentialit&eacute;</a>.</p>' +
+    '</div>' +
+    '<div class="cookie-actions">' +
+      '<button class="cookie-btn cookie-refuse" onclick="cookieChoice(false)">Refuser</button>' +
+      '<button class="cookie-btn cookie-accept" onclick="cookieChoice(true)">Accepter</button>' +
+    '</div>';
+  document.body.appendChild(banner);
+  setTimeout(function(){ banner.classList.add('visible'); }, 300);
+})();
+
+function cookieChoice(accepted) {
+  localStorage.setItem('hymeria-cookie-consent', accepted ? 'accepted' : 'refused');
+  var b = document.getElementById('cookieBanner');
+  if (b) { b.classList.remove('visible'); setTimeout(function(){ b.remove(); }, 300); }
 }
 </script>
 
