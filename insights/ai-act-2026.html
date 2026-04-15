@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Act : ce que le r&egrave;glement europ&eacute;en change vraiment pour votre entreprise en 2026 | Hymeria Insights</title>
+<meta name="description" content="En 2026, l'AI Act europ&eacute;en d&eacute;ploie ses obligations les plus structurantes. Pour les dirigeants, le texte est moins un sujet juridique qu'un test de maturit&eacute; de leur organisation face &agrave; l'IA.">
+<meta property="og:title" content="AI Act : ce que le r&egrave;glement europ&eacute;en change vraiment pour votre entreprise en 2026">
+<meta property="og:description" content="Comment transformer l'AI Act en levier de pilotage strat&eacute;gique de l'IA dans votre entreprise.">
+<meta property="og:type" content="article">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+  :root {
+    --bg: #FAFAF8;
+    --bg-warm: #F5F3EF;
+    --navy: #0C1220;
+    --text: #2D2D3A;
+    --text-light: #6B6B80;
+    --text-muted: #9B9BAE;
+    --green: #2E8B57;
+    --accent: #4338CA;
+    --border: #E8E6E1;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.7; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav.top {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,250,248,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
+  }
+  nav.top .brand { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--navy); }
+  nav.top a.back { font-size: 13px; color: var(--text-light); }
+  nav.top a.back:hover { color: var(--navy); }
+
+  article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 70px 32px 100px;
+  }
+
+  .article-meta-top {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--green); margin-bottom: 24px;
+  }
+  .article-meta-top span { color: var(--text-muted); margin: 0 8px; }
+
+  h1 {
+    font-family: var(--serif); font-size: 44px; font-weight: 600;
+    color: var(--navy); line-height: 1.18; letter-spacing: -0.015em;
+    margin-bottom: 28px;
+  }
+
+  .lede {
+    font-size: 19px; font-weight: 400; color: var(--text);
+    line-height: 1.6; margin-bottom: 40px;
+    padding-bottom: 32px; border-bottom: 1px solid var(--border);
+  }
+  .lede em { font-style: italic; color: var(--navy); }
+
+  .byline {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 56px;
+    font-size: 13px; color: var(--text-light);
+  }
+  .byline-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: linear-gradient(135deg, #2E8B57, #1e6b3f);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 13px;
+  }
+  .byline strong { color: var(--navy); font-weight: 600; }
+
+  h2 {
+    font-family: var(--serif); font-size: 26px; font-weight: 600;
+    color: var(--navy); line-height: 1.3; letter-spacing: -0.01em;
+    margin-top: 48px; margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 17px; color: var(--text); line-height: 1.75;
+    margin-bottom: 22px;
+  }
+  p strong { color: var(--navy); font-weight: 600; }
+  p em { font-style: italic; }
+
+  .risk-list {
+    list-style: none; padding: 0;
+    margin: 24px 0 28px;
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+  }
+  .risk-list li {
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--border);
+    font-size: 15.5px; color: var(--text); line-height: 1.6;
+  }
+  .risk-list li:last-child { border-bottom: none; }
+  .risk-list li strong { color: var(--navy); display: block; font-size: 14px; margin-bottom: 4px; font-weight: 600; }
+
+  .pull-quote {
+    font-family: var(--serif); font-size: 24px; font-style: italic;
+    color: var(--navy); line-height: 1.4;
+    margin: 48px 0; padding: 8px 0 8px 28px;
+    border-left: 3px solid var(--green);
+  }
+
+  .sources {
+    margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .sources h3 {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 16px;
+  }
+  .sources ul { list-style: none; padding: 0; }
+  .sources li {
+    font-size: 14px; color: var(--text-light); line-height: 1.6;
+    margin-bottom: 8px; padding-left: 16px; position: relative;
+  }
+  .sources li:before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 6px; height: 6px; background: var(--green); border-radius: 50%;
+  }
+
+  .article-cta {
+    margin-top: 64px; padding: 36px 40px;
+    background: var(--navy); border-radius: 16px;
+    color: #fff; text-align: left;
+  }
+  .article-cta h3 {
+    font-family: var(--serif); font-size: 22px; font-weight: 500;
+    color: #fff; margin-bottom: 12px; line-height: 1.35;
+  }
+  .article-cta p {
+    color: rgba(255,255,255,0.75); font-size: 15px;
+    margin-bottom: 22px;
+  }
+  .article-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .article-cta a {
+    display: inline-block; padding: 12px 22px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; transition: all .2s ease;
+  }
+  .article-cta a.primary { background: var(--green); color: #fff; }
+  .article-cta a.primary:hover { background: #246d44; text-decoration: none; }
+  .article-cta a.secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+  .article-cta a.secondary:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
+
+  .back-to-insights {
+    max-width: 760px; margin: 0 auto; padding: 0 32px 40px;
+    text-align: center;
+  }
+  .back-to-insights a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 8px;
+    background: #fff; border: 1px solid var(--border);
+    color: var(--navy); font-size: 14px; font-weight: 500;
+    transition: all .2s ease;
+  }
+  .back-to-insights a:hover {
+    background: var(--navy); color: #fff; border-color: var(--navy);
+    text-decoration: none; transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(12,18,32,0.12);
+  }
+  .back-to-insights svg { width: 16px; height: 16px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 13px; color: var(--text-light);
+  }
+  footer a { color: var(--text-light); margin: 0 12px; }
+  footer a:hover { color: var(--navy); }
+
+  @media (max-width: 720px) {
+    nav.top { padding: 16px 20px; }
+    article { padding: 40px 22px 70px; }
+    h1 { font-size: 30px; }
+    .lede { font-size: 17px; }
+    h2 { font-size: 22px; }
+    p { font-size: 16px; }
+    .pull-quote { font-size: 20px; padding-left: 20px; }
+    .article-cta { padding: 28px 24px; }
+    .back-to-insights { padding: 0 22px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="../index-fr.html" class="brand">Hymeria</a>
+  <a href="../index-fr.html#insights" class="back">&larr; Tous les insights</a>
+</nav>
+
+<article>
+  <div class="article-meta-top">
+    Hymeria Insights <span>&middot;</span> R&eacute;glementation <span>&middot;</span> 7 min de lecture
+  </div>
+
+  <h1>AI Act : ce que le r&egrave;glement europ&eacute;en change vraiment pour votre entreprise en 2026</h1>
+
+  <p class="lede">Entr&eacute; en vigueur en 2024, le r&egrave;glement europ&eacute;en sur l'intelligence artificielle d&eacute;ploie ses obligations par vagues successives. 2026 marque une ann&eacute;e charni&egrave;re : les syst&egrave;mes &agrave; haut risque, les mod&egrave;les &agrave; usage g&eacute;n&eacute;ral et les obligations de transparence trouvent leur plein effet. <em>Pour les dirigeants, l'AI Act ne se lit pas comme un texte technique, il se lit comme un test de maturit&eacute; de leur organisation face &agrave; l'intelligence artificielle.</em></p>
+
+  <div class="byline">
+    <div class="byline-avatar">H</div>
+    <div>Par <strong>Hymeria</strong> &middot; Publi&eacute; le 15 avril 2026</div>
+  </div>
+
+  <p>Pendant les deux ann&eacute;es qui ont suivi l'adoption de l'AI Act, une grande partie des dirigeants ont r&eacute;agi en confiant le dossier aux &eacute;quipes juridiques, en attendant les d&eacute;crets d'application, en suivant de loin les analyses des cabinets sp&eacute;cialis&eacute;s. Cette posture a peut-&ecirc;tre suffi tant que l'IA restait, dans la pratique, confin&eacute;e &agrave; quelques projets exp&eacute;rimentaux. Elle ne tient plus en 2026, alors que l'IA g&eacute;n&eacute;rative et l'IA agentique s'infiltrent dans l'ensemble des fonctions de l'entreprise.</p>
+
+  <p>Le r&egrave;glement europ&eacute;en ne se contente pas d'imposer des r&egrave;gles nouvelles. Il r&eacute;v&egrave;le, par effet miroir, l'&eacute;tat de ma&icirc;trise d'une organisation sur les usages de l'IA qu'elle a d&eacute;ploy&eacute;s. Les entreprises qui vivront bien l'AI Act ne seront pas celles qui auront produit les dossiers de conformit&eacute; les plus volumineux, mais celles qui auront su transformer cette obligation en occasion de clarifier, consolider et piloter leurs usages de l'intelligence artificielle.</p>
+
+  <h2>Comprendre la logique du texte : une pyramide de risques, pas une liste de cas</h2>
+
+  <p>L'AI Act n'est pas une r&eacute;glementation sectorielle. Il ne traite pas l'IA comme un objet technique, mais comme un usage. Sa logique est celle d'une pyramide de risques : plus un syst&egrave;me d'IA peut affecter les droits fondamentaux, la s&eacute;curit&eacute; ou le bien-&ecirc;tre des personnes, plus les obligations sont fortes, allant m&ecirc;me jusqu'&agrave; l'interdiction pure et simple pour certaines pratiques.</p>
+
+  <p>Il est n&eacute;cessaire de distinguer quatre cat&eacute;gories qui structurent l'AI Act :</p>
+
+  <ul class="risk-list">
+    <li><strong>Les syst&egrave;mes interdits</strong>Notation sociale g&eacute;n&eacute;ralis&eacute;e, manipulation subliminale, exploitation de la vuln&eacute;rabilit&eacute;, et, sous conditions strictes, certaines utilisations d'identification biom&eacute;trique &agrave; distance.</li>
+    <li><strong>Les syst&egrave;mes &agrave; haut risque</strong>Ceux utilis&eacute;s dans le recrutement, l'&eacute;valuation des salari&eacute;s, l'acc&egrave;s &agrave; l'&eacute;ducation, au cr&eacute;dit, aux services publics, &agrave; la sant&eacute;, &agrave; la justice, ainsi que les syst&egrave;mes int&eacute;gr&eacute;s &agrave; des infrastructures critiques.</li>
+    <li><strong>Les syst&egrave;mes &agrave; risque limit&eacute;</strong>Principalement ceux qui interagissent directement avec des personnes (chatbots, syst&egrave;mes g&eacute;n&eacute;rant du contenu), soumis &agrave; des obligations de transparence.</li>
+    <li><strong>Les syst&egrave;mes &agrave; risque minimal</strong>Ils restent libres d'usage.</li>
+  </ul>
+
+  <p>&Agrave; c&ocirc;t&eacute; de cette cat&eacute;gorisation, le r&egrave;glement introduit un r&eacute;gime sp&eacute;cifique pour les mod&egrave;les d'IA &agrave; usage g&eacute;n&eacute;ral (<em>GPAI, General Purpose AI models</em>) et plus particuli&egrave;rement pour les mod&egrave;les de fondation dits syst&eacute;miques. Ce r&eacute;gime s'applique d'abord aux fournisseurs de ces mod&egrave;les, mais il a un effet direct sur les entreprises qui les d&eacute;ploient : ce qui est exig&eacute; des fournisseurs finit par redescendre en exigences contractuelles chez les clients.</p>
+
+  <h2>2026 : les jalons d'application qui comptent pour un dirigeant</h2>
+
+  <p>Le calendrier de l'AI Act ne se lit pas en une seule date, mais en plusieurs phases. Les pratiques interdites sont applicables depuis d&eacute;but 2025. Les obligations relatives aux mod&egrave;les &agrave; usage g&eacute;n&eacute;ral ont commenc&eacute; &agrave; s'appliquer mi-2025, avec une exigence de transparence et de documentation technique qui remonte d&eacute;sormais le long de la cha&icirc;ne de valeur. Les syst&egrave;mes &agrave; haut risque rattrapent le r&eacute;gime g&eacute;n&eacute;ral en 2026 pour l'essentiel, avec des r&egrave;gles de transition sp&eacute;cifiques selon leur date de mise sur le march&eacute;. Les autorit&eacute;s nationales comp&eacute;tentes ont &eacute;t&eacute; d&eacute;sign&eacute;es, les sanctions sont calibr&eacute;es et peuvent aller jusqu'&agrave; <strong>7&nbsp;% du chiffre d'affaires mondial</strong> pour les manquements les plus graves.</p>
+
+  <p>Pour un dirigeant, en 2026, il ne suffit plus de dire &laquo;&nbsp;nous allons nous conformer&nbsp;&raquo;. Il faut pouvoir d&eacute;montrer, document &agrave; l'appui, que l'organisation sait ce qu'elle fait avec l'IA, qu'elle l'a class&eacute;e selon le niveau de risque ad&eacute;quat, qu'elle a mis en place les contr&ocirc;les proportionn&eacute;s. Cette d&eacute;monstration ne rel&egrave;ve ni du juridique seul, ni de la DSI seule, ni de la direction m&eacute;tier seule. Elle suppose une gouvernance transverse que la plupart des entreprises n'ont pas encore structur&eacute;e.</p>
+
+  <h2>L'obligation la plus sous-estim&eacute;e : savoir ce qu'on fait de l'IA</h2>
+
+  <p>Avant toute mise en conformit&eacute;, une obligation implicite traverse le r&egrave;glement : celle de disposer d'un inventaire r&eacute;el et &agrave; jour des syst&egrave;mes d'IA utilis&eacute;s dans l'entreprise. Dans la plupart des organisations, les usages de l'IA se sont multipli&eacute;s de fa&ccedil;on diffuse : copilotes achet&eacute;s par les &eacute;quipes m&eacute;tiers, mod&egrave;les embarqu&eacute;s dans des SaaS tiers, d&eacute;veloppements internes port&eacute;s par des data teams, agents conversationnels d&eacute;ploy&eacute;s c&ocirc;t&eacute; relation client, syst&egrave;mes de scoring historiques, automatisations RPA augment&eacute;es. Aucun p&eacute;rim&egrave;tre unique ne les tient tous.</p>
+
+  <p>EY, dans son rapport <em>AI Pulse Survey 2025</em>, mesure l'ampleur du ph&eacute;nom&egrave;ne : une majorit&eacute; des dirigeants reconnaissent ne pas disposer d'une vue consolid&eacute;e des syst&egrave;mes d'IA d&eacute;ploy&eacute;s dans leur propre organisation. EY qualifie cette situation d'<em>oversight gap</em> et y voit l'un des freins majeurs &agrave; la cr&eacute;ation de valeur par l'IA. L'AI Act rend cette situation intenable : on ne peut pas qualifier le niveau de risque, ni documenter une tra&ccedil;abilit&eacute;, ni organiser une supervision humaine, sur un parc dont on ignore la cartographie.</p>
+
+  <div class="pull-quote">
+    La premi&egrave;re conformit&eacute; &agrave; l'AI Act n'est pas juridique. Elle est cartographique.
+  </div>
+
+  <p>Cette cartographie est aussi la premi&egrave;re &eacute;tape d'un pilotage strat&eacute;gique de l'IA. Les entreprises qui la construisent d&eacute;couvrent souvent trois choses en m&ecirc;me temps : elles utilisent plus d'IA qu'elles ne le pensaient, certains de leurs usages ne rel&egrave;vent plus d'un pilote mais d'une d&eacute;pendance op&eacute;rationnelle, et plusieurs initiatives parall&egrave;les recouvrent les m&ecirc;mes besoins.</p>
+
+  <h2>Les obligations op&eacute;rationnelles : transparence, supervision humaine et gestion des risques</h2>
+
+  <p>Au-del&agrave; de l'inventaire, trois exigences structurent les obligations applicables aux syst&egrave;mes &agrave; haut risque et, par ricochet, aux syst&egrave;mes &agrave; usage g&eacute;n&eacute;ral.</p>
+
+  <ul class="risk-list">
+    <li><strong>Transparence</strong>Les utilisateurs doivent &ecirc;tre inform&eacute;s qu'ils interagissent avec un syst&egrave;me d'IA, et, dans certaines situations, recevoir des explications sur les d&eacute;cisions qui les concernent.</li>
+    <li><strong>Supervision humaine</strong>Les syst&egrave;mes &agrave; haut risque doivent &ecirc;tre con&ccedil;us pour permettre une intervention humaine effective et non pas simul&eacute;e.</li>
+    <li><strong>Gestion des risques</strong>L'organisation doit documenter l'analyse des risques, les mesures de mitigation, les dispositifs de contr&ocirc;le, la qualit&eacute; des jeux de donn&eacute;es d'entra&icirc;nement et la robustesse du syst&egrave;me.</li>
+  </ul>
+
+  <p>Ces exigences ne peuvent pas &ecirc;tre trait&eacute;es &agrave; la derni&egrave;re minute par un prestataire ext&eacute;rieur. Elles supposent que les &eacute;quipes m&eacute;tiers qui utilisent l'IA, les &eacute;quipes DSI qui la d&eacute;ploient, les &eacute;quipes juridiques qui la documentent et les &eacute;quipes risques qui la supervisent travaillent sur un langage commun. C'est souvent &agrave; ce stade que les entreprises d&eacute;couvrent que leur gouvernance IA est sous-dimensionn&eacute;e : un comit&eacute; existe peut-&ecirc;tre, mais il ne tranche pas ; des proc&eacute;dures existent, mais elles ne sont pas opposables ; une charte existe, mais elle ne s'applique pas aux outils achet&eacute;s par les &eacute;quipes m&eacute;tiers en dehors de la DSI.</p>
+
+  <h2>Mod&egrave;les &agrave; usage g&eacute;n&eacute;ral : l'effet de cascade sur les entreprises utilisatrices</h2>
+
+  <p>Les fournisseurs de mod&egrave;les d'IA &agrave; usage g&eacute;n&eacute;ral sont soumis &agrave; un r&eacute;gime d'obligations sp&eacute;cifiques : documentation technique, politique de respect du droit d'auteur, r&eacute;sum&eacute; des contenus d'entra&icirc;nement, exigences renforc&eacute;es pour les mod&egrave;les &agrave; risque syst&eacute;mique. Ces obligations ne s'adressent pas directement aux entreprises utilisatrices.</p>
+
+  <p>Mais elles ont un effet de cascade qui les concerne directement. Pour pouvoir se conformer eux-m&ecirc;mes et pour limiter leur propre exposition, les fournisseurs r&eacute;percutent une partie de ces exigences &agrave; leurs clients. Concr&egrave;tement, cela se traduit par des &eacute;volutions contractuelles : nouvelles clauses de responsabilit&eacute;, obligations d&eacute;claratives sur les usages, contraintes sur les donn&eacute;es d'entr&eacute;e, limitation de certains cas d'usage.</p>
+
+  <h2>Ce que les dirigeants doivent engager d&egrave;s 2026</h2>
+
+  <p>Face &agrave; cette &eacute;ch&eacute;ance, les entreprises les mieux pr&eacute;par&eacute;es ne sont pas celles qui ont le plus d&eacute;pens&eacute; en conformit&eacute;. Ce sont celles qui ont engag&eacute; quatre mouvements, dans un ordre pr&eacute;cis.</p>
+
+  <p><strong>D'abord</strong>, b&acirc;tir ou consolider un inventaire exhaustif des syst&egrave;mes d'IA utilis&eacute;s dans l'organisation, avec leur finalit&eacute;, leurs donn&eacute;es, leurs fournisseurs et leur rattachement m&eacute;tier.</p>
+
+  <p><strong>Ensuite</strong>, qualifier chaque usage selon la grille de risque du r&egrave;glement et assumer, le cas &eacute;ch&eacute;ant, l'arr&ecirc;t ou la refonte d'usages que le texte rend intenables.</p>
+
+  <p><strong>Puis</strong>, structurer une gouvernance IA effective au niveau du comit&eacute; ex&eacute;cutif : un sponsor clairement identifi&eacute;, une instance qui tranche r&eacute;ellement, un reporting trimestriel qui rend visible la trajectoire.</p>
+
+  <p><strong>Enfin</strong>, int&eacute;grer l'AI Act &agrave; la politique contractuelle : revoir les clauses avec les fournisseurs de mod&egrave;les, les int&eacute;grateurs, les &eacute;diteurs SaaS, pour que la conformit&eacute; technique du fournisseur se traduise par des engagements opposables.</p>
+
+  <p>Ces quatre mouvements ont un point commun : ils ne sont pas des chantiers de conformit&eacute;. <strong>Ce sont des chantiers de pilotage.</strong> Les dirigeants qui les m&egrave;neront s&eacute;rieusement sortiront de 2026 avec une entreprise capable de d&eacute;montrer sa ma&icirc;trise de l'IA non seulement &agrave; un r&eacute;gulateur, mais aussi &agrave; ses clients, ses salari&eacute;s, ses partenaires et ses investisseurs. C'est ce surplus de cr&eacute;dibilit&eacute;, plus que le respect formel du texte, qui fera la diff&eacute;rence.</p>
+
+  <h2>La position d'Hymeria</h2>
+
+  <p>Nous sommes convaincus que l'AI Act n'est pas un sujet juridique. <strong>C'est un sujet strat&eacute;gique</strong> qui oblige les directions g&eacute;n&eacute;rales &agrave; clarifier ce qu'elles font r&eacute;ellement de l'intelligence artificielle et &agrave; le piloter. Les entreprises qui le traiteront comme une charge subie perdront du temps et de l'argent. Celles qui s'en saisissent comme d'un r&eacute;v&eacute;lateur gagneront une longueur d'avance, notamment sur la question de la confiance, qui restera, pour les ann&eacute;es &agrave; venir, le premier facteur de diff&eacute;renciation dans les usages IA.</p>
+
+  <p>C'est l'approche que nous portons chez Hymeria : accompagner les dirigeants dans une lecture strat&eacute;gique de l'AI Act, avec des livrables concis, valid&eacute;s par un senior, et utilisables dans une salle de comit&eacute; ex&eacute;cutif. Notre conviction est simple : sur ces sujets, un document court, pr&eacute;cis et actionnable vaut plus que mille pages de conformit&eacute; empil&eacute;es &mdash; et c'est pr&eacute;cis&eacute;ment ce que nos &eacute;quipes, augment&eacute;es par l'IA, sont capables de produire.</p>
+
+  <div class="article-cta">
+    <h3>Besoin d'un diagnostic AI Act actionnable pour votre comit&eacute; ex&eacute;cutif ?</h3>
+    <p>R&eacute;servez 30 minutes avec un expert Hymeria, ou lancez un pr&eacute;-diagnostic strat&eacute;gique gratuit en 4 questions.</p>
+    <div class="article-cta-actions">
+      <a href="https://calendly.com/hymeria" class="primary" target="_blank" rel="noopener">R&eacute;server un appel strat&eacute;gique</a>
+      <a href="../index-fr.html#diagnostic" class="secondary">Lancer mon diagnostic IA</a>
+    </div>
+  </div>
+
+  <div class="sources">
+    <h3>Sources</h3>
+    <ul>
+      <li>Commission europ&eacute;enne &mdash; R&egrave;glement (UE) 2024/1689 &eacute;tablissant des r&egrave;gles harmonis&eacute;es sur l'intelligence artificielle (AI Act)</li>
+      <li>Commission europ&eacute;enne &mdash; AI Office, lignes directrices sur les mod&egrave;les d'IA &agrave; usage g&eacute;n&eacute;ral (2025)</li>
+      <li>EY &mdash; <em>AI Pulse Survey, Wave 3</em> (2025)</li>
+      <li>KPMG &mdash; <em>Trust, Attitudes and Use of AI</em> (2025)</li>
+      <li>McKinsey &amp; Company &mdash; <em>The State of AI in 2025</em></li>
+      <li>Deloitte AI Institute &mdash; <em>Agentic Enterprise 2028</em></li>
+    </ul>
+  </div>
+</article>
+
+<div class="back-to-insights">
+  <a href="../index-fr.html#insights">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Retour aux Insights
+  </a>
+</div>
+
+<footer>
+  &copy; 2026 Hymeria. Tous droits r&eacute;serv&eacute;s.
+  <span>&middot;</span>
+  <a href="../index-fr.html">Accueil</a>
+  <a href="../politique-confidentialite.html">Politique de confidentialit&eacute;</a>
+</footer>
+
+</body>
+</html>
