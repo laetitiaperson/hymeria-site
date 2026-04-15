@@ -532,47 +532,99 @@
   .trust h2 { font-size: 28px; font-weight: 300; line-height: 1.3; margin-bottom: 0; letter-spacing: -0.02em; }
   .trust h2 em { font-weight: 600; font-style: italic; }
   .trust .left-align p { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
-  .trust .cases-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 48px; }
+  .trust .cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
   .trust .case-card {
-    background: var(--white); border-radius: 16px; padding: 36px 40px;
+    background: var(--white); border-radius: 16px; padding: 32px 32px 28px;
     border: 1px solid var(--border); transition: all 0.3s;
-    display: block;
+    display: flex; flex-direction: column;
   }
-  .trust .case-card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+  .trust .case-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
   .trust .case-meta {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
     font-weight: 600; color: var(--green); margin-bottom: 12px;
   }
   .trust .case-card h4 {
-    font-family: var(--serif); font-size: 22px; font-weight: 600;
+    font-family: var(--serif); font-size: 19px; font-weight: 600;
     color: var(--navy); line-height: 1.35; margin-bottom: 14px;
     letter-spacing: -0.01em;
   }
-  .trust .case-tags {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
-    padding-bottom: 24px; border-bottom: 1px solid var(--border);
+  .trust .case-intro {
+    font-size: 14px; color: var(--text-light); line-height: 1.65;
+    margin-bottom: 22px; flex: 1;
   }
-  .trust .case-tag {
+  .trust .case-cta {
+    align-self: flex-start;
+    background: transparent; color: var(--green);
+    border: 1px solid var(--green); border-radius: 8px;
+    padding: 9px 18px; font-size: 13px; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all .2s ease;
+  }
+  .trust .case-cta:hover { background: var(--green); color: #fff; }
+
+  /* Case study modal */
+  .case-modal-overlay {
+    position: fixed; inset: 0; background: rgba(12,18,32,0.55);
+    backdrop-filter: blur(4px);
+    display: none; align-items: flex-start; justify-content: center;
+    z-index: 9998; padding: 40px 20px; overflow-y: auto;
+    opacity: 0; transition: opacity .25s ease;
+  }
+  .case-modal-overlay.open { display: flex; opacity: 1; }
+  .case-modal {
+    background: #fff; border-radius: 16px;
+    max-width: 760px; width: 100%; padding: 48px 52px 44px;
+    position: relative; margin: auto;
+    box-shadow: 0 30px 80px rgba(12,18,32,0.25);
+    transform: translateY(20px); transition: transform .3s ease;
+  }
+  .case-modal-overlay.open .case-modal { transform: translateY(0); }
+  .case-modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #f4f5f7; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #2A3547; font-size: 18px; line-height: 1;
+    transition: all .2s ease;
+  }
+  .case-modal-close:hover { background: #e6e7eb; }
+  .case-modal .case-meta { color: var(--green); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 12px; }
+  .case-modal h3 {
+    font-family: var(--serif); font-size: 24px; font-weight: 600;
+    color: var(--navy); line-height: 1.3; margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .case-modal .case-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding-bottom: 24px; margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-modal .case-tag {
     font-size: 12px; color: var(--text-light); background: var(--bg-warm);
     padding: 5px 12px; border-radius: 20px; font-weight: 500;
   }
-  .trust .case-block { margin-top: 18px; }
-  .trust .case-block:first-of-type { margin-top: 0; }
-  .trust .case-block-label {
+  .case-modal .case-block { margin-top: 22px; }
+  .case-modal .case-block:first-of-type { margin-top: 0; }
+  .case-modal .case-block-label {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
     font-weight: 600; color: var(--navy); margin-bottom: 8px;
   }
-  .trust .case-block p {
-    font-size: 14.5px; color: var(--text-light); line-height: 1.7;
+  .case-modal .case-block p {
+    font-size: 14.5px; color: var(--text-light); line-height: 1.75;
     margin-bottom: 0;
   }
-  .trust .case-result {
-    margin-top: 24px; padding: 18px 22px;
-    background: rgba(46,139,87,0.06); border-left: 3px solid var(--green);
+  .case-modal .case-result {
+    margin-top: 26px; padding: 18px 22px;
+    background: rgba(46,139,87,0.07); border-left: 3px solid var(--green);
     border-radius: 6px;
   }
-  .trust .case-result .case-block-label { color: var(--green); margin-bottom: 6px; }
-  .trust .case-result p { color: var(--text); font-weight: 500; }
+  .case-modal .case-result .case-block-label { color: var(--green); margin-bottom: 6px; }
+  .case-modal .case-result p { color: var(--text); font-weight: 500; }
+  body.modal-open { overflow: hidden; }
+  @media (max-width: 720px) {
+    .case-modal { padding: 36px 24px 28px; }
+    .case-modal h3 { font-size: 20px; }
+  }
   .trust .stat-label {
     font-size: 13px; color: var(--text-muted); margin-top: 4px;
     letter-spacing: 0.04em; font-weight: 500;
@@ -1033,46 +1085,16 @@
       <p>Notre &eacute;quipe r&eacute;unit des profils qui ont pass&eacute; des ann&eacute;es &agrave; produire des &eacute;tudes de march&eacute;, des business plans et des diagnostics strat&eacute;giques pour des grands groupes, des ETI et des startups en croissance. C'est cette exp&eacute;rience terrain qui nourrit aujourd'hui notre mod&egrave;le augment&eacute; par l'IA.</p>
       <div class="cases-grid">
         <div class="case-card">
-          <div class="case-meta">Cas client</div>
+          <div class="case-meta">Cas client &middot; Mobilier enfant</div>
           <h4>Identification et qualification de partenaires commerciaux sur le march&eacute; nord-am&eacute;ricain</h4>
-          <div class="case-tags">
-            <span class="case-tag">Secteur : mobilier d'int&eacute;rieur pour enfants</span>
-            <span class="case-tag">Mission : expansion internationale</span>
-            <span class="case-tag">Livr&eacute; en 4 jours</span>
-          </div>
-          <div class="case-block">
-            <div class="case-block-label">Contexte</div>
-            <p>Un acteur europ&eacute;en du mobilier d'int&eacute;rieur d&eacute;di&eacute; &agrave; l'univers enfant souhaitait acc&eacute;l&eacute;rer son d&eacute;veloppement &agrave; l'international et faire de l'Am&eacute;rique du Nord son prochain relais de croissance. L'enjeu : structurer une strat&eacute;gie de distribution efficace sur un march&eacute; vaste, fragment&eacute; et exigeant, en identifiant les bons partenaires commerciaux pour porter la marque aupr&egrave;s des r&eacute;seaux retail, e-commerce et sp&eacute;cialis&eacute;s.</p>
-          </div>
-          <div class="case-block">
-            <div class="case-block-label">Notre intervention</div>
-            <p>Nos agents IA ont cartographi&eacute; l'&eacute;cosyst&egrave;me nord-am&eacute;ricain du mobilier enfant et des univers connexes (pu&eacute;riculture, d&eacute;coration, retail premium), en analysant des milliers de sources publiques, bases sectorielles et signaux de march&eacute;. Chaque acteur identifi&eacute; a ensuite &eacute;t&eacute; qualifi&eacute; selon une grille multicrit&egrave;res : positionnement, couverture g&eacute;ographique, canaux de distribution, compatibilit&eacute; de gamme, sant&eacute; financi&egrave;re et potentiel de partenariat. Nos experts ont valid&eacute;, priorisé et contextualis&eacute; les r&eacute;sultats pour livrer au client une base actionnable, pr&ecirc;te &agrave; &ecirc;tre exploit&eacute;e par ses &eacute;quipes commerciales.</p>
-          </div>
-          <div class="case-result">
-            <div class="case-block-label">R&eacute;sultat</div>
-            <p>200 partenaires potentiels identifi&eacute;s et qualifi&eacute;s en 4 jours, segment&eacute;s par typologie et priorit&eacute; d'approche, permettant au client d'engager imm&eacute;diatement sa phase de prospection cibl&eacute;e sur le march&eacute; nord-am&eacute;ricain.</p>
-          </div>
+          <p class="case-intro">Un acteur europ&eacute;en du mobilier d'int&eacute;rieur d&eacute;di&eacute; &agrave; l'univers enfant souhaitait faire de l'Am&eacute;rique du Nord son prochain relais de croissance.</p>
+          <button class="case-cta" onclick="openCase('case1')">D&eacute;couvrir la mission &rarr;</button>
         </div>
         <div class="case-card">
-          <div class="case-meta">Cas client</div>
+          <div class="case-meta">Cas client &middot; Pet food</div>
           <h4>Identification de r&eacute;seaux de distribution pour un lancement sur le march&eacute; du pet food en Asie du Sud-Est</h4>
-          <div class="case-tags">
-            <span class="case-tag">Secteur : pet food</span>
-            <span class="case-tag">Mission : entr&eacute;e sur un nouveau march&eacute;</span>
-            <span class="case-tag">Livr&eacute; en 3 jours</span>
-          </div>
-          <div class="case-block">
-            <div class="case-block-label">Contexte</div>
-            <p>Un nouvel entrant sur le march&eacute; du pet food pr&eacute;parait son lancement en Asie du Sud-Est et cherchait &agrave; structurer sa strat&eacute;gie de distribution dans une zone g&eacute;ographique &agrave; fort potentiel mais au tissu commercial complexe et fragment&eacute;. L'enjeu : identifier rapidement les bons canaux pour atteindre les propri&eacute;taires d'animaux, en s'appuyant &agrave; la fois sur les r&eacute;seaux de distribution grand public et sur les prescripteurs cl&eacute;s du secteur.</p>
-          </div>
-          <div class="case-block">
-            <div class="case-block-label">Notre intervention</div>
-            <p>Nos agents IA ont cartographi&eacute; l'&eacute;cosyst&egrave;me de distribution pet food sur l'ensemble des pays cibles, en croisant r&eacute;seaux de cliniques v&eacute;t&eacute;rinaires, distributeurs sp&eacute;cialis&eacute;s, enseignes de retail et plateformes e-commerce r&eacute;gionales. Chaque acteur a &eacute;t&eacute; qualifi&eacute; selon une grille adapt&eacute;e : couverture g&eacute;ographique, taille du r&eacute;seau, positionnement, compatibilit&eacute; avec le positionnement du client et potentiel d'activation commerciale. Nos experts ont prioris&eacute; les cibles et structur&eacute; les r&eacute;sultats en une base directement exploitable par les &eacute;quipes de d&eacute;veloppement du client.</p>
-          </div>
-          <div class="case-result">
-            <div class="case-block-label">R&eacute;sultat</div>
-            <p>80 r&eacute;seaux de cliniques v&eacute;t&eacute;rinaires et distributeurs qualifi&eacute;s en 3 jours, permettant au client d'aborder sa strat&eacute;gie de lancement avec une vision claire des partenaires &agrave; approcher en priorit&eacute; sur chaque pays cible.</p>
-          </div>
+          <p class="case-intro">Un nouvel entrant sur le march&eacute; du pet food pr&eacute;parait son lancement en Asie du Sud-Est dans une zone &agrave; fort potentiel mais complexe.</p>
+          <button class="case-cta" onclick="openCase('case2')">D&eacute;couvrir la mission &rarr;</button>
         </div>
       </div>
     </div>
@@ -1093,6 +1115,57 @@
     <div class="cta-note">30 minutes avec un directeur de mission. Gratuit. Sans engagement.</div>
   </div>
 </section>
+
+<!-- CASE STUDY MODALS -->
+<div class="case-modal-overlay" id="case1">
+  <div class="case-modal">
+    <button class="case-modal-close" onclick="closeCase(this)" aria-label="Fermer">&times;</button>
+    <div class="case-meta">Cas client</div>
+    <h3>Identification et qualification de partenaires commerciaux sur le march&eacute; nord-am&eacute;ricain</h3>
+    <div class="case-tags">
+      <span class="case-tag">Secteur : mobilier d'int&eacute;rieur pour enfants</span>
+      <span class="case-tag">Mission : expansion internationale</span>
+      <span class="case-tag">Livr&eacute; en 4 jours</span>
+    </div>
+    <div class="case-block">
+      <div class="case-block-label">Contexte</div>
+      <p>Un acteur europ&eacute;en du mobilier d'int&eacute;rieur d&eacute;di&eacute; &agrave; l'univers enfant souhaitait acc&eacute;l&eacute;rer son d&eacute;veloppement &agrave; l'international et faire de l'Am&eacute;rique du Nord son prochain relais de croissance. L'enjeu : structurer une strat&eacute;gie de distribution efficace sur un march&eacute; vaste, fragment&eacute; et exigeant, en identifiant les bons partenaires commerciaux pour porter la marque aupr&egrave;s des r&eacute;seaux retail, e-commerce et sp&eacute;cialis&eacute;s.</p>
+    </div>
+    <div class="case-block">
+      <div class="case-block-label">Notre intervention</div>
+      <p>Nos agents IA ont cartographi&eacute; l'&eacute;cosyst&egrave;me nord-am&eacute;ricain du mobilier enfant et des univers connexes (pu&eacute;riculture, d&eacute;coration, retail premium), en analysant des milliers de sources publiques, bases sectorielles et signaux de march&eacute;. Chaque acteur identifi&eacute; a ensuite &eacute;t&eacute; qualifi&eacute; selon une grille multicrit&egrave;res : positionnement, couverture g&eacute;ographique, canaux de distribution, compatibilit&eacute; de gamme, sant&eacute; financi&egrave;re et potentiel de partenariat. Nos experts ont valid&eacute;, prioris&eacute; et contextualis&eacute; les r&eacute;sultats pour livrer au client une base actionnable, pr&ecirc;te &agrave; &ecirc;tre exploit&eacute;e par ses &eacute;quipes commerciales.</p>
+    </div>
+    <div class="case-result">
+      <div class="case-block-label">R&eacute;sultat</div>
+      <p>200 partenaires potentiels identifi&eacute;s et qualifi&eacute;s en 4 jours, segment&eacute;s par typologie et priorit&eacute; d'approche, permettant au client d'engager imm&eacute;diatement sa phase de prospection cibl&eacute;e sur le march&eacute; nord-am&eacute;ricain.</p>
+    </div>
+  </div>
+</div>
+
+<div class="case-modal-overlay" id="case2">
+  <div class="case-modal">
+    <button class="case-modal-close" onclick="closeCase(this)" aria-label="Fermer">&times;</button>
+    <div class="case-meta">Cas client</div>
+    <h3>Identification de r&eacute;seaux de distribution pour un lancement sur le march&eacute; du pet food en Asie du Sud-Est</h3>
+    <div class="case-tags">
+      <span class="case-tag">Secteur : pet food</span>
+      <span class="case-tag">Mission : entr&eacute;e sur un nouveau march&eacute;</span>
+      <span class="case-tag">Livr&eacute; en 3 jours</span>
+    </div>
+    <div class="case-block">
+      <div class="case-block-label">Contexte</div>
+      <p>Un nouvel entrant sur le march&eacute; du pet food pr&eacute;parait son lancement en Asie du Sud-Est et cherchait &agrave; structurer sa strat&eacute;gie de distribution dans une zone g&eacute;ographique &agrave; fort potentiel mais au tissu commercial complexe et fragment&eacute;. L'enjeu : identifier rapidement les bons canaux pour atteindre les propri&eacute;taires d'animaux, en s'appuyant &agrave; la fois sur les r&eacute;seaux de distribution grand public et sur les prescripteurs cl&eacute;s du secteur.</p>
+    </div>
+    <div class="case-block">
+      <div class="case-block-label">Notre intervention</div>
+      <p>Nos agents IA ont cartographi&eacute; l'&eacute;cosyst&egrave;me de distribution pet food sur l'ensemble des pays cibles, en croisant r&eacute;seaux de cliniques v&eacute;t&eacute;rinaires, distributeurs sp&eacute;cialis&eacute;s, enseignes de retail et plateformes e-commerce r&eacute;gionales. Chaque acteur a &eacute;t&eacute; qualifi&eacute; selon une grille adapt&eacute;e : couverture g&eacute;ographique, taille du r&eacute;seau, positionnement, compatibilit&eacute; avec le positionnement du client et potentiel d'activation commerciale. Nos experts ont prioris&eacute; les cibles et structur&eacute; les r&eacute;sultats en une base directement exploitable par les &eacute;quipes de d&eacute;veloppement du client.</p>
+    </div>
+    <div class="case-result">
+      <div class="case-block-label">R&eacute;sultat</div>
+      <p>80 r&eacute;seaux de cliniques v&eacute;t&eacute;rinaires et distributeurs qualifi&eacute;s en 3 jours, permettant au client d'aborder sa strat&eacute;gie de lancement avec une vision claire des partenaires &agrave; approcher en priorit&eacute; sur chaque pays cible.</p>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1401,6 +1474,31 @@ function submitNewsletter() {
       '<div class="success">\u2713 Bienvenue ! Votre premi\u00E8re \u00E9dition arrive lundi prochain.</div>';
   }
 }
+
+// Case study modals
+function openCase(id) {
+  var modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.classList.add('modal-open');
+}
+function closeCase(el) {
+  var modal = el.closest('.case-modal-overlay');
+  if (modal) modal.classList.remove('open');
+  document.body.classList.remove('modal-open');
+}
+document.addEventListener('click', function(e) {
+  if (e.target.classList && e.target.classList.contains('case-modal-overlay')) {
+    e.target.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.case-modal-overlay.open').forEach(function(m){ m.classList.remove('open'); });
+    document.body.classList.remove('modal-open');
+  }
+});
 
 // Cookie consent banner
 (function() {
