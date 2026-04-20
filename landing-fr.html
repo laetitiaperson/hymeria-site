@@ -280,52 +280,10 @@
     max-width: 480px;
   }
   .launch-offer .reserved {
-    margin-top: 22px;
-    font-size: 13px; color: var(--sable); font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-top: 20px;
+    font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 400;
+    font-style: italic;
   }
-  .launch-counter {
-    margin-top: 28px;
-    padding: 18px 22px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 6px;
-    max-width: 420px;
-  }
-  .launch-counter-label {
-    font-size: 11px; color: rgba(255,255,255,0.7);
-    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
-    margin-bottom: 10px; display: block;
-  }
-  .launch-counter-row {
-    display: flex; align-items: center; gap: 14px;
-  }
-  .launch-counter-slots {
-    display: flex; gap: 6px;
-  }
-  .launch-slot {
-    width: 22px; height: 22px; border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.35);
-    background: transparent;
-    transition: all 0.3s ease;
-  }
-  .launch-slot.taken {
-    background: var(--sable);
-    border-color: var(--sable);
-    box-shadow: 0 0 0 2px rgba(212,165,116,0.25);
-  }
-  .launch-counter-text {
-    font-family: var(--display);
-    font-size: 18px; font-weight: 700; color: #fff;
-    letter-spacing: -0.01em;
-  }
-  .launch-counter-text .sable-num { color: var(--sable); font-size: 22px; }
-  .launch-counter.urgent .launch-counter-text { color: var(--sable); }
-  .launch-counter.urgent .launch-slot:not(.taken) {
-    border-color: var(--sable);
-    animation: blink 1.6s ease-in-out infinite;
-  }
-  .launch-counter.full .launch-counter-text { color: var(--sable); }
   .launch-form {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.14);
@@ -1074,14 +1032,7 @@
       <span class="launch-badge">Lancement</span>
       <h2>Une mission de conseil strat&eacute;gique <em>offerte</em></h2>
       <p class="sub">Nous lan&ccedil;ons Hymeria et offrons une mission compl&egrave;te aux premi&egrave;res entreprises qui nous font confiance. &Eacute;tude de march&eacute;, business plan, audit digital : choisissez votre sujet, nous mobilisons nos agents IA et nos experts pour le livrer en quelques jours.</p>
-      <div class="reserved">&#9733; Offre r&eacute;serv&eacute;e aux 5 premiers inscrits</div>
-      <div class="launch-counter" id="launchCounter">
-        <span class="launch-counter-label">Places encore disponibles</span>
-        <div class="launch-counter-row">
-          <div class="launch-counter-slots" id="launchSlots"></div>
-          <div class="launch-counter-text" id="launchCounterText"></div>
-        </div>
-      </div>
+      <div class="reserved">Offre r&eacute;serv&eacute;e aux 5 premiers inscrits</div>
     </div>
 
     <div class="fade-in" style="transition-delay:150ms">
@@ -1676,46 +1627,6 @@ function submitNewsletter() {
       '<div class="success">\u2713 Bienvenue ! Votre premi\u00E8re \u00E9dition arrive lundi prochain.</div>';
   }
 }
-
-// Launch offer counter
-// --------------------
-// TOTAL_PLACES = capacity (don't change unless the offer headline changes)
-// PLACES_TAKEN = number of signups already validated. Update this number
-//                manually as inscriptions come in, then re-deploy.
-var TOTAL_PLACES = 5;
-var PLACES_TAKEN = 0;
-
-function renderLaunchCounter() {
-  var remaining = Math.max(0, TOTAL_PLACES - PLACES_TAKEN);
-  var slotsEl = document.getElementById('launchSlots');
-  var textEl = document.getElementById('launchCounterText');
-  var counterEl = document.getElementById('launchCounter');
-  if (!slotsEl || !textEl || !counterEl) return;
-
-  slotsEl.innerHTML = '';
-  for (var i = 0; i < TOTAL_PLACES; i++) {
-    var s = document.createElement('span');
-    s.className = 'launch-slot' + (i < PLACES_TAKEN ? ' taken' : '');
-    slotsEl.appendChild(s);
-  }
-
-  counterEl.classList.remove('urgent', 'full');
-  if (remaining === 0) {
-    counterEl.classList.add('full');
-    textEl.innerHTML = 'Offre compl\u00E8te';
-    // Lock the form
-    var form = document.getElementById('launchForm');
-    if (form) {
-      form.innerHTML = '<div class="launch-success">\u2713 Les 5 places de l\'offre de lancement sont prises. Merci pour votre int\u00E9r\u00EAt ! Inscrivez-vous &agrave; la liste d\'attente en nous \u00E9crivant \u00E0 <a href="mailto:contact@hymeria.com" style="color:var(--sable);text-decoration:underline">contact@hymeria.com</a>.</div>';
-    }
-  } else if (remaining <= 2) {
-    counterEl.classList.add('urgent');
-    textEl.innerHTML = '<span class="sable-num">' + remaining + '</span> / ' + TOTAL_PLACES + ' &mdash; d\u00E9p\u00EAchez-vous';
-  } else {
-    textEl.innerHTML = '<span class="sable-num">' + remaining + '</span> / ' + TOTAL_PLACES;
-  }
-}
-renderLaunchCounter();
 
 // Launch offer registration
 function submitLaunch() {
