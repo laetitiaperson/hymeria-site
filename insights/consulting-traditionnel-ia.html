@@ -58,7 +58,8 @@
     border-bottom: 1px solid var(--border);
     padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
   }
-  nav.top .brand { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--navy); }
+  nav.top .brand { display: flex; align-items: center; }
+  nav.top .brand img { height: 44px; width: auto; display: block; }
   nav.top a.back { font-size: 13px; color: var(--text-light); }
   nav.top a.back:hover { color: var(--navy); }
 
@@ -213,7 +214,7 @@
 <body>
 
 <nav class="top">
-  <a href="../index-fr.html" class="brand">Hymeria</a>
+  <a href="../index-fr.html" class="brand"><img src="../logo-noir.png?v=5" alt="Hymeria Consulting"></a>
   <a href="../index-fr.html#insights" class="back">&larr; Tous les insights</a>
 </nav>
 
