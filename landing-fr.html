@@ -27,8 +27,8 @@
     --taupe: #8B7D6B;           /* Couleur chaude principale */
     --taupe-soft: rgba(139,125,107,0.08);
     --taupe-pale: #F3F0EB;      /* Fond doux */
-    --sable: #D4A574;           /* Sable Chaud — accent ponctuel */
-    --sable-pale: #FAF3E8;
+    --cuivre: #B87333;           /* Sable Chaud — accent ponctuel */
+    --cuivre-pale: #FAEFE3;
     --blanc: #FFFFFF;
     --gris-80: #333333;
     --gris-60: #666666;
@@ -52,7 +52,7 @@
     --accent-soft: rgba(0,71,171,0.08);
     --green: #8B7D6B;
     --green-soft: rgba(139,125,107,0.10);
-    --gold: #D4A574;
+    --gold: #B87333;
     --white: #FFFFFF;
     --border: #E5E5E5;
 
@@ -215,7 +215,7 @@
   }
   .hero .stat-card:nth-child(1)::before { background: var(--cobalt); }
   .hero .stat-card:nth-child(2)::before { background: var(--cobalt-clair); }
-  .hero .stat-card:nth-child(3)::before { background: var(--sable); }
+  .hero .stat-card:nth-child(3)::before { background: var(--cuivre); }
   .hero .stat-card:nth-child(4)::before { background: var(--taupe); }
   .hero .stat-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.22); }
   .hero .stat-val {
@@ -230,7 +230,7 @@
   }
   .hero .stat-card:nth-child(1) .stat-divider { background: var(--cobalt-clair); }
   .hero .stat-card:nth-child(2) .stat-divider { background: var(--cobalt-clair); }
-  .hero .stat-card:nth-child(3) .stat-divider { background: var(--sable); }
+  .hero .stat-card:nth-child(3) .stat-divider { background: var(--cuivre); }
   .hero .stat-card:nth-child(4) .stat-divider { background: var(--taupe); }
   .hero .stat-label {
     font-family: var(--sans);
@@ -246,7 +246,7 @@
   }
   .launch-offer::before {
     content: ''; position: absolute; inset: 0;
-    background: radial-gradient(circle at 15% 20%, rgba(212,165,116,0.18), transparent 40%),
+    background: radial-gradient(circle at 15% 20%, rgba(184,115,51,0.18), transparent 40%),
                 radial-gradient(circle at 85% 80%, rgba(58,123,213,0.25), transparent 45%);
     pointer-events: none;
   }
@@ -258,7 +258,7 @@
   .launch-badge {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 14px; border-radius: 100px;
-    background: var(--sable); color: var(--noir);
+    background: var(--cuivre); color: var(--noir);
     font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 0.1em;
     margin-bottom: 20px;
@@ -274,7 +274,7 @@
     line-height: 1.15; letter-spacing: -0.02em;
     margin-bottom: 18px;
   }
-  .launch-offer h2 em { font-style: italic; color: var(--sable); font-weight: 700; }
+  .launch-offer h2 em { font-style: italic; color: var(--cuivre); font-weight: 700; }
   .launch-offer .sub {
     font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.7;
     max-width: 480px;
@@ -306,14 +306,14 @@
     outline: none; transition: all 0.2s;
   }
   .launch-form input::placeholder { color: rgba(255,255,255,0.45); }
-  .launch-form input:focus { border-color: var(--sable); background: rgba(255,255,255,0.12); }
+  .launch-form input:focus { border-color: var(--cuivre); background: rgba(255,255,255,0.12); }
   .launch-form input + input { margin-top: 12px; }
   .launch-form .actions {
     display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap;
   }
   .launch-form .btn-sable {
     flex: 1; padding: 14px 28px; border-radius: 100px;
-    background: var(--sable); color: var(--noir);
+    background: var(--cuivre); color: var(--noir);
     font-family: var(--sans);
     font-size: 13px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 0.06em;
@@ -333,8 +333,8 @@
   .launch-form .note { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 14px; line-height: 1.5; }
   .launch-success {
     padding: 16px 20px; border-radius: 8px;
-    background: rgba(212,165,116,0.12); border: 1px solid var(--sable);
-    color: var(--sable); font-size: 14px; font-weight: 500;
+    background: rgba(184,115,51,0.12); border: 1px solid var(--cuivre);
+    color: var(--cuivre); font-size: 14px; font-weight: 500;
   }
   @media (max-width: 820px) {
     .launch-offer .inner { grid-template-columns: 1fr; gap: 40px; }
@@ -373,7 +373,7 @@
   }
   .problem .constats-grid .constat-card:nth-child(1)::before { background: var(--cobalt); }
   .problem .constats-grid .constat-card:nth-child(2)::before { background: var(--taupe); }
-  .problem .constats-grid .constat-card:nth-child(3)::before { background: var(--sable); }
+  .problem .constats-grid .constat-card:nth-child(3)::before { background: var(--cuivre); }
   .problem .constats-grid .constat-card:nth-child(4)::before { background: var(--cobalt-clair); }
   .problem .constat-card:hover {
     box-shadow: 0 12px 40px rgba(0,0,0,0.08);
@@ -552,7 +552,7 @@
   .pricing .inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
   .pricing .left-align { text-align: left; margin-bottom: 48px; }
   .pricing h2 { font-size: 28px; font-weight: 600; line-height: 1.3; color: #fff; }
-  .pricing h2 em { font-weight: 700; font-style: italic; color: var(--sable); }
+  .pricing h2 em { font-weight: 700; font-style: italic; color: var(--cuivre); }
   .pricing .left-align p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 24px; line-height: 1.8; }
 
   .pricing-table { max-width: 900px; margin: 0 auto; }
@@ -568,7 +568,7 @@
   }
   .col-old .col-label { color: rgba(255,255,255,0.3); }
   .col-old .col-price { display: none; }
-  .col-new .col-label { color: var(--sable); }
+  .col-new .col-label { color: var(--cuivre); }
   .col-new .col-price { display: none; }
   .col-old { text-align: center; }
   .col-new { text-align: center; }
@@ -665,7 +665,7 @@
   }
   .diag-metric:nth-child(1)::before { background: var(--cobalt); }
   .diag-metric:nth-child(2)::before { background: var(--taupe); }
-  .diag-metric:nth-child(3)::before { background: var(--sable); }
+  .diag-metric:nth-child(3)::before { background: var(--cuivre); }
   .diag-metric-label {
     font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;
     text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
@@ -720,7 +720,7 @@
   .article-card-link:hover { text-decoration: none; }
 
   /* Trust */
-  .trust { background: var(--sable-pale); padding: 80px 32px; }
+  .trust { background: var(--cuivre-pale); padding: 80px 32px; }
   .trust .inner { max-width: 1100px; margin: 0 auto; }
   .trust .left-align { text-align: left; margin-bottom: 48px; }
   .trust h2 { font-size: 28px; font-weight: 600; line-height: 1.3; margin-bottom: 0; letter-spacing: -0.015em; }
@@ -868,7 +868,7 @@
     position: relative; z-index: 2;
   }
   .final-cta h2 { font-size: 28px; font-weight: 600; line-height: 1.3; color: #fff; margin-bottom: 24px; letter-spacing: -0.015em; }
-  .final-cta h2 em { font-weight: 700; font-style: italic; color: var(--sable); }
+  .final-cta h2 em { font-weight: 700; font-style: italic; color: var(--cuivre); }
   .final-cta p { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 40px; line-height: 1.8; }
   .final-cta .ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
   .final-cta .cta-note { font-size: 14px; color: rgba(255,255,255,0.4); }
@@ -884,7 +884,7 @@
   footer .footer-brand { margin-bottom: 40px; }
   footer .brand { margin-bottom: 12px; }
   footer .brand img { height: 76px; width: auto; }
-  footer .tagline { font-size: 14px; color: var(--sable); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.02em; }
+  footer .tagline { font-size: 14px; color: var(--cuivre); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.02em; }
   footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
   footer .footer-grid {
     display: grid; grid-template-columns: 1fr 1fr 1fr;
@@ -1118,7 +1118,7 @@
     <div class="fade-in" style="transition-delay:300ms">
       <div class="pillar-card left">
         <div class="pillar-text">
-          <div class="pillar-step" style="color:#D4A574">03</div>
+          <div class="pillar-step" style="color:#B87333">03</div>
           <div class="pillar-title">Validation par un expert senior</div>
           <div class="pillar-desc">Tous les livrables Hymeria sont analys&eacute;s en d&eacute;tail et valid&eacute;s par un expert disposant de plus de 15 ans d'exp&eacute;rience dans le domaine concern&eacute;. Son r&ocirc;le est de d&eacute;tecter les angles morts, d'enrichir l'analyse avec sa connaissance sectorielle et de transformer des donn&eacute;es en recommandations actionnables. Cette combinaison &laquo; humain + technologie &raquo; constitue la signature Hymeria.</div>
         </div>
