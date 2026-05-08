@@ -619,6 +619,60 @@
   .article-card-link { display: block; text-decoration: none; color: inherit; }
   .article-card-link:hover { text-decoration: none; }
 
+  /* FAQ */
+  .faq { background: var(--bg); padding: 80px 32px; }
+  .faq .inner { max-width: 880px; margin: 0 auto; }
+  .faq .left-align { text-align: left; margin-bottom: 40px; }
+  .faq h2 { font-family: var(--display); font-size: 28px; font-weight: 600; line-height: 1.3; color: var(--noir); letter-spacing: -0.015em; }
+  .faq h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
+  .faq .left-align p { font-size: 16px; color: var(--text-light); margin-top: 16px; line-height: 1.7; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  .faq-item:hover { border-color: var(--gris-20); }
+  .faq-item[open] { box-shadow: 0 8px 28px rgba(0,71,171,0.06); border-color: var(--cobalt); }
+
+  .faq-item summary {
+    list-style: none;
+    padding: 22px 60px 22px 26px;
+    cursor: pointer;
+    font-family: var(--display);
+    font-size: 16px; font-weight: 600;
+    color: var(--noir); letter-spacing: -0.005em;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--cobalt); }
+  .faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 24px; top: 50%; transform: translateY(-50%);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--cobalt-pale);
+    color: var(--cobalt);
+    font-family: var(--display);
+    font-size: 22px; font-weight: 400; line-height: 26px; text-align: center;
+    transition: transform 0.3s, background 0.2s;
+  }
+  .faq-item[open] summary { color: var(--cobalt); }
+  .faq-item[open] summary::after {
+    content: '\2013';
+    transform: translateY(-50%) rotate(180deg);
+    background: var(--cobalt);
+    color: #fff;
+  }
+  .faq-answer {
+    padding: 0 26px 24px;
+    font-size: 15px; color: var(--text-light); line-height: 1.7;
+  }
+  .faq-answer p { margin: 0; }
+
   /* Trust */
   .trust { background: var(--cuivre-pale); padding: 80px 32px; }
   .trust .inner { max-width: 1100px; margin: 0 auto; }
@@ -974,6 +1028,76 @@
           }
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/index-fr.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte une mission Hymeria ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos missions démarrent à 5 000 €. Le tarif final dépend du périmètre, de la complexité et des livrables attendus. Nous facturons au résultat et au périmètre de mission, pas au nombre de jours mobilisés. Un devis précis vous est proposé sous 24h après une session de qualification gratuite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En combien de temps livrez-vous une mission ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos missions sont livrées en 1 à 2 semaines en moyenne. Cette rapidité est rendue possible par nos 200 agents IA spécialisés qui préparent l'analyse en parallèle, puis par la validation par nos experts seniors. La proposition commerciale est envoyée sous 48h et le démarrage est immédiat après validation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre Hymeria et un cabinet de conseil classique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous avons repensé chaque maillon de la chaîne autour de l'IA. Nos agents IA spécialisés produisent l'essentiel du travail analytique, ce qu'une équipe humaine met plusieurs mois à assembler. Nos experts seniors apportent les 10 % qui changent tout : compréhension fine des enjeux, connaissance intime des marchés, capacité à transformer les données en recommandations actionnables. Résultat : missions livrées 5 fois plus vite, à une fraction du coût."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vos livrables sont-ils vraiment validés par des humains ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, 100 % des livrables Hymeria sont qualifiés et validés par notre réseau d'experts (60 experts partenaires de plus de 15 ans d'expérience). L'IA prépare la première version, mais c'est un expert qui ajuste, enrichit et valide chaque livrable avant transmission. Cette combinaison « Human enriched by IA » constitue notre signature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sur quels sujets pouvez-vous intervenir ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous couvrons 6 pôles d'excellence : études de marché et analyse stratégique, market intelligence et veille, business plans et modélisation financière, audit digital et expérience utilisateur, impact réglementaire et conformité, stratégie RH et transformation des compétences. Si votre projet n'entre pas exactement dans ces catégories, contactez-nous : nos agents IA et experts s'adaptent à la plupart des problématiques stratégiques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui sont vos experts ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notre réseau réunit 60 experts partenaires issus de grands cabinets internationaux et de directions stratégiques de grands groupes. Tous disposent de plus de 15 ans d'expérience dans leur domaine. Pour chaque mission, nous mobilisons l'expert dont la connaissance sectorielle correspond le mieux à votre problématique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment garantissez-vous la confidentialité de mes données ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vos données sont traitées exclusivement dans le cadre de votre mission, sur des infrastructures sécurisées européennes. Aucune donnée client n'est utilisée pour entraîner nos agents IA. Pour les missions sensibles, nous proposons un NDA et un déploiement on-premise est possible. Pour en savoir plus, consultez notre politique de confidentialité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se déroule une mission de A à Z ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notre processus en 8 étapes va de la prise de contact à la clôture en 2 semaines maximum : (1) demande en ligne, (2) qualification du besoin avec un expert, (3) proposition commerciale sous 48h, (4) validation et démarrage immédiat, (5) préparation des livrables par les agents IA, (6) revue qualité par nos experts, (7) présentation client (2h), (8) clôture et évaluation 360."
+          }
+        }
+      ]
     }
   ]
 }
@@ -1270,6 +1394,73 @@
         </div>
       </article>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="inner">
+    <div class="left-align fade-in">
+      <h2>Questions <em>fr&eacute;quentes</em></h2>
+      <p>Tout ce que vous devez savoir sur Hymeria.</p>
+    </div>
+    <div class="faq-list fade-in">
+      <details class="faq-item">
+        <summary>Combien co&ucirc;te une mission Hymeria ?</summary>
+        <div class="faq-answer">
+          <p>Nos missions d&eacute;marrent &agrave; 5 000 &euro;. Le tarif final d&eacute;pend du p&eacute;rim&egrave;tre, de la complexit&eacute; et des livrables attendus. Nous facturons au r&eacute;sultat et au p&eacute;rim&egrave;tre de mission, pas au nombre de jours mobilis&eacute;s. Un devis pr&eacute;cis vous est propos&eacute; sous 24h apr&egrave;s une session de qualification gratuite.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>En combien de temps livrez-vous une mission ?</summary>
+        <div class="faq-answer">
+          <p>Nos missions sont livr&eacute;es en 1 &agrave; 2 semaines en moyenne. Cette rapidit&eacute; est rendue possible par nos 200 agents IA sp&eacute;cialis&eacute;s qui pr&eacute;parent l'analyse en parall&egrave;le, puis par la validation par nos experts seniors. La proposition commerciale est envoy&eacute;e sous 48h et le d&eacute;marrage est imm&eacute;diat apr&egrave;s validation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Quelle est la diff&eacute;rence entre Hymeria et un cabinet de conseil classique ?</summary>
+        <div class="faq-answer">
+          <p>Nous avons repens&eacute; chaque maillon de la cha&icirc;ne autour de l'IA. Nos agents IA sp&eacute;cialis&eacute;s produisent l'essentiel du travail analytique, ce qu'une &eacute;quipe humaine met plusieurs mois &agrave; assembler. Nos experts seniors apportent les 10 % qui changent tout : compr&eacute;hension fine des enjeux, connaissance intime des march&eacute;s, capacit&eacute; &agrave; transformer les donn&eacute;es en recommandations actionnables. R&eacute;sultat : missions livr&eacute;es 5 fois plus vite, &agrave; une fraction du co&ucirc;t.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Vos livrables sont-ils vraiment valid&eacute;s par des humains ?</summary>
+        <div class="faq-answer">
+          <p>Oui, 100 % des livrables Hymeria sont qualifi&eacute;s et valid&eacute;s par notre r&eacute;seau d'experts (60 experts partenaires de plus de 15 ans d'exp&eacute;rience). L'IA pr&eacute;pare la premi&egrave;re version, mais c'est un expert qui ajuste, enrichit et valide chaque livrable avant transmission. Cette combinaison &laquo;&nbsp;Human enriched by IA&nbsp;&raquo; constitue notre signature.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Sur quels sujets pouvez-vous intervenir ?</summary>
+        <div class="faq-answer">
+          <p>Nous couvrons 6 p&ocirc;les d'excellence : &eacute;tudes de march&eacute; et analyse strat&eacute;gique, market intelligence et veille, business plans et mod&eacute;lisation financi&egrave;re, audit digital et exp&eacute;rience utilisateur, impact r&eacute;glementaire et conformit&eacute;, strat&eacute;gie RH et transformation des comp&eacute;tences. Si votre projet n'entre pas exactement dans ces cat&eacute;gories, contactez-nous : nos agents IA et experts s'adaptent &agrave; la plupart des probl&eacute;matiques strat&eacute;giques.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Qui sont vos experts ?</summary>
+        <div class="faq-answer">
+          <p>Notre r&eacute;seau r&eacute;unit 60 experts partenaires issus de grands cabinets internationaux et de directions strat&eacute;giques de grands groupes. Tous disposent de plus de 15 ans d'exp&eacute;rience dans leur domaine. Pour chaque mission, nous mobilisons l'expert dont la connaissance sectorielle correspond le mieux &agrave; votre probl&eacute;matique.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment garantissez-vous la confidentialit&eacute; de mes donn&eacute;es ?</summary>
+        <div class="faq-answer">
+          <p>Vos donn&eacute;es sont trait&eacute;es exclusivement dans le cadre de votre mission, sur des infrastructures s&eacute;curis&eacute;es europ&eacute;ennes. Aucune donn&eacute;e client n'est utilis&eacute;e pour entra&icirc;ner nos agents IA. Pour les missions sensibles, nous proposons un NDA et un d&eacute;ploiement on-premise est possible. Pour en savoir plus, consultez notre <a href="politique-confidentialite.html">politique de confidentialit&eacute;</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment se d&eacute;roule une mission de A &agrave; Z ?</summary>
+        <div class="faq-answer">
+          <p>Notre processus en 8 &eacute;tapes va de la prise de contact &agrave; la cl&ocirc;ture en 2 semaines maximum : (1) demande en ligne, (2) qualification du besoin avec un expert, (3) proposition commerciale sous 48h, (4) validation et d&eacute;marrage imm&eacute;diat, (5) pr&eacute;paration des livrables par les agents IA, (6) revue qualit&eacute; par nos experts, (7) pr&eacute;sentation client (2h), (8) cl&ocirc;ture et &eacute;valuation 360.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
