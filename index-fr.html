@@ -877,6 +877,107 @@
     #cookieBanner .cookie-actions { justify-content: flex-end; }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#organization",
+      "name": "Hymeria Consulting",
+      "alternateName": "Hymeria",
+      "url": "https://laetitiaperson.github.io/hymeria-site/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://laetitiaperson.github.io/hymeria-site/logo-noir.png",
+        "width": 900,
+        "height": 303
+      },
+      "description": "Cabinet de conseil augmenté par l'intelligence artificielle. Hymeria combine agents IA spécialisés et validation par des experts seniors pour livrer des missions de conseil stratégique en 1 à 2 semaines.",
+      "slogan": "Human enriched by IA",
+      "knowsAbout": [
+        "Conseil stratégique",
+        "Intelligence artificielle",
+        "Études de marché",
+        "Business plans",
+        "Audit digital",
+        "Conformité réglementaire",
+        "Stratégie RH",
+        "Market intelligence",
+        "Veille stratégique"
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Place", "name": "Europe" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contact@hymeria.com",
+        "availableLanguage": ["fr", "en"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#website",
+      "url": "https://laetitiaperson.github.io/hymeria-site/",
+      "name": "Hymeria Consulting",
+      "publisher": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/index-fr.html#webpage",
+      "url": "https://laetitiaperson.github.io/hymeria-site/index-fr.html",
+      "name": "Hymeria | Cabinet de conseil augmenté par l'IA",
+      "isPartOf": { "@id": "https://laetitiaperson.github.io/hymeria-site/#website" },
+      "about": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "inLanguage": "fr-FR",
+      "description": "Hymeria combine intelligence artificielle et validation par des experts pour livrer des missions de conseil stratégique en 1 à 2 semaines."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#service",
+      "serviceType": "Conseil stratégique augmenté par l'IA",
+      "name": "Consulting as a Service",
+      "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "description": "Missions de conseil stratégique livrées en 1 à 2 semaines, combinant agents IA spécialisés et validation par des experts seniors. Études de marché, business plans, audits digitaux, impact réglementaire, stratégie RH.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pôles d'excellence Hymeria",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Études de marché et analyse stratégique", "description": "Étude de marché complète, analyse d'opportunité, benchmark concurrentiel, cartographie d'écosystème, étude de faisabilité." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Market intelligence et veille stratégique", "description": "Veille concurrentielle automatisée, détection de signaux faibles, monitoring réglementaire, veille technologique, rapports flash." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Business plans et modélisation financière", "description": "Business plan pour levée de fonds, modélisation financière 3 à 5 ans, plan de développement stratégique, due diligence, évaluation d'entreprise." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Audit digital et expérience utilisateur", "description": "Audit UX/UI, analyse du parcours client omnicanal, audit d'éco-conception numérique, benchmark digital sectoriel, feuille de route d'optimisation." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Impact réglementaire et conformité", "description": "Cartographie des obligations réglementaires, analyse d'impact AI Act / CSRD / NIS2, plan de conformité, gouvernance des données." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Stratégie RH et transformation des compétences", "description": "Diagnostic des compétences, plan de transformation RH, intégration de l'IA dans les métiers, gestion du changement." }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
