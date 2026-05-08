@@ -240,8 +240,45 @@
     box-shadow: 0 12px 40px rgba(0,71,171,0.12);
   }
   .article-hero img { width: 100%; height: auto; display: block; }
+
+  .breadcrumb {
+    max-width: 760px; margin: 0 auto; padding: 24px 32px 0;
+    font-size: 13px; color: var(--text-muted);
+  }
+  .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+  .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; color: var(--gris-40); margin-left: 4px; }
+  .breadcrumb a { color: var(--text-light); text-decoration: none; transition: color .15s; }
+  .breadcrumb a:hover { color: var(--cobalt); text-decoration: underline; }
+  .breadcrumb [aria-current="page"] { color: var(--noir); font-weight: 500; }
 </style>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://laetitiaperson.github.io/hymeria-site/index-fr.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://laetitiaperson.github.io/hymeria-site/index-fr.html#insights"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Act : ce que le règlement européen change vraiment pour votre entreprise en 2026",
+      "item": "https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -301,6 +338,14 @@
   <a href="../index-fr.html#insights" class="back">&larr; Tous les insights</a>
 </nav>
 
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <ol>
+    <li><a href="../index-fr.html">Accueil</a></li>
+    <li><a href="../index-fr.html#insights">Insights</a></li>
+    <li><span aria-current="page">AI Act : ce que change le règlement en 2026</span></li>
+  </ol>
+</nav>
 <article>
   <div class="article-meta-top">
     Hymeria Insights <span>&middot;</span> R&eacute;glementation <span>&middot;</span> 8 min de lecture
