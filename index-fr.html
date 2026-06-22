@@ -475,38 +475,6 @@
   .pricing h2 em { font-weight: 700; font-style: italic; color: var(--cuivre); }
   .pricing .left-align p { font-size: 16px; color: rgba(255,255,255,0.78); margin-top: 24px; line-height: 1.8; }
 
-  .pricing-table { max-width: 900px; margin: 0 auto; }
-  .pricing-header {
-    display: grid; grid-template-columns: 1.4fr 1fr 1fr;
-    padding-bottom: 20px; margin-bottom: 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.22);
-  }
-  .pricing-header > div { padding: 0 20px; }
-  .pricing-header .col-label {
-    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
-    font-weight: 600; margin-bottom: 4px;
-  }
-  .col-old .col-label { color: rgba(255,255,255,0.65); }
-  .col-old .col-price { display: none; }
-  .col-new .col-label { color: var(--cuivre); }
-  .col-new .col-price { display: none; }
-  .col-old { text-align: center; }
-  .col-new { text-align: center; }
-
-  .pricing-row {
-    display: grid; grid-template-columns: 1.4fr 1fr 1fr;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-  .pricing-row:last-child { border-bottom: none; }
-  .pricing-row > div { padding: 0 20px; font-size: 14px; }
-  .pricing-row .row-label { font-weight: 500; color: rgba(255,255,255,0.92); }
-  .pricing-row .row-old {
-    color: rgba(255,255,255,0.62); text-align: center; font-size: 13px;
-  }
-  .pricing-row .row-new {
-    color: #fff; font-weight: 600; text-align: center; font-size: 13px;
-  }
   .pricing-cta { padding: 40px 0 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .pricing-note { font-size: 13px; color: rgba(255,255,255,0.62); text-align: center; max-width: 600px; line-height: 1.6; }
 
@@ -932,7 +900,6 @@
     .pillar-card.left, .pillar-card.right { grid-template-columns: 1fr; }
     .missions-grid { grid-template-columns: 1fr; }
     .articles-grid { grid-template-columns: 1fr; }
-    .pricing-header, .pricing-row { grid-template-columns: 1fr; }
     .compare-row { grid-template-columns: 1fr; gap: 6px; padding: 20px 16px; }
     .compare-row.compare-header { display: none; }
     .compare-row > div[data-label]::before { display: block; }
