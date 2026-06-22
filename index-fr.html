@@ -1052,34 +1052,55 @@
       "name": "Consulting as a Service",
       "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
-      "description": "Missions de conseil stratégique livrées en 5 à 10 jours, combinant agents IA spécialisés et validation par des experts seniors. Études de marché, business plans, audits digitaux, impact réglementaire, stratégie RH.",
+      "description": "Missions de conseil stratégique livrées en 5 à 10 jours, combinant agents IA spécialisés et validation par des experts seniors. Stratégie & Business Development, Finance & Investissement, Intelligence compétitive, et autres domaines déployés progressivement en 2026.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Pôles d'excellence Hymeria",
+        "name": "Offres Hymeria",
         "itemListElement": [
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Études de marché et analyse stratégique", "description": "Étude de marché complète, analyse d'opportunité, benchmark concurrentiel, cartographie d'écosystème, étude de faisabilité." }
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Stratégie & Business Development", "description": "Nouveaux relais de croissance, sourcing M&A, business plan, évaluation marché émergent." }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Market intelligence et veille stratégique", "description": "Veille concurrentielle automatisée, détection de signaux faibles, monitoring réglementaire, veille technologique, rapports flash." }
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Finance & Investissement", "description": "Due diligence commerciale, modélisation financière, audit pricing." }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Business plans et modélisation financière", "description": "Business plan pour levée de fonds, modélisation financière 3 à 5 ans, plan de développement stratégique, due diligence, évaluation d'entreprise." }
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Intelligence compétitive", "description": "Veille concurrentielle, profilage d'acteurs, cartographie d'écosystème." }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Audit digital et expérience utilisateur", "description": "Audit UX/UI, analyse du parcours client omnicanal, audit d'éco-conception numérique, benchmark digital sectoriel, feuille de route d'optimisation." }
+            "availability": "https://schema.org/PreOrder",
+            "availabilityStarts": "2026-07-01",
+            "itemOffered": { "@type": "Service", "name": "Marketing & Communication", "description": "Audit de positionnement, tendances de contenu, stratégie éditoriale." }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Impact réglementaire et conformité", "description": "Cartographie des obligations réglementaires, analyse d'impact AI Act / CSRD / NIS2, plan de conformité, gouvernance des données." }
+            "availability": "https://schema.org/PreOrder",
+            "availabilityStarts": "2026-07-01",
+            "itemOffered": { "@type": "Service", "name": "Innovation & Technologie", "description": "État de l'art, partenaires technologiques, comparatif make-or-buy, roadmap produit." }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Stratégie RH et transformation des compétences", "description": "Diagnostic des compétences, plan de transformation RH, intégration de l'IA dans les métiers, gestion du changement." }
+            "availability": "https://schema.org/PreOrder",
+            "availabilityStarts": "2026-07-01",
+            "itemOffered": { "@type": "Service", "name": "Réglementation & Conformité", "description": "Cartographie réglementaire, IA Act, RGPD, ESG, cybersécurité." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "availabilityStarts": "2026-10-01",
+            "itemOffered": { "@type": "Service", "name": "Opérations & Organisation", "description": "Mapping de processus, politiques internes, benchmark organisationnel." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "availabilityStarts": "2026-10-01",
+            "itemOffered": { "@type": "Service", "name": "RH & Talent", "description": "Benchmark de rémunérations, marché du talent, grilles d'évaluation." }
           }
         ]
       }
@@ -1125,7 +1146,7 @@
           "name": "Sur quels sujets pouvez-vous intervenir ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nous couvrons 6 pôles d'excellence : études de marché et analyse stratégique, market intelligence et veille, business plans et modélisation financière, audit digital et expérience utilisateur, impact réglementaire et conformité, stratégie RH et transformation des compétences. Si votre projet n'entre pas exactement dans ces catégories, contactez-nous : nos agents IA et experts s'adaptent à la plupart des problématiques stratégiques."
+            "text": "Notre offre couvre huit domaines, déployés progressivement. Disponibles dès maintenant : Stratégie & Business Development, Finance & Investissement, Intelligence compétitive. À partir du Q3 2026 : Marketing & Communication, Innovation & Technologie, Réglementation & Conformité. À partir du Q4 2026 : Opérations & Organisation, RH & Talent. Si votre projet n'entre pas exactement dans ces catégories, contactez-nous : nos agents IA et nos experts s'adaptent à la plupart des problématiques stratégiques."
           }
         },
         {
@@ -1403,6 +1424,7 @@
           <p>Mapping de processus, politiques internes, benchmark organisationnel.</p>
         </div>
         <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-people.svg" alt="" width="30" height="30" loading="lazy"></div>
           <h3>RH &amp; Talent</h3>
           <p>Benchmark de r&eacute;mun&eacute;rations, march&eacute; du talent, grilles d'&eacute;valuation.</p>
         </div>
@@ -1613,7 +1635,7 @@
       <details class="faq-item">
         <summary>Sur quels sujets pouvez-vous intervenir ?</summary>
         <div class="faq-answer">
-          <p>Nous couvrons 6 p&ocirc;les d'excellence : &eacute;tudes de march&eacute; et analyse strat&eacute;gique, market intelligence et veille, business plans et mod&eacute;lisation financi&egrave;re, audit digital et exp&eacute;rience utilisateur, impact r&eacute;glementaire et conformit&eacute;, strat&eacute;gie RH et transformation des comp&eacute;tences. Si votre projet n'entre pas exactement dans ces cat&eacute;gories, contactez-nous : nos agents IA et experts s'adaptent &agrave; la plupart des probl&eacute;matiques strat&eacute;giques.</p>
+          <p>Notre offre couvre huit domaines, d&eacute;ploy&eacute;s progressivement. <strong>Disponibles d&egrave;s maintenant</strong>&nbsp;: Strat&eacute;gie &amp; Business Development, Finance &amp; Investissement, Intelligence comp&eacute;titive. <strong>&Agrave; partir du Q3&nbsp;2026</strong>&nbsp;: Marketing &amp; Communication, Innovation &amp; Technologie, R&eacute;glementation &amp; Conformit&eacute;. <strong>&Agrave; partir du Q4&nbsp;2026</strong>&nbsp;: Op&eacute;rations &amp; Organisation, RH &amp; Talent. Si votre projet n'entre pas exactement dans ces cat&eacute;gories, contactez-nous&nbsp;: nos agents IA et nos experts s'adaptent &agrave; la plupart des probl&eacute;matiques strat&eacute;giques.</p>
         </div>
       </details>
 
@@ -1742,13 +1764,15 @@
     </div>
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-col-title">Expertises</div>
-        <a href="#expertises">&Eacute;tudes de march&eacute;</a>
-        <a href="#expertises">Market intelligence</a>
-        <a href="#expertises">Business plans</a>
-        <a href="#expertises">Audit digital</a>
-        <a href="#expertises">Impact r&eacute;glementaire</a>
-        <a href="#expertises">Strat&eacute;gie RH</a>
+        <div class="footer-col-title">Offres</div>
+        <a href="#expertises">Strat&eacute;gie &amp; Business Development</a>
+        <a href="#expertises">Finance &amp; Investissement</a>
+        <a href="#expertises">Intelligence comp&eacute;titive</a>
+        <a href="#expertises">Marketing &amp; Communication</a>
+        <a href="#expertises">Innovation &amp; Technologie</a>
+        <a href="#expertises">R&eacute;glementation &amp; Conformit&eacute;</a>
+        <a href="#expertises">Op&eacute;rations &amp; Organisation</a>
+        <a href="#expertises">RH &amp; Talent</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Entreprise</div>
