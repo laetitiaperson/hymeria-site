@@ -188,7 +188,9 @@
   <p class="lede">Laissez-nous vos coordonn&eacute;es et quelques mots sur votre besoin. Un expert Hymeria revient vers vous sous 24h.</p>
 
   <div id="contactWrap">
-  <form id="contactForm" onsubmit="submitContact(event)" novalidate>
+  <form id="contactForm" action="https://formspree.io/f/mqevkbql" method="POST" onsubmit="submitContact(event)" novalidate>
+    <input type="hidden" name="_subject" value="Nouveau contact Hymeria">
+    <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="row">
       <div>
         <label for="prenom">Pr&eacute;nom <span class="req">*</span></label>
@@ -241,7 +243,7 @@
 </footer>
 
 <script>
-function submitContact(e) {
+async function submitContact(e) {
   e.preventDefault();
   const form = document.getElementById('contactForm');
   const data = {
@@ -262,27 +264,39 @@ function submitContact(e) {
     return;
   }
 
-  const subject = 'Demande de contact — ' + data.prenom + ' ' + data.nom + ' (' + data.entreprise + ')';
-  const body =
-    'Bonjour,\n\nJe souhaite être recontacté par Hymeria.\n\n' +
-    'Prénom : ' + data.prenom + '\n' +
-    'Nom : ' + data.nom + '\n' +
-    'Email : ' + data.email + '\n' +
-    'Entreprise : ' + data.entreprise + '\n\n' +
-    'Objet de la demande :\n' + data.objet + '\n\n' +
-    'Merci.';
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Envoi en cours…';
 
-  window.location.href = 'mailto:contact@hymeria.com?subject=' +
-    encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
 
-  document.getElementById('contactWrap').innerHTML =
-    '<div class="success">' +
-    '<strong>✓ Merci ' + data.prenom + ' !</strong>' +
-    'Votre client mail vient de s\'ouvrir avec votre demande pré-remplie. ' +
-    'Vérifiez son contenu et envoyez-le. ' +
-    'S\'il ne s\'est pas ouvert, écrivez-nous directement à ' +
-    '<a href="mailto:contact@hymeria.com" style="color:var(--cobalt);text-decoration:underline">contact@hymeria.com</a>.' +
-    '</div>';
+    if (response.ok) {
+      document.getElementById('contactWrap').innerHTML =
+        '<div class="success">' +
+        '<strong>✓ Merci ' + data.prenom + ' !</strong>' +
+        'Votre demande a bien été envoyée. Un expert Hymeria revient vers vous sous 24h à l\'adresse <strong>' + data.email + '</strong>.' +
+        '</div>';
+    } else {
+      const result = await response.json().catch(() => ({}));
+      const errorMsg = (result.errors && result.errors.length)
+        ? result.errors.map(function(e){ return e.message; }).join(', ')
+        : 'Une erreur est survenue (HTTP ' + response.status + ').';
+      throw new Error(errorMsg);
+    }
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+    alert(
+      'Désolé, l\'envoi a échoué : ' + err.message + '\n\n' +
+      'Vous pouvez nous écrire directement à contact@hymeria.com.'
+    );
+  }
 }
 </script>
 
