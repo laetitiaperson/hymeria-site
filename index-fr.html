@@ -1352,8 +1352,21 @@
         <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" role="img"
              aria-label="Cycle Hymeria en 7 etapes : Cadrage, Collecte, Analyse, Modelisation, Recommandations, Validation, Decision">
 
-          <!-- Boucle infinie cuivree -->
-          <path d="M 150 250 C 150 100 350 100 450 250 C 550 400 750 400 750 250 C 750 100 550 100 450 250 C 350 400 150 400 150 250 Z"
+          <defs>
+            <marker id="cuivre-arrow" viewBox="0 0 10 10" refX="10" refY="5"
+                    markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse">
+              <polygon points="0,0 10,5 0,10" fill="#C4873C"/>
+            </marker>
+          </defs>
+
+          <!-- Segment 7 -> 1 (pointilles, retour vers le cadrage) -->
+          <path d="M 150 250 C 150 152.5 234.5 118.4 321 148"
+                fill="none" stroke="#C4873C" stroke-width="8"
+                stroke-linecap="round" stroke-dasharray="8 5"
+                marker-end="url(#cuivre-arrow)"/>
+
+          <!-- Boucle pleine 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -->
+          <path d="M 321 148 C 367.75 163.375 415 197.5 450 250 C 550 400 750 400 750 250 C 750 100 550 100 450 250 C 350 400 150 400 150 250"
                 fill="none" stroke="#C4873C" stroke-width="8"
                 stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -1380,18 +1393,12 @@
             </text>
           </g>
 
-          <!-- Annotation "2 semaines" + fleche pointillee 7 -> 1 -->
-          <g>
-            <path d="M 180 232 Q 230 175, 318 148" fill="none" stroke="#1B3A8C"
-                  stroke-width="1.5" stroke-dasharray="4,3" opacity="0.65"/>
-            <polygon points="-4,5 0,-6 4,5" fill="#1B3A8C" opacity="0.7"
-                     transform="translate(320 150) rotate(70)"/>
-            <text font-family="'Poppins',sans-serif" text-anchor="start">
-              <tspan x="200" y="196" font-size="12" font-weight="700" fill="#1B3A8C">2 semaines</tspan>
-              <tspan x="200" y="212" font-size="11" fill="#6B7280">du cadrage jusqu'&#224;</tspan>
-              <tspan x="200" y="226" font-size="11" fill="#6B7280">la prise de d&#233;cision</tspan>
-            </text>
-          </g>
+          <!-- Annotation "2 semaines" (le segment pointille cuivre joue desormais le role de fleche) -->
+          <text font-family="'Poppins',sans-serif" text-anchor="start">
+            <tspan x="200" y="196" font-size="12" font-weight="700" fill="#1B3A8C">2 semaines</tspan>
+            <tspan x="200" y="212" font-size="11" fill="#6B7280">du cadrage jusqu'&#224;</tspan>
+            <tspan x="200" y="226" font-size="11" fill="#6B7280">la prise de d&#233;cision</tspan>
+          </text>
 
           <!-- Pastilles numerotees + labels -->
           <g font-family="'Montserrat',sans-serif">
