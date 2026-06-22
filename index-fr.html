@@ -349,7 +349,7 @@
   }
   .pillar-desc { font-size: 15px; color: var(--text-light); line-height: 1.75; }
 
-  /* Processus 8 étapes */
+  /* Notre approche — cycle 7 étapes */
   .process-section { margin-top: 64px; }
   .process-section h3 {
     font-family: var(--display); font-size: 24px; font-weight: 600;
@@ -362,45 +362,117 @@
     font-weight: 600; margin-bottom: 40px;
     letter-spacing: 0.01em;
   }
-  .process-timeline { position: relative; padding-left: 48px; }
-  .process-timeline::before {
-    content: ''; position: absolute; left: 18px; top: 8px; bottom: 8px;
-    width: 2px; background: linear-gradient(to bottom, var(--cobalt-clair), var(--cobalt), var(--taupe));
-    border-radius: 2px;
+
+  .cycle { max-width: 920px; margin: 0 auto; }
+  .cycle-cols {
+    display: grid; grid-template-columns: 1fr 1.25fr;
+    gap: 22px 36px; align-items: stretch;
   }
-  .process-step {
-    position: relative; margin-bottom: 36px; display: grid;
-    grid-template-columns: 1fr 1fr; gap: 0 28px; align-items: start;
-    min-height: 56px;
+  .cycle-col { display: flex; flex-direction: column; gap: 14px; }
+  .cycle-label {
+    font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--cuivre); text-align: center;
+    padding: 9px 14px;
+    background: rgba(184, 115, 51, 0.07);
+    border-radius: 4px;
   }
-  .process-step:last-child { margin-bottom: 0; }
-  .process-step-num {
-    position: absolute; left: -48px; top: 0;
-    width: 36px; height: 36px; border-radius: 50%;
+
+  .cycle-step {
+    display: flex; align-items: center; gap: 14px;
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 6px; padding: 14px 18px;
+    position: relative; transition: all 0.2s;
+  }
+  .cycle-step:hover {
+    border-color: rgba(0,71,171,0.25);
+    box-shadow: 0 4px 14px rgba(0,71,171,0.06);
+  }
+  .cycle-step-num {
+    flex-shrink: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--cobalt); color: #fff;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px; font-weight: 700; color: #fff;
+    font-family: var(--display); font-weight: 700; font-size: 14px;
+  }
+  .cycle-step-body { flex: 1; min-width: 0; }
+  .cycle-step-title {
     font-family: var(--display);
-    background: var(--noir);
+    font-weight: 700; font-size: 14.5px;
+    color: var(--noir); line-height: 1.3;
   }
-  .process-step-num.green { background: var(--cobalt-clair); }
-  .process-step-num.accent { background: var(--cobalt); }
-  .process-step-num.bordeaux { background: var(--taupe); }
-  .process-step-title {
-    font-family: var(--display);
-    font-size: 15px; font-weight: 600; color: var(--noir); line-height: 1.4;
-    padding-top: 7px; letter-spacing: -0.005em;
+  .cycle-step-who {
+    display: block; font-size: 12px; color: var(--text-light);
+    font-style: italic; margin-top: 2px;
   }
-  .process-step-desc {
-    font-size: 13px; color: var(--text-light); line-height: 1.65;
-    padding-top: 7px;
+
+  /* Down-arrow connectors between successive steps in the right column */
+  .cycle-col-right .cycle-step + .cycle-step {
+    margin-top: 4px;
   }
-  .process-step-day {
-    grid-column: 1 / -1; margin-top: -4px;
+  .cycle-col-right .cycle-step + .cycle-step::before {
+    content: ''; position: absolute;
+    left: 30px; top: -14px;
+    width: 0; height: 10px;
+    border-left: 2px solid var(--cobalt); opacity: 0.55;
   }
-  .process-day-badge {
-    display: inline-block; font-size: 11px; font-weight: 600;
-    color: var(--cobalt); background: var(--cobalt-pale);
-    padding: 2px 10px; border-radius: 100px;
+  .cycle-col-right .cycle-step + .cycle-step::after {
+    content: ''; position: absolute;
+    left: 25px; top: -6px;
+    width: 0; height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--cobalt); opacity: 0.55;
+  }
+
+  /* Left-column spacer with dashed "cycle back" indicator */
+  .cycle-spacer {
+    flex: 1; min-height: 140px; position: relative;
+  }
+  .cycle-spacer::before {
+    content: ''; position: absolute;
+    left: 50%; top: 22px; bottom: 22px;
+    width: 0;
+    border-left: 2px dashed var(--cobalt);
+    opacity: 0.45; transform: translateX(-50%);
+  }
+  .cycle-spacer .cycle-arrow-up {
+    position: absolute; left: 50%; top: 0;
+    transform: translateX(-50%);
+    color: var(--cobalt); font-size: 18px; font-weight: 700;
+    opacity: 0.65; background: #fff; padding: 0 6px; line-height: 1;
+  }
+  .cycle-spacer .cycle-loop-label {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--cobalt); opacity: 0.75;
+    background: #fff; padding: 4px 10px; border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  /* Step 6 — Validation, centered below both columns */
+  .cycle-validation {
+    margin-top: 22px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .cycle-validation .cycle-arrow-down {
+    color: var(--cobalt); opacity: 0.55;
+    font-size: 18px; font-weight: 700; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .cycle-validation .cycle-step {
+    background: var(--cobalt-pale);
+    border-color: rgba(0,71,171,0.18);
+    min-width: 280px;
+  }
+
+  .cycle-conclusion {
+    text-align: center; font-style: italic;
+    color: var(--cobalt); font-size: 14.5px;
+    margin: 36px auto 0;
+    max-width: 720px; line-height: 1.6;
   }
 
   /* Expertise */
@@ -997,7 +1069,8 @@
     .diag-metrics { grid-template-columns: 1fr; }
     nav .links a.nav-link { display: none; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .process-flow { border-radius: 20px; padding: 16px 20px; }
+    .cycle-cols { grid-template-columns: 1fr; gap: 14px; }
+    .cycle-spacer { display: none; }
     .offer-card { padding: 20px; }
     .pillar-text { padding: 32px 28px; }
     .diag-card { padding: 32px 24px; }
@@ -1379,50 +1452,78 @@
     </div>
 
     <div class="process-section fade-in">
-      <h3>Votre mission : un processus en <em>8 &eacute;tapes</em></h3>
-      <div class="process-badge">De la prise de contact aux livrables finaux (5 &agrave; 10 jours selon vos besoins)</div>
+      <h3>Notre approche&nbsp;: l'humain encadre, <em>l'IA acc&eacute;l&egrave;re</em></h3>
+      <div class="process-badge">2&nbsp;semaines du cadrage jusqu'&agrave; la prise de d&eacute;cision</div>
 
-      <div class="process-timeline">
-        <div class="process-step">
-          <div class="process-step-num green">1</div>
-          <div class="process-step-title">Demande</div>
-          <div class="process-step-desc">Vous nous expliquez votre projet et vos enjeux. Vous pouvez utiliser, par exemple, <a href="#diagnostic" style="color:var(--accent);font-weight:500">cet outil en ligne</a>.</div>
+      <div class="cycle">
+        <div class="cycle-cols">
+          <div class="cycle-col cycle-col-left">
+            <div class="cycle-label">Expertise humaine</div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">1</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">Cadrage</div>
+                <span class="cycle-step-who">Client + Expert</span>
+              </div>
+            </div>
+            <div class="cycle-spacer">
+              <span class="cycle-arrow-up">&uarr;</span>
+              <span class="cycle-loop-label">&#x21bb;&nbsp;Cycle</span>
+            </div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">7</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">D&eacute;cision</div>
+                <span class="cycle-step-who">Client + Expert</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cycle-col cycle-col-right">
+            <div class="cycle-label">Production augment&eacute;e par l'IA</div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">2</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">Collecte</div>
+                <span class="cycle-step-who">IA + Expert</span>
+              </div>
+            </div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">3</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">Analyse</div>
+                <span class="cycle-step-who">IA + Expert</span>
+              </div>
+            </div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">4</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">Mod&eacute;lisation</div>
+                <span class="cycle-step-who">IA + Expert</span>
+              </div>
+            </div>
+            <div class="cycle-step">
+              <div class="cycle-step-num">5</div>
+              <div class="cycle-step-body">
+                <div class="cycle-step-title">Recommandations</div>
+                <span class="cycle-step-who">IA + Expert</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="process-step">
-          <div class="process-step-num green">2</div>
-          <div class="process-step-title">Contact et qualification</div>
-          <div class="process-step-desc">Prise de rendez-vous et qualification initiale via une session structur&eacute;e avec notre expert pour d&eacute;finir pr&eacute;cis&eacute;ment les contours de votre projet et vos attentes.</div>
+
+        <div class="cycle-validation">
+          <span class="cycle-arrow-down">&darr;</span>
+          <div class="cycle-step">
+            <div class="cycle-step-num">6</div>
+            <div class="cycle-step-body">
+              <div class="cycle-step-title">Validation</div>
+              <span class="cycle-step-who">Expert</span>
+            </div>
+          </div>
         </div>
-        <div class="process-step">
-          <div class="process-step-num green">3</div>
-          <div class="process-step-title">Proposition commerciale</div>
-          <div class="process-step-desc">Proposition compl&egrave;te pr&eacute;par&eacute;e par Hymeria, incluant p&eacute;rim&egrave;tre, contraintes &agrave; prendre en compte, livrables et budget. Envoy&eacute;e sous 48h.</div>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num accent">4</div>
-          <div class="process-step-title">Validation et d&eacute;marrage</div>
-          <div class="process-step-desc">Confirmation et validation avec d&eacute;marrage imm&eacute;diat de la mission.</div>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num accent">5</div>
-          <div class="process-step-title">Pr&eacute;paration des livrables</div>
-          <div class="process-step-desc">Configuration et orchestration des agents IA qui pr&eacute;parent une premi&egrave;re version des livrables de la mission.</div>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num bordeaux">6</div>
-          <div class="process-step-title">Revue qualit&eacute;</div>
-          <div class="process-step-desc">L'&eacute;quipe Hymeria et l'expert mobilis&eacute; ajustent, enrichissent et valident les livrables de la mission.</div>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num bordeaux">7</div>
-          <div class="process-step-title">Pr&eacute;sentation client (2h)</div>
-          <div class="process-step-desc">Pr&eacute;sentation des r&eacute;sultats et transmission des livrables finaux.</div>
-        </div>
-        <div class="process-step">
-          <div class="process-step-num bordeaux">8</div>
-          <div class="process-step-title">Cl&ocirc;ture de la mission</div>
-          <div class="process-step-desc">&Eacute;valuation 360 et feedbacks ; approfondissements &eacute;ventuels.</div>
-        </div>
+
+        <p class="cycle-conclusion">L'humain &agrave; chaque &eacute;tape&nbsp;: Human-in-the-Loop par conception, align&eacute; sur les principes de l'IA Act.</p>
       </div>
     </div>
   </div>
