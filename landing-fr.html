@@ -431,9 +431,12 @@
   .pillar-card.right { grid-template-columns: 1.2fr 1fr; }
   .pillar-card img { width: 100%; height: 100%; object-fit: cover; max-height: 260px; }
   .pillar-text { padding: 48px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .pillar-header { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+  .pillar-icon { width: 44px; height: 44px; flex-shrink: 0; }
+  .pillar-icon img { width: 100%; height: 100%; max-height: none; object-fit: contain; }
   .pillar-step {
     font-size: 64px; font-weight: 700; color: var(--cobalt);
-    font-family: var(--display); line-height: 1; margin-bottom: 8px;
+    font-family: var(--display); line-height: 1;
     letter-spacing: -0.03em; opacity: 0.9;
   }
   .pillar-title { font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--noir); margin-bottom: 6px; letter-spacing: -0.01em; }
@@ -1122,21 +1125,25 @@
       <p class="desc">Chez Hymeria, nous avons fond&eacute; notre approche sur un constat : les cabinets de conseil traditionnels ont &eacute;t&eacute; con&ccedil;us pour un monde qui n'existe plus. D&eacute;lais, co&ucirc;ts, pertinence, mod&egrave;le &eacute;conomique, nous avons repens&eacute; chaque maillon de la cha&icirc;ne pour r&eacute;pondre &agrave; ce que les dirigeants attendent vraiment : des r&eacute;ponses fiables, rapides et actionnables.</p>
       <div class="constats-grid">
         <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-hourglass.svg" alt="" width="36" height="36" loading="lazy"></div>
           <div class="constat-card-title">La lenteur du conseil traditionnel</div>
           <div class="constat-card-quote">&laquo; 4 &agrave; 12 semaines pour un livrable strat&eacute;gique &raquo;</div>
           <div class="constat-card-desc">Votre march&eacute; bouge en temps r&eacute;el. Vos concurrents lancent, testent, pivotent pendant que votre cabinet de conseil finalise ses slides. Attendre trois mois pour une recommandation strat&eacute;gique, n'est pas un processus : c'est un handicap concurrentiel. Les dirigeants veulent des r&eacute;ponses plus rapides, plus fiables et moins co&ucirc;teuses. Hymeria livre en 3 &agrave; 10 jours ce que le conseil traditionnel produit en plusieurs semaines.</div>
         </div>
         <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-dollar.svg" alt="" width="36" height="36" loading="lazy"></div>
           <div class="constat-card-title">Le co&ucirc;t prohibitif des missions de conseil</div>
           <div class="constat-card-quote">&laquo; 50 000 &euro; &agrave; 500 000 &euro; la mission &raquo;</div>
           <div class="constat-card-desc">&Agrave; ce niveau de budget, le conseil reste r&eacute;serv&eacute; aux grands groupes et &agrave; quelques sujets. Les ETI, les PME ambitieuses et les startups en scaling, celles qui en auraient le plus besoin, en sont exclues de fait. Et m&ecirc;me pour ceux qui paient, la question est devenue incontournable : si l'IA permet de produire mieux et plus vite, pourquoi le prix ne baisse-t-il pas ? Hymeria r&eacute;pond &agrave; cette contradiction en proposant des missions &agrave; partir de 5 000 &euro;, sans sacrifier la profondeur d'analyse et les insights des experts.</div>
         </div>
         <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-target.svg" alt="" width="36" height="36" loading="lazy"></div>
           <div class="constat-card-title">Des recommandations sans impact op&eacute;rationnel</div>
           <div class="constat-card-quote">&laquo; Des rapports de 200 pages que personne n'ex&eacute;cute &raquo;</div>
           <div class="constat-card-desc">Le livrable classique du conseil, c'est un document. &Eacute;pais, structur&eacute;, bien r&eacute;dig&eacute; et souvent class&eacute; sans suite. Ce que veulent r&eacute;ellement les d&eacute;cideurs, ce n'est pas du temps consultant ni des slides : ce sont des r&eacute;sultats concrets et des m&eacute;canismes reproductibles. Le secteur lui-m&ecirc;me reconna&icirc;t cette bascule, du livrable vers le r&eacute;sultat mesurable. Chez Hymeria nous ne vendons pas des pages, nous livrons des r&eacute;ponses actionnables, valid&eacute;es par des experts.</div>
         </div>
         <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-chess.svg" alt="" width="36" height="36" loading="lazy"></div>
           <div class="constat-card-title">Un mod&egrave;le de facturation devenu obsol&egrave;te</div>
           <div class="constat-card-quote">&laquo; Le tarif journalier a fait son temps &raquo;</div>
           <div class="constat-card-desc">Facturer au temps pass&eacute; avait du sens quand le conseil reposait uniquement sur l'humain. Ce n'est plus le cas. Chez Hymeria, nous facturons au r&eacute;sultat et au p&eacute;rim&egrave;tre de mission, pas au nombre de jours. C'est la seule logique compatible avec un conseil augment&eacute; par l'intelligence artificielle.</div>
@@ -1159,7 +1166,7 @@
     <div class="fade-in">
       <div class="pillar-card left">
         <div class="pillar-text">
-          <div class="pillar-step" style="color:#0047AB">01</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#0047AB">01</div><div class="pillar-icon"><img src="assets/icons/icon-compass.svg" alt="" width="44" height="44" loading="lazy"></div></div>
           <div class="pillar-title">Qualification strat&eacute;gique</div>
           <div class="pillar-desc">Chaque mission commence par un cadrage pr&eacute;cis avec un directeur de mission Hymeria. Objectifs, p&eacute;rim&egrave;tre, livrables attendus, contraintes sectorielles : nous posons les bonnes questions avant de lancer la moindre analyse. C'est cette &eacute;tape qui garantit que la puissance de nos agents IA est dirig&eacute;e vers les vrais enjeux de votre entreprise.</div>
         </div>
@@ -1171,7 +1178,7 @@
       <div class="pillar-card right">
         <img src="assets/visuals/ai-data-architecture.jpg" alt="Vue rapproch&eacute;e d'&eacute;crans affichant des analyses de donn&eacute;es produites par les agents IA Hymeria" loading="lazy" width="1600" height="900" />
         <div class="pillar-text">
-          <div class="pillar-step" style="color:#8B7D6B">02</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#8B7D6B">02</div><div class="pillar-icon"><img src="assets/icons/icon-network.svg" alt="" width="44" height="44" loading="lazy"></div></div>
           <div class="pillar-title">Production par agents IA</div>
           <div class="pillar-desc">Nos agents IA sp&eacute;cialis&eacute;s collectent, analysent et synth&eacute;tisent les donn&eacute;es &agrave; une &eacute;chelle et une vitesse inaccessibles &agrave; une &eacute;quipe humaine seule. Chaque agent est d&eacute;di&eacute; &agrave; un domaine pr&eacute;cis : analyse financi&egrave;re, &eacute;tude concurrentielle, mod&eacute;lisation de march&eacute;, audit technologique. En 3 &agrave; 10 jours, ils produisent ce qu'une &eacute;quipe de consultants met plusieurs semaines &agrave; assembler.</div>
         </div>
@@ -1181,7 +1188,7 @@
     <div class="fade-in" style="transition-delay:300ms">
       <div class="pillar-card left">
         <div class="pillar-text">
-          <div class="pillar-step" style="color:#B87333">03</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#B87333">03</div><div class="pillar-icon"><img src="assets/icons/icon-diamond.svg" alt="" width="44" height="44" loading="lazy"></div></div>
           <div class="pillar-title">Validation par un expert senior</div>
           <div class="pillar-desc">Tous les livrables Hymeria sont analys&eacute;s en d&eacute;tail et valid&eacute;s par un expert disposant de plus de 15 ans d'exp&eacute;rience dans le domaine concern&eacute;. Son r&ocirc;le est de d&eacute;tecter les angles morts, d'enrichir l'analyse avec sa connaissance sectorielle et de transformer des donn&eacute;es en recommandations actionnables. Cette combinaison &laquo; humain + technologie &raquo; constitue la signature Hymeria.</div>
         </div>
