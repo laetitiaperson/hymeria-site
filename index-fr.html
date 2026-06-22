@@ -510,6 +510,48 @@
   .pricing-cta { padding: 40px 0 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .pricing-note { font-size: 13px; color: rgba(255,255,255,0.62); text-align: center; max-width: 600px; line-height: 1.6; }
 
+  /* Compare table v2 (5 actors x 5 columns) */
+  .compare-wrap { max-width: 1040px; margin: 0 auto; }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr 0.7fr 1.2fr 1.6fr;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    align-items: center;
+  }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row > div { padding: 0 16px; font-size: 13.5px; color: rgba(255,255,255,0.78); line-height: 1.55; }
+  .compare-row.compare-header { padding: 10px 0 14px; border-bottom: 1px solid rgba(255,255,255,0.22); margin-bottom: 6px; }
+  .compare-row.compare-header > div {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: rgba(255,255,255,0.55);
+  }
+  .compare-row .actor-name { font-family: var(--display); font-weight: 700; color: #fff; font-size: 14.5px; margin-bottom: 3px; letter-spacing: -0.005em; }
+  .compare-row .actor-sub { font-size: 12.5px; color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.45; }
+  .compare-row.compare-highlight {
+    background: var(--cobalt);
+    border-radius: 8px;
+    border-bottom: none;
+    padding: 22px 0;
+    margin: 6px 0 10px;
+    box-shadow: 0 8px 28px rgba(0,71,171,0.35);
+  }
+  .compare-row.compare-highlight + .compare-row { border-top: 1px solid rgba(255,255,255,0.12); }
+  .compare-row.compare-highlight > div { color: #fff; font-weight: 500; }
+  .compare-row.compare-highlight .actor-name { color: #fff; font-size: 16px; }
+  .compare-row.compare-highlight .actor-sub { color: rgba(255,255,255,0.82); font-style: italic; }
+  .compare-row > div[data-label]::before {
+    content: attr(data-label);
+    display: none;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .compare-row.compare-highlight > div[data-label]::before { color: rgba(255,255,255,0.7); }
+
   /* Diagnostic */
   .diagnostic { background: var(--bg); padding: 80px 32px; }
   .diagnostic .inner { max-width: 1100px; margin: 0 auto; }
@@ -891,6 +933,10 @@
     .missions-grid { grid-template-columns: 1fr; }
     .articles-grid { grid-template-columns: 1fr; }
     .pricing-header, .pricing-row { grid-template-columns: 1fr; }
+    .compare-row { grid-template-columns: 1fr; gap: 6px; padding: 20px 16px; }
+    .compare-row.compare-header { display: none; }
+    .compare-row > div[data-label]::before { display: block; }
+    .compare-row.compare-highlight { padding: 22px 16px; }
     .hero .stats { grid-template-columns: 1fr; gap: 16px; }
     .diag-metrics { grid-template-columns: 1fr; }
     nav .links a.nav-link { display: none; }
@@ -1332,19 +1378,64 @@
     </div>
 
     <div class="fade-in" style="transition-delay:200ms">
-      <div class="pricing-table">
-        <div class="pricing-header">
-          <div></div>
-          <div class="col-old">
-            <div class="col-label">Cabinet traditionnel</div>
-            <div class="col-price">50K&euro; &mdash; 500K&euro;</div>
-          </div>
-          <div class="col-new">
-            <div class="col-label">Hymeria</div>
-            <div class="col-price">5K&euro; &mdash; 15K&euro;</div>
-          </div>
+      <div class="compare-wrap">
+        <div class="compare-row compare-header">
+          <div>Acteur</div>
+          <div>Co&ucirc;t</div>
+          <div>D&eacute;lai</div>
+          <div>Fiabilit&eacute;</div>
+          <div>Limite principale</div>
         </div>
-        <div id="pricingRows"></div>
+        <div class="compare-row compare-highlight">
+          <div>
+            <div class="actor-name">Hymeria</div>
+            <div class="actor-sub">Conseil hybrid&eacute; avec l'IA</div>
+          </div>
+          <div data-label="Co&ucirc;t">5&ndash;15&nbsp;K&euro;</div>
+          <div data-label="D&eacute;lai">5&ndash;10&nbsp;j</div>
+          <div data-label="Fiabilit&eacute;">&Eacute;lev&eacute;e (experts seniors)</div>
+          <div data-label="Limite principale">P&eacute;rim&egrave;tre sur missions d'analyse et de cadrage</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Cabinet traditionnel</div>
+            <div class="actor-sub">Big 4, strat&eacute;gie</div>
+          </div>
+          <div data-label="Co&ucirc;t">50&ndash;500&nbsp;K&euro;</div>
+          <div data-label="D&eacute;lai">2&ndash;3&nbsp;mois</div>
+          <div data-label="Fiabilit&eacute;">&Eacute;lev&eacute;e mais variable selon consultants mobilis&eacute;s</div>
+          <div data-label="Limite principale">Co&ucirc;t et d&eacute;lais prohibitifs pour un cadrage</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Freelance / expert</div>
+            <div class="actor-sub">Ind&eacute;pendant senior</div>
+          </div>
+          <div data-label="Co&ucirc;t">8&ndash;25&nbsp;K&euro;</div>
+          <div data-label="D&eacute;lai">2&ndash;4&nbsp;sem.</div>
+          <div data-label="Fiabilit&eacute;">Variable (d&eacute;pend du consultant)</div>
+          <div data-label="Limite principale">Capacit&eacute; et couverture limit&eacute;es, pas de garantie</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Interne avec ChatGPT</div>
+            <div class="actor-sub">&Eacute;quipe + LLM g&eacute;n&eacute;rique</div>
+          </div>
+          <div data-label="Co&ucirc;t">Temps interne</div>
+          <div data-label="D&eacute;lai">Variable</div>
+          <div data-label="Fiabilit&eacute;">Faible (non v&eacute;rifi&eacute;e)</div>
+          <div data-label="Limite principale">Hallucinations, sources non fiabilis&eacute;es, pas d'arbitrage</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Logiciels IA</div>
+            <div class="actor-sub">Plateformes data en self-service</div>
+          </div>
+          <div data-label="Co&ucirc;t">10&ndash;50&nbsp;K&euro;/an</div>
+          <div data-label="D&eacute;lai">Setup long</div>
+          <div data-label="Fiabilit&eacute;">Moyenne (sans interpr&eacute;tation)</div>
+          <div data-label="Limite principale">Donn&eacute;es brutes, sans conseil ni recommandation</div>
+        </div>
         <div class="pricing-cta">
           <a href="#diagnostic" class="btn-white" style="font-size:15px;padding:14px 36px">&Eacute;valuez votre projet &rarr;</a>
           <div class="pricing-note">Nous facturons au p&eacute;rim&egrave;tre de mission et au r&eacute;sultat attendu. Chaque projet fait l'objet d'un devis pr&eacute;cis sous 24h, sans engagement longue dur&eacute;e.</div>
@@ -1743,20 +1834,6 @@ function renderExpertise() {
 }
 function setTab(i) { activeTab = i; renderExpertise(); }
 renderExpertise();
-
-// Pricing Rows
-const pricingData = [
-  { label: "D\u00E9lai moyen", old: "4 \u00E0 12 semaines", neu: "5 \u00E0 10 jours" },
-  { label: "Budget mission", old: "50\u00A0000\u00A0\u20AC \u00E0 500\u00A0000\u00A0\u20AC", neu: "5\u00A0000\u00A0\u20AC \u00E0 15\u00A0000\u00A0\u20AC" },
-  { label: "Profondeur d\u2019analyse", old: "Limit\u00E9e par la taille de l\u2019\u00E9quipe", neu: "D\u00E9multipli\u00E9e par nos agents IA" },
-  { label: "Sources analys\u00E9es", old: "10 \u00E0 50 sources", neu: "1\u00A0000+ sources" },
-  { label: "Validation humaine", old: "Junior + partner review", neu: "Expert senior d\u00E9di\u00E9" },
-  { label: "Support post-mission", old: "Factur\u00E9 en suppl\u00E9ment", neu: "30 jours inclus" },
-  { label: "Format des livrables", old: "PDF et PowerPoint statiques", neu: "Interactif + PDF" },
-];
-document.getElementById('pricingRows').innerHTML = pricingData.map(function(r) {
-  return '<div class="pricing-row"><div class="row-label">' + r.label + '</div><div class="row-old">' + r.old + '</div><div class="row-new">' + r.neu + '</div></div>';
-}).join('');
 
 // Diagnostic Tool
 const diagQuestions = [
