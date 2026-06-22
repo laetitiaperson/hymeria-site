@@ -139,6 +139,25 @@
     background: var(--cobalt); border-color: var(--cobalt);
   }
   nav.scrolled .cta-nav:hover { background: var(--cobalt-profond); border-color: var(--cobalt-profond); }
+
+  /* Hamburger (mobile) */
+  .nav-burger {
+    display: none;
+    background: transparent; border: none; cursor: pointer;
+    width: 36px; height: 36px; padding: 0;
+    flex-direction: column; justify-content: center; align-items: center;
+    gap: 5px; z-index: 102; position: relative;
+  }
+  .nav-burger span {
+    display: block; width: 26px; height: 2px;
+    background: #fff; border-radius: 2px;
+    transition: transform .3s ease, opacity .2s ease, background-color .3s ease;
+  }
+  nav.scrolled .nav-burger span { background: var(--noir); }
+  .nav-burger.open span { background: var(--noir); }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .lang-switch {
     display: flex; align-items: center; gap: 4px;
     margin-left: 8px; font-size: 13px; font-weight: 500;
@@ -938,7 +957,21 @@
     .compare-row.compare-highlight { padding: 22px 16px; }
     .hero .stats { grid-template-columns: 1fr; gap: 16px; }
     .diag-metrics { grid-template-columns: 1fr; }
-    nav .links a.nav-link { display: none; }
+    .nav-burger { display: flex; }
+    nav .links {
+      position: fixed; inset: 0;
+      background: #fff;
+      flex-direction: column;
+      justify-content: center; align-items: center;
+      gap: 28px;
+      padding: 100px 32px 40px;
+      transform: translateX(100%);
+      transition: transform .35s ease;
+      z-index: 101;
+    }
+    nav .links.open { transform: translateX(0); }
+    nav .links a.nav-link { color: var(--noir) !important; font-size: 22px; font-weight: 500; }
+    nav .links a.cta-nav { background: var(--cobalt) !important; border-color: var(--cobalt) !important; color: #fff !important; padding: 14px 32px !important; font-size: 14px !important; margin-top: 8px; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .cycle-svg-wrap { margin-top: 16px; }
     .offer-card { padding: 20px; }
@@ -1199,7 +1232,7 @@
       <img src="logo-blanc.png" alt="Hymeria Consulting" class="logo-blanc">
       <img src="logo-noir.png" alt="Hymeria Consulting" class="logo-noir">
     </a>
-    <div class="links">
+    <div class="links" id="navLinks">
       <a href="#modele" class="nav-link">Approche</a>
       <a href="#expertises" class="nav-link">Offres</a>
       <a href="#pour-qui" class="nav-link">Pour qui&nbsp;?</a>
@@ -1207,6 +1240,9 @@
       <a href="#references" class="nav-link">&Agrave; propos</a>
       <a href="#diagnostic" class="cta-nav">Votre projet</a>
     </div>
+    <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -1877,6 +1913,25 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 window.addEventListener('scroll', () => {
   document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
 });
+
+// Mobile hamburger menu
+(function() {
+  const burger = document.getElementById('navBurger');
+  const links = document.getElementById('navLinks');
+  if (!burger || !links) return;
+  function setOpen(open) {
+    burger.classList.toggle('open', open);
+    links.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', () => setOpen(!burger.classList.contains('open')));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && burger.classList.contains('open')) setOpen(false);
+  });
+})();
 
 // Diagnostic Tool
 const diagQuestions = [
