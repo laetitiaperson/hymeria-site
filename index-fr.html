@@ -356,123 +356,18 @@
     color: var(--noir); letter-spacing: -0.01em; margin-bottom: 12px;
   }
   .process-section h3 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .process-badge {
-    display: inline-block; padding: 6px 16px; border-radius: 100px;
-    background: var(--cobalt-pale); color: var(--cobalt); font-size: 13px;
-    font-weight: 600; margin-bottom: 40px;
-    letter-spacing: 0.01em;
+  .cycle-svg-wrap {
+    max-width: 860px;
+    margin: 24px auto 0;
   }
-
-  .cycle { max-width: 920px; margin: 0 auto; }
-  .cycle-cols {
-    display: grid; grid-template-columns: 1fr 1.25fr;
-    gap: 22px 36px; align-items: stretch;
-  }
-  .cycle-col { display: flex; flex-direction: column; gap: 14px; }
-  .cycle-label {
-    font-size: 10.5px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.18em;
-    color: var(--cuivre); text-align: center;
-    padding: 9px 14px;
-    background: rgba(184, 115, 51, 0.07);
-    border-radius: 4px;
-  }
-
-  .cycle-step {
-    display: flex; align-items: center; gap: 14px;
-    background: #fff; border: 1px solid var(--border);
-    border-radius: 6px; padding: 14px 18px;
-    position: relative; transition: all 0.2s;
-  }
-  .cycle-step:hover {
-    border-color: rgba(0,71,171,0.25);
-    box-shadow: 0 4px 14px rgba(0,71,171,0.06);
-  }
-  .cycle-step-num {
-    flex-shrink: 0;
-    width: 32px; height: 32px; border-radius: 50%;
-    background: var(--cobalt); color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--display); font-weight: 700; font-size: 14px;
-  }
-  .cycle-step-body { flex: 1; min-width: 0; }
-  .cycle-step-title {
-    font-family: var(--display);
-    font-weight: 700; font-size: 14.5px;
-    color: var(--noir); line-height: 1.3;
-  }
-  .cycle-step-who {
-    display: block; font-size: 12px; color: var(--text-light);
-    font-style: italic; margin-top: 2px;
-  }
-
-  /* Down-arrow connectors between successive steps in the right column */
-  .cycle-col-right .cycle-step + .cycle-step {
-    margin-top: 4px;
-  }
-  .cycle-col-right .cycle-step + .cycle-step::before {
-    content: ''; position: absolute;
-    left: 30px; top: -14px;
-    width: 0; height: 10px;
-    border-left: 2px solid var(--cobalt); opacity: 0.55;
-  }
-  .cycle-col-right .cycle-step + .cycle-step::after {
-    content: ''; position: absolute;
-    left: 25px; top: -6px;
-    width: 0; height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--cobalt); opacity: 0.55;
-  }
-
-  /* Left-column spacer with dashed "cycle back" indicator */
-  .cycle-spacer {
-    flex: 1; min-height: 140px; position: relative;
-  }
-  .cycle-spacer::before {
-    content: ''; position: absolute;
-    left: 50%; top: 22px; bottom: 22px;
-    width: 0;
-    border-left: 2px dashed var(--cobalt);
-    opacity: 0.45; transform: translateX(-50%);
-  }
-  .cycle-spacer .cycle-arrow-up {
-    position: absolute; left: 50%; top: 0;
-    transform: translateX(-50%);
-    color: var(--cobalt); font-size: 18px; font-weight: 700;
-    opacity: 0.65; background: #fff; padding: 0 6px; line-height: 1;
-  }
-  .cycle-spacer .cycle-loop-label {
-    position: absolute; left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--cobalt); opacity: 0.75;
-    background: #fff; padding: 4px 10px; border-radius: 100px;
-    white-space: nowrap;
-  }
-
-  /* Step 6 — Validation, centered below both columns */
-  .cycle-validation {
-    margin-top: 22px;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .cycle-validation .cycle-arrow-down {
-    color: var(--cobalt); opacity: 0.55;
-    font-size: 18px; font-weight: 700; line-height: 1;
-    margin-bottom: 8px;
-  }
-  .cycle-validation .cycle-step {
-    background: var(--cobalt-pale);
-    border-color: rgba(0,71,171,0.18);
-    min-width: 280px;
-  }
+  .cycle-svg-wrap svg { width: 100%; height: auto; display: block; }
 
   .cycle-conclusion {
-    text-align: center; font-style: italic;
-    color: var(--cobalt); font-size: 14.5px;
-    margin: 36px auto 0;
-    max-width: 720px; line-height: 1.6;
+    text-align: center;
+    color: var(--cobalt); font-weight: 700;
+    font-size: 15px; line-height: 1.6;
+    margin: 32px auto 0;
+    max-width: 760px;
   }
 
   /* Expertise */
@@ -1069,8 +964,7 @@
     .diag-metrics { grid-template-columns: 1fr; }
     nav .links a.nav-link { display: none; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .cycle-cols { grid-template-columns: 1fr; gap: 14px; }
-    .cycle-spacer { display: none; }
+    .cycle-svg-wrap { margin-top: 16px; }
     .offer-card { padding: 20px; }
     .pillar-text { padding: 32px 28px; }
     .diag-card { padding: 32px 24px; }
@@ -1453,78 +1347,101 @@
 
     <div class="process-section fade-in">
       <h3>Notre approche&nbsp;: l'humain encadre, <em>l'IA acc&eacute;l&egrave;re</em></h3>
-      <div class="process-badge">2&nbsp;semaines du cadrage jusqu'&agrave; la prise de d&eacute;cision</div>
 
-      <div class="cycle">
-        <div class="cycle-cols">
-          <div class="cycle-col cycle-col-left">
-            <div class="cycle-label">Expertise humaine</div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">1</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">Cadrage</div>
-                <span class="cycle-step-who">Client + Expert</span>
-              </div>
-            </div>
-            <div class="cycle-spacer">
-              <span class="cycle-arrow-up">&uarr;</span>
-              <span class="cycle-loop-label">&#x21bb;&nbsp;Cycle</span>
-            </div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">7</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">D&eacute;cision</div>
-                <span class="cycle-step-who">Client + Expert</span>
-              </div>
-            </div>
-          </div>
+      <div class="cycle-svg-wrap">
+        <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Cycle Hymeria en 7 etapes : Cadrage, Collecte, Analyse, Modelisation, Recommandations, Validation, Decision">
 
-          <div class="cycle-col cycle-col-right">
-            <div class="cycle-label">Production augment&eacute;e par l'IA</div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">2</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">Collecte</div>
-                <span class="cycle-step-who">IA + Expert</span>
-              </div>
-            </div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">3</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">Analyse</div>
-                <span class="cycle-step-who">IA + Expert</span>
-              </div>
-            </div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">4</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">Mod&eacute;lisation</div>
-                <span class="cycle-step-who">IA + Expert</span>
-              </div>
-            </div>
-            <div class="cycle-step">
-              <div class="cycle-step-num">5</div>
-              <div class="cycle-step-body">
-                <div class="cycle-step-title">Recommandations</div>
-                <span class="cycle-step-who">IA + Expert</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          <!-- Boucle infinie cuivree -->
+          <path d="M 150 250 C 150 100 350 100 450 250 C 550 400 750 400 750 250 C 750 100 550 100 450 250 C 350 400 150 400 150 250 Z"
+                fill="none" stroke="#C4873C" stroke-width="8"
+                stroke-linecap="round" stroke-linejoin="round"/>
 
-        <div class="cycle-validation">
-          <span class="cycle-arrow-down">&darr;</span>
-          <div class="cycle-step">
-            <div class="cycle-step-num">6</div>
-            <div class="cycle-step-body">
-              <div class="cycle-step-title">Validation</div>
-              <span class="cycle-step-who">Expert</span>
-            </div>
-          </div>
-        </div>
+          <!-- Fleches directionnelles sur le chemin (sens 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7) -->
+          <g fill="#C4873C">
+            <polygon points="-7,6 0,-8 7,6" transform="translate(490 290) rotate(135)"/>
+            <polygon points="-7,6 0,-8 7,6" transform="translate(637 362) rotate(90)"/>
+            <polygon points="-7,6 0,-8 7,6" transform="translate(750 250) rotate(0)"/>
+            <polygon points="-7,6 0,-8 7,6" transform="translate(637 137) rotate(270)"/>
+            <polygon points="-7,6 0,-8 7,6" transform="translate(410 290) rotate(225)"/>
+            <polygon points="-7,6 0,-8 7,6" transform="translate(262 362) rotate(270)"/>
+          </g>
 
-        <p class="cycle-conclusion">L'humain &agrave; chaque &eacute;tape&nbsp;: Human-in-the-Loop par conception, align&eacute; sur les principes de l'IA Act.</p>
+          <!-- Labels des deux lobes -->
+          <g fill="#C4873C" font-family="'Montserrat',sans-serif" font-weight="700" letter-spacing="1.8" text-anchor="middle">
+            <text font-size="13">
+              <tspan x="290" y="244">EXPERTISE</tspan>
+              <tspan x="290" y="266">HUMAINE</tspan>
+            </text>
+            <text font-size="13">
+              <tspan x="610" y="234">PRODUCTION</tspan>
+              <tspan x="610" y="256">AUGMENT&#201;E</tspan>
+              <tspan x="610" y="278">PAR L'IA</tspan>
+            </text>
+          </g>
+
+          <!-- Annotation "2 semaines" + fleche pointillee 7 -> 1 -->
+          <g>
+            <path d="M 180 232 Q 230 175, 318 148" fill="none" stroke="#1B3A8C"
+                  stroke-width="1.5" stroke-dasharray="4,3" opacity="0.65"/>
+            <polygon points="-4,5 0,-6 4,5" fill="#1B3A8C" opacity="0.7"
+                     transform="translate(320 150) rotate(70)"/>
+            <text font-family="'Poppins',sans-serif" text-anchor="start">
+              <tspan x="200" y="196" font-size="12" font-weight="700" fill="#1B3A8C">2 semaines</tspan>
+              <tspan x="200" y="212" font-size="11" fill="#6B7280">du cadrage jusqu'&#224;</tspan>
+              <tspan x="200" y="226" font-size="11" fill="#6B7280">la prise de d&#233;cision</tspan>
+            </text>
+          </g>
+
+          <!-- Pastilles numerotees + labels -->
+          <g font-family="'Montserrat',sans-serif">
+
+            <!-- 1 Cadrage : haut de la boucle gauche -->
+            <text x="341" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A8C">Cadrage</text>
+            <text x="341" y="123" text-anchor="middle" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">Client + Expert</text>
+            <circle cx="341" cy="156" r="22" fill="#1B3A8C"/>
+            <text x="341" y="163" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text>
+
+            <!-- 2 Collecte : bas de la boucle droite -->
+            <circle cx="559" cy="344" r="22" fill="#1B3A8C"/>
+            <text x="559" y="351" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text>
+            <text x="559" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A8C">Collecte</text>
+            <text x="559" y="406" text-anchor="middle" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">IA + Expert</text>
+
+            <!-- 3 Analyse : bas-droite de la boucle droite -->
+            <circle cx="737" cy="307" r="22" fill="#1B3A8C"/>
+            <text x="737" y="314" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text>
+            <text x="773" y="302" text-anchor="start" font-size="16" font-weight="700" fill="#1B3A8C">Analyse</text>
+            <text x="773" y="320" text-anchor="start" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">IA + Expert</text>
+
+            <!-- 4 Modelisation : haut-droite de la boucle droite -->
+            <circle cx="737" cy="193" r="22" fill="#1B3A8C"/>
+            <text x="737" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4</text>
+            <text x="773" y="188" text-anchor="start" font-size="16" font-weight="700" fill="#1B3A8C">Mod&#233;lisation</text>
+            <text x="773" y="206" text-anchor="start" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">IA + Expert</text>
+
+            <!-- 5 Recommandations : haut de la boucle droite -->
+            <text x="559" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A8C">Recommandations</text>
+            <text x="559" y="123" text-anchor="middle" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">IA + Expert</text>
+            <circle cx="559" cy="156" r="22" fill="#1B3A8C"/>
+            <text x="559" y="163" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">5</text>
+
+            <!-- 6 Validation : bas de la boucle gauche -->
+            <circle cx="341" cy="344" r="22" fill="#1B3A8C"/>
+            <text x="341" y="351" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">6</text>
+            <text x="341" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A8C">Validation</text>
+            <text x="341" y="406" text-anchor="middle" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">Expert</text>
+
+            <!-- 7 Decision : extreme gauche -->
+            <text x="115" y="245" text-anchor="end" font-size="16" font-weight="700" fill="#1B3A8C">D&#233;cision</text>
+            <text x="115" y="263" text-anchor="end" font-size="12" fill="#6B7280" font-family="'Poppins',sans-serif">Client + Expert</text>
+            <circle cx="150" cy="250" r="22" fill="#1B3A8C"/>
+            <text x="150" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">7</text>
+          </g>
+        </svg>
       </div>
+
+      <p class="cycle-conclusion">L'humain &agrave; chaque &eacute;tape&nbsp;: Human-in-the-Loop par conception, align&eacute; sur les principes de l'IA Act.</p>
     </div>
   </div>
 </section>
