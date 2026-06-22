@@ -153,6 +153,14 @@
     h1 { font-size: 30px; }
     h2 { font-size: 19px; }
   }
+
+  .breadcrumb { font-size: 13px; color: var(--text-muted); padding: 0 0 24px; }
+  .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+  .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; color: var(--gris-40); margin-left: 4px; }
+  .breadcrumb a { color: var(--text-light); text-decoration: none; transition: color .15s; }
+  .breadcrumb a:hover { color: var(--cobalt); text-decoration: underline; }
+  .breadcrumb [aria-current="page"] { color: var(--noir); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -163,6 +171,12 @@
 </nav>
 
 <main>
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="index-fr.html">Accueil</a></li>
+      <li><span aria-current="page">Mentions l&eacute;gales</span></li>
+    </ol>
+  </nav>
   <span class="page-label">Mentions l&eacute;gales</span>
   <h1>Mentions l&eacute;gales</h1>
   <p class="subtitle">Hymeria &mdash; Le conseil r&eacute;invent&eacute; par la combinaison de l'intelligence humaine et la puissance de l'IA</p>

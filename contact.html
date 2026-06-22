@@ -173,6 +173,14 @@
     main { padding: 40px 22px 70px; }
     h1 { font-size: 28px; }
   }
+
+  .breadcrumb { font-size: 13px; color: var(--text-muted); padding: 0 0 24px; }
+  .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+  .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; color: var(--gris-40); margin-left: 4px; }
+  .breadcrumb a { color: var(--text-light); text-decoration: none; transition: color .15s; }
+  .breadcrumb a:hover { color: var(--cobalt); text-decoration: underline; }
+  .breadcrumb [aria-current="page"] { color: var(--noir); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -183,6 +191,12 @@
 </nav>
 
 <main>
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="index-fr.html">Accueil</a></li>
+      <li><span aria-current="page">Contact</span></li>
+    </ol>
+  </nav>
   <span class="page-label">Nous contacter</span>
   <h1>Parlons de <em>votre projet</em></h1>
   <p class="lede">Laissez-nous vos coordonn&eacute;es et quelques mots sur votre besoin. Un expert Hymeria revient vers vous sous 24h.</p>
