@@ -411,54 +411,74 @@
   .expertise h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
   .expertise .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; }
 
-  .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
-  .tab-btn {
-    display: flex; align-items: center; gap: 8px;
-    padding: 10px 20px; border-radius: 100px; border: none; cursor: pointer;
-    font-size: 13px; font-weight: 500; font-family: var(--sans);
-    transition: all 0.3s;
-  }
-  .tab-btn.active {
-    background: var(--cobalt); color: #fff;
-    box-shadow: 0 4px 16px rgba(0,71,171,0.22);
-  }
-  .tab-btn:not(.active) {
-    background: var(--white); color: var(--text-light);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  .offers-sub {
+    font-size: 11px; font-weight: 700; color: var(--cobalt);
+    text-transform: uppercase; letter-spacing: 0.18em;
+    margin-top: 8px !important;
   }
 
-  .expertise-card {
-    background: var(--white); border-radius: 6px; padding: 56px 60px;
-    box-shadow: 0 8px 40px rgba(0,45,107,0.06); border: 1px solid var(--border);
+  .offers-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    margin-bottom: 40px;
   }
-  .expertise-card h3 { font-family: var(--display); font-size: 26px; font-weight: 700; color: var(--noir); margin-bottom: 12px; letter-spacing: -0.01em; }
-  .expertise-card .expertise-desc { font-size: 15px; color: var(--text-light); line-height: 1.75; margin-bottom: 28px; }
-  .expertise-card .missions-label { font-size: 12px; font-weight: 600; color: var(--cobalt); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-  .missions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
-  .mission-item {
-    display: flex; align-items: baseline; gap: 10px;
-    padding: 4px 0;
+  .offers-col { display: flex; flex-direction: column; gap: 14px; }
+  .offers-col-head {
+    display: flex; align-items: center; gap: 10px;
+    padding-bottom: 14px; margin-bottom: 2px;
+    border-bottom: 1px solid var(--border);
   }
-  .mission-dot {
-    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px;
-    background: var(--cobalt);
+  .status-badge {
+    display: inline-block; padding: 4px 10px; border-radius: 100px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; line-height: 1.2;
   }
-  .mission-item span { font-size: 14px; color: var(--text-light); line-height: 1.55; }
+  .badge-green { background: #10B981; color: #fff; }
+  .badge-grey { background: var(--gris-10); color: var(--gris-80); }
+  .status-text { font-size: 12px; color: var(--text-light); font-weight: 500; }
 
-  .expertise-card .pricing-line {
-    margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
-    font-size: 15px; color: var(--taupe); font-weight: 600;
+  .offer-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 6px;
+    padding: 22px 22px 20px; transition: all 0.25s;
+  }
+  .offer-card.available { border-left: 3px solid var(--cobalt); }
+  .offer-card.upcoming { opacity: 0.78; }
+  .offer-card:hover { box-shadow: 0 8px 24px rgba(0,45,107,0.07); transform: translateY(-2px); }
+  .offer-icon { width: 30px; height: 30px; margin-bottom: 12px; }
+  .offer-icon img { width: 100%; height: 100%; display: block; }
+  .offer-card h3 {
+    font-family: var(--display); font-size: 15px; font-weight: 700;
+    color: var(--noir); margin-bottom: 8px; letter-spacing: -0.005em;
+    line-height: 1.3;
+  }
+  .offer-card p {
+    font-size: 13px; color: var(--text-light);
+    line-height: 1.55; margin: 0;
   }
 
-  .btn-navy {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 32px; border-radius: 100px;
-    background: var(--cobalt); color: #fff;
-    font-family: var(--sans);
-    font-size: 13px; font-weight: 600; transition: all 0.3s; margin-top: 24px;
-    text-transform: uppercase; letter-spacing: 0.06em;
+  .price-strip {
+    background: var(--cobalt-profond); border-radius: 8px;
+    padding: 28px 36px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; margin-bottom: 14px;
   }
-  .btn-navy:hover { background: var(--cobalt-profond); }
+  .price-block { text-align: center; }
+  .price-block + .price-block { border-left: 1px solid rgba(255,255,255,0.16); }
+  .price-label {
+    font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.65);
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .price-value {
+    font-family: var(--display); font-size: 22px; font-weight: 700;
+    color: #fff; letter-spacing: -0.01em;
+  }
+
+  .forfait-note {
+    text-align: center; font-style: italic;
+    color: var(--text-light) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
 
   /* Pricing */
   .pricing {
@@ -898,7 +918,9 @@
     .problem .grid, .trust .grid { grid-template-columns: 1fr; gap: 40px; }
     .problem .constats-grid { grid-template-columns: 1fr; }
     .pillar-card.left, .pillar-card.right { grid-template-columns: 1fr; }
-    .missions-grid { grid-template-columns: 1fr; }
+    .offers-grid { grid-template-columns: 1fr; }
+    .price-strip { grid-template-columns: 1fr; padding: 24px; }
+    .price-block + .price-block { border-left: none; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 24px; }
     .articles-grid { grid-template-columns: 1fr; }
     .compare-row { grid-template-columns: 1fr; gap: 6px; padding: 20px 16px; }
     .compare-row.compare-header { display: none; }
@@ -909,7 +931,7 @@
     nav .links a.nav-link { display: none; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .process-flow { border-radius: 20px; padding: 16px 20px; }
-    .expertise-card { padding: 32px 24px; }
+    .offer-card { padding: 20px; }
     .pillar-text { padding: 32px 28px; }
     .diag-card { padding: 32px 24px; }
   }
@@ -1321,16 +1343,88 @@
 <section class="expertise" id="expertises">
   <div class="inner">
     <div class="left-align fade-in">
-      <h2>6 p&ocirc;les d'excellence combinant <em>Expertise et IA</em></h2>
-      <p>Strat&eacute;gie, finance, digital, r&eacute;glementation, RH : en fonction de votre projet et de vos enjeux, Hymeria mobilise les agents IA pertinents associ&eacute;s &agrave; des experts de votre m&eacute;tier ou de votre secteur.</p>
+      <h2>Nos offres&nbsp;: des types de mission vari&eacute;s et align&eacute;s avec <em>les enjeux clients</em></h2>
+      <p class="offers-sub">D&eacute;ploiement progressif de nos offres</p>
     </div>
 
-    <div class="fade-in" style="transition-delay:100ms">
-      <div class="tabs" id="expertiseTabs"></div>
+    <div class="fade-in offers-grid" style="transition-delay:100ms">
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-green">Dispo</span>
+          <span class="status-text">Disponible maintenant</span>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-chess.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Strat&eacute;gie &amp; Business Development</h3>
+          <p>Nouveaux relais de croissance, sourcing M&amp;A, business plan, &eacute;valuation march&eacute; &eacute;mergent.</p>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-dollar.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Finance &amp; Investissement</h3>
+          <p>Due diligence commerciale, mod&eacute;lisation financi&egrave;re, audit pricing.</p>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-target.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Intelligence comp&eacute;titive</h3>
+          <p>Veille concurrentielle, profilage d'acteurs, cartographie d'&eacute;cosyst&egrave;me.</p>
+        </div>
+      </div>
+
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-grey">Q3 26</span>
+          <span class="status-text">Disponible Q3&nbsp;2026</span>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-network.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Marketing &amp; Communication</h3>
+          <p>Audit de positionnement, tendances de contenu, strat&eacute;gie &eacute;ditoriale.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-diamond.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Innovation &amp; Technologie</h3>
+          <p>&Eacute;tat de l'art, partenaires technologiques, comparatif make-or-buy, roadmap produit.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-compass.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>R&eacute;glementation &amp; Conformit&eacute;</h3>
+          <p>Cartographie r&eacute;glementaire, IA Act, RGPD, ESG, cybers&eacute;curit&eacute;.</p>
+        </div>
+      </div>
+
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-grey">Q4 26</span>
+          <span class="status-text">Disponible Q4&nbsp;2026</span>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-hourglass.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Op&eacute;rations &amp; Organisation</h3>
+          <p>Mapping de processus, politiques internes, benchmark organisationnel.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <h3>RH &amp; Talent</h3>
+          <p>Benchmark de r&eacute;mun&eacute;rations, march&eacute; du talent, grilles d'&eacute;valuation.</p>
+        </div>
+      </div>
     </div>
 
     <div class="fade-in" style="transition-delay:200ms">
-      <div class="expertise-card" id="expertiseCard"></div>
+      <div class="price-strip">
+        <div class="price-block">
+          <div class="price-label">Mission standard</div>
+          <div class="price-value">5&nbsp;&mdash;&nbsp;10&nbsp;K&euro;</div>
+        </div>
+        <div class="price-block">
+          <div class="price-label">Mission complexe</div>
+          <div class="price-value">10&nbsp;&mdash;&nbsp;15&nbsp;K&euro;</div>
+        </div>
+        <div class="price-block">
+          <div class="price-label">D&eacute;lai</div>
+          <div class="price-value">5&nbsp;&mdash;&nbsp;10&nbsp;jours</div>
+        </div>
+      </div>
+      <p class="forfait-note">Missions vendues au forfait exclusivement</p>
     </div>
   </div>
 </section>
@@ -1689,118 +1783,6 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 window.addEventListener('scroll', () => {
   document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
 });
-
-// Expertise Tabs
-const expertiseData = [
-  {
-    id: "marche",
-    label: "\u00C9tudes de march\u00E9 et analyse strat\u00E9gique",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>',
-    desc: "Comprendre un march\u00E9 avant vos concurrents, c\u2019est le premier avantage comp\u00E9titif. Nos agents IA analysent des milliers de sources en temps r\u00E9el pour construire une vision compl\u00E8te de votre environnement. Nos experts la transforment en recommandations strat\u00E9giques actionnables.",
-    missions: [
-      "\u00C9tude de march\u00E9 compl\u00E8te",
-      "Analyse d\u2019opportunit\u00E9 pour un lancement ou une expansion",
-      "Benchmark concurrentiel approfondi",
-      "Cartographie d\u2019\u00E9cosyst\u00E8me",
-      "\u00C9tude de faisabilit\u00E9 pour investisseurs et comit\u00E9s de direction"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-  {
-    id: "intelligence",
-    label: "Market intelligence et veille strat\u00E9gique",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
-    desc: "L\u2019information est partout. L\u2019intelligence, non. Nos agents IA filtrent le bruit en continu pour extraire les signaux qui comptent. Vous recevez l\u2019essentiel, contextualis\u00E9 et prioris\u00E9 par nos analystes.",
-    missions: [
-      "Veille concurrentielle automatis\u00E9e",
-      "D\u00E9tection de signaux faibles et tendances \u00E9mergentes",
-      "Monitoring r\u00E9glementaire sectoriel",
-      "Veille technologique et cartographie de l\u2019innovation",
-      "Rapports flash sur \u00E9v\u00E9nements march\u00E9"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-  {
-    id: "business",
-    label: "Business plans et mod\u00E9lisation financi\u00E8re",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-    desc: "Un business plan n\u2019est pas un exercice de style, c\u2019est un outil de d\u00E9cision. Nos agents IA mod\u00E9lisent vos hypoth\u00E8ses et simulent des dizaines de sc\u00E9narios. Nos experts challengent chaque projection pour que vos chiffres tiennent face \u00E0 un investisseur comme face \u00E0 la r\u00E9alit\u00E9.",
-    missions: [
-      "Business plan pour lev\u00E9e de fonds",
-      "Mod\u00E9lisation financi\u00E8re 3 \u00E0 5 ans avec analyse de sensibilit\u00E9",
-      "Plan de d\u00E9veloppement strat\u00E9gique",
-      "Due diligence commerciale et strat\u00E9gique",
-      "\u00C9valuation d\u2019entreprise et sc\u00E9narios de valorisation"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-  {
-    id: "digital",
-    label: "Audit digital et exp\u00E9rience utilisateur",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>',
-    desc: "Chaque friction dans un parcours client digital est une perte de revenu mesurable. Nos agents IA scannent chaque point de contact, identifient les blocages et quantifient les leviers de croissance. Nos experts UX traduisent ces donn\u00E9es en une feuille de route concr\u00E8te.",
-    missions: [
-      "Audit UX/UI de site web ou application mobile",
-      "Analyse du parcours client omnicanal",
-      "Audit d\u2019\u00E9co-conception num\u00E9rique",
-      "Benchmark digital sectoriel",
-      "Recommandations de refonte et feuille de route d\u2019optimisation"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-  {
-    id: "regulation",
-    label: "Impact r\u00E9glementaire et conformit\u00E9",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>',
-    desc: "CSRD, AI Act, RGPD, DORA, NIS2 : chaque nouvelle r\u00E9glementation est un risque ou un avantage concurrentiel, selon la vitesse \u00E0 laquelle vous vous y pr\u00E9parez. Nos agents IA cartographient l\u2019ensemble des obligations applicables \u00E0 votre activit\u00E9. Nos experts \u00E9valuent les impacts concrets et priorisent les actions.",
-    missions: [
-      "Analyse d\u2019impact r\u00E9glementaire",
-      "Diagnostic de conformit\u00E9 et plan de mise en conformit\u00E9",
-      "Cartographie des risques sectoriels",
-      "\u00C9valuation de l\u2019impact ESG et strat\u00E9gie de reporting",
-      "Veille r\u00E9glementaire automatis\u00E9e"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-  {
-    id: "rh",
-    label: "Strat\u00E9gie RH et transformation des comp\u00E9tences",
-    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-    desc: "L\u2019IA redessine les m\u00E9tiers. Les comp\u00E9tences qui comptaient hier ne sont plus celles qui compteront demain. Nos agents IA analysent votre capital humain \u00E0 grande \u00E9chelle. Nos experts RH co-construisent avec vous une strat\u00E9gie d\u2019adaptation align\u00E9e sur vos ambitions de croissance.",
-    missions: [
-      "Cartographie des comp\u00E9tences et plan de transformation",
-      "Diagnostic organisationnel",
-      "Strat\u00E9gie marque employeur",
-      "Analyse d\u2019impact IA sur les m\u00E9tiers et accompagnement du changement",
-      "Benchmark RH sectoriel"
-    ],
-    pricing: "Livraison en 5 \u00E0 10 jours"
-  },
-];
-
-let activeTab = 0;
-function renderExpertise() {
-  const tabsEl = document.getElementById('expertiseTabs');
-  tabsEl.innerHTML = expertiseData.map((c, i) =>
-    '<button class="tab-btn ' + (i === activeTab ? 'active' : '') + '" onclick="setTab(' + i + ')">' + c.icon + ' ' + c.label + '</button>'
-  ).join('');
-
-  const cat = expertiseData[activeTab];
-  const cardEl = document.getElementById('expertiseCard');
-  cardEl.innerHTML =
-    '<h3>' + cat.icon + '  ' + cat.label + '</h3>' +
-    '<div class="expertise-desc">' + cat.desc + '</div>' +
-    '<div class="missions-label">Missions types</div>' +
-    '<div class="missions-grid">' +
-      cat.missions.map(function(m) {
-        return '<div class="mission-item"><div class="mission-dot"></div><span>' + m + '</span></div>';
-      }).join('') +
-    '</div>' +
-    '<div class="pricing-line">\u2192 ' + cat.pricing + '</div>' +
-    '<a href="#diagnostic" class="btn-navy">\u00C9valuez votre projet \u2192</a>';
-}
-function setTab(i) { activeTab = i; renderExpertise(); }
-renderExpertise();
 
 // Diagnostic Tool
 const diagQuestions = [
