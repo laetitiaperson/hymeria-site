@@ -813,6 +813,22 @@
   .ref-label {
     font-size: 11px; color: var(--text-light); line-height: 1.4;
   }
+  .refs-legend {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 8px 20px; margin-top: 32px;
+    font-size: 12.5px;
+  }
+  .refs-legend-intro {
+    font-weight: 700; color: var(--noir); margin-right: 8px;
+  }
+  .refs-legend-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--text-light); font-weight: 500;
+  }
+  .refs-legend-pill .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    flex-shrink: 0;
+  }
   .trust .stat-label {
     font-size: 13px; color: var(--text-muted); margin-top: 4px;
     letter-spacing: 0.04em; font-weight: 500;
@@ -1778,6 +1794,16 @@
           <div class="ref-figure">180+</div>
           <div class="ref-label">Influenceurs qualifi&eacute;s</div>
         </div>
+      </div>
+
+      <div class="refs-legend">
+        <span class="refs-legend-intro">Une expertise multisectorielle&nbsp;:</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#2E7D6B"></span>Consumer &amp; Retail</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#2E6B7D"></span>Tech &amp; Software</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#5A6B5A"></span>Industrie &amp; &Eacute;nergie</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#8C2E2E"></span>Luxe &amp; Maroquinerie</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#6B7D2E"></span>Mobilit&eacute;</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#C4873C"></span>Media &amp; Telecom</span>
       </div>
     </div>
   </div>
