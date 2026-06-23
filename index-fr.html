@@ -78,7 +78,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; }
   body { font-family: var(--sans); color: var(--text); background: var(--bg); overflow-x: hidden; font-weight: 400; }
   ::selection { background: rgba(0,71,171,0.15); }
   img { display: block; }
@@ -112,6 +112,10 @@
     backdrop-filter: blur(24px) saturate(180%);
     border-bottom-color: var(--border);
   }
+  /* When mobile menu is open, drop backdrop-filter so .links position:fixed
+     escapes the nav's containing block and can cover the full viewport. */
+  nav.menu-open { backdrop-filter: none !important; }
+  nav.menu-open.scrolled { background: #fff; }
   nav .inner {
     max-width: 1200px; margin: 0 auto; padding: 0 32px;
     display: flex; align-items: center; justify-content: space-between; height: 110px;
@@ -2162,10 +2166,12 @@ window.addEventListener('scroll', () => {
 (function() {
   const burger = document.getElementById('navBurger');
   const links = document.getElementById('navLinks');
+  const nav = document.getElementById('mainNav');
   if (!burger || !links) return;
   function setOpen(open) {
     burger.classList.toggle('open', open);
     links.classList.toggle('open', open);
+    if (nav) nav.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     document.body.style.overflow = open ? 'hidden' : '';
