@@ -1528,9 +1528,81 @@
 
     <div class="process-section fade-in" style="text-align:center;">
       <h2 style="text-align:center;">Notre approche&nbsp;: l'humain encadre, <em>l'IA acc&eacute;l&egrave;re</em></h2>
-      <picture><source srcset="assets/visuals/processus-boucle-infinie.webp" type="image/webp"><img src="assets/visuals/processus-boucle-infinie.png"
-        alt="Sch&eacute;ma boucle infinie : m&eacute;thodologie Hymeria en 7 &eacute;tapes &mdash; l'humain encadre, l'IA acc&eacute;l&egrave;re"
-        style="max-width: 860px; width: 100%; display: block; margin: 2rem auto;" width="1920" height="1080"></picture>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Cycle Hymeria en 7 etapes : Cadrage, Collecte, Analyse, Modelisation, Recommandations, Validation, Decision" style="display:block; width:100%; max-width:860px; height:auto; margin:2rem auto;">
+  <!-- Boucle infinie (chemin vectoriel original du PPT, place dans la slide) -->
+  <svg x="178" y="169" width="955" height="424" viewBox="140 175 1000 445" overflow="visible">
+    <path d="M640 395C800 187 1130 193 1130 395 1130 597 800 603 640 395 480 187 150 193 150 395 150 597 480 603 640 395Z" stroke="#B87333" stroke-width="16" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <!-- Fleches directionnelles sur la boucle (sens 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7) -->
+  <g fill="#B87333">
+    <polygon points="-12,9 12,9 0,-13" transform="translate(547 284) rotate(125)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(947 524) rotate(60)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(937 233) rotate(290)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(547 480) rotate(235)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(197 432) rotate(345)"/>
+  </g>
+
+  <!-- Labels des deux lobes (cuivre) -->
+  <g fill="#B87333" font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" letter-spacing="2" text-anchor="middle">
+    <text font-size="22"><tspan x="380" y="378">EXPERTISE</tspan><tspan x="380" y="406">HUMAINE</tspan></text>
+    <text font-size="22"><tspan x="935" y="365">PRODUCTION</tspan><tspan x="935" y="393">AUGMENT&#201;E</tspan><tspan x="935" y="421">PAR L'IA</tspan></text>
+  </g>
+
+  <!-- Annotation 2 semaines + fleche pointillee 7 -> 1 -->
+  <g font-family="'Poppins',-apple-system,BlinkMacSystemFont,sans-serif">
+    <path d="M 232 285 Q 305 215, 380 240" fill="none" stroke="#1B3A8C" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+    <polygon points="-5,6 5,6 0,-7" fill="#1B3A8C" opacity="0.8" transform="translate(380 240) rotate(65)"/>
+    <text x="270" y="282" font-size="16" font-weight="700" fill="#1B3A8C">2 semaines</text>
+    <text x="270" y="302" font-size="13" fill="#6B7280">du cadrage jusqu'&#224;</text>
+    <text x="270" y="318" font-size="13" fill="#6B7280">la prise de d&#233;cision</text>
+  </g>
+
+  <!-- Labels pastilles -->
+  <g font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" fill="#1B3A8C">
+    <!-- 1 Cadrage (au-dessus, centre) -->
+    <text x="398" y="180" font-size="22" font-weight="700" text-anchor="middle">Cadrage</text>
+    <text x="398" y="204" font-size="17" text-anchor="middle">Client + Expert</text>
+    <!-- 5 Recommandations (au-dessus) -->
+    <text x="805" y="207" font-size="22" font-weight="700" text-anchor="middle">Recommandations</text>
+    <text x="805" y="231" font-size="17" text-anchor="middle">IA + Expert</text>
+    <!-- 6 Validation (en-dessous) -->
+    <text x="398" y="585" font-size="22" font-weight="700" text-anchor="middle">Validation</text>
+    <text x="398" y="609" font-size="17" text-anchor="middle">Expert</text>
+    <!-- 2 Collecte (en-dessous) -->
+    <text x="805" y="556" font-size="22" font-weight="700" text-anchor="middle">Collecte</text>
+    <text x="805" y="580" font-size="17" text-anchor="middle">IA + Expert</text>
+    <!-- 4 Modelisation (droite) -->
+    <text x="1100" y="260" font-size="22" font-weight="700" text-anchor="start">Mod&#233;lisation</text>
+    <text x="1100" y="284" font-size="17" text-anchor="start">IA + Expert</text>
+    <!-- 3 Analyse (droite) -->
+    <text x="1100" y="490" font-size="22" font-weight="700" text-anchor="start">Analyse</text>
+    <text x="1100" y="514" font-size="17" text-anchor="start">IA + Expert</text>
+    <!-- 7 Decision (gauche) -->
+    <text x="170" y="291" font-size="22" font-weight="700" text-anchor="end">D&#233;cision</text>
+    <text x="170" y="315" font-size="17" text-anchor="end">Client + Expert</text>
+  </g>
+
+  <!-- Pastilles cobalt + numeros blancs -->
+  <g fill="#1B3A8C">
+    <circle cx="398" cy="237" r="24"/>
+    <circle cx="805" cy="263" r="24"/>
+    <circle cx="1064" cy="263" r="24"/>
+    <circle cx="1064" cy="494" r="24"/>
+    <circle cx="805" cy="494" r="24"/>
+    <circle cx="398" cy="524" r="24"/>
+    <circle cx="210" cy="294" r="24"/>
+  </g>
+  <g fill="#fff" font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="398" y="246">1</text>
+    <text x="805" y="272">5</text>
+    <text x="1064" y="272">4</text>
+    <text x="1064" y="503">3</text>
+    <text x="805" y="503">2</text>
+    <text x="398" y="533">6</text>
+    <text x="210" y="303">7</text>
+  </g>
+</svg>
     </div>
   </div>
 </section>
