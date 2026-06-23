@@ -1,0 +1,114 @@
+# ============================================================================
+# Hymeria - Apache .htaccess for Hostinger production
+# Uploaded at the document root of hymeria.com
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# 1) HTTPS only (Let's Encrypt auto-provided by Hostinger)
+# ---------------------------------------------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------------------------------------------------------------------------
+# 2) Canonical host: hymeria.com -> www.hymeria.com
+#    (or the reverse if you prefer a bare apex; pick one and stick to it)
+# ---------------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^hymeria\.com$ [NC]
+RewriteRule ^(.*)$ https://www.hymeria.com/$1 [L,R=301]
+
+# ---------------------------------------------------------------------------
+# 3) Clean URLs - serve .html without the extension if requested
+#    /contact -> /contact.html
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [L]
+
+# ---------------------------------------------------------------------------
+# 4) Default document for the apex
+# ---------------------------------------------------------------------------
+DirectoryIndex index-fr.html index.html
+
+# ---------------------------------------------------------------------------
+# 5) Custom 404
+# ---------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------------
+# 6) Cache headers - this is the big win Lighthouse asked about (-202 KB)
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML pages: revalidate often so updates ship fast
+  ExpiresByType text/html "access plus 5 minutes"
+
+  # CSS / JS: 1 year (fingerprint with ?v= when you change them)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/json "access plus 1 day"
+
+  # Fonts: 1 year (immutable, hashed filenames are even better)
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # Images: 1 year
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # XML and text utilities: 1 week
+  ExpiresByType application/xml "access plus 1 week"
+  ExpiresByType text/xml "access plus 1 week"
+  ExpiresByType text/plain "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # immutable for fingerprinted assets
+  <FilesMatch "\.(woff2|woff|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "interest-cohort=()"
+  # tell browsers to upgrade any http subresource to https
+  Header always set Content-Security-Policy "upgrade-insecure-requests"
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# 7) Compression (Gzip + Brotli when available)
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml font/woff font/woff2 application/font-woff2
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# 8) 301 redirects from old GitHub Pages paths to canonical hymeria.com
+#    Activate only if visitors might still hit the *-fr suffix on the new host.
+# ---------------------------------------------------------------------------
+# Redirect 301 /hymeria-site/index-fr.html /
+# Redirect 301 /hymeria-site/ /
+
+# ---------------------------------------------------------------------------
+# 9) MIME type for WebP (older Apache builds need this)
+# ---------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
