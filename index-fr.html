@@ -388,6 +388,36 @@
   }
   .cycle-svg-wrap svg { width: 100%; height: auto; display: block; }
 
+  .methodo-recap {
+    max-width: 760px; margin: 16px auto 0;
+    padding: 28px 32px;
+    background: var(--cobalt-pale); border-radius: 8px;
+    border-left: 3px solid var(--cobalt);
+  }
+  .methodo-recap h3 {
+    font-family: var(--display); font-size: 18px; font-weight: 700;
+    color: var(--cobalt-profond); letter-spacing: -0.005em;
+    margin-bottom: 14px;
+  }
+  .methodo-recap ul {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; gap: 10px;
+  }
+  .methodo-recap li {
+    font-size: 14.5px; line-height: 1.55; color: var(--text);
+    padding-left: 22px; position: relative;
+  }
+  .methodo-recap li::before {
+    content: '\2022'; position: absolute; left: 6px; top: 0;
+    color: var(--cobalt); font-weight: 700; font-size: 18px; line-height: 1.3;
+  }
+  .methodo-recap li strong { color: var(--cobalt-profond); font-weight: 700; }
+  @media (max-width: 600px) {
+    .methodo-recap { padding: 22px 22px; }
+    .methodo-recap h3 { font-size: 16px; }
+    .methodo-recap li { font-size: 14px; }
+  }
+
   .cycle-conclusion {
     text-align: center;
     color: var(--cobalt); font-weight: 700;
@@ -1246,6 +1276,54 @@
             "@type": "Answer",
             "text": "Notre processus en 8 étapes va de la prise de contact à la clôture en 10 jours maximum : (1) demande en ligne, (2) qualification du besoin avec un expert, (3) proposition commerciale sous 48h, (4) validation et démarrage immédiat, (5) préparation des livrables par les agents IA, (6) revue qualité par nos experts, (7) présentation client (2h), (8) clôture et évaluation 360."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Vos agents IA sont-ils différents de ChatGPT ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, fondamentalement. ChatGPT est un assistant généraliste qui produit des réponses uniques sans validation. Nos agents IA sont spécialisés par tâche (recherche, analyse, modélisation, contrôle qualité, rédaction), connectés à plus de 600 sources premium fiabilisées, et chaque livrable est validé par un expert senior de plus de 15 ans d'expérience avant transmission. Là où un assistant IA seul reste faillible, l'orchestration agentique d'Hymeria produit des analyses approfondies, robustes et auditables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À qui s'adresse Hymeria ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hymeria s'adresse aux clients historiques du conseil stratégique (ETI, groupes, fonds d'investissement) qui veulent un livrable de qualité grand cabinet sans le délai et le coût associés, mais aussi aux PME et scale-ups qui étaient jusqu'ici exclus du conseil par son prix. Nos missions démarrent à 5 000 € et sont livrées en 5 à 10 jours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels formats de livrables fournissez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tous les formats classiques du conseil stratégique : présentations PowerPoint et Keynote (lecture business), rapports Word et PDF (synthèses détaillées), modèles Excel (chiffrages, scénarios, plans financiers), notes de synthèse (1 page exécutive), tableaux de bord interactifs. Les livrables suivent les standards des grands cabinets : rigueur méthodologique, sources citées, recommandations actionnables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous à l'international ou en anglais ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Notre réseau de 50 experts seniors couvre la France, l'Europe, l'Amérique du Nord et plusieurs pays d'Asie. Nous travaillons en français et en anglais, et plusieurs experts maîtrisent l'allemand, l'espagnol, l'italien et le mandarin. Pour des missions ciblées géographiquement, nous mobilisons systématiquement un expert ayant l'expérience du marché concerné."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment vous comparez-vous à un cabinet comme McKinsey ou BCG ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sur la rigueur de l'analyse et la qualité de la recommandation, notre standard est le même : nos experts viennent souvent de ces cabinets ou de directions stratégiques de grands groupes. La différence se joue sur le délai (5 à 10 jours contre 4 à 12 semaines), le coût (5 000 à 15 000 € contre 50 000 à 500 000 €) et l'accessibilité (toute structure, pas seulement les grands groupes). Là où un grand cabinet mobilise plusieurs consultants juniors encadrés par un partner, Hymeria mobilise 40 agents IA spécialisés plus un expert senior dédié."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je ne suis pas satisfait du livrable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chaque mission inclut une session de présentation et de challenge avec l'expert sénior dédié. Si des ajustements sont nécessaires (cadrage à affiner, analyses à approfondir, restitution à reformater), ils sont inclus dans le forfait initial. Notre engagement est de livrer un travail directement actionnable, validé par un expert senior, pas un brouillon à reprendre. Pendant 30 jours après la remise, nous restons disponibles pour répondre à vos questions et clarifications."
+          }
         }
       ]
     }
@@ -1627,6 +1705,20 @@
   </g>
 </svg>
     </div>
+
+    <div class="fade-in" style="transition-delay:200ms">
+      <div class="methodo-recap" aria-label="Notre m&eacute;thodologie en 1 minute">
+        <h3>Notre m&eacute;thodologie en 1 minute</h3>
+        <ul>
+          <li><strong>5 &agrave; 10 jours</strong> de d&eacute;lai, du cadrage initial &agrave; la prise de d&eacute;cision client.</li>
+          <li><strong>5 000 &agrave; 15 000 &euro;</strong> au forfait, selon le p&eacute;rim&egrave;tre de la mission.</li>
+          <li><strong>40 agents IA sp&eacute;cialis&eacute;s</strong> orchestr&eacute;s en architecture propri&eacute;taire, aliment&eacute;s par 600 sources premium.</li>
+          <li><strong>50 experts seniors</strong> mobilisables selon le secteur, qui valident chaque livrable.</li>
+          <li><strong>M&eacute;thodologie cabinet de r&eacute;f&eacute;rence</strong>&nbsp;: tra&ccedil;abilit&eacute;, recoupement des sources, relecture crois&eacute;e, conclusions auditables.</li>
+          <li><strong>Human-in-the-Loop par conception</strong>, align&eacute; sur les principes de l'IA Act.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1966,6 +2058,48 @@
         <summary>Comment se d&eacute;roule une mission de A &agrave; Z ?</summary>
         <div class="faq-answer">
           <p>Notre processus en 8 &eacute;tapes va de la prise de contact &agrave; la cl&ocirc;ture en 10 jours maximum : (1) demande en ligne, (2) qualification du besoin avec un expert, (3) proposition commerciale sous 48h, (4) validation et d&eacute;marrage imm&eacute;diat, (5) pr&eacute;paration des livrables par les agents IA, (6) revue qualit&eacute; par nos experts, (7) pr&eacute;sentation client (2h), (8) cl&ocirc;ture et &eacute;valuation 360.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Vos agents IA sont-ils diff&eacute;rents de ChatGPT ?</summary>
+        <div class="faq-answer">
+          <p>Oui, fondamentalement. ChatGPT est un assistant g&eacute;n&eacute;raliste qui produit des r&eacute;ponses uniques sans validation. Nos agents IA sont sp&eacute;cialis&eacute;s par t&acirc;che (recherche, analyse, mod&eacute;lisation, contr&ocirc;le qualit&eacute;, r&eacute;daction), connect&eacute;s &agrave; plus de 600 sources premium fiabilis&eacute;es, et chaque livrable est valid&eacute; par un expert senior de plus de 15 ans d'exp&eacute;rience avant transmission. L&agrave; o&ugrave; un assistant IA seul reste faillible, l'orchestration agentique d'Hymeria produit des analyses approfondies, robustes et auditables.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>&Agrave; qui s'adresse Hymeria ?</summary>
+        <div class="faq-answer">
+          <p>Hymeria s'adresse aux clients historiques du conseil strat&eacute;gique (ETI, groupes, fonds d'investissement) qui veulent un livrable de qualit&eacute; grand cabinet sans le d&eacute;lai et le co&ucirc;t associ&eacute;s, mais aussi aux PME et scale-ups qui &eacute;taient jusqu'ici exclus du conseil par son prix. Nos missions d&eacute;marrent &agrave; 5 000 &euro; et sont livr&eacute;es en 5 &agrave; 10 jours.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Quels formats de livrables fournissez-vous ?</summary>
+        <div class="faq-answer">
+          <p>Tous les formats classiques du conseil strat&eacute;gique : pr&eacute;sentations PowerPoint et Keynote (lecture business), rapports Word et PDF (synth&egrave;ses d&eacute;taill&eacute;es), mod&egrave;les Excel (chiffrages, sc&eacute;narios, plans financiers), notes de synth&egrave;se (1 page ex&eacute;cutive), tableaux de bord interactifs. Les livrables suivent les standards des grands cabinets : rigueur m&eacute;thodologique, sources cit&eacute;es, recommandations actionnables.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Travaillez-vous &agrave; l'international ou en anglais ?</summary>
+        <div class="faq-answer">
+          <p>Oui. Notre r&eacute;seau de 50 experts seniors couvre la France, l'Europe, l'Am&eacute;rique du Nord et plusieurs pays d'Asie. Nous travaillons en fran&ccedil;ais et en anglais, et plusieurs experts ma&icirc;trisent l'allemand, l'espagnol, l'italien et le mandarin. Pour des missions cibl&eacute;es g&eacute;ographiquement, nous mobilisons syst&eacute;matiquement un expert ayant l'exp&eacute;rience du march&eacute; concern&eacute;.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment vous comparez-vous &agrave; un cabinet comme McKinsey ou BCG ?</summary>
+        <div class="faq-answer">
+          <p>Sur la rigueur de l'analyse et la qualit&eacute; de la recommandation, notre standard est le m&ecirc;me : nos experts viennent souvent de ces cabinets ou de directions strat&eacute;giques de grands groupes. La diff&eacute;rence se joue sur le d&eacute;lai (5 &agrave; 10 jours contre 4 &agrave; 12 semaines), le co&ucirc;t (5 000 &agrave; 15 000 &euro; contre 50 000 &agrave; 500 000 &euro;) et l'accessibilit&eacute; (toute structure, pas seulement les grands groupes). L&agrave; o&ugrave; un grand cabinet mobilise plusieurs consultants juniors encadr&eacute;s par un partner, Hymeria mobilise 40 agents IA sp&eacute;cialis&eacute;s plus un expert senior d&eacute;di&eacute;.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Que se passe-t-il si je ne suis pas satisfait du livrable ?</summary>
+        <div class="faq-answer">
+          <p>Chaque mission inclut une session de pr&eacute;sentation et de challenge avec l'expert s&eacute;nior d&eacute;di&eacute;. Si des ajustements sont n&eacute;cessaires (cadrage &agrave; affiner, analyses &agrave; approfondir, restitution &agrave; reformater), ils sont inclus dans le forfait initial. Notre engagement est de livrer un travail directement actionnable, valid&eacute; par un expert senior, pas un brouillon &agrave; reprendre. Pendant 30 jours apr&egrave;s la remise, nous restons disponibles pour r&eacute;pondre &agrave; vos questions et clarifications.</p>
         </div>
       </details>
     </div>
