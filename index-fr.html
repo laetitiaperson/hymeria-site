@@ -89,7 +89,6 @@
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
   @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
-  @keyframes fadeInLine { to { opacity: 1; } }
   @keyframes blink { 50% { opacity: 0; } }
 
   /* Section Label */
@@ -627,92 +626,77 @@
   .diagnostic h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
   .diagnostic .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; }
 
-  .diag-card {
-    background: var(--white); border-radius: 24px; padding: 52px;
-    box-shadow: 0 16px 64px rgba(0,0,0,0.06);
-    border: 1px solid var(--border); position: relative; overflow: hidden;
-  }
-  .diag-progress {
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: var(--border);
-  }
-  .diag-progress-bar {
-    height: 100%; background: linear-gradient(90deg, var(--cobalt), var(--cobalt-clair));
-    transition: width 0.5s ease; border-radius: 0 2px 2px 0;
-  }
-  .diag-step { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-weight: 500; }
-  .diag-question { font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 32px; line-height: 1.3; }
-  .diag-options { display: flex; flex-direction: column; gap: 10px; }
-  .diag-option {
-    padding: 16px 20px; border-radius: 14px; text-align: left;
-    background: var(--bg); border: 1px solid var(--border);
-    color: var(--text); font-size: 15px; font-weight: 450; cursor: pointer;
-    transition: all 0.2s; display: flex; align-items: center; gap: 14px;
-    font-family: var(--sans);
-  }
-  .diag-option:hover { border-color: var(--accent); background: var(--accent-soft); }
-  .diag-option-key {
-    width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-    background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 700; color: var(--accent);
-  }
 
-  .diag-analyzing { text-align: center; padding: 40px 0; }
-  .diag-analyzing .brain { font-size: 40px; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
-  .diag-lines { max-width: 340px; margin: 28px auto 0; text-align: left; }
-  .diag-line { color: var(--green); font-size: 14px; font-weight: 500; margin-bottom: 10px; opacity: 0; }
+  /* 3 questions pour cadrer une mission */
+  .q3-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .q3-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--cobalt);
+    border-radius: 6px;
+    padding: 28px 30px 26px;
+    display: flex; flex-direction: column;
+    transition: all 0.25s;
+  }
+  .q3-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,45,107,0.07);
+  }
+  .q3-num {
+    font-family: var(--display); font-size: 11px; font-weight: 700;
+    color: var(--cobalt); letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .q3-card h3 {
+    font-family: var(--display); font-size: 18px; font-weight: 700;
+    color: var(--noir); line-height: 1.35; letter-spacing: -0.005em;
+    margin-bottom: 16px;
+  }
+  .q3-card p {
+    font-size: 14.5px; color: var(--text-light); line-height: 1.7;
+    margin: 0 0 14px;
+  }
+  .q3-card ul {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; gap: 8px;
+  }
+  .q3-card li {
+    font-size: 13.5px; color: var(--text-light); line-height: 1.5;
+    padding-left: 18px; position: relative;
+  }
+  .q3-card li::before {
+    content: '\2022'; color: var(--cobalt); font-weight: 700;
+    position: absolute; left: 0; top: -1px; font-size: 16px; line-height: 1.3;
+  }
+  .q3-card li strong { color: var(--noir); font-weight: 600; }
 
-  .diag-result-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
-  .diag-check {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: var(--green-soft); display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
+  .q3-footer {
+    margin-top: 40px; padding: 24px 28px;
+    background: var(--cobalt-pale);
+    border-radius: 6px; border-left: 3px solid var(--cobalt);
+    font-size: 15px; color: var(--text); line-height: 1.7;
   }
-  .diag-result-title { font-size: 22px; font-weight: 600; color: var(--navy); }
-  .diag-result-sub { font-size: 13px; color: var(--text-muted); }
-  .diag-missions-label {
-    font-size: 13px; font-weight: 600; color: var(--accent);
-    margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .diag-mission {
-    display: flex; align-items: center; gap: 10px; padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .diag-mission:last-child { border-bottom: none; }
-  .diag-mission .arrow { color: var(--accent); }
+  .q3-footer strong { color: var(--cobalt-profond); font-weight: 700; }
+  .q3-footer em { font-style: italic; color: var(--cobalt); }
 
-  .diag-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 32px; }
-  .diag-metric {
-    position: relative;
-    padding: 20px 18px; border-radius: 4px; background: var(--gris-05);
-    border: 1px solid var(--border); text-align: left;
-    overflow: hidden;
+  .q3-cta {
+    margin-top: 28px; text-align: center;
   }
-  .diag-metric::before {
-    content: ''; position: absolute; top: 0; left: 0; height: 100%;
-    width: 3px; background: var(--cobalt);
-  }
-  .diag-metric:nth-child(1)::before { background: var(--cobalt); }
-  .diag-metric:nth-child(2)::before { background: var(--taupe); }
-  .diag-metric:nth-child(3)::before { background: var(--cuivre); }
-  .diag-metric-label {
-    font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;
-    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
-  }
-  .diag-metric-value { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--noir); letter-spacing: -0.01em; }
-
-  .diag-actions { display: flex; gap: 12px; }
-  .diag-actions .primary {
-    flex: 1; text-align: center; padding: 14px 28px; border-radius: 100px;
-    background: var(--cobalt); color: #fff; font-size: 13px; font-weight: 600;
-    border: none; cursor: pointer; font-family: var(--sans);
+  .q3-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 16px 36px; border-radius: 100px;
+    background: var(--cobalt); color: #fff;
+    font-size: 13px; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.06em;
+    transition: all 0.2s;
   }
-  .diag-actions .primary:hover { background: var(--cobalt-profond); }
-  .diag-actions .secondary {
-    padding: 14px 20px; border-radius: 100px; background: transparent;
-    border: 1px solid var(--border); color: var(--text-light);
-    font-size: 14px; cursor: pointer; font-family: var(--sans);
+  .q3-cta a:hover { background: var(--cobalt-profond); transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .q3-grid { grid-template-columns: 1fr; }
   }
 
   /* Insights */
@@ -983,7 +967,6 @@
     .compare-row > div[data-label]::before { display: block; }
     .compare-row.compare-highlight { padding: 22px 16px; }
     .hero .stats { grid-template-columns: 1fr; gap: 16px; }
-    .diag-metrics { grid-template-columns: 1fr; }
     .nav-burger { display: flex; }
     nav .links {
       position: fixed; inset: 0;
@@ -1011,11 +994,9 @@
     .cycle-svg-wrap { margin-top: 16px; }
     .offer-card { padding: 20px; }
     .pillar-text { padding: 32px 28px; }
-    .diag-card { padding: 32px 24px; }
   }
   @media (max-width: 480px) {
     footer .footer-grid { grid-template-columns: 1fr; }
-    .diag-actions { flex-direction: column; }
     .trust .refs-grid { grid-template-columns: 1fr; }
   }
 
@@ -1919,18 +1900,53 @@
   </div>
 </section>
 
-<!-- DIAGNOSTIC IA -->
+<!-- 3 QUESTIONS POUR CADRER UNE MISSION -->
 <section class="diagnostic" id="diagnostic">
   <div class="inner">
     <div class="left-align fade-in">
-      <h2>&Eacute;valuez votre projet <em>gratuitement</em></h2>
-      <p>Vous avez un enjeu strat&eacute;gique en t&ecirc;te mais vous ne savez pas encore par o&ugrave; commencer ? R&eacute;pondez &agrave; quelques questions cl&eacute;s : nous vous envoyons sous 48h une premi&egrave;re analyse personnalis&eacute;e avec des pistes d'action concr&egrave;tes.</p>
+      <h2>Pr&eacute;parer la mission ensemble : <em>3 questions cl&eacute;s</em></h2>
+      <p>Voici les trois questions que nous abordons avec vous lors du cadrage initial. Avoir une id&eacute;e de vos r&eacute;ponses en amont nous permet d'aller plus vite &agrave; l'essentiel et de calibrer la mission au plus juste.</p>
     </div>
 
-    <div class="fade-in" style="transition-delay:150ms">
-      <div class="diag-card" id="diagCard">
-        <div class="diag-progress"><div class="diag-progress-bar" id="diagProgress" style="width:0%"></div></div>
-        <div id="diagContent"></div>
+    <div class="fade-in q3-grid" style="transition-delay:100ms">
+      <div class="q3-card">
+        <div class="q3-num">01 &middot; Le besoin</div>
+        <h3>Quelle d&eacute;cision attendez-vous d'&eacute;clairer ?</h3>
+        <p>Chaque mission Hymeria sert &agrave; &eacute;clairer une d&eacute;cision concr&egrave;te : lancer ou non un produit, entrer ou non sur un march&eacute;, acqu&eacute;rir ou non un acteur, investir ou non dans une technologie. Plus la d&eacute;cision que vous voulez prendre est claire, plus nous pouvons concentrer l'analyse l&agrave; o&ugrave; elle compte.</p>
+      </div>
+
+      <div class="q3-card">
+        <div class="q3-num">02 &middot; Le p&eacute;rim&egrave;tre</div>
+        <h3>Quel p&eacute;rim&egrave;tre couvre votre besoin ?</h3>
+        <p>Le p&eacute;rim&egrave;tre conditionne la profondeur de l'analyse, le d&eacute;lai et le co&ucirc;t. Avoir quelques pistes nous aide &agrave; dimensionner la mission au plus juste :</p>
+        <ul>
+          <li><strong>G&eacute;ographie</strong> : pays, zone, langue</li>
+          <li><strong>March&eacute;</strong> : segment, taille (CA, volume, acteurs)</li>
+          <li><strong>Concurrents</strong> : top 5, top 20, &eacute;cosyst&egrave;me complet</li>
+          <li><strong>Temporalit&eacute;</strong> : photographie actuelle, projection 3-5 ans</li>
+        </ul>
+      </div>
+
+      <div class="q3-card">
+        <div class="q3-num">03 &middot; Le livrable</div>
+        <h3>Quel format de livrable correspond &agrave; votre usage ?</h3>
+        <p>Comex, board, fonds d'investissement, &eacute;quipe op&eacute;rationnelle : chaque public consomme l'information diff&eacute;remment. Nous adaptons le format au besoin :</p>
+        <ul>
+          <li>Note de synth&egrave;se ex&eacute;cutive (1-2 pages)</li>
+          <li>Pr&eacute;sentation pour comit&eacute; (15-30 slides + executive summary)</li>
+          <li>Rapport approfondi (30-100 pages + annexes)</li>
+          <li>Mod&egrave;le financier interactif (Excel param&eacute;trable)</li>
+          <li>Cartographie d'acteurs structur&eacute;e</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:300ms">
+      <div class="q3-footer">
+        <strong>Hymeria a d&eacute;j&agrave; men&eacute; ce type de missions</strong> : &eacute;tudes de march&eacute; internationales, cartographies d'acteurs, benchmarks concurrentiels, due diligence commerciale, &eacute;valuations de march&eacute;, diagnostics organisationnels et intelligence concurrentielle. <em>Voir nos r&eacute;f&eacute;rences ci-dessous &darr;</em>
+      </div>
+      <div class="q3-cta">
+        <a href="contact.html">Discutons-en &rarr;</a>
       </div>
     </div>
   </div>
@@ -2318,124 +2334,6 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// Diagnostic Tool
-const diagQuestions = [
-  {
-    q: "Quel est le d\u00E9fi strat\u00E9gique num\u00E9ro un de votre organisation aujourd\u2019hui ?",
-    opts: [
-      "Acc\u00E9l\u00E9rer la croissance (nouveaux march\u00E9s, lancement produit)",
-      "Optimiser la performance (co\u00FBts, processus, organisation)",
-      "G\u00E9rer une transformation (digitale, r\u00E9glementaire, organisationnelle)",
-      "Renforcer la comp\u00E9titivit\u00E9 (positionnement, diff\u00E9renciation)"
-    ]
-  },
-  {
-    q: "Dans quel secteur op\u00E9rez-vous ?",
-    opts: [
-      "Services financiers & assurance",
-      "Sant\u00E9 & Life Sciences",
-      "Industrie & Manufacturing",
-      "Retail & e-commerce",
-      "Tech & SaaS",
-      "Autre"
-    ]
-  },
-  {
-    q: "Quelle est la taille de votre organisation ?",
-    opts: [
-      "Startup / PME (< 50 collaborateurs)",
-      "ETI (50 \u2013 500 collaborateurs)",
-      "Grand groupe (500+ collaborateurs)"
-    ]
-  },
-  {
-    q: "Quel est votre horizon de d\u00E9cision ?",
-    opts: [
-      "Urgent \u2014 j\u2019ai besoin de r\u00E9sultats sous 2 semaines",
-      "Court terme \u2014 d\u00E9cision \u00E0 prendre dans le mois",
-      "Moyen terme \u2014 planification strat\u00E9gique \u00E0 3\u20136 mois",
-      "Exploratoire \u2014 je me renseigne"
-    ]
-  },
-];
-let diagStep = 0, diagAnswers = {};
-
-function renderDiag() {
-  const progress = document.getElementById('diagProgress');
-  const content = document.getElementById('diagContent');
-  progress.style.width = (diagStep / diagQuestions.length * 100) + '%';
-
-  const q = diagQuestions[diagStep];
-  content.innerHTML =
-    '<div class="diag-step">Question ' + (diagStep + 1) + ' sur ' + diagQuestions.length + '</div>' +
-    '<div class="diag-question">' + q.q + '</div>' +
-    '<div class="diag-options">' +
-      q.opts.map(function(o, i) {
-        return '<button class="diag-option" onclick="diagAnswer(\'' + o.replace(/'/g, "\\'") + '\')">' +
-          '<span class="diag-option-key">' + String.fromCharCode(65 + i) + '</span>' + o + '</button>';
-      }).join('') +
-    '</div>';
-}
-
-function diagAnswer(answer) {
-  diagAnswers[diagStep] = answer;
-  if (diagStep < diagQuestions.length - 1) {
-    diagStep++;
-    renderDiag();
-  } else {
-    showAnalyzing();
-  }
-}
-
-function showAnalyzing() {
-  var progress = document.getElementById('diagProgress');
-  progress.style.width = '90%';
-  var content = document.getElementById('diagContent');
-  content.innerHTML =
-    '<div class="diag-analyzing">' +
-      '<h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-bottom:8px">Analyse en cours</h3>' +
-      '<p style="font-size:15px;color:var(--text-light)">Nos agents construisent votre recommandation personnalis\u00E9e.</p>' +
-      '<div class="diag-lines">' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.3s forwards">\u2713 Analyse du type de d\u00E9fi\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.9s forwards">\u2713 Mapping des expertises pertinentes\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 1.5s forwards">\u2713 Estimation du p\u00E9rim\u00E8tre et du d\u00E9lai\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 2.1s forwards">\u2713 G\u00E9n\u00E9ration de la recommandation\u2026</div>' +
-      '</div>' +
-    '</div>';
-  setTimeout(showResult, 3000);
-}
-
-function showResult() {
-  var progress = document.getElementById('diagProgress');
-  progress.style.width = '100%';
-  var content = document.getElementById('diagContent');
-  content.innerHTML =
-    '<div class="diag-result-header">' +
-      '<div class="diag-check">\u2713</div>' +
-      '<div>' +
-        '<div class="diag-result-title">Votre diagnostic Hymeria</div>' +
-        '<div class="diag-result-sub">Bas\u00E9 sur : ' + diagAnswers[0] + '</div>' +
-      '</div>' +
-    '</div>' +
-    '<div class="diag-missions-label">Missions recommand\u00E9es</div>' +
-    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Analyse du paysage concurrentiel et positionnement strat\u00E9gique</span></div>' +
-    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Dimensionnement march\u00E9 et \u00E9valuation des opportunit\u00E9s</span></div>' +
-    '<div class="diag-mission" style="border-bottom:none"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Strat\u00E9gie go-to-market avec feuille de route actionnable</span></div>' +
-    '<div class="diag-metrics">' +
-      '<div class="diag-metric"><div class="diag-metric-label">Livraison</div><div class="diag-metric-value">5 \u00E0 10 jours</div></div>' +
-      '<div class="diag-metric"><div class="diag-metric-label">\u00C9conomies</div><div class="diag-metric-value">~85% vs traditionnel</div></div>' +
-    '</div>' +
-    '<div class="diag-actions">' +
-      '<a href="contact.html" class="primary" style="display:inline-block;text-align:center;text-decoration:none">Contactez un expert \u2192</a>' +
-      '<button class="secondary" onclick="resetDiag()">Recommencer</button>' +
-    '</div>';
-}
-
-function resetDiag() {
-  diagStep = 0; diagAnswers = {};
-  renderDiag();
-}
-renderDiag();
 
 // Newsletter
 function submitNewsletter() {
