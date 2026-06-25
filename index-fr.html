@@ -674,10 +674,16 @@
     margin-top: 40px; padding: 24px 28px;
     background: var(--cobalt-pale);
     border-radius: 6px; border-left: 3px solid var(--cobalt);
-    font-size: 15px; color: var(--text); line-height: 1.7;
+    font-family: var(--sans);
+    font-size: 16px; color: var(--text); line-height: 1.8;
   }
   .q3-footer strong { color: var(--cobalt-profond); font-weight: 700; }
-  .q3-footer em { font-style: italic; color: var(--cobalt); }
+  .q3-footer a.q3-ref-link {
+    color: var(--cobalt); font-style: italic; font-weight: 600;
+    text-decoration: none; border-bottom: 1px solid rgba(0,71,171,0.3);
+    transition: border-color 0.2s;
+  }
+  .q3-footer a.q3-ref-link:hover { border-bottom-color: var(--cobalt); }
 
   .q3-cta {
     margin-top: 28px; text-align: center;
@@ -1933,7 +1939,7 @@
 
     <div class="fade-in" style="transition-delay:300ms">
       <div class="q3-footer">
-        <strong>Hymeria a d&eacute;j&agrave; men&eacute; ce type de missions</strong> : &eacute;tudes de march&eacute; internationales, cartographies d'acteurs, benchmarks concurrentiels, due diligence commerciale, &eacute;valuations de march&eacute;, diagnostics organisationnels et intelligence concurrentielle. <em>Voir nos r&eacute;f&eacute;rences ci-dessous &darr;</em>
+        <strong>Hymeria a d&eacute;j&agrave; men&eacute; ce type de missions</strong> : &eacute;tudes de march&eacute; internationales, cartographies d'acteurs, benchmarks concurrentiels, due diligence commerciale, &eacute;valuations de march&eacute;, diagnostics organisationnels et intelligence concurrentielle. <a href="#references" class="q3-ref-link">Voir nos r&eacute;f&eacute;rences ci-dessous &darr;</a>
       </div>
       <div class="q3-cta">
         <a href="contact.html">Discutons-en &rarr;</a>
