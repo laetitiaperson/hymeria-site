@@ -53,7 +53,7 @@ def main() -> None:
                    help="reverse the swap (production -> staging)")
     args = p.parse_args()
 
-    targets = list(REPO_ROOT.glob("*.html")) + list(REPO_ROOT.glob("insights/*.html"))
+    targets = list(REPO_ROOT.glob("**/*.html"))
     for extra in ("sitemap.xml", "robots.txt"):
         f = REPO_ROOT / extra
         if f.exists():
