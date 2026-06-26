@@ -286,7 +286,7 @@
     max-width: 1100px; margin: 0 auto;
   }
   .problem h2, .solution h2, .expertise h2, .pricing h2, .diagnostic h2,
-  .insights h2, .trust h2, .newsletter h3, .final-cta h2 {
+  .insights h2, .trust h2, .final-cta h2 {
     font-family: var(--display); color: var(--noir); letter-spacing: -0.015em; font-weight: 600;
   }
   .problem h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
@@ -838,37 +838,6 @@
   .trust .stat-label {
     font-size: 13px; color: var(--text-muted); margin-top: 4px;
     letter-spacing: 0.04em; font-weight: 500;
-  }
-
-  /* Newsletter */
-  .newsletter { background: var(--white); padding: 80px 32px; }
-  .newsletter .card {
-    max-width: 640px; margin: 0 auto; text-align: center;
-    padding: 56px 52px; border-radius: 24px;
-    background: var(--bg-warm); border: 1px solid var(--border);
-  }
-  .newsletter h3 { font-size: 26px; font-weight: 600; line-height: 1.3; }
-  .newsletter h3 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .newsletter p { font-size: 15px; color: var(--text-light); margin-top: 12px; margin-bottom: 32px; line-height: 1.6; }
-  .newsletter .form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
-  .newsletter input {
-    flex: 1; padding: 14px 18px; border-radius: 100px;
-    border: 1px solid var(--border); background: var(--white);
-    font-size: 15px; color: var(--text); outline: none; font-family: var(--sans);
-  }
-  .newsletter input::placeholder { color: var(--text-muted); }
-  .newsletter button {
-    padding: 14px 28px; border-radius: 100px; border: none;
-    background: var(--cobalt); color: #fff; font-size: 13px; font-weight: 600;
-    cursor: pointer; white-space: nowrap; font-family: var(--sans);
-    text-transform: uppercase; letter-spacing: 0.05em;
-  }
-  .newsletter button:hover { background: var(--cobalt-profond); }
-  .newsletter .note { font-size: 13px; color: var(--text-muted); margin-top: 16px; }
-  .newsletter .success {
-    padding: 14px 24px; border-radius: 100px;
-    background: var(--cobalt-pale); border: 1px solid rgba(0,71,171,0.2);
-    color: var(--cobalt); font-size: 15px; font-weight: 500;
   }
 
   /* Final CTA */
@@ -2313,15 +2282,6 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-
-// Newsletter
-function submitNewsletter() {
-  var email = document.getElementById('nlEmail').value;
-  if (email) {
-    document.getElementById('newsletterForm').innerHTML =
-      '<div class="success">\u2713 Welcome! Your first edition lands next Monday.</div>';
-  }
-}
 
 // Cookie consent banner
 (function() {
