@@ -1,5 +1,5 @@
 # robots.txt — Hymeria Consulting
-# https://laetitiaperson.github.io/hymeria-site/
+# https://www.hymeria.com/
 
 # Default: allow everything
 User-agent: *
@@ -77,4 +77,4 @@ User-agent: MistralAI-User
 Allow: /
 
 # Sitemap
-Sitemap: https://laetitiaperson.github.io/hymeria-site/sitemap.xml
+Sitemap: https://www.hymeria.com/sitemap.xml
