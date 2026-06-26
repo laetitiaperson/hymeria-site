@@ -29,8 +29,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=5">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=5">
 <link rel="preload" as="image" href="assets/visuals/hero-bg.webp" type="image/webp" fetchpriority="high">
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="preload" href="assets/fonts/fonts.css" as="style">
+<link rel="stylesheet" href="assets/fonts/fonts.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/fonts/fonts.css"></noscript>
 <style>
   :root {
     /* Charte Hymeria 2026 */
@@ -844,7 +845,11 @@
   .final-cta { position: relative; padding: 80px 32px; overflow: hidden; }
   .final-cta .bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1400&q=80') center/cover;
+    background-image: url('assets/visuals/cta-bg.jpg');
+    background-image: -webkit-image-set(url('assets/visuals/cta-bg.webp') type('image/webp'), url('assets/visuals/cta-bg.jpg') type('image/jpeg'));
+    background-image: image-set(url('assets/visuals/cta-bg.webp') type('image/webp'), url('assets/visuals/cta-bg.jpg') type('image/jpeg'));
+    background-position: center;
+    background-size: cover;
   }
   .final-cta .overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,45,107,0.92) 0%, rgba(26,26,26,0.85) 100%); }
   .final-cta .content {
