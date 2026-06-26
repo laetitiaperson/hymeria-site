@@ -18,25 +18,60 @@ RewriteCond %{HTTP_HOST} ^hymeria\.com$ [NC]
 RewriteRule ^(.*)$ https://www.hymeria.com/$1 [L,R=301]
 
 # ---------------------------------------------------------------------------
-# 3) Clean URLs - serve .html without the extension if requested
-#    /contact -> /contact.html
+# 3) Language-based redirect at root: hymeria.com/ -> /en/ if Accept-Language
+#    starts with "en", otherwise /fr/. The static /index.html is the JS-based
+#    fallback for clients that bypass Apache (GitHub Pages, edge caches, etc).
+#    NOTE: This block intentionally runs BEFORE the clean-URL rule below so
+#    a bare "/" never falls through to DirectoryIndex.
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ /en/ [L,R=302]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /fr/ [L,R=302]
+
+# ---------------------------------------------------------------------------
+# 4) Clean URLs - serve .html without the extension if requested
+#    /landing-fr -> /landing-fr.html (only useful for non-restructured pages)
 # ---------------------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [L]
 
 # ---------------------------------------------------------------------------
-# 4) Default document for the apex
+# 5) Default document for directories
+#    All localized pages live at /fr/<slug>/index.html and /en/<slug>/index.html
 # ---------------------------------------------------------------------------
-DirectoryIndex index-fr.html index.html
+DirectoryIndex index.html
 
 # ---------------------------------------------------------------------------
-# 5) Custom 404
+# 6) Custom 404
 # ---------------------------------------------------------------------------
 ErrorDocument 404 /404.html
 
 # ---------------------------------------------------------------------------
-# 6) Cache headers - this is the big win Lighthouse asked about (-202 KB)
+# 7) 301 redirects from old flat URLs to the new /fr|en/<slug>/ paths
+#    Required so existing inbound links and search-engine entries keep working.
+# ---------------------------------------------------------------------------
+Redirect 301 /index-fr.html                                  /fr/
+Redirect 301 /index-en.html                                  /en/
+Redirect 301 /contact.html                                   /fr/contact/
+Redirect 301 /contact-en.html                                /en/contact/
+Redirect 301 /mentions-legales.html                          /fr/mentions-legales/
+Redirect 301 /mentions-legales-en.html                       /en/legal-notice/
+Redirect 301 /politique-confidentialite.html                 /fr/politique-confidentialite/
+Redirect 301 /politique-confidentialite-en.html              /en/privacy-policy/
+Redirect 301 /cgu.html                                       /fr/conditions-generales/
+Redirect 301 /cgu-en.html                                    /en/terms/
+Redirect 301 /insights/ai-act-2026.html                      /fr/insights/ai-act-2026/
+Redirect 301 /insights/ai-act-2026-en.html                   /en/insights/ai-act-2026/
+Redirect 301 /insights/consulting-traditionnel-ia.html       /fr/insights/consulting-traditionnel-ia/
+Redirect 301 /insights/exploiter-ia-sans-consultant.html     /fr/insights/exploiter-ia-sans-consultant/
+Redirect 301 /insights/traditional-consulting-vs-ai.html     /en/insights/traditional-consulting-vs-ai/
+Redirect 301 /insights/leveraging-ai-without-consultants.html /en/insights/leveraging-ai-without-consultants/
+
+# ---------------------------------------------------------------------------
+# 8) Cache headers - this is the big win Lighthouse asked about (-202 KB)
 # ---------------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
@@ -88,7 +123,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # ---------------------------------------------------------------------------
-# 7) Compression (Gzip + Brotli when available)
+# 9) Compression (Gzip + Brotli when available)
 # ---------------------------------------------------------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml font/woff font/woff2 application/font-woff2
@@ -99,14 +134,14 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # ---------------------------------------------------------------------------
-# 8) 301 redirects from old GitHub Pages paths to canonical hymeria.com
-#    Activate only if visitors might still hit the *-fr suffix on the new host.
+# 10) 301 redirects from old GitHub Pages paths to canonical hymeria.com
+#     Activate only if visitors might still hit the /hymeria-site/ prefix.
 # ---------------------------------------------------------------------------
-# Redirect 301 /hymeria-site/index-fr.html /
+# Redirect 301 /hymeria-site/index-fr.html /fr/
 # Redirect 301 /hymeria-site/ /
 
 # ---------------------------------------------------------------------------
-# 9) MIME type for WebP (older Apache builds need this)
+# 11) MIME type for WebP (older Apache builds need this)
 # ---------------------------------------------------------------------------
 <IfModule mod_mime.c>
   AddType image/webp .webp
