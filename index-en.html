@@ -3,42 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hymeria | AI-Powered Strategic Consulting, Results in Days, Not Months</title>
-<meta name="description" content="AI-augmented strategic consulting firm. Market studies, business plans, digital audits delivered in 1-2 weeks, from &euro;5,000. Human enriched by IA.">
-<meta property="og:title" content="Hymeria | AI-Augmented Strategic Consulting, Human enriched by IA">
-<meta property="og:description" content="Strategic consulting engagements delivered in days. McKinsey quality, startup agility.">
+<meta name="robots" content="noindex, follow">
+<title>Hymeria | The quality of a top consulting firm, 5x faster, 10x cheaper</title>
+<meta name="description" content="Strategy consulting firm blending human expertise with AI acceleration. Engagements delivered in 5 to 10 days, starting at &euro;5,000.">
+<meta property="og:title" content="Hymeria | The quality of a top consulting firm, 5x faster, 10x cheaper">
+<meta property="og:description" content="Strategic consulting engagements delivered in 5 to 10 days. McKinsey-grade quality, startup agility.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta name="robots" content="noindex, follow">
+<link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/index-en.html">
+<link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html">
+<link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html">
 <meta property="og:url" content="https://laetitiaperson.github.io/hymeria-site/index-en.html">
 <meta property="og:image" content="https://laetitiaperson.github.io/hymeria-site/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Hymeria Consulting, Human enriched by IA">
+<meta property="og:image:alt" content="Hymeria Consulting, AI produces, humans set direction, structure and decide">
 <meta property="og:site_name" content="Hymeria Consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hymeria | AI-Powered Strategic Consulting, Results in Days, Not Months">
-<meta name="twitter:description" content="AI-augmented strategic consulting firm. Market studies, business plans, digital audits delivered in 1-2 weeks, from &euro;5,000. Human enriched by IA.">
+<meta name="twitter:title" content="Hymeria | The quality of a top consulting firm, 5x faster, 10x cheaper">
+<meta name="twitter:description" content="Strategy consulting firm blending human expertise with AI acceleration. Engagements delivered in 5 to 10 days, starting at &euro;5,000.">
 <meta name="twitter:image" content="https://laetitiaperson.github.io/hymeria-site/og-image.png">
-<meta name="twitter:image:alt" content="Hymeria Consulting, Human enriched by IA">
+<meta name="twitter:image:alt" content="Hymeria Consulting, AI produces, humans set direction, structure and decide">
 <link rel="canonical" href="https://laetitiaperson.github.io/hymeria-site/index-en.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=5">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=5">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=5">
+<link rel="preload" as="image" href="assets/visuals/hero-bg.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
   :root {
-    /* Hymeria Brand Charter 2026 */
-    --cobalt: #0047AB;
-    --cobalt-clair: #3A7BD5;
-    --cobalt-profond: #002D6B;
-    --cobalt-pale: #E8F0FE;
-    --noir: #1A1A1A;
-    --taupe: #8B7D6B;
+    /* Charte Hymeria 2026 */
+    --cobalt: #0047AB;          /* Bleu Cobalt, accent principal */
+    --cobalt-clair: #3A7BD5;    /* Liens, survols */
+    --cobalt-profond: #002D6B;  /* Fonds sombres */
+    --cobalt-pale: #E8F0FE;     /* Fonds légers */
+    --noir: #1A1A1A;            /* Noir Charbon, textes, logo */
+    --taupe: #8B7D6B;           /* Couleur chaude principale */
     --taupe-soft: rgba(139,125,107,0.08);
-    --taupe-pale: #F3F0EB;
-    --cuivre: #B87333;
+    --taupe-pale: #F3F0EB;      /* Fond doux */
+    --cuivre: #B87333;           /* Sable Chaud, accent ponctuel */
     --cuivre-pale: #FAEFE3;
     --blanc: #FFFFFF;
     --gris-80: #333333;
@@ -48,6 +52,7 @@
     --gris-10: #E5E5E5;
     --gris-05: #F5F5F5;
 
+    /* Aliases preserving compatibility with existing styles */
     --bg: #FAFAF8;
     --bg-warm: #F3F0EB;
     --bg-dark: #1A1A1A;
@@ -72,12 +77,13 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; }
   body { font-family: var(--sans); color: var(--text); background: var(--bg); overflow-x: hidden; font-weight: 400; }
   ::selection { background: rgba(0,71,171,0.15); }
   img { display: block; }
   a { text-decoration: none; }
 
+  /* Animations */
   .fade-in {
     opacity: 0; transform: translateY(24px);
     transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
@@ -85,9 +91,9 @@
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
   @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
-  @keyframes fadeInLine { to { opacity: 1; } }
   @keyframes blink { 50% { opacity: 0; } }
 
+  /* Section Label */
   .section-label {
     font-size: 12px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.15em; display: inline-block; margin-bottom: 16px;
@@ -104,13 +110,20 @@
     backdrop-filter: blur(24px) saturate(180%);
     border-bottom-color: var(--border);
   }
+  /* When mobile menu is open, drop backdrop-filter so .links position:fixed
+     escapes the nav's containing block and can cover the full viewport. */
+  nav.menu-open { backdrop-filter: none !important; }
+  nav.menu-open.scrolled { background: #fff; }
   nav .inner {
     max-width: 1200px; margin: 0 auto; padding: 0 32px;
-    display: flex; align-items: center; justify-content: space-between; height: 72px;
+    display: flex; align-items: center; justify-content: space-between; height: 110px;
   }
-  nav .logo { font-family: var(--display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #fff; transition: color 0.4s; }
-  nav .logo span { font-weight: 300; }
-  nav.scrolled .logo { color: var(--noir); }
+  nav .logo { display: flex; align-items: center; transition: all 0.4s; }
+  nav .logo img { height: 100px; width: auto; }
+  nav .logo .logo-blanc { display: block; }
+  nav .logo .logo-noir { display: none; }
+  nav.scrolled .logo .logo-blanc { display: none; }
+  nav.scrolled .logo .logo-noir { display: block; }
   nav .links { display: flex; align-items: center; gap: 36px; }
   nav .links a.nav-link {
     font-size: 14px; font-weight: 450; transition: color 0.3s;
@@ -130,6 +143,25 @@
     background: var(--cobalt); border-color: var(--cobalt);
   }
   nav.scrolled .cta-nav:hover { background: var(--cobalt-profond); border-color: var(--cobalt-profond); }
+
+  /* Hamburger (mobile) */
+  .nav-burger {
+    display: none;
+    background: transparent; border: none; cursor: pointer;
+    width: 36px; height: 36px; padding: 0;
+    flex-direction: column; justify-content: center; align-items: center;
+    gap: 5px; z-index: 102; position: relative;
+  }
+  .nav-burger span {
+    display: block; width: 26px; height: 2px;
+    background: #fff; border-radius: 2px;
+    transition: transform .3s ease, opacity .2s ease, background-color .3s ease;
+  }
+  nav.scrolled .nav-burger span { background: var(--noir); }
+  .nav-burger.open span { background: var(--noir); }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .lang-switch {
     display: flex; align-items: center; gap: 4px;
     margin-left: 8px; font-size: 13px; font-weight: 500;
@@ -151,7 +183,11 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80') center/cover;
+    background-image: url('assets/visuals/hero-bg.jpg');
+    background-image: -webkit-image-set(url('assets/visuals/hero-bg.webp') type('image/webp'), url('assets/visuals/hero-bg.jpg') type('image/jpeg'));
+    background-image: image-set(url('assets/visuals/hero-bg.webp') type('image/webp'), url('assets/visuals/hero-bg.jpg') type('image/jpeg'));
+    background-position: center;
+    background-size: cover;
   }
   .hero-overlay {
     position: absolute; inset: 0;
@@ -167,20 +203,24 @@
     background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
     margin-bottom: 36px;
   }
-  .hero .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cuivre); }
-  .hero .badge span { font-size: 12px; color: rgba(255,255,255,0.82); font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; }
+  .hero .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #10B981; }
+  .hero .badge span { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 450; }
   .hero h1 {
-    font-size: clamp(40px, 5vw, 60px); font-weight: 300;
-    line-height: 1.15; letter-spacing: -0.02em;
-    color: #fff; margin-bottom: 28px; font-family: var(--display); max-width: 780px;
+    font-size: clamp(36px, 4.5vw, 54px); font-weight: 300;
+    line-height: 1.2; letter-spacing: -0.02em;
+    color: #fff; margin-bottom: 28px; font-family: var(--display); max-width: 900px;
   }
-  .hero h1 em { font-weight: 700; font-style: italic; color: #fff; }
+  .hero h1 em { font-weight: 700; font-style: normal; color: #fff; }
   .hero .sub {
-    font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.7;
-    max-width: 600px; margin-bottom: 44px; font-weight: 350;
+    font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.7;
+    max-width: 680px; margin-bottom: 12px; font-weight: 350;
   }
   .hero .sub strong { color: #fff; }
-  .hero .ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero .sub-source {
+    font-size: 13px; color: rgba(255,255,255,0.4); font-style: italic;
+    margin-bottom: 44px; font-weight: 350;
+  }
+  .hero .ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
   .btn-white {
     background: #fff; color: var(--cobalt); padding: 16px 36px; border-radius: 100px;
     font-family: var(--sans);
@@ -198,86 +238,114 @@
   }
   .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
   .hero .stats {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
     margin-top: 80px;
   }
-  .hero .stats > div {
-    position: relative; padding: 28px 24px 26px;
+  .hero .stat-card {
+    position: relative; text-align: left;
+    padding: 28px 24px 26px;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.10);
     border-radius: 4px;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease;
   }
-  .hero .stats > div::before {
+  .hero .stat-card::before {
     content: ''; position: absolute; top: 0; left: 0;
-    width: 100%; height: 3px;
+    width: 100%; height: 3px; background: var(--cobalt);
   }
-  .hero .stats > div:nth-child(1)::before { background: var(--cobalt); }
-  .hero .stats > div:nth-child(2)::before { background: var(--cobalt-clair); }
-  .hero .stats > div:nth-child(3)::before { background: var(--cuivre); }
-  .hero .stats > div:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.22); }
+  .hero .stat-card:nth-child(1)::before { background: var(--cobalt); }
+  .hero .stat-card:nth-child(2)::before { background: var(--cobalt-clair); }
+  .hero .stat-card:nth-child(3)::before { background: var(--cuivre); }
+  .hero .stat-card:nth-child(4)::before { background: var(--taupe); }
+  .hero .stat-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.22); }
   .hero .stat-val {
     font-family: var(--display);
-    font-size: 42px; font-weight: 700; color: #fff; letter-spacing: -0.02em;
-    line-height: 1; display: block;
+    font-size: 46px; font-weight: 700; color: #fff;
+    letter-spacing: -0.02em; line-height: 1;
+    display: block;
   }
+  .hero .stat-divider {
+    display: block; width: 32px; height: 1px;
+    background: rgba(255,255,255,0.35); margin: 14px 0 12px;
+  }
+  .hero .stat-card:nth-child(1) .stat-divider { background: var(--cobalt-clair); }
+  .hero .stat-card:nth-child(2) .stat-divider { background: var(--cobalt-clair); }
+  .hero .stat-card:nth-child(3) .stat-divider { background: var(--cuivre); }
+  .hero .stat-card:nth-child(4) .stat-divider { background: var(--taupe); }
   .hero .stat-label {
-    display: block; margin-top: 14px; padding-top: 12px;
-    border-top: 1px solid rgba(255,255,255,0.18);
     font-family: var(--sans);
     font-size: 12.5px; color: rgba(255,255,255,0.72);
-    font-weight: 300; letter-spacing: 0.01em; line-height: 1.5;
+    font-weight: 300; line-height: 1.5;
+    letter-spacing: 0.01em;
   }
-  .hero .stats > div:nth-child(1) .stat-label { border-top-color: var(--cobalt-clair); }
-  .hero .stats > div:nth-child(2) .stat-label { border-top-color: var(--cobalt-clair); }
-  .hero .stats > div:nth-child(3) .stat-label { border-top-color: var(--cuivre); }
 
   /* Problem */
-  .problem { background: var(--bg); padding: 120px 32px; }
+  .problem { background: var(--bg); padding: 80px 32px; }
   .problem .grid {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
   }
   .problem h2, .solution h2, .expertise h2, .pricing h2, .diagnostic h2,
   .insights h2, .trust h2, .newsletter h3, .final-cta h2 {
     font-family: var(--display); color: var(--noir); letter-spacing: -0.015em; font-weight: 600;
   }
-  .problem h2 { font-size: 36px; font-weight: 600; line-height: 1.2; }
+  .problem h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
   .problem h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .problem p.desc { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
-  .problem .items { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
-  .problem .item {
-    position: relative; display: flex; gap: 18px; align-items: flex-start;
-    padding: 20px 22px 20px 26px;
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 4px;
-    transition: all 0.3s;
+  .problem p.desc { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; margin-bottom: 40px; }
+  .problem .constats-title {
+    font-family: var(--display); font-size: 28px; font-weight: 600; color: var(--noir);
+    margin-top: 0; margin-bottom: 16px; letter-spacing: -0.015em;
   }
-  .problem .item::before {
-    content: ''; position: absolute; left: 0; top: 18px; bottom: 18px;
-    width: 3px; border-radius: 2px;
+  .problem .constats-title em { font-weight: 700; font-style: italic; color: var(--cobalt); }
+  .problem .constats-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
   }
-  .problem .items .item:nth-child(1)::before { background: var(--cobalt); }
-  .problem .items .item:nth-child(2)::before { background: var(--taupe); }
-  .problem .items .item:nth-child(3)::before { background: var(--cuivre); }
-  .problem .item:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.06); transform: translateY(-2px); }
-  .problem .item-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
-  .problem .item-title { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--noir); letter-spacing: -0.005em; }
-  .problem .item-desc { font-size: 14.5px; color: var(--text-light); margin-top: 6px; line-height: 1.65; }
-  .problem .photo-wrap {
-    border-radius: 20px; overflow: hidden;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.08);
+  .problem .constat-card {
+    position: relative; background: var(--white); border-radius: 4px;
+    padding: 36px 32px 36px 36px;
+    border: 1px solid var(--border); transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   }
-  .problem .photo-wrap img { width: 100%; height: 500px; object-fit: cover; }
+  .problem .constat-card::before {
+    content: ''; position: absolute; left: 0; top: 24px; bottom: 24px;
+    width: 3px; border-radius: 2px; background: var(--cobalt);
+  }
+  .problem .constats-grid .constat-card:nth-child(1)::before { background: var(--cobalt); }
+  .problem .constats-grid .constat-card:nth-child(2)::before { background: var(--taupe); }
+  .problem .constats-grid .constat-card:nth-child(3)::before { background: var(--cuivre); }
+  .problem .constats-grid .constat-card:nth-child(4)::before { background: var(--cobalt-clair); }
+  .problem .constat-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+  }
+  .problem .constat-card-icon {
+    width: 36px; height: 36px; margin-bottom: 14px;
+  }
+  .problem .constat-card-icon img { width: 100%; height: 100%; display: block; }
+  .problem .constat-card-title {
+    font-family: var(--display);
+    font-size: 18px; font-weight: 700; color: var(--noir); margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .problem .constat-card-quote {
+    font-size: 14px; font-weight: 500; color: var(--cobalt);
+    margin-bottom: 16px; font-style: italic;
+  }
+  .problem .constats-grid .constat-card:nth-child(2) .constat-card-quote { color: var(--taupe); }
+  .problem .constats-grid .constat-card:nth-child(3) .constat-card-quote { color: #B88A4E; }
+  .problem .constats-grid .constat-card:nth-child(4) .constat-card-quote { color: var(--cobalt-clair); }
+  .problem .constat-card-desc {
+    font-size: 14px; color: var(--text-light); line-height: 1.7;
+  }
 
   /* Solution / Process */
-  .solution { background: var(--white); padding: 120px 32px; }
+  .solution { background: var(--white); padding: 80px 32px; }
   .solution .inner { max-width: 1100px; margin: 0 auto; }
   .solution .center { text-align: center; margin-bottom: 80px; }
-  .solution h2 { font-size: 42px; font-weight: 600; line-height: 1.2; }
-  .solution h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .solution .center p { font-size: 16px; color: var(--text-light); margin-top: 20px; max-width: 680px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .solution .left-align { text-align: left; margin-bottom: 48px; }
+  .solution h2 { font-size: 28px; font-weight: 600; line-height: 1.3; font-family: var(--display); color: var(--noir); letter-spacing: -0.015em; }
+  .solution h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .solution .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; margin-bottom: 40px; }
 
   .pillar-card {
     display: grid; gap: 0; border-radius: 4px; overflow: hidden;
@@ -290,16 +358,16 @@
   .pillar-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.06); }
   .pillar-card.left { grid-template-columns: 1fr 1.2fr; }
   .pillar-card.right { grid-template-columns: 1.2fr 1fr; }
-  .pillar-card img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
+  .pillar-card img { width: 100%; height: 100%; object-fit: cover; min-height: 100%; display: block; }
   .pillar-text { padding: 48px 52px; display: flex; flex-direction: column; justify-content: center; }
+  .pillar-header { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+  .pillar-icon { width: 44px; height: 44px; flex-shrink: 0; }
+  .pillar-icon img { width: 100%; height: 100%; max-height: none; object-fit: contain; }
   .pillar-step {
     font-size: 64px; font-weight: 700; color: var(--cobalt);
-    font-family: var(--display); line-height: 1; margin-bottom: 8px;
+    font-family: var(--display); line-height: 1;
     letter-spacing: -0.03em; opacity: 0.9;
   }
-  .solution .pillar-card:nth-of-type(1) .pillar-step { color: var(--cobalt); }
-  .solution .pillar-card:nth-of-type(2) .pillar-step { color: var(--taupe); }
-  .solution .pillar-card:nth-of-type(3) .pillar-step { color: var(--cuivre); }
   .pillar-title { font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--noir); margin-bottom: 6px; letter-spacing: -0.01em; }
   .pillar-who {
     font-family: var(--sans);
@@ -308,241 +376,311 @@
   }
   .pillar-desc { font-size: 15px; color: var(--text-light); line-height: 1.75; }
 
-  .process-flow {
-    margin-top: 48px; padding: 20px 32px; border-radius: 100px;
-    background: var(--cobalt-pale); border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    gap: 10px; flex-wrap: wrap; font-size: 12px; font-weight: 500;
+  /* Our approach, 7-step cycle */
+  .process-section { margin-top: 64px; }
+  .process-section h3 {
+    font-family: var(--display); font-size: 24px; font-weight: 600;
+    color: var(--noir); letter-spacing: -0.01em; margin-bottom: 12px;
   }
-  .flow-step {
-    padding: 5px 14px; border-radius: 100px;
-    background: var(--white); border: 1px solid var(--border);
-    color: var(--noir); white-space: nowrap; font-family: var(--display);
-    font-weight: 600; letter-spacing: -0.005em;
+  .process-section h3 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .cycle-svg-wrap {
+    max-width: 860px;
+    margin: 24px auto 0;
   }
-  .flow-arrow { color: var(--cobalt); font-weight: 600; }
+  .cycle-svg-wrap svg { width: 100%; height: auto; display: block; }
+
+  .cycle-conclusion {
+    text-align: center;
+    color: var(--cobalt); font-weight: 700;
+    font-size: 15px; line-height: 1.6;
+    margin: 32px auto 0;
+    max-width: 760px;
+  }
 
   /* Expertise */
-  .expertise { background: var(--cobalt-pale); padding: 120px 32px; }
+  .expertise { background: var(--cobalt-pale); padding: 80px 32px; }
   .expertise .inner { max-width: 1100px; margin: 0 auto; }
-  .expertise .center { text-align: center; margin-bottom: 64px; }
-  .expertise h2 { font-size: 42px; font-weight: 600; line-height: 1.2; }
-  .expertise h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .expertise .center p { font-size: 16px; color: var(--text-light); margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .expertise .left-align { text-align: left; margin-bottom: 48px; }
+  .expertise h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
+  .expertise h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .expertise .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; }
 
-  .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
-  .tab-btn {
-    display: flex; align-items: center; gap: 8px;
-    padding: 10px 20px; border-radius: 100px; border: none; cursor: pointer;
-    font-size: 13px; font-weight: 500; font-family: var(--sans);
-    transition: all 0.3s;
-  }
-  .tab-btn.active {
-    background: var(--cobalt); color: #fff;
-    box-shadow: 0 4px 16px rgba(0,71,171,0.22);
-  }
-  .tab-btn:not(.active) {
-    background: var(--white); color: var(--text-light);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+
+  .offers-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    margin-bottom: 40px;
   }
 
-  .expertise-card {
-    background: var(--white); border-radius: 6px; padding: 56px 60px;
-    box-shadow: 0 8px 40px rgba(0,45,107,0.06); border: 1px solid var(--border);
+  .offer-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 6px;
+    padding: 22px 22px 20px; transition: all 0.25s;
+    position: relative;
   }
-  .expertise-card h3 { font-family: var(--display); font-size: 26px; font-weight: 700; color: var(--noir); margin-bottom: 12px; letter-spacing: -0.01em; }
-  .expertise-card .expertise-desc { font-size: 15px; color: var(--text-light); line-height: 1.75; margin-bottom: 28px; }
-  .expertise-card .missions-label { font-size: 12px; font-weight: 600; color: var(--cobalt); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-  .missions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .mission-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 16px 18px; border-radius: 14px;
-    border: 1px solid var(--border); transition: all 0.25s; cursor: default;
+  .offer-card.available { border-left: 3px solid var(--cobalt); }
+  .offer-card:hover { box-shadow: 0 8px 24px rgba(0,45,107,0.07); transform: translateY(-2px); }
+  .offer-icon { width: 30px; height: 30px; margin-bottom: 12px; }
+  .offer-icon img { width: 100%; height: 100%; display: block; }
+  .offer-card h3 {
+    font-family: var(--display); font-size: 15px; font-weight: 700;
+    color: var(--noir); margin-bottom: 8px; letter-spacing: -0.005em;
+    line-height: 1.3;
   }
-  .mission-item:hover { border-color: var(--cobalt); background: var(--cobalt-pale); }
-  .mission-icon {
-    width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; margin-top: 1px;
-    background: var(--cobalt-pale); display: flex; align-items: center; justify-content: center;
-    font-family: var(--display);
-    font-size: 12px; color: var(--cobalt); font-weight: 700;
-  }
-  .mission-item span { font-size: 14px; color: var(--text); line-height: 1.55; }
-
-  .expertise-card .pricing-line {
-    margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);
-    font-size: 15px; color: var(--taupe); font-weight: 600;
+  .offer-card p {
+    font-size: 13px; color: var(--text-light);
+    line-height: 1.55; margin: 0;
   }
 
-  .btn-navy {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 32px; border-radius: 100px;
-    background: var(--cobalt); color: #fff;
-    font-family: var(--sans);
-    font-size: 13px; font-weight: 600; transition: all 0.3s; margin-top: 24px;
-    text-transform: uppercase; letter-spacing: 0.06em;
+  /* Columns + status badges */
+  .offers-col { display: flex; flex-direction: column; gap: 14px; }
+  .offers-col-head {
+    display: flex; align-items: center; gap: 10px;
+    padding-bottom: 14px; margin-bottom: 2px;
+    border-bottom: 1px solid var(--border);
   }
-  .btn-navy:hover { background: var(--cobalt-profond); }
+  .status-badge {
+    display: inline-block; padding: 4px 10px; border-radius: 100px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; line-height: 1.2;
+  }
+  .badge-green { background: #10B981; color: #fff; }
+  .badge-grey  { background: var(--gris-10); color: var(--gris-80); }
+
+  /* Upcoming cards: washed-out 'coming soon' treatment */
+  .offer-card.upcoming {
+    background: #F9FAFB;
+    border-color: var(--gris-10);
+    border-left: 3px solid #C8CDD5;
+  }
+  .offer-card.upcoming .offer-icon { filter: grayscale(1); opacity: 0.4; }
+  .offer-card.upcoming h3 { color: #9CA3AF; }
+  .offer-card.upcoming p { color: #B7BFC9; }
+  .offer-card.upcoming:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.04); transform: none; }
+
+
+  .price-strip {
+    background: var(--cobalt-profond); border-radius: 8px;
+    padding: 28px 36px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; margin-bottom: 14px;
+  }
+  .price-block { text-align: center; }
+  .price-block + .price-block { border-left: 1px solid rgba(255,255,255,0.16); }
+  .price-label {
+    font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.65);
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .price-value {
+    font-family: var(--display); font-size: 22px; font-weight: 700;
+    color: #fff; letter-spacing: -0.01em;
+  }
+
+  .forfait-note {
+    text-align: center; font-style: italic;
+    color: var(--text-light) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  /* Audience (Pour qui ?) */
+  .audience { background: var(--bg); padding: 80px 32px; }
+  .audience .inner { max-width: 1100px; margin: 0 auto; }
+  .audience .left-align { text-align: left; margin-bottom: 48px; }
+  .audience h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
+  .audience h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .audience .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; }
+
+  .audience-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .audience-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 6px;
+    padding: 28px 30px 26px; transition: all 0.25s;
+    display: flex; flex-direction: column;
+  }
+  .audience-card.established { border-left: 4px solid var(--cobalt); }
+  .audience-card.new { background: #FDF8F0; border: 1px solid #EDE3D0; border-left: 4px solid var(--cuivre); }
+  .audience-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,45,107,0.06); }
+
+  .audience-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 10px;
+  }
+  .audience-card.established .audience-label { color: var(--cobalt); }
+  .audience-card.new .audience-label { color: var(--cuivre); }
+
+  .audience-card h3 {
+    font-family: var(--display); font-size: 20px; font-weight: 700;
+    color: var(--noir); margin-bottom: 12px; letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .audience-card p {
+    font-size: 14px; color: var(--text-light);
+    line-height: 1.7; margin: 0 0 18px;
+  }
+  .audience-missions {
+    font-size: 13px; font-style: italic; font-weight: 500;
+    margin-top: auto; padding-top: 14px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    line-height: 1.6;
+  }
+  .audience-card.established .audience-missions { color: var(--cobalt); }
+  .audience-card.new .audience-missions { color: #B88A4E; }
 
   /* Pricing */
   .pricing {
-    background: var(--noir); padding: 120px 32px;
+    background: var(--noir); padding: 80px 32px;
     position: relative; overflow: hidden;
   }
   .pricing-bg {
     position: absolute; inset: 0;
     background: linear-gradient(135deg, rgba(0,45,107,0.35), rgba(26,26,26,0) 60%);
   }
-  .pricing .inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
-  .pricing .center { text-align: center; margin-bottom: 64px; }
-  .pricing h2 { font-size: 42px; font-weight: 600; line-height: 1.2; color: #fff; }
-  .pricing h2 em { font-weight: 700; font-style: italic; color: var(--cuivre); }
-  .pricing .center p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .pricing .inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+  .pricing .left-align { text-align: left; margin-bottom: 48px; }
+  .pricing h2 { font-size: 28px; font-weight: 600; line-height: 1.3; color: #fff; }
+  .pricing h2 em { font-weight: 700; font-style: normal; color: var(--cuivre); }
+  .pricing .left-align p { font-size: 16px; color: rgba(255,255,255,0.78); margin-top: 24px; line-height: 1.8; }
 
-  .pricing-table {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px; overflow: hidden;
-    backdrop-filter: blur(20px);
-  }
-  .pricing-header {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .pricing-header > div { padding: 24px 32px; }
-  .pricing-header .col-label {
-    font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
-    font-weight: 600; margin-bottom: 8px;
-  }
-  .pricing-header .col-price { font-size: 28px; font-family: var(--display); font-weight: 700; letter-spacing: -0.01em; }
-  .col-old .col-label { color: rgba(255,255,255,0.35); }
-  .col-old .col-price { color: rgba(255,255,255,0.5); font-weight: 300; }
-  .col-new { border-left: 1px solid rgba(255,255,255,0.06); background: rgba(0,71,171,0.12); text-align: center; }
-  .col-new .col-label { color: var(--cuivre); }
-  .col-new .col-price { color: #fff; font-weight: 700; }
-  .col-old { border-left: 1px solid rgba(255,255,255,0.06); text-align: center; }
+  .pricing-cta { padding: 40px 0 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .pricing-note { font-size: 13px; color: rgba(255,255,255,0.62); text-align: center; max-width: 600px; line-height: 1.6; }
 
-  .pricing-row {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+  /* Compare table v2 (5 actors x 5 columns) */
+  .compare-wrap { max-width: 1040px; margin: 0 auto; }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr 0.7fr 1.2fr 1.6fr;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    align-items: center;
   }
-  .pricing-row:last-child { border-bottom: none; }
-  .pricing-row > div { padding: 16px 32px; font-size: 14px; }
-  .pricing-row .row-label { font-weight: 500; color: rgba(255,255,255,0.6); }
-  .pricing-row .row-old {
-    color: rgba(255,255,255,0.35); text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.04);
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row > div { padding: 0 16px; font-size: 13.5px; color: rgba(255,255,255,0.78); line-height: 1.55; }
+  .compare-row.compare-header { padding: 10px 0 14px; border-bottom: 1px solid rgba(255,255,255,0.22); margin-bottom: 6px; }
+  .compare-row.compare-header > div {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: rgba(255,255,255,0.55);
   }
-  .pricing-row .row-new {
-    color: var(--cuivre); font-weight: 600; text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.04);
-    background: rgba(0,71,171,0.08);
+  .compare-row .actor-name { font-family: var(--display); font-weight: 700; color: #fff; font-size: 14.5px; margin-bottom: 3px; letter-spacing: -0.005em; }
+  .compare-row .actor-sub { font-size: 12.5px; color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.45; }
+  .compare-row.compare-highlight {
+    background: var(--cobalt);
+    border-radius: 8px;
+    border-bottom: none;
+    padding: 22px 0;
+    margin: 6px 0 10px;
+    box-shadow: 0 8px 28px rgba(0,71,171,0.35);
   }
-  .pricing-cta { padding: 28px 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-  .pricing-note { font-size: 13px; color: rgba(255,255,255,0.35); text-align: center; }
+  .compare-row.compare-highlight + .compare-row { border-top: 1px solid rgba(255,255,255,0.12); }
+  .compare-row.compare-highlight > div { color: #fff; font-weight: 500; }
+  .compare-row.compare-highlight .actor-name { color: #fff; font-size: 16px; }
+  .compare-row.compare-highlight .actor-sub { color: rgba(255,255,255,0.82); font-style: italic; }
+  .compare-row > div[data-label]::before {
+    content: attr(data-label);
+    display: none;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .compare-row.compare-highlight > div[data-label]::before { color: rgba(255,255,255,0.7); }
 
   /* Diagnostic */
-  .diagnostic { background: var(--bg); padding: 120px 32px; }
-  .diagnostic .inner { max-width: 680px; margin: 0 auto; }
-  .diagnostic .center { text-align: center; margin-bottom: 48px; }
-  .diagnostic h2 { font-size: 40px; font-weight: 600; line-height: 1.2; }
-  .diagnostic h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .diagnostic .center p { font-size: 16px; color: var(--text-light); margin-top: 16px; line-height: 1.6; }
+  .diagnostic { background: var(--bg); padding: 80px 32px; }
+  .diagnostic .inner { max-width: 1100px; margin: 0 auto; }
+  .diagnostic .left-align { text-align: left; margin-bottom: 48px; }
+  .diagnostic h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
+  .diagnostic h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .diagnostic .left-align p { font-size: 16px; color: var(--text-light); margin-top: 24px; line-height: 1.8; }
 
-  .diag-card {
-    background: var(--white); border-radius: 24px; padding: 52px;
-    box-shadow: 0 16px 64px rgba(0,0,0,0.06);
-    border: 1px solid var(--border); position: relative; overflow: hidden;
+
+  /* 3 questions to scope an engagement */
+  .q3-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   }
-  .diag-progress {
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: var(--border);
+  .q3-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--cobalt);
+    border-radius: 6px;
+    padding: 28px 30px 26px;
+    display: flex; flex-direction: column;
+    transition: all 0.25s;
   }
-  .diag-progress-bar {
-    height: 100%; background: linear-gradient(90deg, var(--cobalt), var(--cobalt-clair));
-    transition: width 0.5s ease; border-radius: 0 2px 2px 0;
+  .q3-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,45,107,0.07);
   }
-  .diag-step { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; font-weight: 500; }
-  .diag-question { font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 32px; line-height: 1.3; }
-  .diag-options { display: flex; flex-direction: column; gap: 10px; }
-  .diag-option {
-    padding: 16px 20px; border-radius: 14px; text-align: left;
-    background: var(--bg); border: 1px solid var(--border);
-    color: var(--text); font-size: 15px; font-weight: 450; cursor: pointer;
-    transition: all 0.2s; display: flex; align-items: center; gap: 14px;
+  .q3-num {
+    font-family: var(--display); font-size: 11px; font-weight: 700;
+    color: var(--cobalt); letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .q3-card h3 {
+    font-family: var(--display); font-size: 18px; font-weight: 700;
+    color: var(--noir); line-height: 1.35; letter-spacing: -0.005em;
+    margin-bottom: 16px;
+  }
+  .q3-card p {
+    font-size: 14.5px; color: var(--text-light); line-height: 1.7;
+    margin: 0 0 14px;
+  }
+  .q3-card ul {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; gap: 8px;
+  }
+  .q3-card li {
+    font-size: 13.5px; color: var(--text-light); line-height: 1.5;
+    padding-left: 18px; position: relative;
+  }
+  .q3-card li::before {
+    content: '\2022'; color: var(--cobalt); font-weight: 700;
+    position: absolute; left: 0; top: -1px; font-size: 16px; line-height: 1.3;
+  }
+  .q3-card li strong { color: var(--noir); font-weight: 600; }
+
+  .q3-footer {
+    margin-top: 40px; padding: 24px 28px;
+    background: var(--cobalt-pale);
+    border-radius: 6px; border-left: 3px solid var(--cobalt);
     font-family: var(--sans);
+    font-size: 16px; color: var(--text); line-height: 1.8;
   }
-  .diag-option:hover { border-color: var(--accent); background: var(--accent-soft); }
-  .diag-option-key {
-    width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-    background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 700; color: var(--accent);
+  .q3-footer strong { color: var(--cobalt-profond); font-weight: 700; }
+  .q3-footer a.q3-ref-link {
+    color: var(--cobalt); font-style: italic; font-weight: 600;
+    text-decoration: none; border-bottom: 1px solid rgba(0,71,171,0.3);
+    transition: border-color 0.2s;
   }
+  .q3-footer a.q3-ref-link:hover { border-bottom-color: var(--cobalt); }
 
-  .diag-analyzing { text-align: center; padding: 40px 0; }
-  .diag-analyzing .brain { font-size: 40px; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
-  .diag-lines { max-width: 340px; margin: 28px auto 0; text-align: left; }
-  .diag-line { color: var(--green); font-size: 14px; font-weight: 500; margin-bottom: 10px; opacity: 0; }
-
-  .diag-result-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
-  .diag-check {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: var(--green-soft); display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
+  .q3-cta {
+    margin-top: 28px; text-align: center;
   }
-  .diag-result-title { font-size: 22px; font-weight: 600; color: var(--navy); }
-  .diag-result-sub { font-size: 13px; color: var(--text-muted); }
-  .diag-missions-label {
-    font-size: 13px; font-weight: 600; color: var(--accent);
-    margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .diag-mission {
-    display: flex; align-items: center; gap: 10px; padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .diag-mission:last-child { border-bottom: none; }
-  .diag-mission .arrow { color: var(--accent); }
-
-  .diag-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 28px 0 32px; }
-  .diag-metric {
-    position: relative;
-    padding: 20px 18px; border-radius: 4px; background: var(--gris-05);
-    border: 1px solid var(--border); text-align: left;
-    overflow: hidden;
-  }
-  .diag-metric::before {
-    content: ''; position: absolute; top: 0; left: 0; height: 100%;
-    width: 3px; background: var(--cobalt);
-  }
-  .diag-metric:nth-child(1)::before { background: var(--cobalt); }
-  .diag-metric:nth-child(2)::before { background: var(--taupe); }
-  .diag-metric:nth-child(3)::before { background: var(--cuivre); }
-  .diag-metric-label {
-    font-size: 10.5px; color: var(--text-muted); margin-bottom: 6px;
-    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
-  }
-  .diag-metric-value { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--noir); letter-spacing: -0.01em; }
-
-  .diag-actions { display: flex; gap: 12px; }
-  .diag-actions .primary {
-    flex: 1; text-align: center; padding: 14px 28px; border-radius: 100px;
-    background: var(--cobalt); color: #fff; font-size: 13px; font-weight: 600;
-    border: none; cursor: pointer; font-family: var(--sans);
+  .q3-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 16px 36px; border-radius: 100px;
+    background: var(--cobalt); color: #fff;
+    font-size: 13px; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.06em;
+    transition: all 0.2s;
   }
-  .diag-actions .primary:hover { background: var(--cobalt-profond); }
-  .diag-actions .secondary {
-    padding: 14px 20px; border-radius: 100px; background: transparent;
-    border: 1px solid var(--border); color: var(--text-light);
-    font-size: 14px; cursor: pointer; font-family: var(--sans);
+  .q3-cta a:hover { background: var(--cobalt-profond); transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .q3-grid { grid-template-columns: 1fr; }
   }
 
   /* Insights */
-  .insights { background: var(--white); padding: 120px 32px; }
+  .insights { background: var(--white); padding: 80px 32px; }
   .insights .inner { max-width: 1100px; margin: 0 auto; }
   .insights .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
-  .insights h2 { font-size: 40px; font-weight: 600; }
-  .insights h2 em { font-weight: 700; font-style: italic; color: var(--cobalt); }
-  .insights .center-desc { font-size: 16px; color: var(--text-light); margin-top: 12px; max-width: 600px; line-height: 1.7; }
+  .insights h2 { font-size: 28px; font-weight: 600; line-height: 1.3; }
+  .insights h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .insights .center-desc { font-size: 16px; color: var(--text-light); margin-top: 12px; line-height: 1.7; }
   .insights .view-all { font-size: 14px; color: var(--accent); font-weight: 500; }
 
   .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -560,50 +698,146 @@
     font-size: 11px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.1em; color: var(--cobalt); margin-bottom: 8px;
   }
-  .articles-grid .article-card:nth-child(2) .article-tag { color: var(--taupe); }
-  .articles-grid .article-card:nth-child(3) .article-tag { color: #B88A4E; }
+  .article-card-link:nth-of-type(2) .article-tag { color: var(--taupe); }
+  .article-card-link:nth-of-type(3) .article-tag { color: #B88A4E; }
   .article-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
   .article-card h3 { font-family: var(--display); font-size: 17px; font-weight: 700; color: var(--noir); line-height: 1.4; margin-bottom: 10px; letter-spacing: -0.005em; }
   .article-card p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
   .article-link { display: inline-block; margin-top: 14px; font-size: 13px; color: var(--cobalt); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+  .article-card-link { display: block; text-decoration: none; color: inherit; }
+  .article-card-link:hover { text-decoration: none; }
+
+  /* FAQ */
+  .faq { background: var(--bg); padding: 80px 32px; }
+  .faq .inner { max-width: 880px; margin: 0 auto; }
+  .faq .left-align { text-align: left; margin-bottom: 40px; }
+  .faq h2 { font-family: var(--display); font-size: 28px; font-weight: 600; line-height: 1.3; color: var(--noir); letter-spacing: -0.015em; }
+  .faq h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .faq .left-align p { font-size: 16px; color: var(--text-light); margin-top: 16px; line-height: 1.7; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  .faq-item:hover { border-color: var(--gris-20); }
+  .faq-item[open] { box-shadow: 0 8px 28px rgba(0,71,171,0.06); border-color: var(--cobalt); }
+
+  .faq-item summary {
+    list-style: none;
+    padding: 22px 60px 22px 26px;
+    cursor: pointer;
+    font-family: var(--display);
+    font-size: 16px; font-weight: 600;
+    color: var(--noir); letter-spacing: -0.005em;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--cobalt); }
+  .faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 24px; top: 50%; transform: translateY(-50%);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--cobalt-pale);
+    color: var(--cobalt);
+    font-family: var(--display);
+    font-size: 22px; font-weight: 400; line-height: 26px; text-align: center;
+    transition: transform 0.3s, background 0.2s;
+  }
+  .faq-item[open] summary { color: var(--cobalt); }
+  .faq-item[open] summary::after {
+    content: '\2013';
+    transform: translateY(-50%) rotate(180deg);
+    background: var(--cobalt);
+    color: #fff;
+  }
+  .faq-answer {
+    padding: 0 26px 24px;
+    font-size: 15px; color: var(--text-light); line-height: 1.7;
+  }
+  .faq-answer p { margin: 0; }
 
   /* Trust */
-  .trust { background: var(--cuivre-pale); padding: 100px 32px; }
+  .trust { background: var(--cobalt-pale); padding: 80px 32px; }
   .trust .inner { max-width: 1100px; margin: 0 auto; }
-  .trust .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  .trust .photo-wrap { border-radius: 4px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.12); }
-  .trust .photo-wrap img { width: 100%; height: 400px; object-fit: cover; }
-  .trust h2 { font-size: 34px; font-weight: 600; line-height: 1.25; margin-bottom: 20px; letter-spacing: -0.015em; }
-  .trust h2 em { font-weight: 700; font-style: italic; color: var(--taupe); }
-  .trust .desc { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
-  .trust .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
-  .trust .stat {
-    position: relative;
-    padding: 20px 20px 18px;
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  .trust .left-align { text-align: left; margin-bottom: 48px; }
+  .trust h2 { font-size: 28px; font-weight: 600; line-height: 1.3; margin-bottom: 0; letter-spacing: -0.015em; }
+  .trust h2 em { font-weight: 700; font-style: normal; color: var(--cobalt); }
+  .trust .left-align p { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-top: 24px; }
+  .trust .refs-h3 {
+    font-family: var(--display); font-size: 22px; font-weight: 700;
+    color: var(--noir); letter-spacing: -0.01em;
+    margin-top: 56px; margin-bottom: 28px; line-height: 1.3;
   }
-  .trust .stat::before {
-    content: ''; position: absolute; top: 0; left: 0;
-    width: 100%; height: 3px; background: var(--cobalt);
+  .trust .refs-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
   }
-  .trust .stats-grid .stat:nth-child(1)::before { background: var(--cobalt); }
-  .trust .stats-grid .stat:nth-child(2)::before { background: var(--cobalt-clair); }
-  .trust .stats-grid .stat:nth-child(3)::before { background: var(--cuivre); }
-  .trust .stats-grid .stat:nth-child(4)::before { background: var(--taupe); }
-  .trust .stat:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-  .trust .stat-val {
-    font-family: var(--display);
-    font-size: 30px; font-weight: 700; color: var(--noir);
-    letter-spacing: -0.02em; line-height: 1; display: block;
+  .ref-card {
+    background: #fff; border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 6px; padding: 18px 18px 16px;
+    display: flex; flex-direction: column;
+    transition: all 0.25s;
+  }
+  .ref-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  }
+  .ref-badges {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 8px; margin-bottom: 14px;
+  }
+  .ref-sector {
+    font-size: 9.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: #fff; background: var(--accent);
+    padding: 4px 8px; border-radius: 4px;
+    line-height: 1.3; white-space: nowrap;
+  }
+  .ref-type {
+    font-size: 9.5px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-light); background: rgba(0,0,0,0.04);
+    padding: 4px 8px; border-radius: 4px; line-height: 1.3;
+    text-align: right;
+  }
+  .ref-title {
+    font-family: var(--display); font-size: 13.5px; font-weight: 700;
+    color: var(--noir); line-height: 1.4; letter-spacing: -0.005em;
+    margin-bottom: 16px; flex: 1;
+  }
+  .ref-figure {
+    font-family: var(--display); font-size: 28px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.02em;
+    line-height: 1; margin-bottom: 6px;
+  }
+  .ref-label {
+    font-size: 11px; color: var(--text-light); line-height: 1.4;
+  }
+  .refs-legend {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 12px 24px; margin-top: 36px;
+    font-size: 13.5px;
+  }
+  .refs-legend-intro {
+    font-weight: 700; color: var(--noir); margin-right: 8px;
+  }
+  .refs-legend-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--text); font-weight: 500;
+  }
+  .refs-legend-pill .dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
   }
   .trust .stat-label {
-    display: block; margin-top: 10px; padding-top: 10px;
-    border-top: 1px solid var(--gris-10);
-    font-size: 12.5px; color: var(--text-light);
-    font-weight: 400; line-height: 1.5; letter-spacing: 0.01em;
+    font-size: 13px; color: var(--text-muted); margin-top: 4px;
+    letter-spacing: 0.04em; font-weight: 500;
   }
 
   /* Newsletter */
@@ -638,20 +872,20 @@
   }
 
   /* Final CTA */
-  .final-cta { position: relative; padding: 140px 32px; overflow: hidden; }
+  .final-cta { position: relative; padding: 80px 32px; overflow: hidden; }
   .final-cta .bg {
     position: absolute; inset: 0;
     background: url('https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1400&q=80') center/cover;
   }
   .final-cta .overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,45,107,0.92) 0%, rgba(26,26,26,0.85) 100%); }
   .final-cta .content {
-    max-width: 720px; margin: 0 auto; text-align: center;
+    max-width: 1100px; margin: 0 auto; text-align: left;
     position: relative; z-index: 2;
   }
-  .final-cta h2 { font-size: clamp(32px, 4.5vw, 48px); font-weight: 600; line-height: 1.2; color: #fff; margin-bottom: 24px; letter-spacing: -0.015em; }
-  .final-cta h2 em { font-weight: 700; font-style: italic; color: var(--cuivre); }
-  .final-cta p { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 44px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-  .final-cta .ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .final-cta h2 { font-size: 28px; font-weight: 600; line-height: 1.3; color: #fff; margin-bottom: 24px; letter-spacing: -0.015em; }
+  .final-cta h2 em { font-weight: 700; font-style: normal; color: var(--cuivre); }
+  .final-cta p { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 40px; line-height: 1.8; }
+  .final-cta .ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
   .final-cta .cta-note { font-size: 14px; color: rgba(255,255,255,0.4); }
 
   /* Footer */
@@ -659,21 +893,24 @@
     background: var(--noir); padding: 64px 32px 40px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
-  footer .inner { max-width: 1100px; margin: 0 auto; }
+  footer .inner {
+    max-width: 1100px; margin: 0 auto;
+  }
+  footer .footer-brand { margin-bottom: 40px; }
+  footer .brand { margin-bottom: 12px; }
+  footer .brand img { height: 76px; width: auto; }
+  footer .tagline { font-size: 14px; color: var(--cuivre); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.02em; }
+  footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
   footer .footer-grid {
-    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
     gap: 48px; margin-bottom: 48px;
   }
-  footer .brand { font-family: var(--display); font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.01em; margin-bottom: 8px; }
-  footer .brand span { font-weight: 300; }
-  footer .tagline { font-size: 13px; color: var(--cuivre); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.02em; }
-  footer .brand-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
   footer .footer-col-title {
     font-size: 12px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 20px;
+    letter-spacing: 0.1em; color: rgba(255,255,255,0.75); margin-bottom: 20px;
   }
   footer .footer-col a, footer .footer-col span {
-    display: block; font-size: 14px; color: rgba(255,255,255,0.4);
+    display: block; font-size: 14px; color: rgba(255,255,255,0.75);
     margin-bottom: 12px; transition: color 0.2s;
   }
   footer .footer-col a:hover { color: #fff; }
@@ -682,51 +919,550 @@
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 16px;
   }
-  footer .copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  footer .copy { font-size: 12px; color: rgba(255,255,255,0.6); }
   footer .legal-links { display: flex; gap: 24px; }
-  footer .legal-links a { font-size: 12px; color: rgba(255,255,255,0.25); }
-  footer .legal-links a:hover { color: rgba(255,255,255,0.5); }
+  footer .legal-links a { font-size: 12px; color: rgba(255,255,255,0.6); }
+  footer .legal-links a:hover { color: rgba(255,255,255,0.85); }
 
   /* Responsive */
+  @media (max-width: 1000px) {
+    .trust .refs-grid { grid-template-columns: repeat(3, 1fr); }
+  }
   @media (max-width: 768px) {
+    .trust .refs-grid { grid-template-columns: repeat(2, 1fr); }
     .problem .grid, .trust .grid { grid-template-columns: 1fr; gap: 40px; }
+    .problem .constats-grid { grid-template-columns: 1fr; }
     .pillar-card.left, .pillar-card.right { grid-template-columns: 1fr; }
-    .missions-grid { grid-template-columns: 1fr; }
+    .offers-grid { grid-template-columns: 1fr; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .price-strip { grid-template-columns: 1fr; padding: 24px; }
+    .price-block + .price-block { border-left: none; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 24px; }
     .articles-grid { grid-template-columns: 1fr; }
-    .pricing-header, .pricing-row { grid-template-columns: 1fr; }
-    .hero .stats { gap: 32px; }
-    .diag-metrics { grid-template-columns: 1fr; }
-    nav .links a.nav-link { display: none; }
+    .compare-row { grid-template-columns: 1fr; gap: 6px; padding: 20px 16px; }
+    .compare-row.compare-header { display: none; }
+    .compare-row > div[data-label]::before { display: block; }
+    .compare-row.compare-highlight { padding: 22px 16px; }
+    .hero .stats { grid-template-columns: 1fr; gap: 16px; }
+    .nav-burger { display: flex; }
+    nav .links {
+      position: fixed; inset: 0;
+      background: #fff;
+      flex-direction: column;
+      justify-content: center; align-items: center;
+      gap: 8px;
+      padding: 100px 24px 40px;
+      transform: translateX(100%);
+      transition: transform .35s ease;
+      z-index: 101;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav .links.open { transform: translateX(0); }
+    nav .links a.nav-link {
+      color: var(--noir) !important; font-size: 20px; font-weight: 500;
+      display: block; padding: 14px 20px; min-height: 44px;
+      width: 100%; max-width: 360px; text-align: center;
+      border-radius: 6px; line-height: 1.2;
+    }
+    nav .links a.nav-link:active { background: rgba(0,71,171,0.06); }
+    nav .links a.cta-nav { background: var(--cobalt) !important; border-color: var(--cobalt) !important; color: #fff !important; padding: 16px 32px !important; font-size: 14px !important; margin-top: 16px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
     footer .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .process-flow { border-radius: 20px; padding: 16px 20px; }
-    .expertise-card { padding: 32px 24px; }
+    .cycle-svg-wrap { margin-top: 16px; }
+    .offer-card { padding: 20px; }
     .pillar-text { padding: 32px 28px; }
-    .diag-card { padding: 32px 24px; }
   }
   @media (max-width: 480px) {
     footer .footer-grid { grid-template-columns: 1fr; }
-    .diag-actions { flex-direction: column; }
+    .trust .refs-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Cookie consent banner */
+  #cookieBanner {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    max-width: 880px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid rgba(12,18,32,0.08);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(12,18,32,0.18);
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #cookieBanner.visible { opacity: 1; transform: translateY(0); }
+  #cookieBanner .cookie-text { flex: 1; font-size: 13px; color: var(--gris-80); line-height: 1.55; }
+  #cookieBanner .cookie-text strong { display: block; font-size: 14px; color: var(--noir); margin-bottom: 4px; font-family: var(--display); }
+  #cookieBanner .cookie-text p { margin: 0; }
+  #cookieBanner .cookie-text a { color: var(--cobalt); text-decoration: underline; }
+  #cookieBanner .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  #cookieBanner .cookie-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: inherit;
+    transition: all .2s ease;
+  }
+  #cookieBanner .cookie-refuse { background: #fff; color: var(--gris-80); border-color: rgba(26,26,26,0.15); }
+  #cookieBanner .cookie-refuse:hover { background: var(--gris-05); }
+  #cookieBanner .cookie-accept { background: var(--cobalt); color: #fff; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; }
+  #cookieBanner .cookie-accept:hover { background: var(--cobalt-profond); }
+  @media (max-width: 720px) {
+    #cookieBanner { flex-direction: column; align-items: stretch; padding: 20px; bottom: 16px; left: 16px; right: 16px; }
+    #cookieBanner .cookie-actions { justify-content: flex-end; }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#organization",
+      "name": "Hymeria Consulting",
+      "alternateName": "Hymeria",
+      "legalName": "Hymeria",
+      "url": "https://laetitiaperson.github.io/hymeria-site/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://laetitiaperson.github.io/hymeria-site/logo-noir.png",
+        "width": 900,
+        "height": 303
+      },
+      "image": "https://laetitiaperson.github.io/hymeria-site/og-image.png",
+      "description": "Strategy consulting firm blending human expertise and AI. Hymeria combines specialized AI agents with senior expert validation to deliver strategic consulting engagements in 5 to 10 days.",
+      "slogan": "AI produces. Humans set the direction, structure and decide.",
+      "taxID": "103861910",
+      "vatID": "FR14103861910",
+      "naics": "541611",
+      "isicV4": "7022",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "177, route de l'Empereur",
+        "postalCode": "92500",
+        "addressLocality": "Rueil-Malmaison",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "priceRange": "€5,000 – €15,000 per engagement",
+      "knowsAbout": [
+        "Strategy consulting",
+        "Artificial intelligence",
+        "Market studies",
+        "Business plans",
+        "Digital audit",
+        "Regulatory compliance",
+        "HR strategy",
+        "Market intelligence",
+        "Competitive intelligence"
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Place", "name": "Europe" },
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Place", "name": "Asia-Pacific" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contact@hymeria.com",
+        "availableLanguage": ["fr", "en"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#website",
+      "url": "https://laetitiaperson.github.io/hymeria-site/",
+      "name": "Hymeria Consulting",
+      "publisher": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/index-en.html#webpage",
+      "url": "https://laetitiaperson.github.io/hymeria-site/index-en.html",
+      "name": "Hymeria | Strategy consulting firm blending human expertise and AI",
+      "isPartOf": { "@id": "https://laetitiaperson.github.io/hymeria-site/#website" },
+      "about": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "inLanguage": "en-US",
+      "description": "Hymeria combines artificial intelligence with senior expert validation to deliver strategic consulting engagements in 5 to 10 days."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/#service",
+      "serviceType": "Strategy consulting blending human expertise and AI",
+      "name": "Hybrid consulting: AI + senior experts",
+      "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Place", "name": "Europe" },
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Place", "name": "Asia-Pacific" }
+      ],
+      "description": "Strategic consulting engagements delivered in 5 to 10 days, combining specialized AI agents with senior expert validation. Strategy & Business Development, Finance & Investment, Competitive Intelligence, and other domains rolled out progressively in 2026.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hymeria offerings",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Strategy & Business Development", "description": "New growth drivers, M&A sourcing, business plans, emerging market assessment." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Finance & Investment", "description": "Commercial due diligence, financial modeling, pricing audit." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": { "@type": "Service", "name": "Competitive Intelligence", "description": "Competitive monitoring, player profiling, ecosystem mapping." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "itemOffered": { "@type": "Service", "name": "Marketing & Communications", "description": "Positioning audit, content trends, editorial strategy." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "itemOffered": { "@type": "Service", "name": "Innovation & Technology", "description": "State of the art, technology partners, make-or-buy comparison, product roadmap." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "itemOffered": { "@type": "Service", "name": "Regulation & Compliance", "description": "Regulatory mapping, AI Act, GDPR, ESG, cybersecurity." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "itemOffered": { "@type": "Service", "name": "Operations & Organization", "description": "Process mapping, internal policies, organizational benchmarks." }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "itemOffered": { "@type": "Service", "name": "HR & Talent", "description": "Compensation benchmarks, talent market, evaluation frameworks." }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://laetitiaperson.github.io/hymeria-site/index-en.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a Hymeria engagement cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our engagements start at €5,000. The final price depends on scope, complexity and expected deliverables. We bill by outcome and engagement scope, not by days mobilized. A precise quote is provided within 24 hours after a free qualification session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly do you deliver an engagement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our engagements are delivered in 5 to 10 days on average. This speed is made possible by our 40+ specialized AI agents preparing the analysis in parallel, followed by validation from our senior experts. The commercial proposal is sent within 48 hours and work begins immediately upon approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Hymeria and a traditional consulting firm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have rebuilt every link in the consulting chain around AI. Our specialized AI agents produce the bulk of the analytical work — what a human team would take months to assemble. Our senior experts deliver the 10% that makes the difference: deep understanding of the stakes, intimate market knowledge, the ability to turn data into actionable recommendations. The result: engagements delivered 5x faster, at a fraction of the cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your deliverables really validated by humans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — 100% of Hymeria deliverables are qualified and validated by our expert network (50+ senior experts with 15+ years of experience). The AI prepares the first draft, but it is an expert who refines, enriches and validates every deliverable before it is shared. This combination — \"AI produces. Humans set the direction, structure and decide.\" — is our signature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What topics can you work on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our offering covers eight domains, rolled out progressively. Available today: Strategy & Business Development, Finance & Investment, Competitive Intelligence. Coming soon: Marketing & Communications, Innovation & Technology, Regulation & Compliance. Coming later: Operations & Organization, HR & Talent. If your project does not fit exactly into these categories, get in touch — our AI agents and experts adapt to most strategic challenges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who are your experts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our network brings together 50+ senior experts from leading international consulting firms and from corporate strategy teams at major groups. All have more than 15 years of experience in their field. For each engagement, we mobilize the expert whose sector knowledge best matches your challenge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you guarantee the confidentiality of my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data is processed exclusively within the scope of your engagement, on secure European infrastructure. No client data is used to train our AI agents. For sensitive engagements, we offer an NDA and an on-premise deployment is possible. For more details, see our privacy policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an engagement unfold from A to Z?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our 8-step process runs from first contact to closure in 10 days maximum: (1) online request, (2) needs qualification with an expert, (3) commercial proposal within 48 hours, (4) approval and immediate start, (5) deliverable preparation by AI agents, (6) quality review by our experts, (7) client presentation (2h), (8) closure and 360 evaluation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your AI agents different from ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, fundamentally. ChatGPT is a generalist assistant that produces single answers without validation. Our AI agents are specialized by task (research, analysis, modeling, quality control, writing), connected to more than 600 verified premium sources, and every deliverable is validated by a senior expert with 15+ years of experience before delivery. Where a standalone AI assistant remains fallible, Hymeria's agentic orchestration produces deep, robust and auditable analyses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Hymeria for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hymeria serves the traditional clients of strategy consulting (mid-market companies, large groups, investment funds) that want top-firm-quality deliverables without the typical lead time and cost, as well as SMBs and scale-ups that were previously priced out of consulting. Our engagements start at €5,000 and are delivered in 5 to 10 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What deliverable formats do you provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All standard strategy consulting formats: PowerPoint and Keynote presentations (business read), Word and PDF reports (detailed syntheses), Excel models (sizing, scenarios, financial plans), executive summary notes (1-page executive), interactive dashboards. Deliverables follow top-firm standards: methodological rigor, cited sources, actionable recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work internationally and in English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our network of 50+ senior experts covers France, Europe, North America and several countries across Asia. We work in English and French, and several experts are fluent in German, Spanish, Italian and Mandarin. For geographically targeted engagements, we systematically mobilize an expert with hands-on experience in the relevant market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you compare to a top-tier strategy consulting firm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On analytical rigor and recommendation quality, our standard is the same: our experts often come from leading international firms (McKinsey, BCG, Bain, Roland Berger) or from corporate strategy teams at major groups. The difference is in lead time (5 to 10 days vs. 4 to 12 weeks), cost (€5,000 to €15,000 vs. €50,000 to €500,000) and accessibility (any organization, not only large groups). Where a top firm mobilizes several junior consultants supervised by a partner, Hymeria mobilizes 40+ specialized AI agents plus a dedicated senior expert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I am not satisfied with the deliverable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every engagement includes a presentation and challenge session with the dedicated senior expert. If adjustments are required (refining the scope, deepening analyses, reformatting the output), they are included in the initial package. Our commitment is to deliver work that is directly actionable and validated by a senior expert — not a draft you have to redo. For 30 days after delivery, we remain available for questions and clarifications."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://laetitiaperson.github.io/hymeria-site/index-en.html#references",
+  "name": "Hymeria case studies — engagements delivered by sector",
+  "description": "Selection of strategy consulting engagements delivered by Hymeria, covering Consumer & Retail, Tech & Software, Mobility, Luxury, Media & Telecom, Industry and Energy.",
+  "numberOfItems": 12,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Player mapping: children's furniture and equipment, USA",
+        "serviceType": "Player mapping",
+        "category": "Baby & kids",
+        "areaServed": { "@type": "Country", "name": "United States" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "300+ brands and players identified across the children's furniture and equipment market in the United States."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Market study: premium bicycles and e-bikes, Asia-Pacific",
+        "serviceType": "Market study",
+        "category": "Mobility",
+        "areaServed": { "@type": "Place", "name": "Asia-Pacific" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "12+ countries covered for an in-depth study of the premium bicycle and e-bike market across Asia-Pacific."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "International benchmark of media paywalls",
+        "serviceType": "International benchmark",
+        "category": "Media & Telecom",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "14 geographies benchmarked to compare paywall strategies of leading international media players."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Competitive intelligence: food compliance",
+        "serviceType": "Competitive intelligence",
+        "category": "Foodtech",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "10 competitors analyzed in the food compliance market with comprehensive market intelligence."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "name": "Due diligence: software for real-estate agencies, Germany",
+        "serviceType": "Due diligence",
+        "category": "Proptech",
+        "areaServed": { "@type": "Country", "name": "Germany" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "8 competitors analyzed in the German software market for real-estate agencies."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "name": "Competitive benchmark: smart on-street parking",
+        "serviceType": "Competitive benchmark",
+        "category": "Mobility",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "10 players analyzed in the smart on-street parking solutions market."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Service",
+        "name": "Market assessment: jewelry, Japan",
+        "serviceType": "Market assessment",
+        "category": "Luxury",
+        "areaServed": { "@type": "Country", "name": "Japan" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "Japanese jewelry market sized at ¥1.2 trillion, with detailed segment sizing."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Service",
+        "name": "Strategic roadmap: premium and prosumer coffee machines",
+        "serviceType": "Strategic roadmap",
+        "category": "CPG",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "12+ brands benchmarked in the premium and prosumer coffee machine segment to shape the product roadmap."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Service",
+        "name": "Market study: furniture in India, 2030 outlook",
+        "serviceType": "Market study",
+        "category": "Home equipment",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "Indian furniture market sized at $28 billion with projections to 2030."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Service",
+        "name": "Competitive mapping: mapping software",
+        "serviceType": "Competitive mapping",
+        "category": "Energy",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "19 players mapped in the mapping-software market for energy exploration."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Service",
+        "name": "HR diagnostic of the leather goods sector",
+        "serviceType": "HR diagnostic",
+        "category": "Leather goods",
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "25+ job types mapped as part of a comprehensive HR diagnostic of the leather goods sector (ongoing engagement)."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Service",
+        "name": "Influencer mapping: pet food, Asia",
+        "serviceType": "Influencer mapping",
+        "category": "Pet food",
+        "areaServed": { "@type": "Place", "name": "Asia" },
+        "provider": { "@id": "https://laetitiaperson.github.io/hymeria-site/#organization" },
+        "description": "180+ qualified influencers across the Asian pet food market."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
   <div class="inner">
-    <a href="#hero" class="logo">Hyme<span>ria</span></a>
-    <div class="links">
-      <a href="#model" class="nav-link">Model</a>
-      <a href="#expertise" class="nav-link">Expertise</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="#hero" class="logo">
+      <img src="logo-blanc.png" alt="Hymeria Consulting" class="logo-blanc" width="900" height="303">
+      <img src="logo-noir.png" alt="Hymeria Consulting" class="logo-noir" width="900" height="303">
+    </a>
+    <div class="links" id="navLinks">
+      <a href="#modele" class="nav-link">Approach</a>
+      <a href="#expertises" class="nav-link">Offerings</a>
+      <a href="#pour-qui" class="nav-link">Clients</a>
+      <a href="#references" class="nav-link">Case studies</a>
       <a href="#insights" class="nav-link">Insights</a>
-      <a href="#diagnostic" class="cta-nav">AI Diagnostic</a>
-      <div class="lang-switch">
-        <a href="index-fr.html">FR</a>
-        <span class="lang-sep">|</span>
-        <a href="index-en.html" class="active">EN</a>
-      </div>
+      <a href="#a-propos" class="nav-link">About</a>
+      <a href="contact-en.html" class="cta-nav">Contact</a>
     </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -736,101 +1472,92 @@
   <div class="hero-overlay"></div>
   <div class="content">
     <div class="fade-in">
-      <div class="badge">
-        <div class="badge-dot"></div>
-        <span>Consulting as a Service, Powered by AI</span>
-      </div>
-    </div>
-    <div class="fade-in" style="transition-delay:120ms">
-      <h1>Strategic consulting, <em>reinvented by artificial intelligence</em></h1>
+      <h1>The quality of a top consulting firm,<br><em>5x faster, 10x cheaper</em></h1>
     </div>
     <div class="fade-in" style="transition-delay:240ms">
-      <p class="sub">Hymeria combines specialized AI agents with senior expert validation to deliver consulting engagements <strong>in days, not months</strong>. The rigor of a top-tier firm. The agility of technology.</p>
+      <p class="sub">Hymeria is a new kind of strategy consulting firm, focused on strategic studies and deliverables.<br>Our principle: <strong>humans are the architects who lead, decide and guarantee quality</strong>.<br>AI accelerates time-consuming and repetitive work.</p>
     </div>
     <div class="fade-in" style="transition-delay:360ms">
       <div class="ctas">
-        <a href="#model" class="btn-white">Discover our model</a>
-        <a href="#diagnostic" class="btn-outline">Start your free AI diagnostic</a>
+        <a href="#modele" class="btn-white">Discover our approach</a>
       </div>
     </div>
     <div class="fade-in" style="transition-delay:500ms">
       <div class="stats">
-        <div><div class="stat-val">5&times;</div><div class="stat-label">faster than a traditional firm</div></div>
-        <div><div class="stat-val">70%</div><div class="stat-label">average cost reduction</div></div>
-        <div><div class="stat-val">92%</div><div class="stat-label">actionable recommendations</div></div>
+        <div class="stat-card"><span class="stat-val">5&nbsp;to&nbsp;10&nbsp;days</span><span class="stat-divider"></span><span class="stat-label">delivery time, from scoping to handover</span></div>
+        <div class="stat-card"><span class="stat-val">&euro;5,000</span><span class="stat-divider"></span><span class="stat-label">starting price, fixed-fee engagements</span></div>
+        <div class="stat-card"><span class="stat-val">40+</span><span class="stat-divider"></span><span class="stat-label">specialized AI agents</span></div>
+        <div class="stat-card"><span class="stat-val">50+</span><span class="stat-divider"></span><span class="stat-label">senior experts on call, 600 premium sources</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
+<!-- PROBLEME -->
 <section class="problem">
   <div class="grid">
     <div class="fade-in">
-      <span class="section-label" style="color:var(--accent)">Strategic consulting is broken</span>
-      <h2>Why 73% of executives find traditional consulting <em>out of touch with their reality</em></h2>
-      <p class="desc">Traditional consulting firms were built for a world that no longer exists. Endless timelines, prohibitive fees, generic recommendations: the classic model no longer meets the needs of organizations that must decide fast and act immediately.</p>
-      <div class="items">
-        <div class="item">
-          <span class="item-icon">&#9201;</span>
-          <div>
-            <div class="item-title">4 to 12 weeks for a single deliverable</div>
-            <div class="item-desc">When your market moves in real time, waiting three months for a strategic study isn't a process, it's a handicap. Your competitors aren't waiting for your consultants.</div>
-          </div>
+      <h2 class="constats-title">Why Hymeria? A new consulting model <em>&laquo;&nbsp;AI produces. Humans set the direction, structure and decide.&nbsp;&raquo;</em></h2>
+      <p class="desc">Hymeria was born from a simple observation: consulting firms have not fully tapped into what AI now makes possible. The result: high costs, long lead times, quality that varies with the team assigned. That is why at Hymeria we have rebuilt every link in the chain to deliver what executives actually expect — reliable, fast, actionable answers — through a hybrid model combining human expertise with specialized AI agents.</p>
+      <div class="constats-grid">
+        <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-hourglass.svg" alt="" width="36" height="36" loading="lazy"></div>
+          <div class="constat-card-title">The slowness of traditional consulting</div>
+          <div class="constat-card-quote">&laquo; 4 to 12 weeks for a strategic deliverable &raquo;</div>
+          <div class="constat-card-desc">Your competitors move in real time. Waiting 3 months for a strategic recommendation is a competitive handicap. Hymeria delivers in 5 to 10 days.</div>
         </div>
-        <div class="item">
-          <span class="item-icon">&#128176;</span>
-          <div>
-            <div class="item-title">$50,000 to $500,000 per engagement</div>
-            <div class="item-desc">Fees that effectively exclude mid-market companies, ambitious SMBs, and growing startups. Strategic expertise shouldn't be a privilege reserved for Fortune 500 companies.</div>
-          </div>
+        <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-dollar.svg" alt="" width="36" height="36" loading="lazy"></div>
+          <div class="constat-card-title">The prohibitive cost of consulting engagements</div>
+          <div class="constat-card-quote">&laquo; &euro;50,000 to &euro;500,000 per engagement &raquo;</div>
+          <div class="constat-card-desc">Mid-market companies, SMBs, scaling startups: those who would benefit most from consulting are priced out. Hymeria changes that, starting at &euro;5,000.</div>
         </div>
-        <div class="item">
-          <span class="item-icon">&#128196;</span>
-          <div>
-            <div class="item-title">Beautiful slides, zero execution</div>
-            <div class="item-desc">200-page reports that nobody reads. Theoretical recommendations disconnected from your operational reality. Traditional consulting produces knowledge. Hymeria produces action.</div>
-          </div>
+        <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-target.svg" alt="" width="36" height="36" loading="lazy"></div>
+          <div class="constat-card-title">Recommendations with no operational impact</div>
+          <div class="constat-card-quote">&laquo; 200-page reports that no one executes &raquo;</div>
+          <div class="constat-card-desc">At Hymeria, every engagement is led by a senior expert who knows which recommendations are actionable and how to land them.</div>
         </div>
-      </div>
-    </div>
-    <div class="fade-in" style="transition-delay:200ms">
-      <div class="photo-wrap">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Modern city skyline at twilight illustrating fast-moving markets" loading="lazy" />
+        <div class="constat-card">
+          <div class="constat-card-icon"><img src="assets/icons/icon-chess.svg" alt="" width="36" height="36" loading="lazy"></div>
+          <div class="constat-card-title">A billing model that has become obsolete</div>
+          <div class="constat-card-quote">&laquo; The daily rate has had its day &raquo;</div>
+          <div class="constat-card-desc">Billing by time spent no longer makes sense when AI multiplies productivity. Hymeria bills by scope and outcome, not by days.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MODEL / PROCESS -->
-<section class="solution" id="model">
+<!-- MODELE / PROCESSUS -->
+<section class="solution" id="modele">
   <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:var(--green)">How it works</span>
-      <h2>AI produces. <em>The expert validates. You decide.</em></h2>
-      <p>Hymeria has designed an entirely new consulting model. Our specialized AI agents handle 90% of the analytical work, research, modeling, synthesis, before a senior expert validates, enriches, and contextualizes every deliverable. The result: tier-one quality, delivered in days, at a fraction of the cost.</p>
+    <div class="left-align fade-in">
+      <h2>A new approach to consulting: our agents prepare, <em>our experts structure<br>and validate</em></h2>
+      <p>Hymeria is a strategy consulting firm blending human expertise and AI. Our model rests on a simple conviction: AI now makes it possible to produce strategic analysis that is faster, deeper and more accessible — provided that an expert structures it upstream, validates it downstream and corrects its limits. This combination of specialized agents and senior expertise defines our approach.</p>
+      <p>With more than <strong style="color:#0047AB">40 specialized AI agents</strong> in operation, the bulk of the analytical work is prepared, structured and controlled by our agentic infrastructure. Our <strong style="color:#8B7D6B">senior experts</strong> scope each engagement, arbitrate the results and catch the errors that only deep sector knowledge can surface. The result: superior-quality consulting, delivered in 5 to 10 days, at a fraction of the traditional cost.</p>
+      <h3 style="font-family:var(--display); font-size:24px; font-weight:600; color:var(--noir); letter-spacing:-0.01em; margin-top:8px;">Our 3 <em style="font-weight:700; font-style:normal; color:var(--cobalt);">distinctive assets</em></h3>
+      <p>The AI wave is producing new tools, but not new firms. Hymeria is the only one to combine a proprietary agentic infrastructure, a senior expert network and a rigorous consulting methodology.</p>
     </div>
 
     <div class="fade-in">
       <div class="pillar-card left">
         <div class="pillar-text">
-          <div class="pillar-step">01</div>
-          <div class="pillar-title">Strategic Qualification</div>
-          <div class="pillar-who">Mission Director + Client</div>
-          <div class="pillar-desc">Every engagement starts with a precise scoping session with a mission director. Objectives, scope, expected deliverables, industry constraints: nothing is left to chance. This human framing ensures our AI agents work on the right questions.</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#0047AB">01</div><div class="pillar-icon"><img src="assets/icons/icon-compass.svg" alt="" width="44" height="44" loading="lazy"></div></div>
+          <div class="pillar-title">Proprietary orchestration</div>
+          <div class="pillar-desc">More than 40 specialized AI agents — research, analysis, quality control, compliance, writing — brought together in a proprietary architecture aligned with the best agentic practices. Where a standalone AI assistant remains limited and fallible, Hymeria's agentic AI produces deep, robust and quality-controlled analyses.</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Strategic scoping meeting between a Hymeria expert and a client" loading="lazy" />
+        <picture><source srcset="assets/visuals/ai-data-architecture.webp" type="image/webp"><img src="assets/visuals/ai-data-architecture.jpg" alt="Close-up of screens displaying analyses produced by Hymeria's AI agents" loading="lazy" width="1600" height="900"></picture>
       </div>
     </div>
 
     <div class="fade-in" style="transition-delay:150ms">
       <div class="pillar-card right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Close-up of analytics dashboards showing AI-powered data analysis" loading="lazy" />
+        <picture><source srcset="assets/visuals/atomic-network.webp" type="image/webp"><img src="assets/visuals/atomic-network.jpg" alt="Interconnected network symbolizing the mobilization of Hymeria's senior experts by sector" loading="lazy" width="1600" height="900"></picture>
         <div class="pillar-text">
-          <div class="pillar-step">02</div>
-          <div class="pillar-title">AI Agent Production</div>
-          <div class="pillar-who">AI Agent Pipeline (~90%)</div>
-          <div class="pillar-desc">Our specialized AI agent pipelines collect, analyze, and synthesize data at a scale and speed impossible for a human team. Each agent is trained on a specific domain: financial analysis, competitive intelligence, market modeling, technical auditing.</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#8B7D6B">02</div><div class="pillar-icon"><img src="assets/icons/icon-network.svg" alt="" width="44" height="44" loading="lazy"></div></div>
+          <div class="pillar-title">Senior expert network</div>
+          <div class="pillar-desc">More than 50 senior experts available by sector, geography and language. They scope, control, arbitrate and present every deliverable, bringing what no AI has learned: deep knowledge of a sector, its networks of influence and its organizational dynamics — to produce actionable recommendations.</div>
         </div>
       </div>
     </div>
@@ -838,95 +1565,481 @@
     <div class="fade-in" style="transition-delay:300ms">
       <div class="pillar-card left">
         <div class="pillar-text">
-          <div class="pillar-step">03</div>
-          <div class="pillar-title">Senior Expert Validation</div>
-          <div class="pillar-who">Senior Consultant (15+ years)</div>
-          <div class="pillar-desc">Every deliverable is reviewed, enriched, and validated by a senior consultant (15+ years of experience). The expert brings judgment, industry nuance, and strategic vision that AI cannot replicate. This combination is what makes the difference.</div>
+          <div class="pillar-header"><div class="pillar-step" style="color:#B87333">03</div><div class="pillar-icon"><img src="assets/icons/icon-diamond.svg" alt="" width="44" height="44" loading="lazy"></div></div>
+          <div class="pillar-title">Structured methodology</div>
+          <div class="pillar-desc">All of consulting's reference frameworks have been translated into agents, drawing on more than 600 premium sources and the methods of top firms, applied systematically. Controls are performed at every step — traceability, cross-checking of sources, peer review — producing auditable conclusions from diagnosis to action plan.</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Senior consultant reviewing and validating a strategic deliverable" loading="lazy" />
+        <picture><source srcset="assets/visuals/cyber-architecture.webp" type="image/webp"><img src="assets/visuals/cyber-architecture.jpg" alt="Hymeria's structured methodology guaranteeing traceability and auditable conclusions" loading="lazy" width="1600" height="900"></picture>
       </div>
     </div>
 
-    <div class="fade-in" style="transition-delay:400ms">
-      <div class="process-flow">
-        <span class="flow-step">Strategic brief</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Method. framing</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Augmented collection</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Multi-dim. analysis</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Strategic synthesis</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Expert validation</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">Delivery</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-step">30-day support</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERTISE -->
-<section class="expertise" id="expertise">
-  <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:var(--accent)">6 centers of excellence</span>
-      <h2>Strategic expertise, <em>augmented by AI</em></h2>
-      <p>Each practice area combines the analytical power of our AI agents with the experience of specialized senior consultants. Select a domain to discover our typical engagements.</p>
+    <div class="fade-in" style="transition-delay:450ms">
+      <p style="text-align:center; font-style:italic; color:var(--text-light); font-size:16px; max-width:760px; margin:48px auto 0;">Orchestration, experts and methodology together ensure the quality and relevance of our deliverables.</p>
     </div>
 
-    <div class="fade-in" style="transition-delay:100ms">
-      <div class="tabs" id="expertiseTabs"></div>
+    <div class="process-section fade-in">
+      <h2>Our approach: humans set the direction, <em>AI accelerates</em></h2>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Hymeria 7-step cycle: Scoping, Collection, Analysis, Modeling, Recommendations, Validation, Decision" style="display:block; width:100%; max-width:860px; height:auto; margin:2rem auto;">
+  <!-- Boucle infinie (chemin vectoriel original du PPT, place dans la slide) -->
+  <svg x="178" y="169" width="955" height="424" viewBox="140 175 1000 445" overflow="visible">
+    <path d="M640 395 C800 187 1130 193 1130 395 C1130 597 800 603 640 395 C568 301 462 251 366 243 M176 309 C160 332 150 361 150 395 C150 597 480 603 640 395" stroke="#B87333" stroke-width="16" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <!-- Fleches directionnelles sur la boucle (sens 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7) -->
+  <g fill="#B87333">
+    <polygon points="-12,9 12,9 0,-13" transform="translate(547 284) rotate(125)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(947 524) rotate(60)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(937 233) rotate(290)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(547 480) rotate(235)"/>
+    <polygon points="-12,9 12,9 0,-13" transform="translate(197 432) rotate(345)"/>
+  </g>
+
+  <!-- Lobe labels (copper) -->
+  <g fill="#B87333" font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" letter-spacing="2" text-anchor="middle">
+    <text font-size="22"><tspan x="380" y="378">HUMAN</tspan><tspan x="380" y="406">EXPERTISE</tspan></text>
+    <text font-size="22"><tspan x="935" y="365">AI-ACCELERATED</tspan><tspan x="935" y="393">PRODUCTION</tspan></text>
+  </g>
+
+  <!-- Annotation 2 semaines + fleche pointillee 7 -> 1 -->
+  <g font-family="'Poppins',-apple-system,BlinkMacSystemFont,sans-serif">
+    <path d="M 212 297 C 248 248 317 226 394 234" fill="none" stroke="#1B3A8C" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+    <polygon points="-5,6 5,6 0,-7" fill="#1B3A8C" opacity="0.8" transform="translate(394 234) rotate(96)"/>
+    <text x="270" y="282" font-size="16" font-weight="700" fill="#1B3A8C">2 weeks</text>
+    <text x="270" y="302" font-size="13" fill="#6B7280">from scoping to</text>
+    <text x="270" y="318" font-size="13" fill="#6B7280">decision</text>
+  </g>
+
+  <!-- Labels pastilles -->
+  <g font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" fill="#1B3A8C">
+    <!-- 1 Cadrage (au-dessus, centre) -->
+    <text x="398" y="180" font-size="22" font-weight="700" text-anchor="middle">Scoping</text>
+    <text x="398" y="204" font-size="17" text-anchor="middle">Client + Expert</text>
+    <!-- 5 Recommandations (au-dessus) -->
+    <text x="805" y="207" font-size="22" font-weight="700" text-anchor="middle">Recommendations</text>
+    <text x="805" y="231" font-size="17" text-anchor="middle">AI + Expert</text>
+    <!-- 6 Validation (en-dessous) -->
+    <text x="398" y="585" font-size="22" font-weight="700" text-anchor="middle">Validation</text>
+    <text x="398" y="609" font-size="17" text-anchor="middle">Expert</text>
+    <!-- 2 Collecte (en-dessous) -->
+    <text x="805" y="556" font-size="22" font-weight="700" text-anchor="middle">Collection</text>
+    <text x="805" y="580" font-size="17" text-anchor="middle">AI + Expert</text>
+    <!-- 4 Modelisation (droite) -->
+    <text x="1100" y="260" font-size="22" font-weight="700" text-anchor="start">Modeling</text>
+    <text x="1100" y="284" font-size="17" text-anchor="start">AI + Expert</text>
+    <!-- 3 Analyse (droite) -->
+    <text x="1100" y="490" font-size="22" font-weight="700" text-anchor="start">Analysis</text>
+    <text x="1100" y="514" font-size="17" text-anchor="start">AI + Expert</text>
+    <!-- 7 Decision (gauche) -->
+    <text x="170" y="291" font-size="22" font-weight="700" text-anchor="end">Decision</text>
+    <text x="170" y="315" font-size="17" text-anchor="end">Client + Expert</text>
+  </g>
+
+  <!-- Pastilles cobalt + numeros blancs -->
+  <g fill="#1B3A8C">
+    <circle cx="398" cy="237" r="24"/>
+    <circle cx="805" cy="263" r="24"/>
+    <circle cx="1064" cy="263" r="24"/>
+    <circle cx="1064" cy="494" r="24"/>
+    <circle cx="805" cy="494" r="24"/>
+    <circle cx="398" cy="524" r="24"/>
+    <circle cx="210" cy="294" r="24"/>
+  </g>
+  <g fill="#fff" font-family="'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="398" y="246">1</text>
+    <text x="805" y="272">5</text>
+    <text x="1064" y="272">4</text>
+    <text x="1064" y="503">3</text>
+    <text x="805" y="503">2</text>
+    <text x="398" y="533">6</text>
+    <text x="210" y="303">7</text>
+  </g>
+</svg>
     </div>
 
     <div class="fade-in" style="transition-delay:200ms">
-      <div class="expertise-card" id="expertiseCard"></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
+<!-- EXPERTISES -->
+<section class="expertise" id="expertises">
+  <div class="inner">
+    <div class="left-align fade-in">
+      <h2>Our offerings: varied engagements aligned with <em>client priorities</em></h2>
+    </div>
+
+    <div class="fade-in offers-grid" style="transition-delay:100ms">
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-green">Available</span>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-chess.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Strategy &amp; Business Development</h3>
+          <p>New growth drivers, M&amp;A sourcing, business plans, emerging market assessment.</p>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-dollar.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Finance &amp; Investment</h3>
+          <p>Commercial due diligence, financial modeling, pricing audit.</p>
+        </div>
+        <div class="offer-card available">
+          <div class="offer-icon"><img src="assets/icons/icon-target.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Competitive Intelligence</h3>
+          <p>Competitive monitoring, player profiling, ecosystem mapping.</p>
+        </div>
+      </div>
+
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-grey">Coming soon</span>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-network.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Marketing &amp; Communications</h3>
+          <p>Positioning audit, content trends, editorial strategy.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-diamond.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Innovation &amp; Technology</h3>
+          <p>State of the art, technology partners, make-or-buy comparison, product roadmap.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-compass.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Regulation &amp; Compliance</h3>
+          <p>Regulatory mapping, AI Act, GDPR, ESG, cybersecurity.</p>
+        </div>
+      </div>
+
+      <div class="offers-col">
+        <div class="offers-col-head">
+          <span class="status-badge badge-grey">Coming later</span>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-hourglass.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>Operations &amp; Organization</h3>
+          <p>Process mapping, internal policies, organizational benchmarks.</p>
+        </div>
+        <div class="offer-card upcoming">
+          <div class="offer-icon"><img src="assets/icons/icon-people.svg" alt="" width="30" height="30" loading="lazy"></div>
+          <h3>HR &amp; Talent</h3>
+          <p>Compensation benchmarks, talent market, evaluation frameworks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:200ms">
+      <div class="price-strip">
+        <div class="price-block">
+          <div class="price-label">Standard engagement</div>
+          <div class="price-value">&euro;5&nbsp;to&nbsp;10K</div>
+        </div>
+        <div class="price-block">
+          <div class="price-label">Complex engagement</div>
+          <div class="price-value">&euro;10&nbsp;to&nbsp;15K</div>
+        </div>
+        <div class="price-block">
+          <div class="price-label">Delivery time</div>
+          <div class="price-value">5&nbsp;to&nbsp;10&nbsp;days</div>
+        </div>
+      </div>
+      <p class="forfait-note">Fixed-fee engagements only</p>
+    </div>
+  </div>
+</section>
+
+<!-- POUR QUI -->
+<section class="audience" id="pour-qui">
+  <div class="inner">
+    <div class="left-align fade-in">
+      <h2>Who we serve: Hymeria opens consulting to <em>new segments</em></h2>
+      <p>Hymeria serves the traditional clients of consulting, as well as those previously priced out.</p>
+    </div>
+
+    <div class="fade-in audience-grid" style="transition-delay:100ms">
+      <div class="audience-card established">
+        <div class="audience-label">Mid-market &amp; Large Groups</div>
+        <h3>Top-firm quality</h3>
+        <p>For CEOs and executive committees: an independent study to frame a topic, or to validate and challenge a top-firm study — at a marginal cost.</p>
+        <div class="audience-missions">AI diagnostic &middot; Digital audit &middot; Regulatory mapping &middot; Make-or-Buy &middot; Organizational benchmark</div>
+      </div>
+
+      <div class="audience-card established">
+        <div class="audience-label">Investment funds</div>
+        <h3>Accelerated due diligence</h3>
+        <p>Investors in analysis or post-deal phases. Independent expertise delivered in the shortest possible time, with no compromise on depth or reliability.</p>
+        <div class="audience-missions">Commercial due diligence &middot; Market validation &middot; Competitive monitoring &middot; Post-deal review</div>
+      </div>
+
+      <div class="audience-card new">
+        <div class="audience-label">SMBs</div>
+        <h3>Consulting, finally accessible</h3>
+        <p>Historically priced out of consulting. Hymeria opens lasting access, with no compromise on analytical depth or recommendation quality.</p>
+        <div class="audience-missions">Market studies &middot; Business plans &middot; Pricing audit &middot; Strategic diagnostic</div>
+      </div>
+
+      <div class="audience-card new">
+        <div class="audience-label">Scale-ups</div>
+        <h3>To scale faster</h3>
+        <p>Founders and executive teams facing structural trade-offs. They need fast, well-supported answers to stay ahead of the market.</p>
+        <div class="audience-missions">Fundraising business plan &middot; M&amp;A sourcing &middot; Market analysis &middot; Due diligence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFICATION -->
+<section class="pricing" id="tarifs">
   <div class="pricing-bg"></div>
   <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:rgba(255,255,255,0.4)">Transparent investment</span>
-      <h2>Top-tier quality, <em>without the top-tier budget</em></h2>
-      <p>We believe strategic expertise should be accessible. Thanks to our AI-augmented model, we drastically reduce production costs without ever compromising deliverable quality.</p>
+    <div class="left-align fade-in">
+      <h2>Consulting engagements <em>starting at &euro;5,000</em></h2>
+      <p>At Hymeria, we made a simple choice: bill by outcome, not by time spent. Our hybrid model — combining human expertise with AI — lets us drastically reduce production costs without ever compromising analytical depth. You pay for the value of the recommendation, not for days mobilized.</p>
     </div>
 
     <div class="fade-in" style="transition-delay:200ms">
-      <div class="pricing-table">
-        <div class="pricing-header">
-          <div></div>
-          <div class="col-old">
-            <div class="col-label">Traditional firm</div>
-            <div class="col-price">$50K, $500K</div>
-          </div>
-          <div class="col-new">
-            <div class="col-label">Hymeria</div>
-            <div class="col-price">$5K, $15K</div>
-          </div>
+      <div class="compare-wrap">
+        <div class="compare-row compare-header">
+          <div>Player</div>
+          <div>Cost</div>
+          <div>Lead time</div>
+          <div>Reliability</div>
+          <div>Main limitation</div>
         </div>
-        <div id="pricingRows"></div>
+        <div class="compare-row compare-highlight">
+          <div>
+            <div class="actor-name">Hymeria</div>
+            <div class="actor-sub">Consulting blended with AI</div>
+          </div>
+          <div data-label="Cost">&euro;5&nbsp;to&nbsp;15K</div>
+          <div data-label="Lead time">5&nbsp;to&nbsp;10&nbsp;days</div>
+          <div data-label="Reliability">High (senior experts)</div>
+          <div data-label="Main limitation">Scope: analysis and framing engagements</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Traditional firm</div>
+            <div class="actor-sub">Big 4, strategy houses</div>
+          </div>
+          <div data-label="Cost">&euro;50&nbsp;to&nbsp;500K</div>
+          <div data-label="Lead time">2&nbsp;to&nbsp;3&nbsp;months</div>
+          <div data-label="Reliability">High but varies with assigned consultants</div>
+          <div data-label="Main limitation">Cost and lead time too high for framing work</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">Freelancer / expert</div>
+            <div class="actor-sub">Senior independent</div>
+          </div>
+          <div data-label="Cost">&euro;8&nbsp;to&nbsp;25K</div>
+          <div data-label="Lead time">2&nbsp;to&nbsp;4&nbsp;weeks</div>
+          <div data-label="Reliability">Variable (depends on the consultant)</div>
+          <div data-label="Main limitation">Limited capacity and coverage, no guarantee</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">In-house with ChatGPT</div>
+            <div class="actor-sub">Team + generic LLM</div>
+          </div>
+          <div data-label="Cost">Internal time</div>
+          <div data-label="Lead time">Variable</div>
+          <div data-label="Reliability">Low (unverified)</div>
+          <div data-label="Main limitation">Hallucinations, unreliable sources, no arbitration</div>
+        </div>
+        <div class="compare-row">
+          <div>
+            <div class="actor-name">AI software</div>
+            <div class="actor-sub">Self-service data platforms</div>
+          </div>
+          <div data-label="Cost">&euro;10&nbsp;to&nbsp;50K/year</div>
+          <div data-label="Lead time">Long setup</div>
+          <div data-label="Reliability">Medium (no interpretation)</div>
+          <div data-label="Main limitation">Raw data, no advice or recommendation</div>
+        </div>
         <div class="pricing-cta">
-          <a href="#diagnostic" class="btn-white" style="font-size:15px;padding:14px 36px">Request a custom quote &rarr;</a>
-          <div class="pricing-note">All prices are pre-tax. Custom quote within 24 hours. No long-term commitment.</div>
+          <div class="pricing-note">We bill by engagement scope and expected outcome. Every project gets a precise quote within 24 hours, with no long-term commitment.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AI DIAGNOSTIC -->
+<!-- 3 QUESTIONS TO SCOPE AN ENGAGEMENT -->
 <section class="diagnostic" id="diagnostic">
   <div class="inner">
-    <div class="center fade-in">
-      <span class="section-label" style="color:var(--green)">Interactive tool</span>
-      <h2>Assess your strategic maturity <em>in 2 minutes</em></h2>
-      <p>Our AI diagnostic analyzes your situation through 4 key questions and generates personalized recommendations. Free, no commitment, instant results.</p>
+    <div class="left-align fade-in">
+      <h2>Scoping your engagement together: <em>3 key questions</em></h2>
+      <p>These are the three questions we work through with you during initial scoping. Having a sense of your answers up front lets us get to what matters faster and calibrate the engagement precisely.</p>
     </div>
 
-    <div class="fade-in" style="transition-delay:150ms">
-      <div class="diag-card" id="diagCard">
-        <div class="diag-progress"><div class="diag-progress-bar" id="diagProgress" style="width:0%"></div></div>
-        <div id="diagContent"></div>
+    <div class="fade-in q3-grid" style="transition-delay:100ms">
+      <div class="q3-card">
+        <div class="q3-num">01 &middot; The need</div>
+        <h3>Which decision are you looking to inform?</h3>
+        <p>Every Hymeria engagement is built to inform a concrete decision: whether to launch a product, enter a market, acquire a player, invest in a technology. The clearer the decision you want to make, the more we can focus the analysis where it matters.</p>
+      </div>
+
+      <div class="q3-card">
+        <div class="q3-num">02 &middot; The scope</div>
+        <h3>What scope does your need cover?</h3>
+        <p>Scope drives analytical depth, lead time and cost. A few initial directions help us size the engagement precisely:</p>
+        <ul>
+          <li><strong>Geography</strong>: country, region, language</li>
+          <li><strong>Market</strong>: segment, size (revenue, volume, players)</li>
+          <li><strong>Competitors</strong>: top 5, top 20, full ecosystem</li>
+          <li><strong>Time horizon</strong>: snapshot today, 3-5 year projection</li>
+        </ul>
+      </div>
+
+      <div class="q3-card">
+        <div class="q3-num">03 &middot; The deliverable</div>
+        <h3>Which deliverable format fits your use?</h3>
+        <p>Executive committee, board, investment fund, operational team: each audience consumes information differently. We adapt the format to the need:</p>
+        <ul>
+          <li>Executive summary note (1-2 pages)</li>
+          <li>Committee presentation (15-30 slides + executive summary)</li>
+          <li>In-depth report (30-100 pages + appendices)</li>
+          <li>Interactive financial model (parameterized Excel)</li>
+          <li>Structured player mapping</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-in" style="transition-delay:300ms">
+      <div class="q3-footer">
+        <strong>Hymeria has already delivered these types of engagements</strong>: international market studies, player mappings, competitive benchmarks, commercial due diligence, market assessments, organizational diagnostics and competitive intelligence. <a href="#references" class="q3-ref-link">See our case studies below &darr;</a>
+      </div>
+      <div class="q3-cta">
+        <a href="contact-en.html">Let's discuss &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="trust" id="references">
+  <div class="inner">
+    <div class="left-align fade-in">
+      <h3 class="refs-h3">Diverse engagements across <em style="color:var(--cobalt);font-style:normal;font-weight:700">many industry sectors</em></h3>
+      <div class="refs-grid">
+        <div class="ref-card" style="--accent:#2A9D8F">
+          <div class="ref-badges">
+            <span class="ref-sector">Baby &amp; kids</span>
+            <span class="ref-type">Player mapping</span>
+          </div>
+          <div class="ref-title">Children's furniture and equipment, USA</div>
+          <div class="ref-figure">300+</div>
+          <div class="ref-label">Brands and players identified</div>
+        </div>
+        <div class="ref-card" style="--accent:#6B8E6B">
+          <div class="ref-badges">
+            <span class="ref-sector">Mobility</span>
+            <span class="ref-type">Market study</span>
+          </div>
+          <div class="ref-title">Premium bicycles and e-bikes, Asia-Pacific</div>
+          <div class="ref-figure">12+</div>
+          <div class="ref-label">Countries covered</div>
+        </div>
+        <div class="ref-card" style="--accent:#D4763A">
+          <div class="ref-badges">
+            <span class="ref-sector">Media &amp; Telecom</span>
+            <span class="ref-type">International benchmark</span>
+          </div>
+          <div class="ref-title">Media paywalls, international comparison</div>
+          <div class="ref-figure">14</div>
+          <div class="ref-label">Geographies benchmarked</div>
+        </div>
+        <div class="ref-card" style="--accent:#7B68AE">
+          <div class="ref-badges">
+            <span class="ref-sector">Foodtech</span>
+            <span class="ref-type">Competitive intelligence</span>
+          </div>
+          <div class="ref-title">Food compliance, market intelligence</div>
+          <div class="ref-figure">10</div>
+          <div class="ref-label">Competitors analyzed</div>
+        </div>
+        <div class="ref-card" style="--accent:#3A7BD5">
+          <div class="ref-badges">
+            <span class="ref-sector">Proptech</span>
+            <span class="ref-type">Due diligence</span>
+          </div>
+          <div class="ref-title">Software for real-estate agencies, Germany</div>
+          <div class="ref-figure">8</div>
+          <div class="ref-label">Competitors analyzed</div>
+        </div>
+        <div class="ref-card" style="--accent:#6B8E6B">
+          <div class="ref-badges">
+            <span class="ref-sector">Mobility</span>
+            <span class="ref-type">Competitive benchmark</span>
+          </div>
+          <div class="ref-title">Smart on-street parking</div>
+          <div class="ref-figure">10</div>
+          <div class="ref-label">Players analyzed</div>
+        </div>
+        <div class="ref-card" style="--accent:#9B2226">
+          <div class="ref-badges">
+            <span class="ref-sector">Luxury</span>
+            <span class="ref-type">Market assessment</span>
+          </div>
+          <div class="ref-title">Jewelry market, Japan</div>
+          <div class="ref-figure">&yen;1.2T</div>
+          <div class="ref-label">Market size</div>
+        </div>
+        <div class="ref-card" style="--accent:#0047AB">
+          <div class="ref-badges">
+            <span class="ref-sector">CPG</span>
+            <span class="ref-type">Strategic roadmap</span>
+          </div>
+          <div class="ref-title">Premium and prosumer coffee machines</div>
+          <div class="ref-figure">12+</div>
+          <div class="ref-label">Brands benchmarked</div>
+        </div>
+        <div class="ref-card" style="--accent:#8B7D6B">
+          <div class="ref-badges">
+            <span class="ref-sector">Home equipment</span>
+            <span class="ref-type">Market study</span>
+          </div>
+          <div class="ref-title">Indian furniture market, 2030 outlook</div>
+          <div class="ref-figure">$28B</div>
+          <div class="ref-label">Market size</div>
+        </div>
+        <div class="ref-card" style="--accent:#C4982A">
+          <div class="ref-badges">
+            <span class="ref-sector">Energy</span>
+            <span class="ref-type">Competitive mapping</span>
+          </div>
+          <div class="ref-title">Mapping software</div>
+          <div class="ref-figure">19</div>
+          <div class="ref-label">Players mapped</div>
+        </div>
+        <div class="ref-card" style="--accent:#9B2226">
+          <div class="ref-badges">
+            <span class="ref-sector">Leather goods</span>
+            <span class="ref-type">HR diagnostic (ongoing)</span>
+          </div>
+          <div class="ref-title">Leather goods sector, HR diagnostic</div>
+          <div class="ref-figure">25+</div>
+          <div class="ref-label">Job types mapped</div>
+        </div>
+        <div class="ref-card" style="--accent:#2A9D8F">
+          <div class="ref-badges">
+            <span class="ref-sector">Pet food</span>
+            <span class="ref-type">Influencer mapping</span>
+          </div>
+          <div class="ref-title">Pet food influencers, Asia</div>
+          <div class="ref-figure">180+</div>
+          <div class="ref-label">Qualified influencers</div>
+        </div>
+      </div>
+
+      <div class="refs-legend">
+        <span class="refs-legend-intro">Multi-sector expertise:</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#2A9D8F"></span>Consumer &amp; Retail</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#3A7BD5"></span>Tech &amp; Software</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#C4982A"></span>Industry &amp; Energy</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#9B2226"></span>Luxury &amp; Leather goods</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#6B8E6B"></span>Mobility</span>
+        <span class="refs-legend-pill"><span class="dot" style="background:#D4763A"></span>Media &amp; Telecom</span>
       </div>
     </div>
   </div>
@@ -937,138 +2050,224 @@
   <div class="inner">
     <div class="header fade-in">
       <div>
-        <span class="section-label" style="color:var(--accent)">Strategic perspectives</span>
-        <h2>Analysis and viewpoints <em>for decision-makers</em></h2>
-        <p class="center-desc">Our experts and AI agents regularly publish in-depth analyses on the strategic issues transforming industries.</p>
+        <h2>Insights: <em>analysis and viewpoints for decision-makers</em></h2>
+        <p class="center-desc">We regularly publish in-depth analysis on the strategic issues reshaping industries.</p>
       </div>
-      <a href="#" class="view-all">View all &rarr;</a>
     </div>
     <div class="articles-grid fade-in" style="transition-delay:150ms">
+      <a href="insights/traditional-consulting-vs-ai.html" class="article-card-link">
       <article class="article-card">
-        <div class="photo"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" alt="Glowing circuit board illustrating artificial intelligence in consulting" loading="lazy" /></div>
+        <div class="photo"><picture><source srcset="assets/visuals/blue-fibers.webp" type="image/webp"><img src="assets/visuals/blue-fibers.jpg" alt="Glowing circuit board illustrating AI in service of consulting" loading="lazy" width="1600" height="900"></picture></div>
         <div class="body">
-          <div class="article-tag">Strategy</div>
-          <div class="article-meta">8 min read</div>
-          <h3>Why traditional consulting won't survive the AI era</h3>
-          <p>The strategic consulting industry hasn't fundamentally changed in 50 years. The arrival of generative AI changes everything.</p>
+          <div class="article-tag">Opinion</div>
+          <div class="article-meta">7 min read</div>
+          <h3>Why traditional consulting will not survive the AI era</h3>
+          <p>Three technical disruptions make daily-rate billing untenable. Consulting is not disappearing — it is being rebuilt around the senior and the AI agent.</p>
           <span class="article-link">Read the article &rarr;</span>
         </div>
       </article>
+      </a>
+      <a href="insights/leveraging-ai-without-consultants.html" class="article-card-link">
       <article class="article-card">
-        <div class="photo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Executives collaborating on a strategic roadmap with laptop and notebook" loading="lazy" /></div>
+        <div class="photo"><picture><source srcset="assets/visuals/blue-prisms.webp" type="image/webp"><img src="assets/visuals/blue-prisms.jpg" alt="Executives collaborating on a strategic plan with laptop and notebook" loading="lazy" width="1600" height="1203"></picture></div>
         <div class="body">
-          <div class="article-tag">Artificial Intelligence</div>
-          <div class="article-meta">6 min read</div>
+          <div class="article-tag">Adoption vs value creation</div>
+          <div class="article-meta">7 min read</div>
           <h3>Executives: how to leverage AI without depending on a consultant</h3>
-          <p>AI isn't just another tool. It's a paradigm shift in how strategic decisions are made.</p>
+          <p>Used well, AI lets you take back control of day-to-day decisions and better target those that still require an outside firm.</p>
           <span class="article-link">Read the article &rarr;</span>
         </div>
       </article>
+      </a>
+      <a href="insights/ai-act-2026-en.html" class="article-card-link">
       <article class="article-card">
-        <div class="photo"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Legal office desk illustrating EU regulation and AI Act compliance" loading="lazy" /></div>
+        <div class="photo"><picture><source srcset="assets/visuals/eu-flag.webp" type="image/webp"><img src="assets/visuals/eu-flag.jpg" alt="Legal desk illustrating regulatory compliance and the AI Act" loading="lazy" width="1600" height="936"></picture></div>
         <div class="body">
           <div class="article-tag">Regulation</div>
-          <div class="article-meta">10 min read</div>
-          <h3>CSRD, AI Act, NIS2: mapping the regulations that will transform your business in 2026</h3>
-          <p>Three major European regulations take effect this year. What are the concrete impacts for your company?</p>
+          <div class="article-meta">8 min read</div>
+          <h3>AI Act: what the European regulation really changes for your business in 2026</h3>
+          <p>True compliance is not legal — it is cartographic. Why the AI Act is, first and foremost, a leadership test for your executive committee.</p>
           <span class="article-link">Read the article &rarr;</span>
         </div>
       </article>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust">
+<!-- FAQ -->
+<section class="faq" id="faq">
   <div class="inner">
-    <div class="grid fade-in">
-      <div class="photo-wrap">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Hymeria senior consulting team in a working meeting" loading="lazy" />
-      </div>
-      <div>
-        <span class="section-label" style="color:var(--gold)">Why trust us</span>
-        <h2>The standards of a top firm. <em>The agility of AI.</em></h2>
-        <p class="desc">Hymeria was born from a simple observation: artificial intelligence can handle 90% of a consultant's analytical work, but the remaining 10%, judgment, nuance, strategic intuition, remain irreplaceable. Our model unites the best of both worlds.</p>
-        <p class="desc">Our experts come from the world's leading consulting firms (McKinsey, BCG, Bain, Roland Berger) and the strategic divisions of major corporations. They don't produce, they validate, enrich, and guarantee the quality of every deliverable.</p>
-        <div class="stats-grid">
-          <div class="stat"><div class="stat-val">90%</div><div class="stat-label">of production handled by our AI agents</div></div>
-          <div class="stat"><div class="stat-val">100%</div><div class="stat-label">of deliverables validated by a senior expert</div></div>
-          <div class="stat"><div class="stat-val">48h</div><div class="stat-label">average time to first results</div></div>
-          <div class="stat"><div class="stat-val">15+</div><div class="stat-label">years of experience per expert</div></div>
+    <div class="left-align fade-in">
+      <h2>Frequently Asked <em>Questions</em></h2>
+      <p>Everything you need to know about Hymeria.</p>
+    </div>
+    <div class="faq-list fade-in">
+      <details class="faq-item">
+        <summary>How much does a Hymeria engagement cost?</summary>
+        <div class="faq-answer">
+          <p>Our engagements start at &euro;5,000. The final price depends on scope, complexity and expected deliverables. We bill by outcome and engagement scope, not by days mobilized. A precise quote is provided within 24 hours after a free qualification session.</p>
         </div>
-      </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How quickly do you deliver an engagement?</summary>
+        <div class="faq-answer">
+          <p>Our engagements are delivered in 5 to 10 days on average. This speed is made possible by our 40+ specialized AI agents preparing the analysis in parallel, followed by validation from our senior experts. The commercial proposal is sent within 48 hours and work begins immediately upon approval.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the difference between Hymeria and a traditional consulting firm?</summary>
+        <div class="faq-answer">
+          <p>We have rebuilt every link in the consulting chain around AI. Our specialized AI agents produce the bulk of the analytical work &mdash; what a human team would take months to assemble. Our senior experts deliver the 10% that makes the difference: deep understanding of the stakes, intimate market knowledge, the ability to turn data into actionable recommendations. The result: engagements delivered 5x faster, at a fraction of the cost.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are your deliverables really validated by humans?</summary>
+        <div class="faq-answer">
+          <p>Yes &mdash; 100% of Hymeria deliverables are qualified and validated by our expert network (50+ senior experts with 15+ years of experience). The AI prepares the first draft, but it is an expert who refines, enriches and validates every deliverable before it is shared. This combination &mdash; &laquo;&nbsp;AI produces. Humans set the direction, structure and decide.&nbsp;&raquo; &mdash; is our signature.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What topics can you work on?</summary>
+        <div class="faq-answer">
+          <p>Our offering covers eight domains, rolled out progressively. <strong>Available today</strong>: Strategy &amp; Business Development, Finance &amp; Investment, Competitive Intelligence. <strong>Coming soon</strong>: Marketing &amp; Communications, Innovation &amp; Technology, Regulation &amp; Compliance. <strong>Coming later</strong>: Operations &amp; Organization, HR &amp; Talent. If your project does not fit exactly into these categories, get in touch &mdash; our AI agents and experts adapt to most strategic challenges.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who are your experts?</summary>
+        <div class="faq-answer">
+          <p>Our network brings together 50+ senior experts from leading international consulting firms and from corporate strategy teams at major groups. All have more than 15 years of experience in their field. For each engagement, we mobilize the expert whose sector knowledge best matches your challenge.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do you guarantee the confidentiality of my data?</summary>
+        <div class="faq-answer">
+          <p>Your data is processed exclusively within the scope of your engagement, on secure European infrastructure. No client data is used to train our AI agents. For sensitive engagements, we offer an NDA and an on-premise deployment is possible. For more details, see our <a href="politique-confidentialite-en.html">privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How does an engagement unfold from A to Z?</summary>
+        <div class="faq-answer">
+          <p>Our 8-step process runs from first contact to closure in 10 days maximum: (1) online request, (2) needs qualification with an expert, (3) commercial proposal within 48 hours, (4) approval and immediate start, (5) deliverable preparation by AI agents, (6) quality review by our experts, (7) client presentation (2h), (8) closure and 360 evaluation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are your AI agents different from ChatGPT?</summary>
+        <div class="faq-answer">
+          <p>Yes, fundamentally. ChatGPT is a generalist assistant that produces single answers without validation. Our AI agents are specialized by task (research, analysis, modeling, quality control, writing), connected to more than 600 verified premium sources, and every deliverable is validated by a senior expert with 15+ years of experience before delivery. Where a standalone AI assistant remains fallible, Hymeria's agentic orchestration produces deep, robust and auditable analyses.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who is Hymeria for?</summary>
+        <div class="faq-answer">
+          <p>Hymeria serves the traditional clients of strategy consulting (mid-market companies, large groups, investment funds) that want top-firm-quality deliverables without the typical lead time and cost, as well as SMBs and scale-ups that were previously priced out of consulting. Our engagements start at &euro;5,000 and are delivered in 5 to 10 days.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What deliverable formats do you provide?</summary>
+        <div class="faq-answer">
+          <p>All standard strategy consulting formats: PowerPoint and Keynote presentations (business read), Word and PDF reports (detailed syntheses), Excel models (sizing, scenarios, financial plans), executive summary notes (1-page executive), interactive dashboards. Deliverables follow top-firm standards: methodological rigor, cited sources, actionable recommendations.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you work internationally and in English?</summary>
+        <div class="faq-answer">
+          <p>Our network of 50+ senior experts covers France, Europe, North America and several countries across Asia. We work in English and French, and several experts are fluent in German, Spanish, Italian and Mandarin. For geographically targeted engagements, we systematically mobilize an expert with hands-on experience in the relevant market.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do you compare to a top-tier strategy consulting firm?</summary>
+        <div class="faq-answer">
+          <p>On analytical rigor and recommendation quality, our standard is the same: our experts often come from leading international firms (McKinsey, BCG, Bain, Roland Berger) or from corporate strategy teams at major groups. The difference is in lead time (5 to 10 days vs. 4 to 12 weeks), cost (&euro;5,000 to &euro;15,000 vs. &euro;50,000 to &euro;500,000) and accessibility (any organization, not only large groups). Where a top firm mobilizes several junior consultants supervised by a partner, Hymeria mobilizes 40+ specialized AI agents plus a dedicated senior expert.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if I am not satisfied with the deliverable?</summary>
+        <div class="faq-answer">
+          <p>Every engagement includes a presentation and challenge session with the dedicated senior expert. If adjustments are required (refining the scope, deepening analyses, reformatting the output), they are included in the initial package. Our commitment is to deliver work that is directly actionable and validated by a senior expert &mdash; not a draft you have to redo. For 30 days after delivery, we remain available for questions and clarifications.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="card fade-in">
-    <span class="section-label" style="color:var(--accent)">Newsletter</span>
-    <h3>Strategic intelligence, delivered to <em>your inbox every week</em></h3>
-    <p>Receive our exclusive analyses, industry trends, and case studies straight to your inbox. Join the decision-makers who stay one step ahead.</p>
-    <div id="newsletterForm">
-      <div class="form">
-        <input type="email" id="nlEmail" placeholder="your@email.com" />
-        <button onclick="submitNewsletter()">Subscribe for free</button>
-      </div>
-      <div class="note">No spam. Unsubscribe in one click. ~5 min read per week.</div>
+<!-- CONFIANCE -->
+<section class="trust" id="a-propos">
+  <div class="inner">
+    <div class="left-align fade-in">
+      <h2>About <em>Hymeria</em></h2>
+      <p>Hymeria was founded by consultants from leading international firms, convinced that artificial intelligence would deeply transform their profession. Rather than wait, they chose to build the firm they would have wanted to find: faster, more accessible, with no compromise on analytical rigor or recommendation quality.</p>
+      <p>Our team brings together profiles that have spent years producing market studies, business plans and strategic diagnostics for large groups, mid-market companies and growing startups. That hands-on experience is what feeds our model today: &laquo;&nbsp;AI produces. Humans set the direction, structure and decide.&nbsp;&raquo;</p>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- CTA FINAL -->
 <section class="final-cta" id="contact">
   <div class="bg"></div>
   <div class="overlay"></div>
   <div class="content fade-in">
-    <h2>Ready to redefine your approach to <em>strategic consulting?</em></h2>
-    <p>Whether it's a market study, a business plan, or a digital audit, Hymeria delivers results in days, not months. Tell us about your project.</p>
+    <h2>Your next engagement <em>with Hymeria?</em></h2>
+    <p>Whether it is a market study, a business plan or a digital audit, Hymeria delivers results in 5 to 10 days. Tell us about your project.</p>
     <div class="ctas">
-      <a href="#contact" class="btn-white" style="padding:18px 40px;font-size:16px">Book a strategy call</a>
-      <a href="#diagnostic" class="btn-outline" style="padding:18px 32px;font-size:16px">Start your AI diagnostic</a>
+      <a href="contact-en.html" class="btn-white" style="padding:18px 40px;font-size:16px">Contact us</a>
     </div>
-    <div class="cta-note">30 minutes with a mission director. Free. No commitment.</div>
+    <div class="cta-note">30 minutes with an engagement director. Free. No commitment.</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="inner">
+    <div class="footer-brand">
+      <div class="brand"><img src="logo-blanc.png" alt="Hymeria Consulting" width="900" height="303"></div>
+      <div class="tagline">AI produces. Humans set the direction, structure and decide.</div>
+      <div class="brand-desc">Strategy consulting blending human expertise and AI.</div>
+    </div>
     <div class="footer-grid">
-      <div>
-        <div class="brand">Hyme<span>ria</span></div>
-        <div class="tagline">AI Consulting, Human Validated.</div>
-        <div class="brand-desc">Strategic consulting augmented by artificial intelligence.</div>
-      </div>
       <div class="footer-col">
-        <div class="footer-col-title">Expertise</div>
-        <a href="#expertise">Market Research</a>
-        <a href="#expertise">Market Intelligence</a>
-        <a href="#expertise">Business Plans</a>
-        <a href="#expertise">Digital Audit</a>
-        <a href="#expertise">Regulatory Impact</a>
-        <a href="#expertise">HR Strategy</a>
+        <div class="footer-col-title">Offerings</div>
+        <a href="#expertises">Strategy &amp; Business Development</a>
+        <a href="#expertises">Finance &amp; Investment</a>
+        <a href="#expertises">Competitive Intelligence</a>
+        <a href="#expertises">Marketing &amp; Communications</a>
+        <a href="#expertises">Innovation &amp; Technology</a>
+        <a href="#expertises">Regulation &amp; Compliance</a>
+        <a href="#expertises">Operations &amp; Organization</a>
+        <a href="#expertises">HR &amp; Talent</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Company</div>
-        <a href="#model">Our Model</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#modele">Approach</a>
+        <a href="#pour-qui">Clients</a>
+        <a href="#references">Case studies</a>
         <a href="#insights">Insights</a>
-        <a href="#contact">Contact</a>
+        <a href="#a-propos">About</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Contact</div>
         <a href="mailto:contact@hymeria.com">contact@hymeria.com</a>
-        <span>Paris &middot; New York</span>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="copy">&copy; 2026 Hymeria. All rights reserved.</div>
       <div class="legal-links">
-        <a href="#">Legal Notice</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="mentions-legales-en.html">Legal notice</a>
+        <a href="politique-confidentialite-en.html">Privacy policy</a>
+        <a href="cgu-en.html">Terms</a>
       </div>
     </div>
   </div>
@@ -1086,260 +2285,59 @@ window.addEventListener('scroll', () => {
   document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Expertise Tabs
-const expertiseData = [
-  {
-    id: "market",
-    label: "Market Research",
-    icon: "\uD83D\uDCCA",
-    desc: "Understand a market, identify opportunities, anticipate shifts: our AI agents analyze thousands of sources in real time to deliver a clear and actionable view of your competitive landscape.",
-    missions: [
-      "Comprehensive market study (size, segments, trends, key players)",
-      "Opportunity analysis for product launch / geographic expansion",
-      "In-depth competitive benchmark (positioning, pricing, strategy)",
-      "Ecosystem mapping and strategic partner identification",
-      "Market feasibility study for investors and executive committees"
-    ],
-    pricing: "Starting at $5,000 \u00B7 Delivered in 5\u20137 days"
-  },
-  {
-    id: "intelligence",
-    label: "Market Intelligence",
-    icon: "\uD83D\uDD0D",
-    desc: "In a world where information is abundant but intelligence is rare, our AI agents filter the noise to extract the weak signals that matter. Continuous monitoring, strategic alerts, automated synthesis reports.",
-    missions: [
-      "Automated competitive intelligence system setup",
-      "Weak signal analysis and emerging trend identification",
-      "Sector-specific regulatory monitoring (compliance, standards, directives)",
-      "Technology watch and innovation landscape mapping",
-      "Flash reports on market events (M&A, fundraising, strategic pivots)"
-    ],
-    pricing: "Starting at $3,000 \u00B7 Delivered in 3\u20135 days"
-  },
-  {
-    id: "business",
-    label: "Business Plans",
-    icon: "\uD83D\uDCBC",
-    desc: "A business plan isn\u2019t a creative exercise \u2014 it\u2019s a decision-making tool. Our AI agents model your financial assumptions while our experts challenge every projection to produce a credible and compelling document.",
-    missions: [
-      "Complete business plan for fundraising (seed, Series A, PE)",
-      "3\u20135 year financial modeling with sensitivity analysis",
-      "Strategic development plan (SMB, mid-market)",
-      "Commercial and strategic due diligence",
-      "Company valuation and scenario analysis"
-    ],
-    pricing: "Starting at $5,000 \u00B7 Delivered in 7\u201310 days"
-  },
-  {
-    id: "digital",
-    label: "Digital Audit",
-    icon: "\u2699\uFE0F",
-    desc: "Website, mobile app, digital customer journey: our AI agents scan every touchpoint to identify friction points, optimization opportunities, and growth levers. Includes sustainable digital design principles.",
-    missions: [
-      "Complete UX/UI audit of website or mobile application",
-      "Omnichannel customer journey analysis (web, mobile, physical)",
-      "Sustainable digital design audit and compliance assessment",
-      "Sector-specific digital benchmark (experience, performance, accessibility)",
-      "Redesign recommendations and optimization roadmap"
-    ],
-    pricing: "Starting at $4,000 \u00B7 Delivered in 5\u20137 days"
-  },
-  {
-    id: "regulation",
-    label: "Regulatory Impact",
-    icon: "\uD83D\uDCCB",
-    desc: "CSRD, AI Act, GDPR, DORA, NIS2: every new regulation transforms your business environment. Our AI agents map the specific impacts on your organization while our experts translate requirements into a concrete action plan.",
-    missions: [
-      "Regulatory impact analysis (CSRD, AI Act, NIS2, DORA)",
-      "GDPR compliance diagnostic and remediation plan",
-      "Sector-specific regulatory risk mapping",
-      "ESG impact assessment and reporting strategy",
-      "Automated regulatory watch and alert system"
-    ],
-    pricing: "Starting at $4,000 \u00B7 Delivered in 5\u20138 days"
-  },
-  {
-    id: "hr",
-    label: "HR Strategy",
-    icon: "\uD83D\uDC65",
-    desc: "AI is transforming jobs, skills, and organizations. Our agents analyze your human capital, map the necessary evolutions, and our experts co-build an HR strategy aligned with your ambitions.",
-    missions: [
-      "Skills mapping and transformation plan (upskilling/reskilling)",
-      "Organizational diagnostic and restructuring recommendations",
-      "Employer brand strategy and employee value proposition",
-      "AI impact analysis on jobs and change management plan",
-      "Sector-specific HR benchmark (compensation, benefits, practices)"
-    ],
-    pricing: "Starting at $5,000 \u00B7 Delivered in 7\u201310 days"
-  },
-];
-
-let activeTab = 0;
-function renderExpertise() {
-  const tabsEl = document.getElementById('expertiseTabs');
-  tabsEl.innerHTML = expertiseData.map((c, i) =>
-    '<button class="tab-btn ' + (i === activeTab ? 'active' : '') + '" onclick="setTab(' + i + ')">' + c.icon + ' ' + c.label + '</button>'
-  ).join('');
-
-  const cat = expertiseData[activeTab];
-  const cardEl = document.getElementById('expertiseCard');
-  cardEl.innerHTML =
-    '<h3>' + cat.icon + '  ' + cat.label + '</h3>' +
-    '<div class="expertise-desc">' + cat.desc + '</div>' +
-    '<div class="missions-label">Typical engagements</div>' +
-    '<div class="missions-grid">' +
-      cat.missions.map(function(m) {
-        return '<div class="mission-item"><div class="mission-icon">\u2192</div><span>' + m + '</span></div>';
-      }).join('') +
-    '</div>' +
-    '<div class="pricing-line">\u2192 ' + cat.pricing + '</div>' +
-    '<a href="#diagnostic" class="btn-navy">Request a quote \u2192</a>';
-}
-function setTab(i) { activeTab = i; renderExpertise(); }
-renderExpertise();
-
-// Pricing Rows
-const pricingData = [
-  { label: "Average timeline", old: "4 to 12 weeks", neu: "3 to 10 days" },
-  { label: "Engagement budget", old: "$50K \u2014 $500K", neu: "$5K \u2014 $15K" },
-  { label: "Analysis depth", old: "Limited by team size", neu: "Unlimited (AI agents)" },
-  { label: "Sources analyzed", old: "10 \u2014 50 sources", neu: "1,000+ sources" },
-  { label: "Human validation", old: "Junior + Partner review", neu: "Dedicated senior expert" },
-  { label: "Post-engagement support", old: "Billed as extra", neu: "30 days included" },
-  { label: "Deliverable format", old: "PDF / PowerPoint", neu: "Interactive + PDF" },
-];
-document.getElementById('pricingRows').innerHTML = pricingData.map(function(r) {
-  return '<div class="pricing-row"><div class="row-label">' + r.label + '</div><div class="row-old">' + r.old + '</div><div class="row-new">' + r.neu + '</div></div>';
-}).join('');
-
-// Diagnostic Tool
-const diagQuestions = [
-  {
-    q: "What is the number one strategic challenge facing your organization today?",
-    opts: [
-      "Accelerate growth (new markets, product launch)",
-      "Optimize performance (costs, processes, organization)",
-      "Manage a transformation (digital, regulatory, organizational)",
-      "Strengthen competitiveness (positioning, differentiation)"
-    ]
-  },
-  {
-    q: "What industry do you operate in?",
-    opts: [
-      "Tech & SaaS",
-      "Financial services & insurance",
-      "Healthcare & Life Sciences",
-      "Manufacturing & industry",
-      "Retail & e-commerce",
-      "Other"
-    ]
-  },
-  {
-    q: "What is the size of your organization?",
-    opts: [
-      "Startup / SMB (< 50 employees)",
-      "Mid-market (50 \u2013 500 employees)",
-      "Enterprise (500+ employees)"
-    ]
-  },
-  {
-    q: "What is your decision horizon?",
-    opts: [
-      "Urgent \u2014 I need results within 2 weeks",
-      "Short term \u2014 decision to make this month",
-      "Medium term \u2014 strategic planning over 3\u20136 months",
-      "Exploratory \u2014 I\u2019m researching"
-    ]
-  },
-];
-let diagStep = 0, diagAnswers = {};
-
-function renderDiag() {
-  var progress = document.getElementById('diagProgress');
-  var content = document.getElementById('diagContent');
-  progress.style.width = (diagStep / diagQuestions.length * 100) + '%';
-
-  var q = diagQuestions[diagStep];
-  content.innerHTML =
-    '<div class="diag-step">Question ' + (diagStep + 1) + ' of ' + diagQuestions.length + '</div>' +
-    '<div class="diag-question">' + q.q + '</div>' +
-    '<div class="diag-options">' +
-      q.opts.map(function(o, i) {
-        return '<button class="diag-option" onclick="diagAnswer(\'' + o.replace(/'/g, "\\'") + '\')">' +
-          '<span class="diag-option-key">' + String.fromCharCode(65 + i) + '</span>' + o + '</button>';
-      }).join('') +
-    '</div>';
-}
-
-function diagAnswer(answer) {
-  diagAnswers[diagStep] = answer;
-  if (diagStep < diagQuestions.length - 1) {
-    diagStep++;
-    renderDiag();
-  } else {
-    showAnalyzing();
+// Mobile hamburger menu
+(function() {
+  const burger = document.getElementById('navBurger');
+  const links = document.getElementById('navLinks');
+  const nav = document.getElementById('mainNav');
+  if (!burger || !links) return;
+  function setOpen(open) {
+    burger.classList.toggle('open', open);
+    links.classList.toggle('open', open);
+    if (nav) nav.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
   }
-}
+  burger.addEventListener('click', () => setOpen(!burger.classList.contains('open')));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && burger.classList.contains('open')) setOpen(false);
+  });
+})();
 
-function showAnalyzing() {
-  var progress = document.getElementById('diagProgress');
-  progress.style.width = '90%';
-  var content = document.getElementById('diagContent');
-  content.innerHTML =
-    '<div class="diag-analyzing">' +
-      '<div class="brain">\uD83E\uDDE0</div>' +
-      '<h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-bottom:8px">AI Analysis in Progress</h3>' +
-      '<p style="font-size:15px;color:var(--text-light)">Our agents are building your personalized recommendation.</p>' +
-      '<div class="diag-lines">' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.3s forwards">\u2713 Analyzing challenge type\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 0.9s forwards">\u2713 Mapping relevant expertise\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 1.5s forwards">\u2713 Estimating scope and timeline\u2026</div>' +
-        '<div class="diag-line" style="animation:fadeInLine 0.3s ease 2.1s forwards">\u2713 Generating recommendation\u2026</div>' +
-      '</div>' +
-    '</div>';
-  setTimeout(showResult, 3000);
-}
-
-function showResult() {
-  var progress = document.getElementById('diagProgress');
-  progress.style.width = '100%';
-  var content = document.getElementById('diagContent');
-  content.innerHTML =
-    '<div class="diag-result-header">' +
-      '<div class="diag-check">\u2713</div>' +
-      '<div>' +
-        '<div class="diag-result-title">Your Hymeria Diagnostic</div>' +
-        '<div class="diag-result-sub">Based on: ' + diagAnswers[0] + '</div>' +
-      '</div>' +
-    '</div>' +
-    '<div class="diag-missions-label">Recommended engagements</div>' +
-    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Competitive landscape analysis with strategic positioning</span></div>' +
-    '<div class="diag-mission"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Market sizing and opportunity assessment</span></div>' +
-    '<div class="diag-mission" style="border-bottom:none"><span class="arrow" style="color:var(--accent)">\u2192</span> <span>Go-to-market strategy with actionable roadmap</span></div>' +
-    '<div class="diag-metrics">' +
-      '<div class="diag-metric"><div class="diag-metric-label">Estimate</div><div class="diag-metric-value">$7,500 \u2013 $12,000</div></div>' +
-      '<div class="diag-metric"><div class="diag-metric-label">Delivery</div><div class="diag-metric-value">5\u20138 business days</div></div>' +
-      '<div class="diag-metric"><div class="diag-metric-label">Savings</div><div class="diag-metric-value">~85% vs traditional</div></div>' +
-    '</div>' +
-    '<div class="diag-actions">' +
-      '<button class="primary" onclick="alert(\'Thank you! We will contact you shortly.\')">Book a strategy call \u2192</button>' +
-      '<button class="secondary" onclick="resetDiag()">Start over</button>' +
-    '</div>';
-}
-
-function resetDiag() {
-  diagStep = 0; diagAnswers = {};
-  renderDiag();
-}
-renderDiag();
 
 // Newsletter
 function submitNewsletter() {
   var email = document.getElementById('nlEmail').value;
   if (email) {
     document.getElementById('newsletterForm').innerHTML =
-      '<div class="success">\u2713 Welcome! Your first issue arrives next Monday.</div>';
+      '<div class="success">\u2713 Welcome! Your first edition lands next Monday.</div>';
   }
+}
+
+// Cookie consent banner
+(function() {
+  if (localStorage.getItem('hymeria-cookie-consent')) return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.innerHTML =
+    '<div class="cookie-text">' +
+      '<strong>Your privacy</strong>' +
+      '<p>We use cookies to measure our site\'s audience and improve your experience. You can accept or decline. To learn more, see our <a href="politique-confidentialite-en.html">Privacy policy</a>.</p>' +
+    '</div>' +
+    '<div class="cookie-actions">' +
+      '<button class="cookie-btn cookie-refuse" onclick="cookieChoice(false)">Decline</button>' +
+      '<button class="cookie-btn cookie-accept" onclick="cookieChoice(true)">Accept</button>' +
+    '</div>';
+  document.body.appendChild(banner);
+  setTimeout(function(){ banner.classList.add('visible'); }, 300);
+})();
+
+function cookieChoice(accepted) {
+  localStorage.setItem('hymeria-cookie-consent', accepted ? 'accepted' : 'refused');
+  var b = document.getElementById('cookieBanner');
+  if (b) { b.classList.remove('visible'); setTimeout(function(){ b.remove(); }, 300); }
 }
 </script>
 
