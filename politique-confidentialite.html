@@ -65,6 +65,11 @@
   nav.top .brand img { height: 44px; width: auto; display: block; }
   nav.top a.back { font-size: 13px; color: var(--text-light); }
   nav.top a.back:hover { color: var(--navy); }
+  nav.top .lang-switch { display: flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 500; }
+  nav.top .lang-switch a { color: var(--text-muted); padding: 4px 6px; border-radius: 4px; transition: color 0.2s; }
+  nav.top .lang-switch a:hover { color: var(--cobalt); text-decoration: none; }
+  nav.top .lang-switch a.active { color: var(--cobalt); font-weight: 600; }
+  nav.top .lang-sep { color: var(--border); font-size: 12px; }
 
   main {
     max-width: 820px;
@@ -163,6 +168,9 @@
 
 <nav class="top">
   <a href="index-fr.html" class="brand"><img src="logo-noir.png?v=5" alt="Hymeria Consulting"></a>
+  <div class="lang-switch">
+    <a href="politique-confidentialite.html" class="active">FR</a><span class="lang-sep">|</span><a href="politique-confidentialite-en.html">EN</a>
+  </div>
   <a href="index-fr.html" class="back">&larr; Retour au site</a>
 </nav>
 
