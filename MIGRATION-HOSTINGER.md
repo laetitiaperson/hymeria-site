@@ -14,6 +14,23 @@ Checklist pas-à-pas pour basculer le site en production sur **www.hymeria.com**
   ```
   → met à jour canonical, hreflang, og:url, twitter:image, JSON-LD `@id`, sitemap.xml, robots.txt vers `https://www.hymeria.com`.
 
+- [ ] Retirer le `<meta name="robots" content="noindex, follow">` des 8 pages EN
+  (elles sont en noindex pendant la relecture sur GitHub Pages —
+  à retirer juste avant la mise en prod Hostinger) :
+  ```bash
+  for f in index-en.html contact-en.html mentions-legales-en.html \
+           politique-confidentialite-en.html cgu-en.html \
+           insights/ai-act-2026-en.html insights/traditional-consulting-vs-ai.html \
+           insights/leveraging-ai-without-consultants.html; do
+    sed -i '' '/<meta name="robots" content="noindex, follow">/d' "$f"
+  done
+  ```
+  Vérifier qu'il ne reste plus de `noindex` :
+  ```bash
+  grep -rn 'noindex' --include='*.html' .
+  ```
+  Doit retourner **0 résultat**.
+
 - [ ] Vérifier qu'il ne reste plus de `laetitiaperson.github.io` dans le HTML/XML :
   ```bash
   grep -rn 'laetitiaperson.github.io' --include='*.html' --include='*.xml' --include='*.txt' .
