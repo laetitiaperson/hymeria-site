@@ -2,67 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- =========================================================
+       HOME (FR + EN)
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/index-fr.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/index-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/index-fr.html"/>
+  </url>
+
+  <!-- =========================================================
+       LANDING (FR only)
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/landing-fr.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- =========================================================
+       CONTACT (FR + EN)
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/contact.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/contact-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/contact.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/contact-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/contact-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/contact.html"/>
+  </url>
+
+  <!-- =========================================================
+       INSIGHTS — Consulting traditionnel / Traditional consulting
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/insights/consulting-traditionnel-ia.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/consulting-traditionnel-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/traditional-consulting-vs-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/consulting-traditionnel-ia.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/insights/traditional-consulting-vs-ai.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/consulting-traditionnel-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/traditional-consulting-vs-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/consulting-traditionnel-ia.html"/>
+  </url>
+
+  <!-- =========================================================
+       INSIGHTS — Exploiter IA sans consultant / Leveraging AI
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/insights/exploiter-ia-sans-consultant.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/exploiter-ia-sans-consultant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/leveraging-ai-without-consultants.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/exploiter-ia-sans-consultant.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/insights/leveraging-ai-without-consultants.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/exploiter-ia-sans-consultant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/leveraging-ai-without-consultants.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/exploiter-ia-sans-consultant.html"/>
+  </url>
+
+  <!-- =========================================================
+       INSIGHTS — AI Act 2026
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/insights/ai-act-2026.html"/>
+  </url>
+
+  <!-- =========================================================
+       LEGAL — Privacy
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/politique-confidentialite.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite.html"/>
   </url>
 
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/politique-confidentialite-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/politique-confidentialite.html"/>
+  </url>
+
+  <!-- =========================================================
+       LEGAL — Notice (Mentions légales)
+       ========================================================= -->
   <url>
     <loc>https://laetitiaperson.github.io/hymeria-site/mentions-legales.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales.html"/>
   </url>
 
   <url>
-    <loc>https://laetitiaperson.github.io/hymeria-site/cgu.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://laetitiaperson.github.io/hymeria-site/mentions-legales-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/mentions-legales.html"/>
+  </url>
+
+  <!-- =========================================================
+       LEGAL — Terms (CGU)
+       ========================================================= -->
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/cgu.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/cgu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/cgu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/cgu.html"/>
+  </url>
+
+  <url>
+    <loc>https://laetitiaperson.github.io/hymeria-site/cgu-en.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laetitiaperson.github.io/hymeria-site/cgu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laetitiaperson.github.io/hymeria-site/cgu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laetitiaperson.github.io/hymeria-site/cgu.html"/>
   </url>
 
 </urlset>
